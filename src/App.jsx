@@ -2,10 +2,38 @@ import React from "react";
 import { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
 
-
 function App() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slideseToScroll: 1,
+  };
+
+  const data = [
+    {
+      name: `John Morgan`,
+      img: `src/assets/image/1.png`,
+      review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate in necessitatibus temporibus doloribus pariatur rerum nesciunt itaque quae et. Maxime consequatur vero iusto optio iure magnam itaque blanditiis praesentium odit.`,
+    },
+    {
+      name: `Teddy Bear`,
+      img: `src/assets/image/2.png`,
+      review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate in necessitatibus temporibus doloribus pariatur rerum nesciunt itaque quae et. Maxime consequatur vero iusto optio iure magnam itaque blanditiis praesentium odit.`,
+    },
+    {
+      name: `Lilly Collins`,
+      img: `src/assets/image/4.png`,
+      review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate in necessitatibus temporibus doloribus pariatur rerum nesciunt itaque quae et. Maxime consequatur vero iusto optio iure magnam itaque blanditiis praesentium odit.`,
+    },
+  ];
+
   const slides = [
     {
       url: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=2620&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -299,6 +327,34 @@ function App() {
           title="20區推薦導遊名單"
         />
       </map>
+
+      <div className="w-3/4 m-auto">
+        <div className="mt-20">
+          <Slider {...settings}>
+            {data.map((data, index) => (
+              <div
+                key={index}
+                className="bg-white h-[450px] text-black rounded-xl"
+              >
+                <div className="h-56 rounded-t-xl bg-blue-700 flex justify-center items-center">
+                  <img
+                    src={data.img}
+                    alt=""
+                    className="h-44 w-44 rounded-full"
+                  />
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4 p-4">
+                  <p className="text-xl font-semibold ">{data.name}</p>
+                  <p>{data.review}</p>
+                  <button className="bg-indigo-500 text-white text-lg px-6 py-1 rounded-xl">
+                    Read More
+                  </button>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
     </>
   );
 }
