@@ -5,7 +5,7 @@ import { RxDotFilled } from "react-icons/rx";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./App.css";
+// import "./App.css";
 
 function App() {
   const settings = {
@@ -36,7 +36,7 @@ function App() {
 
   const slides = [
     {
-      url: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=2620&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      url: "https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       url: "https://images.unsplash.com/photo-1520503652613-5a55d772ec77?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -71,31 +71,98 @@ function App() {
 
   return (
     <>
-      <h1>尋找你的完美巴黎旅程</h1>
-      <div className="max-w-[1400px] h-[780px] sm:h-[300px] md:h-[700px] lg:h-[780px] w-full m-auto py-16 px-4 relative group">
+      <div className="group relative m-auto w-full max-w-[1920px] py-16 sm:h-[300px] md:h-[700px] lg:h-[780px]">
         <div
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-          className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
-        ></div>
+          className="relative h-full w-full bg-cover bg-center duration-500"
+        >
+          <div className="absolute left-[22%] top-[20%]">
+            <h1 className="py-3 text-6xl font-bold text-white">
+              尋找你的完美巴黎旅程
+            </h1>
+            <p className="py-6 text-2xl font-bold text-white">
+              輕盈漫步在巴黎的街巷。
+            </p>
+            <p className="text-2xl font-bold text-white">
+              無論你心繫歷史的脈動、美食的馨香，還是藝術的深邃，
+            </p>
+            <p className="text-2xl font-bold text-white">
+              我們都為你精選了最契合靈魂的旅程。
+            </p>
+            <p className="py-6 text-2xl font-bold text-white">
+              一段符合你心之所向的旅程，正在靜靜等待與你邂逅。
+            </p>
+
+            <div className="flex items-center">
+              <div className="relative w-full max-w-lg">
+                <input
+                  type="text"
+                  className="w-full rounded-lg border border-gray-300 bg-white p-3 pr-4 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="尋找你的完美巴黎旅程"
+                />
+                <div className="absolute inset-y-0 right-0 flex items-center bg-primary-500 pl-2">
+                  <svg
+                    className="h-5 w-5 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <button className="mx-2 my-2 rounded-xl bg-secondary-500 p-1">
+              歷史建築
+            </button>
+            <button className="mx-2 my-2 rounded-xl bg-secondary-500 p-1">
+              博物館導覽
+            </button>
+            <button className="mx-2 my-2 rounded-xl bg-secondary-500 p-1">
+              文哲學巡禮
+            </button>
+            <button className="mx-2 my-2 rounded-xl bg-secondary-500 p-1">
+              自然風光
+            </button>
+            <button className="mx-2 my-2 rounded-xl bg-secondary-500 p-1">
+              法式美食
+            </button>
+            <button className="mx-2 my-2 rounded-xl bg-secondary-500 p-1">
+              浪漫蜜月行
+            </button>
+            <button className="mx-2 my-2 rounded-xl bg-secondary-500 p-1">
+              親子家庭遊
+            </button>
+            <button className="mx-2 my-2 rounded-xl bg-secondary-500 p-1">
+              時尚購物
+            </button>
+          </div>
+        </div>
+
+
         {/* Left Arrow */}
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+        <div className="absolute left-5 top-[50%] hidden -translate-x-0 translate-y-[-50%] cursor-pointer rounded-full bg-black/20 p-2 text-2xl text-white group-hover:block">
           <BsChevronCompactLeft onClick={prevSlide} size={30} />
         </div>
         {/* Right Arrow */}
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+        <div className="absolute right-5 top-[50%] hidden -translate-x-0 translate-y-[-50%] cursor-pointer rounded-full bg-black/20 p-2 text-2xl text-white group-hover:block">
           <BsChevronCompactRight onClick={nextSlide} size={30} />
         </div>
-        <div className="flex top-4 justify-center py-2">
+        <div className="top-4 flex justify-center py-2">
           {slides.map((slide, slideIndex) => (
             <div
               key={slideIndex}
               onClick={() => goToSlide(slideIndex)}
-              className="text-2xl cursor-pointer"
+              className="cursor-pointer text-2xl"
             >
-              <RxDotFilled />
+              {/* <RxDotFilled /> */}
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="image-container">
+        <img src="src/assets/image/4.png" alt="Image Description" />
+        <div className="text-overlay">Zoomed Text</div>
       </div>
 
       <h2>分區搜尋專屬導遊</h2>
@@ -328,25 +395,25 @@ function App() {
         />
       </map>
 
-      <div className="w-3/4 m-auto">
+      <div className="m-auto w-3/4">
         <div className="mt-20">
           <Slider {...settings}>
             {data.map((data, index) => (
               <div
                 key={index}
-                className="bg-white h-[450px] text-black rounded-xl"
+                className="h-[450px] rounded-xl bg-secondary-600 text-black"
               >
-                <div className="h-56 rounded-t-xl bg-blue-700 flex justify-center items-center">
+                <div className="flex h-56 items-center justify-center rounded-t-xl bg-blue-700">
                   <img
                     src={data.img}
                     alt=""
                     className="h-44 w-44 rounded-full"
                   />
                 </div>
-                <div className="flex flex-col justify-center items-center gap-4 p-4">
-                  <p className="text-xl font-semibold ">{data.name}</p>
+                <div className="flex flex-col items-center justify-center gap-4 p-4">
+                  <p className="text-xl font-semibold">{data.name}</p>
                   <p>{data.review}</p>
-                  <button className="bg-indigo-500 text-white text-lg px-6 py-1 rounded-xl">
+                  <button className="rounded-xl bg-indigo-500 px-6 py-1 text-lg text-white">
                     Read More
                   </button>
                 </div>
