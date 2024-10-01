@@ -2,38 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-
   /* Primary Colors */
   --primary-500: #354bcf;
 
   /* Secondary Colors */
   --secondary-500: #fb5138;
-  --secondary-600: #EA4229;
-  --secondary-700: #C42811;
+  --secondary-600: #ea4229;
+  --secondary-700: #c42811;
 
-
-  /* Background Colors
-  --background-2: #FFF2DB; */
+  /* Background Colors */
+  --background-2: #fff2db;
 }
-
-
-
-
 
 @layer base {
   body {
-    background-color: #F9F4EB;
-    /* background-color: var(--primary-500); */
-    ;
-    font-family: "Noto sans";
+    @apply bg-[#F9F4EB] font-sans;
   }
 }
 
-
-
-
 .slick-slide > div {
-  margin: 0 10px;
+  @apply mx-2.5;
+}
+
+.swiper {
+  @apply h-[800px] w-full;
+}
+
+.swiper-slide {
+  @apply items-center justify-center bg-white text-center text-lg;
+}
+
+.swiper-slide img {
+  @apply block h-full w-full object-cover;
 }
