@@ -10,26 +10,34 @@ import "slick-carousel/slick/slick-theme.css";
 // import "./App.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-
-
-
-
-
 import Card from "./components/Card";
 
-
 function App() {
-  const settings = {
+  const settings1 = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slideseToScroll: 1,
+    slideseToScroll: 2,
+  };
+
+  const settings2 = {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
+    pagination: {
+      clickable: true,
+    },
+    navigation: true,
   };
 
   const data = [
@@ -768,38 +776,35 @@ function App() {
 
       <div className="m-auto w-3/4">
         <div className="mt-20">
-          <Slider {...settings}>
+          <Slider {...settings1}>
             {data.map((data, index) => (
-              <div
-                key={index}
-                // className="h-full rounded-xl  text-black border-blue-400"
-              >
-                <div 
-                // className="flex h-56 items-center justify-center rounded-t-xl"
-                >
-
-                 <Card 
-                 imageSrc={data.img}
-                 title={data.name}
-                 description={data.review}
-                 />
-
-                  {/* <img
-                    src={data.img}
-                    alt=""
-                    className="h-44 w-44 rounded-full"
-                  /> */}
+              <div key={index}>
+                <div>
+                  <Card
+                    imageSrc={data.img}
+                    title={data.name}
+                    description={data.review}
+                  />
                 </div>
-                {/* <div className="flex flex-col items-center justify-center gap-4 p-4">
-                  <p className="text-xl font-semibold">{data.name}</p>
-                  <p>{data.review}</p>
-                  <button className="rounded-xl bg-indigo-500 px-6 py-1 text-lg text-white">
-                    Read More
-                  </button>
-                </div> */}
               </div>
             ))}
           </Slider>
+        </div>
+      </div>
+
+      <div className="m-auto w-3/4">
+        <div className="mt-20">
+          <Swiper {...settings2} className="mySwiper">
+            {data.map((item, index) => (
+              <SwiperSlide key={index}>
+                <Card
+                  imageSrc={item.img}
+                  title={item.name}
+                  description={item.review}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </>
