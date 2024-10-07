@@ -77,6 +77,32 @@ function App() {
     setCurrentIndex(slideIndex);
   };
 
+  const [selectedDistrict, setSelectedDistrict] = useState(null);
+  // const [isHovered, setIsHovered] = useState(false);
+
+  // List of districts with their respective info
+  const districts = {
+    1: "1區推薦導遊名單",
+    2: "2區推薦導遊名單",
+    3: "3區推薦導遊名單",
+    4: "4區推薦導遊名單",
+    // Add more districts...
+  };
+
+  // Handler for when a district is clicked
+  const handleDistrictClick = (event, district) => {
+    event.preventDefault();
+    setSelectedDistrict(district);
+  };
+
+  // const handleMouseEnter = () => {
+  //   setIsHovered(true); // Set hover state to true
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setIsHovered(false); // Set hover state to false
+  // };
+
   return (
     <>
       <Swiper
@@ -523,23 +549,61 @@ function App() {
         </div>
       </div>
 
-      <div className="image-container">
+      {/* <div className="image-container">
         <img src="src/assets/image/4.png" alt="Image Description" />
         <div className="text-overlay">Zoomed Text</div>
-      </div>
+      </div> */}
 
       <h2 className="mt-2 text-center text-4xl">分區搜尋專屬導遊</h2>
       <div className="relative">
+        <div className="flex items-center justify-center">
+          <p className="text-1xl absolute left-[51.5%] top-[45.5%] text-secondary-700 text-white">
+            4
+          </p>
+          <img
+            src="src/assets/image/parismap_dist_web.png"
+            useMap="#parisMap"
+            alt="Paris District Map"
+            className="w-100 h-100"
+          />
+        </div>
 
-      
-      <div className="flex items-center justify-center">
-        <p className="absolute text-secondary-700 text-1xl top-[45.5%] left-[51.5%] text-white">4</p>
-        <img
-          src="src/assets/image/parismap_dist_web.png"
-          useMap="#parisMap"
-          alt="Paris District Map"
-          className="w-100 h-100"
-        />
+
+
+      <div className="">
+          {/* Display selected district info */}
+          {selectedDistrict && (
+            <div className="absolute top-[20%] left-[10%] border border-gray-300 bg-white p-4 shadow-lg">
+              <h3 className="text-xl font-bold">{selectedDistrict}區</h3>
+              <p>{districts[selectedDistrict]}</p>
+            </div>
+          )}
+ 
+        {/* Map for clickable areas */}
+        <map name="parisMap">
+          <area
+            shape="poly"
+            coords="536,334,531,340,527,347,523,356,524,367,531,368,539,367,547,370,561,375,567,379,577,383,584,385,592,389,600,394,609,395,616,399,623,404,637,412,631,405,646,412,646,404,643,396,643,388,647,382,650,375,643,366,635,362,625,358,617,355,607,351,595,349,588,346,582,342,574,339,567,335,558,332,547,328,539,326"
+            href="#"
+            onClick={(event) => handleDistrictClick(event, 1)}
+            // onMouseEnter={handleMouseEnter}
+            // onMouseLeave={handleMouseLeave}
+            alt="Paris 1"
+            className="cursor-pointer"
+          />
+          <area
+            shape="poly"
+            coords="585,303,583,310,578,319,572,327,579,332,586,334,596,339,609,340,613,346,618,343,623,349,630,353,637,353,642,356,650,357,657,351,657,345,663,338,666,331,657,325,647,321,635,316,629,314,621,311,613,307,600,306,591,303"
+            href="#"
+            onClick={(event) => handleDistrictClick(event, 2)}
+            // onMouseEnter={handleMouseEnter}
+            // onMouseLeave={handleMouseLeave}
+            alt="Paris 2"
+            className="cursor-pointer"
+          />
+          {/* Add more <area> elements for other districts */}
+        </map>
+
       </div>
       </div>
 
@@ -550,7 +614,7 @@ function App() {
         />
       </div>
 
-      <map name="parisMap">
+      {/* <map name="parisMap">
         <area
           shape="poly"
           coords="227,168,231,172,236,177,238,183,241,190,242,196,249,199,254,202,260,203,267,204,271,200,274,194,277,188,282,182,273,178,263,175,254,172,246,170,238,167"
@@ -770,7 +834,7 @@ function App() {
           rel="nofollow noreferrer noopener"
           title="20區推薦導遊名單"
         />
-      </map>
+      </map> */}
 
       <div className="m-auto w-3/4">
         <div className="mt-20">
@@ -840,11 +904,11 @@ function App() {
 
       {/* 預約導遊和報名行程 */}
 
-      <div className="// flex-col items-center">
+      <div className="flex-col items-center justify-center">
         <h2 className="mt-2 text-center text-4xl">預約導遊和報名行程</h2>
 
-        <div className="flex">
-          <div className="border border-red-700">
+        <div className="flex justify-center gap-6">
+          <div className="w-[636px] rounded border border-red-700">
             預約導遊
             <div className="flex">
               <div className="">
@@ -862,7 +926,7 @@ function App() {
                 <img src="src/assets/image/step-1-2.png" alt="" />
               </div>
               <div className="flex-col items-center">
-                <p>Step 2 與導遊聯絡</p>
+                <p className="cursor-pointer">Step 2 與導遊聯絡</p>
                 <p>
                   登入會員後，通過私訊與選定的導遊聯絡，詳細溝通你的旅行需求、預期時間和特別喜好，確保導遊能為你提供量身定制的服務
                 </p>
@@ -879,10 +943,10 @@ function App() {
                 </p>
               </div>
             </div>
-            <button>我要預約導遊</button>
+            <button className="">我要預約導遊</button>
           </div>
 
-          <div className="border border-red-700">
+          <div className="w-[636px] border border-red-700">
             報名行程
             <div className="flex">
               <div className="">
@@ -935,46 +999,59 @@ function App() {
 
       {/* footer */}
       <footer className="relative">
+        <div>
+          <img
+            src="src/assets/image/deco_footer_clouds.png"
+            alt=""
+            className="absolute left-[100px] top-10"
+          />
+        </div>
 
-<div>
-  <img src="src/assets/image/deco_footer_clouds.png" alt="" 
-  className="absolute top-10 left-[100px]"
-  />
-</div>
+        <div>
+          <img
+            src="src/assets/image/deco_footer_clouds.png"
+            alt=""
+            className="absolute right-10"
+          />
+        </div>
 
-<div>
-  <img src="src/assets/image/deco_footer_clouds.png" alt="" 
-   className="absolute right-10"
-  />
-</div>
+        <div>
+          <img
+            src="src/assets/image/left_tree.png"
+            alt=""
+            // className="absolute top-10 left-5"
+          />
+        </div>
 
-<div>
-<img src="src/assets/image/left_tree.png" alt="" 
-// className="absolute top-10 left-5"
-/>
-</div>
-
-<div>
-<img src="src/assets/image/deco_middle_tree.png" alt="" 
-// className="absolute bottom-20 right-10"
-/>
-<img src="src/assets/image/deco_right_tree.png" alt="" 
-// className="absolute bottom-10 right-5"
-/>
-</div>
-
-
+        <div>
+          <img
+            src="src/assets/image/deco_middle_tree.png"
+            alt=""
+            // className="absolute bottom-20 right-10"
+          />
+          <img
+            src="src/assets/image/deco_right_tree.png"
+            alt=""
+            // className="absolute bottom-10 right-5"
+          />
+        </div>
 
         <div className="relative">
-          <img src="src/assets/image/footer_background.png" alt="" 
-          className="block w-full"/>
+          <img
+            src="src/assets/image/footer_background.png"
+            alt=""
+            className="block w-full"
+          />
         </div>
-        <div className="bg-primary-600 h-[420px] relative -top-1"></div>
+        <div className="bg-primary-600 relative -top-1 h-[420px]"></div>
 
-<div><img src="src/assets/image/footer_img.png" alt="" 
-className="absolute bottom-[190px] right-[500px]"/></div>
-
-
+        <div>
+          <img
+            src="src/assets/image/footer_img.png"
+            alt=""
+            className="absolute bottom-[190px] right-[500px]"
+          />
+        </div>
       </footer>
     </>
   );

@@ -35,6 +35,11 @@ export default {
 
 
       },
+      cursor: {
+        // Define a custom cursor style
+        'pointer': 'pointer',  
+        'custom': 'url(./src/assets/image/parismap_dist_web.png), auto', 
+      },
     },
   },
   plugins: [],
