@@ -5,19 +5,46 @@
 :root {
   /* Primary Colors */
   --primary-500: #354bcf;
+  --primary-600: #0D55AA;
+  --primary-700: #0D4A97;
+  --primary-800: #0F417D;
+  --primary-900: #123768;
+  --primary-950: #0C2345;
+  ;
 
   /* Secondary Colors */
   --secondary-500: #fb5138;
   --secondary-600: #ea4229;
   --secondary-700: #c42811;
 
-  /* Background Colors */
+
+   /* Neutral Colors: */
+    --grey-50:#F6F6F6;
+    --grey-100:#E7E7E7;
+    --grey-200:#D1D1D1;
+    --grey-300:#B0B0B0;
+    --grey-400:#888888;
+    --grey-500:#6D6D6D;
+    --grey-600:#5D5D5D;
+    --grey-700:#4F4F4F;
+    --grey-800:#454545;
+    --grey-900:#3D3D3D;
+    --grey-950:#1E1E1E;
+
+
+
+  /* Background--grey-50:; Colors */
   --background-2: #fff2db;
+
+  /* Font weights  */
+  --font-weight-normal: 400;
+  --font-weight-semibold: 700;
+  --font-weight-bold: 900;
 }
 
 @layer base {
   body {
-    @apply bg-[#F9F4EB] font-sans;
+    /* @apply bg-[#F9F4EB] font-sans; */
   }
 }
 
@@ -35,4 +62,31 @@
 
 .swiper-slide img {
   @apply block h-full w-full object-cover;
+}
+
+.noto-sans-tc-normal {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-normal);
+}
+
+.noto-sans-tc-semibold {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-semibold);
+}
+
+.noto-sans-tc-bold {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-bold);
+  font-size: 4rem;
+  line-height: 77px;
+}
+
+.slick-prev,
+.slick-next {
+  /* display: block !important;
+  z-index: 10; */
+  background:#c42811;
 }

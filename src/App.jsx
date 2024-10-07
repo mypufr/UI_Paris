@@ -7,13 +7,14 @@ import { RxDotFilled } from "react-icons/rx";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import "./App.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+
+import data from "./data/data.json";
 
 import Card from "./components/Card";
 
@@ -23,7 +24,8 @@ function App() {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slideseToScroll: 2,
+    slideseToScroll: 1,
+    arrows: true,
   };
 
   const settings2 = {
@@ -39,24 +41,6 @@ function App() {
     },
     navigation: true,
   };
-
-  const data = [
-    {
-      name: `John Morgan`,
-      img: `./assets/image/1.png`,
-      review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate in necessitatibus temporibus doloribus pariatur rerum nesciunt itaque quae et. Maxime consequatur vero iusto optio iure magnam itaque blanditiis praesentium odit.`,
-    },
-    {
-      name: `Teddy Bear`,
-      img: `./assets/image/2.png`,
-      review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate in necessitatibus temporibus doloribus pariatur rerum nesciunt itaque quae et. Maxime consequatur vero iusto optio iure magnam itaque blanditiis praesentium odit.`,
-    },
-    {
-      name: `Lilly Collins`,
-      img: `./assets/image/4.png`,
-      review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate in necessitatibus temporibus doloribus pariatur rerum nesciunt itaque quae et. Maxime consequatur vero iusto optio iure magnam itaque blanditiis praesentium odit.`,
-    },
-  ];
 
   const slides = [
     {
@@ -116,7 +100,7 @@ function App() {
               alt=""
             />
             <div className="absolute left-[22%] top-[10%]">
-              <h1 className="py-3 text-6xl font-bold text-white">
+              <h1 className="noto-sans-tc-bold py-3 leading-[1.2] text-white drop-shadow-lg">
                 尋找你的完美巴黎旅程
               </h1>
               <p className="py-6 text-2xl font-bold text-white">
@@ -184,7 +168,7 @@ function App() {
               alt=""
             />
             <div className="absolute left-[22%] top-[10%]">
-              <h1 className="py-3 text-6xl font-bold text-secondary-500">
+              <h1 className="noto-sans-tc-bold py-3 leading-[1.2] text-secondary-500 drop-shadow-lg">
                 尋找你的完美巴黎旅程
               </h1>
               <p className="py-6 text-2xl font-bold text-white">
@@ -252,7 +236,7 @@ function App() {
               alt=""
             />
             <div className="absolute left-[22%] top-[10%]">
-              <h1 className="py-3 text-6xl font-bold text-white">
+              <h1 className="noto-sans-tc-bold py-3 leading-[1.2] text-white drop-shadow-lg">
                 尋找你的完美巴黎旅程
               </h1>
               <p className="py-6 text-2xl font-bold text-white">
@@ -320,7 +304,7 @@ function App() {
               alt=""
             />
             <div className="absolute left-[22%] top-[10%]">
-              <h1 className="py-3 text-6xl font-bold text-white">
+              <h1 className="noto-sans-tc-bold py-3 leading-[1.2] text-white drop-shadow-lg">
                 尋找你的完美巴黎旅程
               </h1>
               <p className="py-6 text-2xl font-bold text-white">
@@ -388,7 +372,7 @@ function App() {
               alt=""
             />
             <div className="absolute left-[22%] top-[10%]">
-              <h1 className="py-3 text-6xl font-bold text-secondary-500">
+              <h1 className="noto-sans-tc-bold py-3 leading-[1.2] text-secondary-500 drop-shadow-lg">
                 尋找你的完美巴黎旅程
               </h1>
               <p className="py-6 text-2xl font-bold text-white">
@@ -457,19 +441,19 @@ function App() {
           className="relative h-full w-full bg-cover bg-center duration-500"
         >
           <div className="absolute left-[22%] top-[20%]">
-            <h1 className="py-3 text-6xl font-bold text-white">
+            <h1 className="noto-sans-tc-bold py-3 leading-[1.2] text-white drop-shadow-lg">
               尋找你的完美巴黎旅程
             </h1>
-            <p className="py-6 text-2xl font-bold text-white">
+            <p className="noto-sans-tc-semibold py-6 text-2xl font-bold text-white drop-shadow-lg">
               輕盈漫步在巴黎的街巷。
             </p>
-            <p className="text-2xl font-bold text-white">
+            <p className="noto-sans-tc-semibold text-2xl font-bold text-white drop-shadow-lg">
               無論你心繫歷史的脈動、美食的馨香，還是藝術的深邃，
             </p>
-            <p className="text-2xl font-bold text-white">
+            <p className="noto-sans-tc-semibold text-2xl font-bold text-white drop-shadow-lg">
               我們都為你精選了最契合靈魂的旅程。
             </p>
-            <p className="py-6 text-2xl font-bold text-white">
+            <p className="noto-sans-tc-semibold py-6 text-2xl font-bold text-white drop-shadow-lg">
               一段符合你心之所向的旅程，正在靜靜等待與你邂逅。
             </p>
 
@@ -544,13 +528,27 @@ function App() {
         <div className="text-overlay">Zoomed Text</div>
       </div>
 
-      <h2>分區搜尋專屬導遊</h2>
+      <h2 className="mt-2 text-center text-4xl">分區搜尋專屬導遊</h2>
+      <div className="relative">
 
-      <img
-        src="src/assets/image/巴黎分區圖.jpg"
-        useMap="#parisMap"
-        alt="Paris District Map"
-      />
+      
+      <div className="flex items-center justify-center">
+        <p className="absolute text-secondary-700 text-1xl top-[45.5%] left-[51.5%] text-white">4</p>
+        <img
+          src="src/assets/image/parismap_dist_web.png"
+          useMap="#parisMap"
+          alt="Paris District Map"
+          className="w-100 h-100"
+        />
+      </div>
+      </div>
+
+      <div>
+        <img
+          src="src/assets/image/deco_sites.png"
+          alt="decorations Paris sites"
+        />
+      </div>
 
       <map name="parisMap">
         <area
@@ -792,7 +790,39 @@ function App() {
         </div>
       </div>
 
-      <div className="m-auto w-3/4">
+      <div className="bg-popular_sites relative">
+        <img
+          src="src/assets/image/upper-background_popular_sites_w1914.png"
+          alt=""
+        />
+        <img
+          src="src/assets/image/background_popular_sites_cutted.png"
+          alt=""
+          className=""
+        />
+        <h2 className="left-50 bottom-50 left- absolute top-12 mt-16 text-4xl">
+          熱門旅程
+        </h2>
+        <div className="absolute bottom-20 left-48 m-auto w-3/4">
+          <div className="mt-20">
+            <Slider {...settings1}>
+              {data.map((data, index) => (
+                <div key={index}>
+                  <div>
+                    <Card
+                      imageSrc={data.img}
+                      title={data.name}
+                      description={data.review}
+                    />
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="m-auto w-3/4">
         <div className="mt-20">
           <Swiper {...settings2} className="mySwiper">
             {data.map((item, index) => (
@@ -806,7 +836,146 @@ function App() {
             ))}
           </Swiper>
         </div>
+      </div> */}
+
+      {/* 預約導遊和報名行程 */}
+
+      <div className="// flex-col items-center">
+        <h2 className="mt-2 text-center text-4xl">預約導遊和報名行程</h2>
+
+        <div className="flex">
+          <div className="border border-red-700">
+            預約導遊
+            <div className="flex">
+              <div className="">
+                <img src="src/assets/image/step-1-1.png" alt="" />
+              </div>
+              <div className="flex-col items-center border border-red-700">
+                <p>Step 1 瀏覽導遊資歷與專長</p>
+                <p>
+                  在平台上探索各種導遊的個人檔案，了解他們的資歷、專長領域，並觀看他們的自我介紹影片。挑選最適合你需求的在地專家。
+                </p>
+              </div>
+            </div>
+            <div className="flex">
+              <div className="">
+                <img src="src/assets/image/step-1-2.png" alt="" />
+              </div>
+              <div className="flex-col items-center">
+                <p>Step 2 與導遊聯絡</p>
+                <p>
+                  登入會員後，通過私訊與選定的導遊聯絡，詳細溝通你的旅行需求、預期時間和特別喜好，確保導遊能為你提供量身定制的服務
+                </p>
+              </div>
+            </div>
+            <div className="flex">
+              <div className="">
+                <img src="src/assets/image/step-1-3.png" alt="" />
+              </div>
+              <div className="flex-col items-center">
+                <p>Step 3 開啟旅程</p>
+                <p>
+                  一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
+                </p>
+              </div>
+            </div>
+            <button>我要預約導遊</button>
+          </div>
+
+          <div className="border border-red-700">
+            報名行程
+            <div className="flex">
+              <div className="">
+                <img src="src/assets/image/step-2-1.png" alt="" />
+              </div>
+              <div className="flex-col items-center">
+                <p>Step 1 瀏覽行程提案</p>
+                <p>
+                  在平台上瀏覽各種精心策劃的行程提案，從文化探險到美食之旅，總有一個行程能讓你心動不已。
+                </p>
+              </div>
+            </div>
+            <div className="flex">
+              <div className="">
+                <img src="src/assets/image/step-2-2.png" alt="" />
+              </div>
+              <div className="flex-col items-center">
+                <p>Step 2 報名行程</p>
+                <p>
+                  選定心儀的行程後，立即登入會員報名，確保你的名額。你還可以和其他參與者交流，分享期待與興奮
+                </p>
+              </div>
+            </div>
+            <div className="flex">
+              <div className="">
+                <img src="src/assets/image/step-2-3.png" alt="" />
+              </div>
+              <div className="flex-col items-center">
+                <p>Step 3 開團確認通知</p>
+                <p>
+                  當行程人數達到標準時，我們將向你發送開團確認通知，讓你準備好出發。
+                </p>
+              </div>
+            </div>
+            <div className="flex">
+              <div className="">
+                <img src="src/assets/image/step-2-4.png" alt="" />
+              </div>
+              <div className="flex-col items-center">
+                <p>Step 4 開啟旅程</p>
+                <p>
+                  一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
+                </p>
+              </div>
+            </div>
+            <button>馬上報名行程</button>
+          </div>
+        </div>
       </div>
+
+      {/* footer */}
+      <footer className="relative">
+
+<div>
+  <img src="src/assets/image/deco_footer_clouds.png" alt="" 
+  className="absolute top-10 left-[100px]"
+  />
+</div>
+
+<div>
+  <img src="src/assets/image/deco_footer_clouds.png" alt="" 
+   className="absolute right-10"
+  />
+</div>
+
+<div>
+<img src="src/assets/image/left_tree.png" alt="" 
+// className="absolute top-10 left-5"
+/>
+</div>
+
+<div>
+<img src="src/assets/image/deco_middle_tree.png" alt="" 
+// className="absolute bottom-20 right-10"
+/>
+<img src="src/assets/image/deco_right_tree.png" alt="" 
+// className="absolute bottom-10 right-5"
+/>
+</div>
+
+
+
+        <div className="relative">
+          <img src="src/assets/image/footer_background.png" alt="" 
+          className="block w-full"/>
+        </div>
+        <div className="bg-primary-600 h-[420px] relative -top-1"></div>
+
+<div><img src="src/assets/image/footer_img.png" alt="" 
+className="absolute bottom-[190px] right-[500px]"/></div>
+
+
+      </footer>
     </>
   );
 }

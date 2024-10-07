@@ -3,7 +3,7 @@ import React from "react";
 
 const Card = ({ imageSrc, title, description }) => {
   return (
-    <div className="max-w-sm overflow-hidden rounded-2xl shadow-lg bg-background-2 border-red-700">
+    <div className="max-w-sm  rounded-2xl shadow-lg border-red-900">
       <div className="px-6 py-5 ">
       <img className="w-full rounded-2xl" src={imageSrc} alt={title} />
 
