@@ -14,6 +14,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import {
+  Navbar,
+  MobileNav,
+  Typography,
+  Button,
+  IconButton,
+} from "@material-tailwind/react";
+
 import data from "./data/data.json";
 
 import Card from "./components/Card";
@@ -103,8 +111,126 @@ function App() {
   //   setIsHovered(false); // Set hover state to false
   // };
 
+  const navList = (
+    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="#" className="flex items-center">
+          Pages
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="#" className="flex items-center">
+          Account
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="#" className="flex items-center">
+          Blocks
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="#" className="flex items-center">
+          Docs
+        </a>
+      </Typography>
+    </ul>
+  );
+
   return (
     <>
+      <div className="flex justify-center py-5">
+        <div className="flex items-center">
+          <div>
+            <img
+              src="src/assets/image/website_logo.png"
+              alt="logo"
+              className=""
+            />
+          </div>
+          <div className="flex-col">
+            <div>
+              <p className="inline-block text-black">樂遊巴黎</p>
+              <span className="inline-block ps-2 text-black">
+                Paris, mon guide
+              </span>
+            </div>
+            <p className="text-black">在地導遊媒合平台</p>
+          </div>
+        </div>
+
+        <ul className="ms-[8.6%] flex items-center justify-between space-x-16">
+          <li>
+            <a href="#">隨行導遊趣</a>
+          </li>
+          <li>
+            <a href="#">行程搶先報</a>
+          </li>
+          <li>
+            <a href="#">精選主題</a>
+          </li>
+          <li>
+            <a href="#">旅行指南</a>
+          </li>
+     <li>
+            <button className="ms-60">
+            <a href="#">註冊/登入</a>
+              
+              </button>
+     </li>
+        </ul>
+        
+      </div>
+
+
+      <ul className="flex items-center justify-center space-x-24">
+          <li>
+            <a href="#">法式美食</a>
+          </li>
+          <li>
+            <a href="#">浪漫蜜月行</a>
+          </li>
+          <li>
+            <a href="#">親子家庭遊</a>
+          </li>
+          <li>
+            <a href="#">時尚購物</a>
+          </li>
+          <li>
+            <a href="#">歷史建築</a>
+          </li>
+          <li>
+            <a href="#">藝術博物館</a>
+          </li>
+          <li>
+            <a href="#">文哲學巡禮</a>
+          </li>
+          <li>
+            <a href="#">自然風光</a>
+          </li>
+
+
+        </ul>
+
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -998,28 +1124,20 @@ function App() {
 
       {/* Clouds decorations */}
       <div className="relative mb-[20%]">
-        <div className="absolute left-[1%] -top-6 -rotate-12">
-          <img
-            src="src/assets/image/deco_footer_clouds.png"
-            alt=""
-       
-          />
+        <div className="absolute -top-6 left-[1%] -rotate-12">
+          <img src="src/assets/image/deco_footer_clouds.png" alt="" />
         </div>
 
-        <div className="absolute right-[3%] -top-40 rotate-10">
-          <img
-            src="src/assets/image/deco_footer_clouds.png"
-            alt=""
-         
-          />
+        <div className="rotate-10 absolute -top-40 right-[3%]">
+          <img src="src/assets/image/deco_footer_clouds.png" alt="" />
         </div>
 
-  {/* Tree decorations */}
+        {/* Tree decorations */}
         <div className="absolute left-16 top-[85px]">
           <img
             src="src/assets/image/left_tree.png"
             alt=""
-             className="w-[98%] h-auto"
+            className="h-auto w-[98%]"
           />
         </div>
 
@@ -1027,15 +1145,16 @@ function App() {
           <img
             src="src/assets/image/deco_middle_tree.png"
             alt=""
-                className="w-[89%] h-auto"
+            className="h-auto w-[89%]"
           />
         </div>
 
-        <div className="absolute right-2 -top-5">
-          <img src="src/assets/image/deco_right_tree.png" alt="" 
-             className="w-[98%] h-auto"
+        <div className="absolute -top-5 right-2">
+          <img
+            src="src/assets/image/deco_right_tree.png"
+            alt=""
+            className="h-auto w-[98%]"
           />
-       
         </div>
       </div>
 
