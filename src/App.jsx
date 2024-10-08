@@ -554,7 +554,9 @@ function App() {
         <div className="text-overlay">Zoomed Text</div>
       </div> */}
 
-      <h2 className="mt-2 text-center text-4xl">分區搜尋專屬導遊</h2>
+      <h2 className="mt-2 text-center text-4xl hover:cursor-pointer">
+        分區搜尋專屬導遊
+      </h2>
       <div className="relative">
         <div className="flex items-center justify-center">
           <p className="text-1xl absolute left-[51.5%] top-[45.5%] text-secondary-700 text-white">
@@ -568,43 +570,40 @@ function App() {
           />
         </div>
 
-
-
-      <div className="">
+        <div className="">
           {/* Display selected district info */}
           {selectedDistrict && (
-            <div className="absolute top-[20%] left-[10%] border border-gray-300 bg-white p-4 shadow-lg">
+            <div className="absolute left-[10%] top-[20%] border border-gray-300 bg-white p-4 shadow-lg">
               <h3 className="text-xl font-bold">{selectedDistrict}區</h3>
               <p>{districts[selectedDistrict]}</p>
             </div>
           )}
- 
-        {/* Map for clickable areas */}
-        <map name="parisMap">
-          <area
-            shape="poly"
-            coords="536,334,531,340,527,347,523,356,524,367,531,368,539,367,547,370,561,375,567,379,577,383,584,385,592,389,600,394,609,395,616,399,623,404,637,412,631,405,646,412,646,404,643,396,643,388,647,382,650,375,643,366,635,362,625,358,617,355,607,351,595,349,588,346,582,342,574,339,567,335,558,332,547,328,539,326"
-            href="#"
-            onClick={(event) => handleDistrictClick(event, 1)}
-            // onMouseEnter={handleMouseEnter}
-            // onMouseLeave={handleMouseLeave}
-            alt="Paris 1"
-            className="cursor-pointer"
-          />
-          <area
-            shape="poly"
-            coords="585,303,583,310,578,319,572,327,579,332,586,334,596,339,609,340,613,346,618,343,623,349,630,353,637,353,642,356,650,357,657,351,657,345,663,338,666,331,657,325,647,321,635,316,629,314,621,311,613,307,600,306,591,303"
-            href="#"
-            onClick={(event) => handleDistrictClick(event, 2)}
-            // onMouseEnter={handleMouseEnter}
-            // onMouseLeave={handleMouseLeave}
-            alt="Paris 2"
-            className="cursor-pointer"
-          />
-          {/* Add more <area> elements for other districts */}
-        </map>
 
-      </div>
+          {/* Map for clickable areas */}
+          <map name="parisMap">
+            <area
+              shape="poly"
+              coords="536,334,531,340,527,347,523,356,524,367,531,368,539,367,547,370,561,375,567,379,577,383,584,385,592,389,600,394,609,395,616,399,623,404,637,412,631,405,646,412,646,404,643,396,643,388,647,382,650,375,643,366,635,362,625,358,617,355,607,351,595,349,588,346,582,342,574,339,567,335,558,332,547,328,539,326"
+              href="#"
+              onClick={(event) => handleDistrictClick(event, 1)}
+              // onMouseEnter={handleMouseEnter}
+              // onMouseLeave={handleMouseLeave}
+              alt="Paris 1"
+              className="cursor-pointer"
+            />
+            <area
+              shape="poly"
+              coords="585,303,583,310,578,319,572,327,579,332,586,334,596,339,609,340,613,346,618,343,623,349,630,353,637,353,642,356,650,357,657,351,657,345,663,338,666,331,657,325,647,321,635,316,629,314,621,311,613,307,600,306,591,303"
+              href="#"
+              onClick={(event) => handleDistrictClick(event, 2)}
+              // onMouseEnter={handleMouseEnter}
+              // onMouseLeave={handleMouseLeave}
+              alt="Paris 2"
+              className="cursor-pointer"
+            />
+            {/* Add more <area> elements for other districts */}
+          </map>
+        </div>
       </div>
 
       <div>
@@ -907,8 +906,8 @@ function App() {
       <div className="flex-col items-center justify-center">
         <h2 className="mt-2 text-center text-4xl">預約導遊和報名行程</h2>
 
-        <div className="flex justify-center gap-6">
-          <div className="w-[636px] rounded border border-red-700">
+        <div className="flex justify-center space-x-6">
+          <div className="w-[40%] rounded border border-red-700">
             預約導遊
             <div className="flex">
               <div className="">
@@ -946,7 +945,7 @@ function App() {
             <button className="">我要預約導遊</button>
           </div>
 
-          <div className="w-[636px] border border-red-700">
+          <div className="w-[40%] border border-red-700">
             報名行程
             <div className="flex">
               <div className="">
@@ -997,59 +996,65 @@ function App() {
         </div>
       </div>
 
-      {/* footer */}
-      <footer className="relative">
-        <div>
+      {/* Clouds decorations */}
+      <div className="relative mb-[20%]">
+        <div className="absolute left-[1%] -top-6 -rotate-12">
           <img
             src="src/assets/image/deco_footer_clouds.png"
             alt=""
-            className="absolute left-[100px] top-10"
+       
           />
         </div>
 
-        <div>
+        <div className="absolute right-[3%] -top-40 rotate-10">
           <img
             src="src/assets/image/deco_footer_clouds.png"
             alt=""
-            className="absolute right-10"
+         
           />
         </div>
 
-        <div>
+  {/* Tree decorations */}
+        <div className="absolute left-16 top-[85px]">
           <img
             src="src/assets/image/left_tree.png"
             alt=""
-            // className="absolute top-10 left-5"
+             className="w-[98%] h-auto"
           />
         </div>
 
-        <div>
+        <div className="absolute right-[7%] top-[190px] -rotate-3">
           <img
             src="src/assets/image/deco_middle_tree.png"
             alt=""
-            // className="absolute bottom-20 right-10"
-          />
-          <img
-            src="src/assets/image/deco_right_tree.png"
-            alt=""
-            // className="absolute bottom-10 right-5"
+                className="w-[89%] h-auto"
           />
         </div>
 
-        <div className="relative">
+        <div className="absolute right-2 -top-5">
+          <img src="src/assets/image/deco_right_tree.png" alt="" 
+             className="w-[98%] h-auto"
+          />
+       
+        </div>
+      </div>
+
+      {/* footer */}
+      <footer className="relative">
+        <div>
           <img
             src="src/assets/image/footer_background.png"
             alt=""
             className="block w-full"
           />
         </div>
-        <div className="bg-primary-600 relative -top-1 h-[420px]"></div>
+        <div className="relative -top-1 h-[420px] bg-primary-600"></div>
 
         <div>
           <img
             src="src/assets/image/footer_img.png"
             alt=""
-            className="absolute bottom-[190px] right-[500px]"
+            className="absolute bottom-[190px] right-[400px]"
           />
         </div>
       </footer>
