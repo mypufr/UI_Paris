@@ -87,7 +87,7 @@ function App() {
   };
 
   const [selectedDistrict, setSelectedDistrict] = useState(null);
-  // const [isHovered, setIsHovered] = useState(false);
+
 
   // List of districts with their respective info
   const districts = {
@@ -119,14 +119,6 @@ function App() {
     setSelectedDistrict(district);
   };
 
-  // const handleMouseEnter = () => {
-  //   setIsHovered(true); // Set hover state to true
-  // };
-
-  // const handleMouseLeave = () => {
-  //   setIsHovered(false); // Set hover state to false
-  // };
-
   return (
     <>
 
@@ -152,21 +144,21 @@ function App() {
         </div>
 
         <ul className="ms-[8.6%] flex items-center justify-between space-x-16">
-          <li>
-            <a href="#">隨行導遊趣</a>
+          <li className="text-grey-950 text-base leading-[22.4px]">
+            <a href="#" className="text-primary-500 hover:font-bold">隨行導遊趣</a>
           </li>
-          <li>
-            <a href="#">行程搶先報</a>
+          <li className="text-grey-950 text-base leading-[22.4px]">
+            <a href="#"  className="text-primary-500 hover:font-bold">行程搶先報</a>
           </li>
-          <li>
-            <a href="#">精選主題</a>
+          <li className="text-grey-950 text-base leading-[22.4px]">
+            <a href="#"  className="text-primary-500 hover:font-bold">精選主題</a>
           </li>
-          <li>
-            <a href="#">旅行指南</a>
+          <li className="text-grey-950 text-base leading-[22.4px]">
+            <a href="#" className="text-primary-500 hover:font-bold">旅行指南</a>
           </li>
-          <li>
-            <button className="ms-60">
-              <a href="#">註冊/登入</a>
+          <li className="text-grey-950 text-base leading-[22.4px]">
+            <button className="ms-60 text-base bg-primary-600 rounded-2xl font-normal">
+              <a href="#" className="text-white hover:font-bold inline-block px-5 my-2">註冊/登入</a>
             </button>
           </li>
         </ul>

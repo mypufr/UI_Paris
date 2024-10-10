@@ -23,8 +23,7 @@ export default {
 
         },
         grey: {
-
-          50: "var()"
+          950: "var(--grey-950)",
         },
       },
       fontFamily: {
