@@ -3,8 +3,13 @@ export default {
   content: ["./index.html", "./src/**/*.{html, js,jsx}"],
   theme: {
     extend: {
+      maxWidth: {
+        '1296px': '1296px',
+      },
       colors: {
         primary: {
+          200: "var(--primary-200)",
+          300: "var(--primary-300)",
           500: "var(--primary-500)",
           600: "var(--primary-600)",
           700: "var(--primary-700)",
@@ -23,8 +28,12 @@ export default {
 
         },
         grey: {
+          100: "var(--grey-100)",
           950: "var(--grey-950)",
         },
+        blue: {
+          50:"var(--blue-50)",
+        }
       },
       fontFamily: {
         sans: ["Noto Sans TC", "sans-serif"],

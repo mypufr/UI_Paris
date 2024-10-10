@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
@@ -14,17 +15,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import {
-  Navbar,
-  Button,
-  IconButton,
-} from "@material-tailwind/react";
+import { Navbar, Button, IconButton } from "@material-tailwind/react";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
-
 
 import data from "./data/data.json";
 
 import Card from "./components/Card";
+import Header from "./components/Header";
 
 function App() {
   const settings1 = {
@@ -88,7 +85,6 @@ function App() {
 
   const [selectedDistrict, setSelectedDistrict] = useState(null);
 
-
   // List of districts with their respective info
   const districts = {
     1: "1區推薦導遊名單",
@@ -110,7 +106,7 @@ function App() {
     17: "17區推薦導遊名單",
     18: "18區推薦導遊名單",
     19: "19區推薦導遊名單",
-    20: "20區推薦導遊名單"
+    20: "20區推薦導遊名單",
   };
 
   // Handler for when a district is clicked
@@ -121,76 +117,42 @@ function App() {
 
   return (
     <>
+      <Header />
 
-    <div className="sticky">
-      <div className="flex justify-center py-5">
-        <div className="flex items-center">
-          <div>
-            <img
-              src="src/assets/image/website_logo.png"
-              alt="logo"
-              className=""
-            />
-          </div>
-          <div className="flex-col">
-            <div>
-              <p className="inline-block text-black">樂遊巴黎</p>
-              <span className="inline-block ps-2 text-black">
-                Paris, mon guide
-              </span>
-            </div>
-            <p className="text-black">在地導遊媒合平台</p>
-          </div>
-        </div>
+      {/* trip themes */}
 
-        <ul className="ms-[8.6%] flex items-center justify-between space-x-16">
-          <li className="text-grey-950 text-base leading-[22.4px]">
-            <a href="#" className="text-primary-500 hover:font-bold">隨行導遊趣</a>
-          </li>
-          <li className="text-grey-950 text-base leading-[22.4px]">
-            <a href="#"  className="text-primary-500 hover:font-bold">行程搶先報</a>
-          </li>
-          <li className="text-grey-950 text-base leading-[22.4px]">
-            <a href="#"  className="text-primary-500 hover:font-bold">精選主題</a>
-          </li>
-          <li className="text-grey-950 text-base leading-[22.4px]">
-            <a href="#" className="text-primary-500 hover:font-bold">旅行指南</a>
-          </li>
-          <li className="text-grey-950 text-base leading-[22.4px]">
-            <button className="ms-60 text-base bg-primary-600 rounded-2xl font-normal">
-              <a href="#" className="text-white hover:font-bold inline-block px-5 my-2">註冊/登入</a>
-            </button>
-          </li>
-        </ul>
-      </div>
-      </div>
-      <ul className="flex items-center justify-center space-x-24">
-        <li>
-          <a href="#">法式美食</a>
+      <ul className="flex 
+       items-center
+      justify-center
+      max-w-1296px mx-auto
+      ">
+        <li className="border border-grey-100 pr-11">
+          <Link to="/" className="text-base ">法式美食</Link>
         </li>
-        <li>
-          <a href="#">浪漫蜜月行</a>
+        <li className="border border-grey-100 px-11">
+          <Link to="/">浪漫蜜月行</Link>
         </li>
-        <li>
-          <a href="#">親子家庭遊</a>
+        <li className="border border-grey-100 px-11">
+          <Link to="/">親子家庭遊</Link>
         </li>
-        <li>
-          <a href="#">時尚購物</a>
+        <li className="border border-grey-100 px-11">
+          <Link to="/">時尚購物</Link>
         </li>
-        <li>
-          <a href="#">歷史建築</a>
+        <li className="border border-grey-100 px-11">
+          <Link to="/">歷史建築</Link>
         </li>
-        <li>
-          <a href="#">藝術博物館</a>
+        <li className="border border-grey-100 px-11">
+          <Link to="/">藝術博物館</Link>
         </li>
-        <li>
-          <a href="#">文哲學巡禮</a>
+        <li className="border border-grey-100 px-11">
+          <Link to="/">文哲學巡禮</Link>
         </li>
-        <li>
-          <a href="#">自然風光</a>
+        <li className="border border-grey-100 px-11">
+          <Link to="/">自然風光</Link>
         </li>
       </ul>
-    
+
+      {/* banner: Slides show */}
 
       <Swiper
         spaceBetween={30}
@@ -923,7 +885,7 @@ function App() {
       </map> */}
 
       {/* slides show: popular tourist guides */}
-      <div className="m-auto w-3/4 ">
+      <div className="m-auto w-3/4">
         <div className="mt-20">
           <Slider {...settings1}>
             {data.map((data, index) => (
@@ -940,7 +902,7 @@ function App() {
           </Slider>
         </div>
       </div>
-{/* background settings */}
+      {/* background settings */}
       <div className="bg-popular_sites relative">
         <img
           src="src/assets/image/upper-background_popular_sites_w1914.png"
