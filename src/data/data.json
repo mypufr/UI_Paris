@@ -1,17 +1,33 @@
 [
   {
-    "name": "John Morgan",
-    "img": "/assets/image/1.png",
-    "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate in necessitatibus temporibus doloribus pariatur rerum nesciunt itaque quae et. Maxime consequatur vero iusto optio iure magnam itaque blanditiis praesentium odit."
+    "name": "李文雅",
+    "img": "src/assets/image/img_tourguide_1.png",
+    "review": "巴黎歷史 建築學 巴洛克時期"
+
   },
   {
-    "name": "Teddy Bear",
-    "img": "/assets/image/2.png",
-    "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate in necessitatibus temporibus doloribus pariatur rerum nesciunt itaque quae et. Maxime consequatur vero iusto optio iure magnam itaque blanditiis praesentium odit."
+    "name": "Kevin Martin",
+    "img": "src/assets/image/img_tourguide_4.png",
+    "review": "巴黎時尚 購物導覽 設計師品牌"
   },
   {
-    "name": "Lilly Collins",
-    "img": "/assets/image/4.png",
-    "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate in necessitatibus temporibus doloribus pariatur rerum nesciunt itaque quae et. Maxime consequatur vero iusto optio iure magnam itaque blanditiis praesentium odit."
+    "name": "Marie Leclerc",
+    "img": "src/assets/image/img_tourguide_2.png",
+    "review": "美食之旅 街頭文化"
+  },
+  {
+    "name": "王淑芬",
+    "img": "src/assets/image/img_tourguide_5.png",
+    "review": "巴黎攝影 浪漫景點 旅遊攝影指導"
+  },
+  {
+    "name": "張曉明",
+    "img": "src/assets/image/img_tourguide_3.png",
+    "review": "當代藝術 巴黎博物館 街頭藝術"
+  },
+  {
+    "name": "Claire Dubois",
+    "img": "src/assets/image/img_tourguide_6.png",
+    "review": "家庭導覽 兒童友好景點 親子活動"
   }
 ]

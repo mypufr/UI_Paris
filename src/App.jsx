@@ -16,11 +16,11 @@ import "swiper/css/navigation";
 
 import {
   Navbar,
-  MobileNav,
-  Typography,
   Button,
   IconButton,
 } from "@material-tailwind/react";
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
+
 
 import data from "./data/data.json";
 
@@ -32,22 +32,23 @@ function App() {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slideseToScroll: 1,
+    slideseToScroll: 2,
     arrows: true,
+    rows: 2,
   };
 
   const settings2 = {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    centeredSlides: true,
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slideseToScroll: 2,
+    arrows: true,
+    rows: 1,
+    // pagination: {
+    //   clickable: true,
     // },
-    pagination: {
-      clickable: true,
-    },
-    navigation: true,
+    // navigation: true,
   };
 
   const slides = [
@@ -94,7 +95,22 @@ function App() {
     2: "2區推薦導遊名單",
     3: "3區推薦導遊名單",
     4: "4區推薦導遊名單",
-    // Add more districts...
+    5: "5區推薦導遊名單",
+    6: "6區推薦導遊名單",
+    7: "7區推薦導遊名單",
+    8: "8區推薦導遊名單",
+    9: "9區推薦導遊名單",
+    10: "10區推薦導遊名單",
+    11: "11區推薦導遊名單",
+    12: "12區推薦導遊名單",
+    13: "13區推薦導遊名單",
+    14: "14區推薦導遊名單",
+    15: "15區推薦導遊名單",
+    16: "16區推薦導遊名單",
+    17: "17區推薦導遊名單",
+    18: "18區推薦導遊名單",
+    19: "19區推薦導遊名單",
+    20: "20區推薦導遊名單"
   };
 
   // Handler for when a district is clicked
@@ -111,53 +127,10 @@ function App() {
   //   setIsHovered(false); // Set hover state to false
   // };
 
-  const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Pages
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Account
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Blocks
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Docs
-        </a>
-      </Typography>
-    </ul>
-  );
-
   return (
     <>
+
+    <div className="sticky">
       <div className="flex justify-center py-5">
         <div className="flex items-center">
           <div>
@@ -191,45 +164,41 @@ function App() {
           <li>
             <a href="#">旅行指南</a>
           </li>
-     <li>
+          <li>
             <button className="ms-60">
-            <a href="#">註冊/登入</a>
-              
-              </button>
-     </li>
+              <a href="#">註冊/登入</a>
+            </button>
+          </li>
         </ul>
-        
       </div>
-
-
+      </div>
       <ul className="flex items-center justify-center space-x-24">
-          <li>
-            <a href="#">法式美食</a>
-          </li>
-          <li>
-            <a href="#">浪漫蜜月行</a>
-          </li>
-          <li>
-            <a href="#">親子家庭遊</a>
-          </li>
-          <li>
-            <a href="#">時尚購物</a>
-          </li>
-          <li>
-            <a href="#">歷史建築</a>
-          </li>
-          <li>
-            <a href="#">藝術博物館</a>
-          </li>
-          <li>
-            <a href="#">文哲學巡禮</a>
-          </li>
-          <li>
-            <a href="#">自然風光</a>
-          </li>
-
-
-        </ul>
+        <li>
+          <a href="#">法式美食</a>
+        </li>
+        <li>
+          <a href="#">浪漫蜜月行</a>
+        </li>
+        <li>
+          <a href="#">親子家庭遊</a>
+        </li>
+        <li>
+          <a href="#">時尚購物</a>
+        </li>
+        <li>
+          <a href="#">歷史建築</a>
+        </li>
+        <li>
+          <a href="#">藝術博物館</a>
+        </li>
+        <li>
+          <a href="#">文哲學巡禮</a>
+        </li>
+        <li>
+          <a href="#">自然風光</a>
+        </li>
+      </ul>
+    
 
       <Swiper
         spaceBetween={30}
@@ -961,12 +930,13 @@ function App() {
         />
       </map> */}
 
-      <div className="m-auto w-3/4">
+      {/* slides show: popular tourist guides */}
+      <div className="m-auto w-3/4 ">
         <div className="mt-20">
           <Slider {...settings1}>
             {data.map((data, index) => (
               <div key={index}>
-                <div>
+                <div className="">
                   <Card
                     imageSrc={data.img}
                     title={data.name}
@@ -978,7 +948,7 @@ function App() {
           </Slider>
         </div>
       </div>
-
+{/* background settings */}
       <div className="bg-popular_sites relative">
         <img
           src="src/assets/image/upper-background_popular_sites_w1914.png"
@@ -989,12 +959,15 @@ function App() {
           alt=""
           className=""
         />
+
         <h2 className="left-50 bottom-50 left- absolute top-12 mt-16 text-4xl">
           熱門旅程
         </h2>
+
+        {/* slides show: popular sites */}
         <div className="absolute bottom-20 left-48 m-auto w-3/4">
           <div className="mt-20">
-            <Slider {...settings1}>
+            <Slider {...settings2}>
               {data.map((data, index) => (
                 <div key={index}>
                   <div>
@@ -1175,6 +1148,53 @@ function App() {
             alt=""
             className="absolute bottom-[190px] right-[400px]"
           />
+        </div>
+
+        {/* Footer text */}
+        <div className="absolute left-[20%] top-[30%]">
+          <div className="flex items-center">
+            <div>
+              <img
+                src="src/assets/image/website_logo.png"
+                alt="logo"
+                className=""
+              />
+            </div>
+
+            <div className="flex-col">
+              <div>
+                <p className="inline-block text-black">樂遊巴黎</p>
+                <span className="inline-block ps-2 text-black">
+                  Paris, mon guide
+                </span>
+              </div>
+              <p className="text-black">在地導遊媒合平台</p>
+            </div>
+          </div>
+
+          <ul>
+            <li>
+              <a href="#">關於我們</a>
+              <span>
+                <a href="#">聯絡我們</a>
+              </span>
+            </li>
+            <li>
+              <a href="#">03-7653421</a>
+            </li>
+            <li>
+              <a href="#">Paris-mon-guide@gmail.com</a>
+            </li>
+            <li>
+              <a href="#"></a>
+              <a href="#"></a>
+              <a href="#"></a>
+              <a href="#"></a>
+            </li>
+          </ul>
+        </div>
+        <div className="absolute bottom-[25%] right-[19%]">
+          <p>© 2024 樂遊巴黎版權所有</p>
         </div>
       </footer>
     </>
