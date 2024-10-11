@@ -22,6 +22,7 @@ import data from "./data/data.json";
 
 import Card from "./components/Card";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const settings1 = {
@@ -121,13 +122,11 @@ function App() {
 
       {/* trip themes */}
 
-      <ul className="flex 
-       items-center
-      justify-center
-      max-w-1296px mx-auto
-      ">
+      <ul className="mx-auto flex max-w-1296px items-center justify-center">
         <li className="border border-grey-100 pr-11">
-          <Link to="/" className="text-base ">法式美食</Link>
+          <Link to="/" className="text-base">
+            法式美食
+          </Link>
         </li>
         <li className="border border-grey-100 px-11">
           <Link to="/">浪漫蜜月行</Link>
@@ -1086,71 +1085,7 @@ function App() {
       </div>
 
       {/* footer */}
-      <footer className="relative">
-        <div>
-          <img
-            src="src/assets/image/footer_background.png"
-            alt=""
-            className="block w-full"
-          />
-        </div>
-        <div className="relative -top-1 h-[420px] bg-primary-600"></div>
-
-        <div>
-          <img
-            src="src/assets/image/footer_img.png"
-            alt=""
-            className="absolute bottom-[190px] right-[400px]"
-          />
-        </div>
-
-        {/* Footer text */}
-        <div className="absolute left-[20%] top-[30%]">
-          <div className="flex items-center">
-            <div>
-              <img
-                src="src/assets/image/website_logo.png"
-                alt="logo"
-                className=""
-              />
-            </div>
-
-            <div className="flex-col">
-              <div>
-                <p className="inline-block text-black">樂遊巴黎</p>
-                <span className="inline-block ps-2 text-black">
-                  Paris, mon guide
-                </span>
-              </div>
-              <p className="text-black">在地導遊媒合平台</p>
-            </div>
-          </div>
-
-          <ul>
-            <li>
-              <a href="#">關於我們</a>
-              <span>
-                <a href="#">聯絡我們</a>
-              </span>
-            </li>
-            <li>
-              <a href="#">03-7653421</a>
-            </li>
-            <li>
-              <a href="#">Paris-mon-guide@gmail.com</a>
-            </li>
-            <li>
-              <a href="#"></a>
-              <a href="#"></a>
-              <a href="#"></a>
-              <a href="#"></a>
-            </li>
-          </ul>
-        </div>
-        <div className="absolute bottom-[25%] right-[19%]">
-          <p>© 2024 樂遊巴黎版權所有</p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
