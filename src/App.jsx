@@ -20,9 +20,12 @@ import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 import data from "./data/data.json";
 
+
 import Card from "./components/Card";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import TourguideList from "./components/TourguideList";
+import DistrictsData from "./data/districts.json"
 
 function App() {
   const settings1 = {
@@ -88,9 +91,22 @@ function App() {
 
   // List of districts with their respective info
   const districts = {
-    1: "1區推薦導遊名單",
+    // 1: "1區推薦導遊名單",
     2: "2區推薦導遊名單",
-    3: "3區推薦導遊名單",
+    1: (
+      <div>
+      {DistrictsData.map((district, index) => (
+        <TourguideList
+          key={index}
+          name={district.name}
+          district={district.district}
+          // img={district.img}
+          specialities={district.specialities}
+          language={district.language}
+        />
+      ))}
+    </div>
+    ),
     4: "4區推薦導遊名單",
     5: "5區推薦導遊名單",
     6: "6區推薦導遊名單",
@@ -122,33 +138,46 @@ function App() {
 
       {/* trip themes */}
 
-      <ul className="mx-auto flex max-w-1296px items-center justify-center py-7 text-grey-400 text-base leading-[22.4px]">
-        <li className="border border-grey-100 border-y-0 pr-11">
+      <ul className="mx-auto flex max-w-1296px items-center justify-center py-7 text-base leading-[22.4px] text-grey-400">
+        <li className="border border-y-0 border-grey-100 pr-11">
           <Link to="/" className="text-base">
-          <span>法式美食</span>
-            
+            <span>法式美食</span>
           </Link>
         </li>
-        <li className="border border-grey-100 border-y-0 px-11">
-          <Link to="/"><span>浪漫蜜月行</span></Link>
+        <li className="border border-y-0 border-grey-100 px-11">
+          <Link to="/">
+            <span>浪漫蜜月行</span>
+          </Link>
         </li>
-        <li className="border border-grey-100 border-y-0 px-11">
-          <Link to="/"><span>親子家庭遊</span></Link>
+        <li className="border border-y-0 border-grey-100 px-11">
+          <Link to="/">
+            <span>親子家庭遊</span>
+          </Link>
         </li>
-        <li className="border border-grey-100 border-y-0 px-11">
-          <Link to="/"><span>時尚購物</span></Link>
+        <li className="border border-y-0 border-grey-100 px-11">
+          <Link to="/">
+            <span>時尚購物</span>
+          </Link>
         </li>
-        <li className="border border-grey-100 border-y-0 px-11">
-          <Link to="/"><span>歷史建築</span></Link>
+        <li className="border border-y-0 border-grey-100 px-11">
+          <Link to="/">
+            <span>歷史建築</span>
+          </Link>
         </li>
-        <li className="border border-grey-100 border-y-0 px-11">
-          <Link to="/"><span>藝術博物館</span></Link>
+        <li className="border border-y-0 border-grey-100 px-11">
+          <Link to="/">
+            <span>藝術博物館</span>
+          </Link>
         </li>
-        <li className="border border-grey-100 border-y-0 px-11">
-          <Link to="/"><span>文哲學巡禮</span></Link>
+        <li className="border border-y-0 border-grey-100 px-11">
+          <Link to="/">
+            <span>文哲學巡禮</span>
+          </Link>
         </li>
-        <li className="border border-grey-100 border-y-0 px-11">
-          <Link to="/"><span>自然風光</span></Link>
+        <li className="border border-y-0 border-grey-100 px-11">
+          <Link to="/">
+            <span>自然風光</span>
+          </Link>
         </li>
       </ul>
 
@@ -598,8 +627,6 @@ function App() {
         </div>
       </div>
 
- 
-
       <h2 className="mt-2 text-center text-4xl hover:cursor-pointer">
         分區搜尋專屬導遊
       </h2>
@@ -620,10 +647,13 @@ function App() {
           {/* Display selected district info */}
           {selectedDistrict && (
             <div className="absolute left-[10%] top-[20%] border border-gray-300 bg-white p-4 shadow-lg">
-              <h3 className="text-xl font-bold">{selectedDistrict}區</h3>
-              <p>{districts[selectedDistrict]}</p>
+              <h3 className="text-xl font-bold">與{selectedDistrict}區導遊預定私人遊覽</h3>
+              <div>{districts[selectedDistrict]}</div>
+            
             </div>
+        
           )}
+
 
           {/* Map for clickable areas */}
           <map name="parisMap">
@@ -645,6 +675,7 @@ function App() {
             />
             {/* Add more <area> elements for other districts */}
           </map>
+          <button className="bg-background-2 text-black">test</button>
         </div>
       </div>
 
@@ -660,13 +691,12 @@ function App() {
         <div className="mt-20">
           <Slider {...settings1}>
             {data.map((data, index) => (
-              <div key={index} >
-                <div className="space-x-0">
+              <div key={index}>
+                <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                   <Card
                     imageSrc={data.img}
                     title={data.name}
                     price={data.price}
-                    // description={data.review}
                     specialities1={data.speciality1}
                     specialities2={data.speciality2}
                     specialities3={data.speciality3}
