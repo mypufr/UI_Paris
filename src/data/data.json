@@ -2,32 +2,56 @@
   {
     "name": "李文雅",
     "img": "src/assets/image/img_tourguide_1.png",
-    "review": "巴黎歷史 建築學 巴洛克時期"
+    "review": "巴黎歷史 建築學 巴洛克時期",
+    "speciality1":"巴黎歷史",
+    "speciality2":"建築學",
+    "speciality3":"巴洛克時期",
+    "price":"15"
 
   },
   {
     "name": "Kevin Martin",
     "img": "src/assets/image/img_tourguide_4.png",
-    "review": "巴黎時尚 購物導覽 設計師品牌"
+    "review": "巴黎時尚 購物導覽 設計師品牌",
+    "speciality1":"巴黎時尚",
+    "speciality2":"購物導覽",
+    "speciality3":"設計師品牌",
+    "price":"16"
   },
   {
     "name": "Marie Leclerc",
     "img": "src/assets/image/img_tourguide_2.png",
-    "review": "美食之旅 街頭文化"
+    "review": "美食之旅 街頭文化",
+    "speciality1":"美食之旅",
+    "speciality2":"街頭文化",
+    "speciality3":"",
+    "price":"13"
   },
   {
     "name": "王淑芬",
     "img": "src/assets/image/img_tourguide_5.png",
-    "review": "巴黎攝影 浪漫景點 旅遊攝影指導"
+    "review": "巴黎攝影 浪漫景點 旅遊攝影指導",
+    "speciality1":"巴黎攝影",
+    "speciality2":"浪漫景點",
+    "speciality3":"旅遊攝影指導",
+    "price":"12"
   },
   {
     "name": "張曉明",
     "img": "src/assets/image/img_tourguide_3.png",
-    "review": "當代藝術 巴黎博物館 街頭藝術"
+    "review": "當代藝術 巴黎博物館 街頭藝術",
+    "speciality1":"當代藝術",
+    "speciality2":"巴黎博物館",
+    "speciality3":"街頭藝術",
+    "price":"10"
   },
   {
     "name": "Claire Dubois",
     "img": "src/assets/image/img_tourguide_6.png",
-    "review": "家庭導覽 兒童友好景點 親子活動"
+    "review": "家庭導覽 兒童友好景點 親子活動",
+    "speciality1":"家庭導覽",
+    "speciality2":"兒童友好景點",
+    "speciality3":"親子活動",
+    "price":"14"
   }
 ]

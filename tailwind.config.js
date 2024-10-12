@@ -19,6 +19,7 @@ export default {
           950: "var(--primary-950)",
         },
         secondary: {
+          300: "var(--secondary-300)",
           500: "var(--secondary-500)",
           600: "var(--secondary-600)",
           700: "var(--secondary-700)",
@@ -30,6 +31,8 @@ export default {
         },
         grey: {
           100: "var(--grey-100)",
+          400: "var(--grey-400)",
+          600: "var(--grey-600)",
           950: "var(--grey-950)",
         },
         blue: {

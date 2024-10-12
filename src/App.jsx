@@ -122,32 +122,33 @@ function App() {
 
       {/* trip themes */}
 
-      <ul className="mx-auto flex max-w-1296px items-center justify-center">
-        <li className="border border-grey-100 pr-11">
+      <ul className="mx-auto flex max-w-1296px items-center justify-center py-7 text-grey-400 text-base leading-[22.4px]">
+        <li className="border border-grey-100 border-y-0 pr-11">
           <Link to="/" className="text-base">
-            法式美食
+          <span>法式美食</span>
+            
           </Link>
         </li>
-        <li className="border border-grey-100 px-11">
-          <Link to="/">浪漫蜜月行</Link>
+        <li className="border border-grey-100 border-y-0 px-11">
+          <Link to="/"><span>浪漫蜜月行</span></Link>
         </li>
-        <li className="border border-grey-100 px-11">
-          <Link to="/">親子家庭遊</Link>
+        <li className="border border-grey-100 border-y-0 px-11">
+          <Link to="/"><span>親子家庭遊</span></Link>
         </li>
-        <li className="border border-grey-100 px-11">
-          <Link to="/">時尚購物</Link>
+        <li className="border border-grey-100 border-y-0 px-11">
+          <Link to="/"><span>時尚購物</span></Link>
         </li>
-        <li className="border border-grey-100 px-11">
-          <Link to="/">歷史建築</Link>
+        <li className="border border-grey-100 border-y-0 px-11">
+          <Link to="/"><span>歷史建築</span></Link>
         </li>
-        <li className="border border-grey-100 px-11">
-          <Link to="/">藝術博物館</Link>
+        <li className="border border-grey-100 border-y-0 px-11">
+          <Link to="/"><span>藝術博物館</span></Link>
         </li>
-        <li className="border border-grey-100 px-11">
-          <Link to="/">文哲學巡禮</Link>
+        <li className="border border-grey-100 border-y-0 px-11">
+          <Link to="/"><span>文哲學巡禮</span></Link>
         </li>
-        <li className="border border-grey-100 px-11">
-          <Link to="/">自然風光</Link>
+        <li className="border border-grey-100 border-y-0 px-11">
+          <Link to="/"><span>自然風光</span></Link>
         </li>
       </ul>
 
@@ -597,10 +598,7 @@ function App() {
         </div>
       </div>
 
-      {/* <div className="image-container">
-        <img src="src/assets/image/4.png" alt="Image Description" />
-        <div className="text-overlay">Zoomed Text</div>
-      </div> */}
+ 
 
       <h2 className="mt-2 text-center text-4xl hover:cursor-pointer">
         分區搜尋專屬導遊
@@ -634,8 +632,6 @@ function App() {
               coords="536,334,531,340,527,347,523,356,524,367,531,368,539,367,547,370,561,375,567,379,577,383,584,385,592,389,600,394,609,395,616,399,623,404,637,412,631,405,646,412,646,404,643,396,643,388,647,382,650,375,643,366,635,362,625,358,617,355,607,351,595,349,588,346,582,342,574,339,567,335,558,332,547,328,539,326"
               href="#"
               onClick={(event) => handleDistrictClick(event, 1)}
-              // onMouseEnter={handleMouseEnter}
-              // onMouseLeave={handleMouseLeave}
               alt="Paris 1"
               className="cursor-pointer"
             />
@@ -644,8 +640,6 @@ function App() {
               coords="585,303,583,310,578,319,572,327,579,332,586,334,596,339,609,340,613,346,618,343,623,349,630,353,637,353,642,356,650,357,657,351,657,345,663,338,666,331,657,325,647,321,635,316,629,314,621,311,613,307,600,306,591,303"
               href="#"
               onClick={(event) => handleDistrictClick(event, 2)}
-              // onMouseEnter={handleMouseEnter}
-              // onMouseLeave={handleMouseLeave}
               alt="Paris 2"
               className="cursor-pointer"
             />
@@ -661,239 +655,21 @@ function App() {
         />
       </div>
 
-      {/* <map name="parisMap">
-        <area
-          shape="poly"
-          coords="227,168,231,172,236,177,238,183,241,190,242,196,249,199,254,202,260,203,267,204,271,200,274,194,277,188,282,182,273,178,263,175,254,172,246,170,238,167"
-          href="#"
-          data-district="1"
-          alt="Paris 1"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="1區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="222,166,228,166,234,166,240,166,246,164,251,166,257,166,262,168,268,169,275,170,281,171,288,168,288,176,282,163,274,161,269,157,260,154,251,152,246,152,240,155,233,158"
-          href="#"
-          data-district="2"
-          alt="Paris 2"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="2區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="9299,165,295,170,292,175,289,181,296,191,288,189,303,194,309,198,312,203,318,208,326,211,332,210,331,202,332,194,330,185,328,178,324,170,319,165,311,160,304,160"
-          href="#"
-          data-district="3"
-          alt="Paris 3"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="3區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="285,195,283,201,279,208,278,214,276,220,283,224,289,229,297,232,305,236,312,240,319,244,325,248,330,243,331,235,333,229,335,221,330,214,322,210,311,204,306,198,301,194,295,192,290,188"
-          href="#"
-          data-district="4"
-          alt="Paris 4"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="4區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="9273,229,270,235,268,243,266,248,262,254,257,261,257,267,255,273,252,278,248,283,252,288,259,293,265,298,271,300,278,302,286,299,293,296,299,294,306,290,309,285,312,279,318,274,322,266,324,258,320,253,313,245,306,238,297,234,288,231,281,228"
-          href="#"
-          data-district="5"
-          alt="Paris 5"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="5區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="6"
-          alt="Paris 6"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="6區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="7"
-          alt="Paris 7"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="7區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="8"
-          alt="Paris 8"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="8區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="9"
-          alt="Paris 9"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="9區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="10"
-          alt="Paris 10"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="10區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="11"
-          alt="Paris 11"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="11區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="12"
-          alt="Paris 12"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="12區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="13"
-          alt="Paris 13"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="13區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="14"
-          alt="Paris 14"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="14區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="15"
-          alt="Paris 15"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="15區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="16"
-          alt="Paris 16"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="16區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="17"
-          alt="Paris 17"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="17區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="18"
-          alt="Paris 18"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="18區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="19"
-          alt="Paris 19"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="19區推薦導遊名單"
-        />
-
-        <area
-          shape="poly"
-          coords="93,118,100,121,105,125,113,129,120,134,129,138,134,128,139,121,148,118,155,111,162,106,170,102,178,101,186,100,196,99,206,97,214,94,213,82,216,71,220,58,222,47,224,36,224,26,214,26,205,28,193,31,181,37,174,38,161,50,153,54,168,40,149,58,142,64,134,70,129,74,123,78,118,80,113,83,107,87,102,94,97,97,94,103,92,109"
-          href="#"
-          data-district="20"
-          alt="Paris 20"
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          title="20區推薦導遊名單"
-        />
-      </map> */}
-
       {/* slides show: popular tourist guides */}
-      <div className="m-auto w-3/4">
+      <div className="m-auto w-[67.5%]">
         <div className="mt-20">
           <Slider {...settings1}>
             {data.map((data, index) => (
-              <div key={index}>
-                <div className="">
+              <div key={index} >
+                <div className="space-x-0">
                   <Card
                     imageSrc={data.img}
                     title={data.name}
-                    description={data.review}
+                    price={data.price}
+                    // description={data.review}
+                    specialities1={data.speciality1}
+                    specialities2={data.speciality2}
+                    specialities3={data.speciality3}
                   />
                 </div>
               </div>
@@ -918,7 +694,7 @@ function App() {
         </h2>
 
         {/* slides show: popular sites */}
-        <div className="absolute bottom-20 left-48 m-auto w-3/4">
+        <div className="absolute bottom-20 left-48 m-auto w-[67.5%]">
           <div className="mt-20">
             <Slider {...settings2}>
               {data.map((data, index) => (
