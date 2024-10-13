@@ -37,8 +37,10 @@
   /* Blue colors */
   --blue-50: #324561;
 
-  /* Background--grey-50:; Colors */
+  /* Background Colors */
   --background-2: #fff2db;
+  --background-blur: #F9F4EBCC;
+
 
   /* Font weights  */
   --font-weight-normal: 400;

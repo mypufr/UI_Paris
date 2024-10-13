@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       maxWidth: {
-        '1296px': '1296px',
+        "1296px": "1296px",
       },
       colors: {
         primary: {
@@ -28,7 +28,7 @@ export default {
         background: {
           y: "var(--background-y)",
           2: "var(--background-2)",
-
+          blur: "var(--background-blur)",
         },
         grey: {
           100: "var(--grey-100)",
@@ -37,25 +37,24 @@ export default {
           950: "var(--grey-950)",
         },
         blue: {
-          50:"var(--blue-50)",
-        }
+          50: "var(--blue-50)",
+        },
       },
       fontFamily: {
         sans: ["Noto Sans TC", "sans-serif"],
       },
       dropShadow: {
         custom: "0px 4px 4px 0px rgba(0, 0, 0, 0.3)",
-
-
       },
       cursor: {
         // Define a custom cursor style
-        'pointer': 'pointer',  
-        'custom': 'url(./src/assets/image/parismap_dist_web.png), auto', 
+        pointer: "pointer",
+        custom: "url(./src/assets/image/parismap_dist_web.png), auto",
       },
       letterSpacing: {
-        '1.5': '1.5px',
-      }
+        1.5: "1.5px",
+        4: '4%',
+      },
     },
   },
   plugins: [],

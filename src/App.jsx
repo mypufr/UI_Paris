@@ -20,12 +20,11 @@ import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 import data from "./data/data.json";
 
-
 import Card from "./components/Card";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TourguideList from "./components/TourguideList";
-import DistrictsData from "./data/districts.json"
+import DistrictsData from "./data/districts.json";
 
 function App() {
   const settings1 = {
@@ -88,48 +87,313 @@ function App() {
   };
 
   const [selectedDistrict, setSelectedDistrict] = useState(null);
+  const [popupPosition, setPopupPosition] = useState({
+    left: "10px",
+    top: "10px",
+  });
 
   // List of districts with their respective info
   const districts = {
-    // 1: "1區推薦導遊名單",
-    2: "2區推薦導遊名單",
     1: (
       <div>
-      {DistrictsData.map((district, index) => (
-        <TourguideList
-          key={index}
-          name={district.name}
-          district={district.district}
-          img={district.img}
-          specialities={district.specialities}
-          language={district.language}
-        />
-      ))}
-    </div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
     ),
-    4: "4區推薦導遊名單",
-    5: "5區推薦導遊名單",
-    6: "6區推薦導遊名單",
-    7: "7區推薦導遊名單",
-    8: "8區推薦導遊名單",
-    9: "9區推薦導遊名單",
-    10: "10區推薦導遊名單",
-    11: "11區推薦導遊名單",
-    12: "12區推薦導遊名單",
-    13: "13區推薦導遊名單",
-    14: "14區推薦導遊名單",
-    15: "15區推薦導遊名單",
-    16: "16區推薦導遊名單",
-    17: "17區推薦導遊名單",
-    18: "18區推薦導遊名單",
-    19: "19區推薦導遊名單",
-    20: "20區推薦導遊名單",
+    2: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    3: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    4: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    5: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    6: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    7: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    8: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    9: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    10: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    11: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    12: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    13: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    14: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    15: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    16: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    17: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    18: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    19: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
+    20: (
+      <div>
+        {DistrictsData.map((district, index) => (
+          <TourguideList
+            key={index}
+            name={district.name}
+            district={district.district}
+            img={district.img}
+            specialities={district.specialities}
+            language={district.language}
+          />
+        ))}
+      </div>
+    ),
   };
 
   // Handler for when a district is clicked
   const handleDistrictClick = (event, district) => {
     event.preventDefault();
+    let x = event.clientX; // Horizontal
+    let y = event.clientY;
     setSelectedDistrict(district);
+    console.log(x, y);
+    // setPopupPosition({
+    //   left: `${x}px`,  // Position from the left of the screen
+    //   top: `${y}px`    // Position from the top of the screen
+    // });
+
+    setPopupPosition({
+      left: `${x * 0.5}px`, // Offset by 10% of the window width
+      top: `${y * 0.2}px`, // Offset by 10% of the window height
+    });
+
+    console.log(popupPosition);
   };
 
   return (
@@ -646,13 +910,33 @@ function App() {
         <div className="">
           {/* Display selected district info */}
           {selectedDistrict && (
-            <div className="absolute left-[10%] top-[10%] border border-gray-300 bg-white p-4 shadow-lg">
-              <h3 className="text-xl font-bold">與{selectedDistrict}區導遊預定私人遊覽</h3>
+            <div
+              className="bg-background-blur absolute rounded-[28px] border border-gray-300 p-4 shadow-lg"
+              style={{
+                left: `${popupPosition.left}`,
+                top: `${popupPosition.top}`,
+              }}
+            >
+              <h3 className="tracking-4 space-x-2 py-6 text-xl font-bold leading-7 text-primary-600">
+                <img
+                  src="src/assets/image/vector_title.png"
+                  alt=""
+                  className="inline-block"
+                />
+                <span>與{selectedDistrict}區導遊預定私人遊覽</span>
+              </h3>
+
               <div>{districts[selectedDistrict]}</div>
-            <div className="mt-6 space-y-4" >
-              <button className="w-full bg-primary-600 rounded-xl text-white">馬上預約</button>
-              <button className="w-full bg-transparent outline outline-1 rounded-xl text-primary-600">所有{selectedDistrict}區推薦景點</button>
-            </div>
+              <div className="mt-6 space-y-4">
+                <button className="flex w-full justify-center rounded-2xl bg-primary-600 py-4 font-bold tracking-1.5 text-white">
+                  <img src="src/assets/image/BsHandIndex.svg" alt="" />
+
+                  <span className="ml-2">馬上預約</span>
+                </button>
+                <button className="w-full rounded-2xl bg-transparent py-4 font-bold tracking-1.5 text-primary-600 outline outline-1">
+                  所有{selectedDistrict}區推薦景點
+                </button>
+              </div>
             </div>
           )}
           {/* Map for clickable areas */}
@@ -674,7 +958,6 @@ function App() {
               className="cursor-pointer"
             />
             {/* Add more <area> elements for other districts */}
-      
           </map>
         </div>
       </div>

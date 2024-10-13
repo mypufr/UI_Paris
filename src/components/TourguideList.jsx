@@ -5,9 +5,10 @@ const TourguideList = ({ name, img, specialities, language }) => {
   return (
     <>
     
-    <div className="">
+    <div className=""
+    >
       <Link to="/">
-        <div className="flex border-secondary-300 rounded-2xl border p-4">
+        <div className="flex rounded-2xl p-4 bg-white mb-4">
           <img
             className="rounded-full object-cover w-24 h-24"
             src={img}
