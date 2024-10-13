@@ -897,7 +897,7 @@ function App() {
           alt=""
           className="w-[30px inline-block h-[40px]"
         />
-        <h2 className="tracking-4 text-[40px] font-bold leading-[3rem] text-primary-600">
+        <h2 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
           分區搜尋專屬導遊
         </h2>
         <img
@@ -923,13 +923,13 @@ function App() {
           {/* Display selected district info */}
           {selectedDistrict && (
             <div
-              className="bg-background-blur absolute rounded-[28px] border border-gray-300 p-4 shadow-lg"
+              className="absolute rounded-[28px] border border-gray-300 bg-background-blur p-4 shadow-lg"
               style={{
                 left: `${popupPosition.left}`,
                 top: `${popupPosition.top}`,
               }}
             >
-              <h3 className="tracking-4 space-x-2 py-6 text-xl font-bold leading-7 text-primary-600">
+              <h3 className="space-x-2 py-6 text-xl font-bold leading-7 tracking-4 text-primary-600">
                 <img
                   src="src/assets/image/vector_title.png"
                   alt=""
@@ -989,7 +989,7 @@ function App() {
             alt=""
             className="inline-block h-[40px]"
           />
-          <h2 className="tracking-4 text-[40px] font-bold leading-[3rem] text-primary-600">
+          <h2 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
             熱門導遊
           </h2>
           <img
@@ -1041,7 +1041,7 @@ function App() {
               alt=""
               className="inline-block h-[40px] w-[30px]"
             />
-            <h2 className="tracking-4 text-[40px] font-bold leading-[3rem] text-primary-600">
+            <h2 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
               熱門旅程
             </h2>
             <img
@@ -1087,7 +1087,7 @@ function App() {
             alt=""
             className="inline-block h-[40px]"
           />
-          <h2 className="tracking-4 text-[40px] font-bold leading-[3rem] text-primary-600">
+          <h2 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
             預約導遊和報名行程
           </h2>
           <img
@@ -1111,7 +1111,7 @@ function App() {
                   className="inline-block max-w-[200px] object-cover"
                 />
                 <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
-                  <p className="tracking-4 text-xl font-bold text-grey-950">
+                  <p className="text-xl font-bold tracking-4 text-grey-950">
                     Step 1 瀏覽導遊資歷與專長
                   </p>
                   <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
@@ -1129,7 +1129,7 @@ function App() {
                   />
                 </div>
                 <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
-                  <p className="tracking-4 text-xl font-bold text-grey-950">
+                  <p className="text-xl font-bold tracking-4 text-grey-950">
                     Step 2 與導遊聯絡
                   </p>
                   <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
@@ -1146,7 +1146,7 @@ function App() {
                   />
                 </div>
                 <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
-                  <p className="tracking-4 text-xl font-bold text-grey-950">
+                  <p className="text-xl font-bold tracking-4 text-grey-950">
                     Step 3 開啟旅程
                   </p>
                   <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
@@ -1175,7 +1175,7 @@ function App() {
               報名行程
             </span>
 
-            <div className="space-y-10 pb-6">
+            <div className="mt-10 flex-col space-y-10">
               <div className="mt-6 flex px-8">
                 <img
                   src="src/assets/image/step-2-1.png"
@@ -1184,7 +1184,7 @@ function App() {
                 />
 
                 <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
-                  <p className="tracking-4 text-xl font-bold text-grey-950">
+                  <p className="text-xl font-bold tracking-4 text-grey-950">
                     Step 1 瀏覽行程提案
                   </p>
                   <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
@@ -1202,7 +1202,7 @@ function App() {
                   />
                 </div>
                 <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
-                  <p className="tracking-4 text-xl font-bold text-grey-950">
+                  <p className="text-xl font-bold tracking-4 text-grey-950">
                     Step 2 報名行程
                   </p>
                   <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
@@ -1219,7 +1219,7 @@ function App() {
                   />
                 </div>
                 <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
-                  <p className="tracking-4 text-xl font-bold text-grey-950">
+                  <p className="text-xl font-bold tracking-4 text-grey-950">
                     Step 3 開團確認通知
                   </p>
                   <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
@@ -1237,7 +1237,7 @@ function App() {
                   />
                 </div>
                 <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
-                  <p className="tracking-4 text-xl font-bold text-grey-950">
+                  <p className="text-xl font-bold tracking-4 text-grey-950">
                     Step 4 開啟旅程
                   </p>
                   <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
@@ -1246,9 +1246,8 @@ function App() {
                 </div>
               </div>
 
-            </div>
-              <div className="flex justify-center mt-6">
-                <button className="bg-secondary-400 flex max-w-full justify-center rounded-2xl px-[15%] py-4">
+              <div className="flex justify-center">
+                <button className="mt-2 flex max-w-full justify-center rounded-2xl bg-secondary-400 px-[15%] py-4">
                   <img
                     src="src/assets/image/BsHandIndex.svg"
                     alt=""
@@ -1260,6 +1259,7 @@ function App() {
                   </span>
                 </button>
               </div>
+            </div>
           </div>
         </div>
       </div>
