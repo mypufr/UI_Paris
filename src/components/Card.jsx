@@ -37,10 +37,6 @@ const Card = ({
                 {specialities3}
               </span>
             </div>
-
-            {/* {specialities && specialities.map((speciality, index) => (
-            <span key={index} className="text-base text-secondary-700">{speciality}</span>
-          ))} */}
           </div>
         </div>
       </Link>

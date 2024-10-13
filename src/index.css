@@ -14,7 +14,10 @@
   --primary-900: #123768;
   --primary-950: #0c2345;
   /* Secondary Colors */
+  --secondary-200: #FFCDC6;
   --secondary-300: #ffab9f;
+  --secondary-400:#FF7C68;
+
   --secondary-500: #fb5138;
   --secondary-600: #ea4229;
   --secondary-700: #c42811;

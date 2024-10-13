@@ -19,12 +19,14 @@ import { Navbar, Button, IconButton } from "@material-tailwind/react";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 import data from "./data/data.json";
+import DistrictsData from "./data/districts.json";
+import TripsData from "./data/trips.json";
 
 import Card from "./components/Card";
+import TripCard from "./components/TripCard";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TourguideList from "./components/TourguideList";
-import DistrictsData from "./data/districts.json";
 
 function App() {
   const settings1 = {
@@ -389,8 +391,8 @@ function App() {
     // });
 
     setPopupPosition({
-      left: `${x * 0.5}px`, // Offset by 10% of the window width
-      top: `${y * 0.2}px`, // Offset by 10% of the window height
+      left: `${x * 0.35}px`, // Offset by 10% of the window width
+      top: `${y * 0.1}px`, // Offset by 10% of the window height
     });
 
     console.log(popupPosition);
@@ -401,7 +403,6 @@ function App() {
       <Header />
 
       {/* trip themes */}
-
       <ul className="mx-auto flex max-w-1296px items-center justify-center py-7 text-base leading-[22.4px] text-grey-400">
         <li className="border border-y-0 border-grey-100 pr-11">
           <Link to="/" className="text-base">
@@ -446,7 +447,6 @@ function App() {
       </ul>
 
       {/* banner: Slides show */}
-
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -803,8 +803,8 @@ function App() {
         </SwiperSlide>
       </Swiper>
 
-      <div className="group relative m-auto w-full max-w-[1920px] py-16 sm:h-[300px] md:h-[700px] lg:h-[780px]">
-        <div
+      {/* <div className="group relative m-auto w-full max-w-[1920px] py-16 sm:h-[300px] md:h-[700px] lg:h-[780px]"> */}
+      {/* <div
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
           className="relative h-full w-full bg-cover bg-center duration-500"
         >
@@ -868,16 +868,16 @@ function App() {
               時尚購物
             </button>
           </div>
-        </div>
+        </div> */}
 
-        {/* Left Arrow */}
-        <div className="absolute left-5 top-[50%] hidden -translate-x-0 translate-y-[-50%] cursor-pointer rounded-full bg-black/20 p-2 text-2xl text-white group-hover:block">
+      {/* <div className="absolute left-5 top-[50%] hidden -translate-x-0 translate-y-[-50%] cursor-pointer rounded-full bg-black/20 p-2 text-2xl text-white group-hover:block">
           <BsChevronCompactLeft onClick={prevSlide} size={30} />
         </div>
-        {/* Right Arrow */}
+ 
         <div className="absolute right-5 top-[50%] hidden -translate-x-0 translate-y-[-50%] cursor-pointer rounded-full bg-black/20 p-2 text-2xl text-white group-hover:block">
           <BsChevronCompactRight onClick={nextSlide} size={30} />
-        </div>
+        </div> */}
+      {/* 
         <div className="top-4 flex justify-center py-2">
           {slides.map((slide, slideIndex) => (
             <div
@@ -885,16 +885,28 @@ function App() {
               onClick={() => goToSlide(slideIndex)}
               className="cursor-pointer text-2xl"
             >
-              {/* <RxDotFilled /> */}
             </div>
           ))}
-        </div>
-      </div>
+        </div> */}
 
-      <h2 className="mt-2 text-center text-4xl hover:cursor-pointer">
-        分區搜尋專屬導遊
-      </h2>
-      <div className="relative">
+      {/* </div> */}
+
+      <div className="mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
+        <img
+          src="src/assets/image/vector_title.png"
+          alt=""
+          className="w-[30px inline-block h-[40px]"
+        />
+        <h2 className="tracking-4 text-[40px] font-bold leading-[3rem] text-primary-600">
+          分區搜尋專屬導遊
+        </h2>
+        <img
+          src="src/assets/image/vector_title.png"
+          alt=""
+          className="w-[30px inline-block h-[40px]"
+        />
+      </div>
+      <div className="relative mt-[60px]">
         <div className="flex items-center justify-center">
           <p className="text-1xl absolute left-[51.5%] top-[45.5%] text-secondary-700 text-white">
             4
@@ -970,8 +982,25 @@ function App() {
       </div>
 
       {/* slides show: popular tourist guides */}
+      <div className="">
+        <div className="flex justify-center space-x-4 hover:cursor-pointer">
+          <img
+            src="src/assets/image/vector_title.png"
+            alt=""
+            className="inline-block h-[40px]"
+          />
+          <h2 className="tracking-4 text-[40px] font-bold leading-[3rem] text-primary-600">
+            熱門導遊
+          </h2>
+          <img
+            src="src/assets/image/vector_title.png"
+            alt=""
+            className="inline-block h-[40px]"
+          />
+        </div>
+      </div>
       <div className="m-auto w-[67.5%]">
-        <div className="mt-20">
+        <div className="mt-8">
           <Slider {...settings1}>
             {data.map((data, index) => (
               <div key={index}>
@@ -992,31 +1021,54 @@ function App() {
       </div>
       {/* background settings */}
       <div className="bg-popular_sites relative">
-        <img
-          src="src/assets/image/upper-background_popular_sites_w1914.png"
-          alt=""
-        />
-        <img
-          src="src/assets/image/background_popular_sites_cutted.png"
-          alt=""
-          className=""
-        />
+        <div className="">
+          <img
+            src="src/assets/image/upper-background_popular_sites_w1914.png"
+            alt=""
+            className="h-[328px] w-full object-cover"
+          />
+          <img
+            src="src/assets/image/background_popular_sites_cutted.png"
+            alt=""
+            className="h-[733px] w-full"
+          />
+        </div>
 
-        <h2 className="left-50 bottom-50 left- absolute top-12 mt-16 text-4xl">
-          熱門旅程
-        </h2>
+        <div className="absolute left-[43%] top-[30%] mt-16">
+          <div className="flex justify-center space-x-4 hover:cursor-pointer">
+            <img
+              src="src/assets/image/vector_title.png"
+              alt=""
+              className="inline-block h-[40px] w-[30px]"
+            />
+            <h2 className="tracking-4 text-[40px] font-bold leading-[3rem] text-primary-600">
+              熱門旅程
+            </h2>
+            <img
+              src="src/assets/image/vector_title.png"
+              alt=""
+              className="inline-block h-[40px] w-[30px]"
+            />
+          </div>
+        </div>
 
         {/* slides show: popular sites */}
-        <div className="absolute bottom-20 left-48 m-auto w-[67.5%]">
+        <div className="absolute left-[15%] top-[40%] w-[67.5%]">
           <div className="mt-20">
             <Slider {...settings2}>
-              {data.map((data, index) => (
+              {TripsData.map((data, index) => (
                 <div key={index}>
-                  <div>
-                    <Card
-                      imageSrc={data.img}
-                      title={data.name}
-                      description={data.review}
+                  <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
+                    <TripCard
+                      tripName={data.tripName}
+                      imageUrl={data.imgUrl}
+                      description={data.description}
+                      date={data.date}
+                      site1={data.site1}
+                      site2={data.site2}
+                      site3={data.site3}
+                      site4={data.site4}
+                      site5={data.site5}
                     />
                   </div>
                 </div>
@@ -1026,113 +1078,188 @@ function App() {
         </div>
       </div>
 
-      {/* <div className="m-auto w-3/4">
-        <div className="mt-20">
-          <Swiper {...settings2} className="mySwiper">
-            {data.map((item, index) => (
-              <SwiperSlide key={index}>
-                <Card
-                  imageSrc={item.img}
-                  title={item.name}
-                  description={item.review}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </div> */}
-
       {/* 預約導遊和報名行程 */}
 
-      <div className="flex-col items-center justify-center">
-        <h2 className="mt-2 text-center text-4xl">預約導遊和報名行程</h2>
+      <div className="">
+        <div className="mb-8 mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
+          <img
+            src="src/assets/image/vector_title.png"
+            alt=""
+            className="inline-block h-[40px]"
+          />
+          <h2 className="tracking-4 text-[40px] font-bold leading-[3rem] text-primary-600">
+            預約導遊和報名行程
+          </h2>
+          <img
+            src="src/assets/image/vector_title.png"
+            alt=""
+            className="inline-block h-[40px]"
+          />
+        </div>
 
         <div className="flex justify-center space-x-6">
-          <div className="w-[40%] rounded border border-red-700">
-            預約導遊
-            <div className="flex">
-              <div className="">
-                <img src="src/assets/image/step-1-1.png" alt="" />
+          <div className="border-grey-200 max-w-[34%] rounded-2xl border">
+            <span className="block rounded-t-2xl bg-primary-300 py-10 text-center text-2xl font-bold text-white">
+              預約導遊
+            </span>
+
+            <div className="space-y-[149px] pb-6">
+              <div className="mt-6 flex px-8">
+                <img
+                  src="src/assets/image/step-1-1.png"
+                  alt=""
+                  className="inline-block max-w-[200px] object-cover"
+                />
+                <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
+                  <p className="tracking-4 text-xl font-bold text-grey-950">
+                    Step 1 瀏覽導遊資歷與專長
+                  </p>
+                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                    在平台上探索各種導遊的個人檔案，了解他們的資歷、專長領域，並觀看他們的自我介紹影片。挑選最適合你需求的在地專家。
+                  </p>
+                </div>
               </div>
-              <div className="flex-col items-center border border-red-700">
-                <p>Step 1 瀏覽導遊資歷與專長</p>
-                <p>
-                  在平台上探索各種導遊的個人檔案，了解他們的資歷、專長領域，並觀看他們的自我介紹影片。挑選最適合你需求的在地專家。
-                </p>
+
+              <div className="flex px-8">
+                <div className="">
+                  <img
+                    src="src/assets/image/step-1-2.png"
+                    alt=""
+                    className="inline-block max-w-[200px] object-cover"
+                  />
+                </div>
+                <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
+                  <p className="tracking-4 text-xl font-bold text-grey-950">
+                    Step 2 與導遊聯絡
+                  </p>
+                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                    登入會員後，通過私訊與選定的導遊聯絡，詳細溝通你的旅行需求、預期時間和特別喜好，確保導遊能為你提供量身定制的服務
+                  </p>
+                </div>
+              </div>
+              <div className="flex px-8">
+                <div className="">
+                  <img
+                    src="src/assets/image/step-1-3.png"
+                    alt=""
+                    className="inline-block max-w-[200px] object-cover"
+                  />
+                </div>
+                <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
+                  <p className="tracking-4 text-xl font-bold text-grey-950">
+                    Step 3 開啟旅程
+                  </p>
+                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                    一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <button className="flex max-w-full justify-center rounded-2xl bg-primary-600 px-[15%] py-4">
+                  <img
+                    src="src/assets/image/BsHandIndex.svg"
+                    alt=""
+                    className="inline-block"
+                  />
+
+                  <span className="ml-2 font-bold tracking-1.5 text-white">
+                    我要預約導遊
+                  </span>
+                </button>
               </div>
             </div>
-            <div className="flex">
-              <div className="">
-                <img src="src/assets/image/step-1-2.png" alt="" />
-              </div>
-              <div className="flex-col items-center">
-                <p className="cursor-pointer">Step 2 與導遊聯絡</p>
-                <p>
-                  登入會員後，通過私訊與選定的導遊聯絡，詳細溝通你的旅行需求、預期時間和特別喜好，確保導遊能為你提供量身定制的服務
-                </p>
-              </div>
-            </div>
-            <div className="flex">
-              <div className="">
-                <img src="src/assets/image/step-1-3.png" alt="" />
-              </div>
-              <div className="flex-col items-center">
-                <p>Step 3 開啟旅程</p>
-                <p>
-                  一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
-                </p>
-              </div>
-            </div>
-            <button className="">我要預約導遊</button>
           </div>
 
-          <div className="w-[40%] border border-red-700">
-            報名行程
-            <div className="flex">
-              <div className="">
-                <img src="src/assets/image/step-2-1.png" alt="" />
+          <div className="border-grey-200 max-w-[34%] rounded-2xl border">
+            <span className="block rounded-t-2xl bg-secondary-300 py-10 text-center text-2xl font-bold text-white">
+              報名行程
+            </span>
+
+            <div className="space-y-10 pb-6">
+              <div className="mt-6 flex px-8">
+                <img
+                  src="src/assets/image/step-2-1.png"
+                  alt=""
+                  className="inline-block max-w-[188px] object-cover"
+                />
+
+                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
+                  <p className="tracking-4 text-xl font-bold text-grey-950">
+                    Step 1 瀏覽行程提案
+                  </p>
+                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                    在平台上瀏覽各種精心策劃的行程提案，從文化探險到美食之旅，總有一個行程能讓你心動不已。
+                  </p>
+                </div>
               </div>
-              <div className="flex-col items-center">
-                <p>Step 1 瀏覽行程提案</p>
-                <p>
-                  在平台上瀏覽各種精心策劃的行程提案，從文化探險到美食之旅，總有一個行程能讓你心動不已。
-                </p>
+
+              <div className="flex px-8">
+                <div className="">
+                  <img
+                    src="src/assets/image/step-2-2.png"
+                    alt=""
+                    className="inline-block max-w-[188px] object-cover"
+                  />
+                </div>
+                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
+                  <p className="tracking-4 text-xl font-bold text-grey-950">
+                    Step 2 報名行程
+                  </p>
+                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                    選定心儀的行程後，立即登入會員報名，確保你的名額。你還可以和其他參與者交流，分享期待與興奮
+                  </p>
+                </div>
               </div>
+              <div className="flex px-8">
+                <div className="">
+                  <img
+                    src="src/assets/image/step-2-3.png"
+                    alt=""
+                    className="inline-block max-w-[188px] object-cover"
+                  />
+                </div>
+                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
+                  <p className="tracking-4 text-xl font-bold text-grey-950">
+                    Step 3 開團確認通知
+                  </p>
+                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                    當行程人數達到標準時，我們將向你發送開團確認通知，讓你準備好出發。
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex px-8">
+                <div className="">
+                  <img
+                    src="src/assets/image/step-2-4.png"
+                    alt=""
+                    className="max-w-[188px] object-cover"
+                  />
+                </div>
+                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
+                  <p className="tracking-4 text-xl font-bold text-grey-950">
+                    Step 4 開啟旅程
+                  </p>
+                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                    一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
+                  </p>
+                </div>
+              </div>
+
             </div>
-            <div className="flex">
-              <div className="">
-                <img src="src/assets/image/step-2-2.png" alt="" />
+              <div className="flex justify-center mt-6">
+                <button className="bg-secondary-400 flex max-w-full justify-center rounded-2xl px-[15%] py-4">
+                  <img
+                    src="src/assets/image/BsHandIndex.svg"
+                    alt=""
+                    className="inline-block"
+                  />
+
+                  <span className="ml-2 font-bold tracking-1.5 text-white">
+                    馬上報名行程
+                  </span>
+                </button>
               </div>
-              <div className="flex-col items-center">
-                <p>Step 2 報名行程</p>
-                <p>
-                  選定心儀的行程後，立即登入會員報名，確保你的名額。你還可以和其他參與者交流，分享期待與興奮
-                </p>
-              </div>
-            </div>
-            <div className="flex">
-              <div className="">
-                <img src="src/assets/image/step-2-3.png" alt="" />
-              </div>
-              <div className="flex-col items-center">
-                <p>Step 3 開團確認通知</p>
-                <p>
-                  當行程人數達到標準時，我們將向你發送開團確認通知，讓你準備好出發。
-                </p>
-              </div>
-            </div>
-            <div className="flex">
-              <div className="">
-                <img src="src/assets/image/step-2-4.png" alt="" />
-              </div>
-              <div className="flex-col items-center">
-                <p>Step 4 開啟旅程</p>
-                <p>
-                  一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
-                </p>
-              </div>
-            </div>
-            <button>馬上報名行程</button>
           </div>
         </div>
       </div>
