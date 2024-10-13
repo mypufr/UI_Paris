@@ -401,3 +401,56 @@ export function StickyNavbar() {
   <img src="src/assets/image/4.png" alt="Image Description" />
   <div className="text-overlay">Zoomed Text</div>
 </div> */}
+
+
+[
+  {
+    "name": "劉洋",
+    "district": "17",
+    "img": "src/assets/image/img_tourguide_8.png",
+    "specialities": "浪漫景點、情侶拍攝",
+    "language": "中文、英文"
+  },
+  {
+    "name": "Lucie",
+    "district": "17",
+    "img": "src/assets/image/img_tourguide_7.png",
+    "specialities": "藝館之旅、畫廊導覽",
+    "language": "中文、法文"
+  },
+  {
+    "name": "張志強",
+    "district": "16",
+    "img": "src/assets/image/img_tourguide_3.png",
+    "specialities": "家庭旅遊、親子活動",
+    "language": "中文、英文、法文"
+  },
+  {
+    "name": "Michel",
+    "district": "17",
+    "img": "src/assets/image/img_tourguide_4.png",
+    "specialities": "當地市場、手工藝品",
+    "language": "中文、英文"
+  },
+  {
+    "name": "黃曉紅",
+    "district": "17",
+    "img": "src/assets/image/img_tourguide_5.png",
+    "specialities": "花園公園、自然景觀",
+    "language": "中文、英文"
+  },
+  {
+    "name": "Chris",
+    "district": "16",
+    "img": "src/assets/image/img_tourguide_6.png",
+    "specialities": "建築設計、城市規劃",
+    "language": "法文、英文"
+  },
+  {
+    "name": "孫潔",
+    "district": "16",
+    "img": "src/assets/image/img_tourguide_7.png",
+    "specialities": "酒吧餐廳、三星美食",
+    "language": "中文、英文、法文"
+  }
+]

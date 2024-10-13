@@ -100,7 +100,7 @@ function App() {
           key={index}
           name={district.name}
           district={district.district}
-          // img={district.img}
+          img={district.img}
           specialities={district.specialities}
           language={district.language}
         />
@@ -646,15 +646,15 @@ function App() {
         <div className="">
           {/* Display selected district info */}
           {selectedDistrict && (
-            <div className="absolute left-[10%] top-[20%] border border-gray-300 bg-white p-4 shadow-lg">
+            <div className="absolute left-[10%] top-[10%] border border-gray-300 bg-white p-4 shadow-lg">
               <h3 className="text-xl font-bold">與{selectedDistrict}區導遊預定私人遊覽</h3>
               <div>{districts[selectedDistrict]}</div>
-            
+            <div className="mt-6 space-y-4" >
+              <button className="w-full bg-primary-600 rounded-xl text-white">馬上預約</button>
+              <button className="w-full bg-transparent outline outline-1 rounded-xl text-primary-600">所有{selectedDistrict}區推薦景點</button>
             </div>
-        
+            </div>
           )}
-
-
           {/* Map for clickable areas */}
           <map name="parisMap">
             <area
@@ -674,8 +674,8 @@ function App() {
               className="cursor-pointer"
             />
             {/* Add more <area> elements for other districts */}
+      
           </map>
-          <button className="bg-background-2 text-black">test</button>
         </div>
       </div>
 

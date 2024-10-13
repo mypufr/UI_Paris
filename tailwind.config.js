@@ -23,6 +23,7 @@ export default {
           500: "var(--secondary-500)",
           600: "var(--secondary-600)",
           700: "var(--secondary-700)",
+          950: "var(--secondary-950)",
         },
         background: {
           y: "var(--background-y)",
@@ -52,6 +53,9 @@ export default {
         'pointer': 'pointer',  
         'custom': 'url(./src/assets/image/parismap_dist_web.png), auto', 
       },
+      letterSpacing: {
+        '1.5': '1.5px',
+      }
     },
   },
   plugins: [],
