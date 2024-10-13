@@ -21,12 +21,14 @@ import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 import data from "./data/data.json";
 import DistrictsData from "./data/districts.json";
 import TripsData from "./data/trips.json";
+import SlidesData from "./data/slides.json";
 
 import Card from "./components/Card";
 import TripCard from "./components/TripCard";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TourguideList from "./components/TourguideList";
+import SlideText from "./components/SlideText";
 
 function App() {
   const settings1 = {
@@ -381,17 +383,13 @@ function App() {
   // Handler for when a district is clicked
   const handleDistrictClick = (event, district) => {
     event.preventDefault();
-    let x = event.clientX; // Horizontal
+    let x = event.clientX; 
     let y = event.clientY;
     setSelectedDistrict(district);
     console.log(x, y);
-    // setPopupPosition({
-    //   left: `${x}px`,  // Position from the left of the screen
-    //   top: `${y}px`    // Position from the top of the screen
-    // });
 
     setPopupPosition({
-      left: `${x * 0.35}px`, // Offset by 10% of the window width
+      left: `${x * 0.35}px`, // Offset by 3.5% of the window width
       top: `${y * 0.1}px`, // Offset by 10% of the window height
     });
 
@@ -461,346 +459,11 @@ function App() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="relative">
-            <img
-              src="https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-            />
-            <div className="absolute left-[22%] top-[10%]">
-              <h1 className="noto-sans-tc-bold py-3 leading-[1.2] text-white drop-shadow-lg">
-                尋找你的完美巴黎旅程
-              </h1>
-              <p className="py-6 text-2xl font-bold text-white">
-                輕盈漫步在巴黎的街巷。
-              </p>
-              <p className="text-2xl font-bold text-white">
-                無論你心繫歷史的脈動、美食的馨香，還是藝術的深邃，
-              </p>
-              <p className="text-2xl font-bold text-white">
-                我們都為你精選了最契合靈魂的旅程。
-              </p>
-              <p className="py-6 text-2xl font-bold text-white">
-                一段符合你心之所向的旅程，正在靜靜等待與你邂逅。
-              </p>
-
-              <div className="flex items-center">
-                <div className="relative w-full max-w-lg">
-                  <input
-                    type="text"
-                    className="w-full rounded-lg border border-gray-300 bg-white p-3 pr-4 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="尋找你的完美巴黎旅程"
-                  />
-                  <div className="absolute inset-y-0 right-0 flex items-center bg-primary-500 pl-2">
-                    <svg
-                      className="h-5 w-5 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                歷史建築
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                博物館導覽
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                文哲學巡禮
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                自然風光
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                法式美食
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                浪漫蜜月行
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                親子家庭遊
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                時尚購物
-              </button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1520503652613-5a55d772ec77?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-            />
-            <div className="absolute left-[22%] top-[10%]">
-              <h1 className="noto-sans-tc-bold py-3 leading-[1.2] text-secondary-500 drop-shadow-lg">
-                尋找你的完美巴黎旅程
-              </h1>
-              <p className="py-6 text-2xl font-bold text-white">
-                輕盈漫步在巴黎的街巷。
-              </p>
-              <p className="text-2xl font-bold text-white">
-                無論你心繫歷史的脈動、美食的馨香，還是藝術的深邃，
-              </p>
-              <p className="text-2xl font-bold text-white">
-                我們都為你精選了最契合靈魂的旅程。
-              </p>
-              <p className="py-6 text-2xl font-bold text-white">
-                一段符合你心之所向的旅程，正在靜靜等待與你邂逅。
-              </p>
-
-              <div className="flex items-center">
-                <div className="relative w-full max-w-lg">
-                  <input
-                    type="text"
-                    className="w-full rounded-lg border border-gray-300 bg-white p-3 pr-4 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="尋找你的完美巴黎旅程"
-                  />
-                  <div className="absolute inset-y-0 right-0 flex items-center bg-primary-500 pl-2">
-                    <svg
-                      className="h-5 w-5 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                歷史建築
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                博物館導覽
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                文哲學巡禮
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                自然風光
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                法式美食
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                浪漫蜜月行
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                親子家庭遊
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                時尚購物
-              </button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1504896287989-ff1fbde00199?q=80&w=2533&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-            />
-            <div className="absolute left-[22%] top-[10%]">
-              <h1 className="noto-sans-tc-bold py-3 leading-[1.2] text-white drop-shadow-lg">
-                尋找你的完美巴黎旅程
-              </h1>
-              <p className="py-6 text-2xl font-bold text-white">
-                輕盈漫步在巴黎的街巷。
-              </p>
-              <p className="text-2xl font-bold text-white">
-                無論你心繫歷史的脈動、美食的馨香，還是藝術的深邃，
-              </p>
-              <p className="text-2xl font-bold text-white">
-                我們都為你精選了最契合靈魂的旅程。
-              </p>
-              <p className="py-6 text-2xl font-bold text-white">
-                一段符合你心之所向的旅程，正在靜靜等待與你邂逅。
-              </p>
-
-              <div className="flex items-center">
-                <div className="relative w-full max-w-lg">
-                  <input
-                    type="text"
-                    className="w-full rounded-lg border border-gray-300 bg-white p-3 pr-4 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="尋找你的完美巴黎旅程"
-                  />
-                  <div className="absolute inset-y-0 right-0 flex items-center bg-primary-500 pl-2">
-                    <svg
-                      className="h-5 w-5 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                歷史建築
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                博物館導覽
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                文哲學巡禮
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                自然風光
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                法式美食
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                浪漫蜜月行
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                親子家庭遊
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                時尚購物
-              </button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1501622549218-2c3ef86627cb?q=80&w=2373&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-            />
-            <div className="absolute left-[22%] top-[10%]">
-              <h1 className="noto-sans-tc-bold py-3 leading-[1.2] text-white drop-shadow-lg">
-                尋找你的完美巴黎旅程
-              </h1>
-              <p className="py-6 text-2xl font-bold text-white">
-                輕盈漫步在巴黎的街巷。
-              </p>
-              <p className="text-2xl font-bold text-white">
-                無論你心繫歷史的脈動、美食的馨香，還是藝術的深邃，
-              </p>
-              <p className="text-2xl font-bold text-white">
-                我們都為你精選了最契合靈魂的旅程。
-              </p>
-              <p className="py-6 text-2xl font-bold text-white">
-                一段符合你心之所向的旅程，正在靜靜等待與你邂逅。
-              </p>
-
-              <div className="flex items-center">
-                <div className="relative w-full max-w-lg">
-                  <input
-                    type="text"
-                    className="w-full rounded-lg border border-gray-300 bg-white p-3 pr-4 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="尋找你的完美巴黎旅程"
-                  />
-                  <div className="absolute inset-y-0 right-0 flex items-center bg-primary-500 pl-2">
-                    <svg
-                      className="h-5 w-5 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                歷史建築
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                博物館導覽
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                文哲學巡禮
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                自然風光
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                法式美食
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                浪漫蜜月行
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                親子家庭遊
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                時尚購物
-              </button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1528535619428-a995242b9096?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-            />
-            <div className="absolute left-[22%] top-[10%]">
-              <h1 className="noto-sans-tc-bold py-3 leading-[1.2] text-secondary-500 drop-shadow-lg">
-                尋找你的完美巴黎旅程
-              </h1>
-              <p className="py-6 text-2xl font-bold text-white">
-                輕盈漫步在巴黎的街巷。
-              </p>
-              <p className="text-2xl font-bold text-white">
-                無論你心繫歷史的脈動、美食的馨香，還是藝術的深邃，
-              </p>
-              <p className="text-2xl font-bold text-white">
-                我們都為你精選了最契合靈魂的旅程。
-              </p>
-              <p className="py-6 text-2xl font-bold text-white">
-                一段符合你心之所向的旅程，正在靜靜等待與你邂逅。
-              </p>
-
-              <div className="flex items-center">
-                <div className="relative w-full max-w-lg">
-                  <input
-                    type="text"
-                    className="w-full rounded-lg border border-gray-300 bg-white p-3 pr-4 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="尋找你的完美巴黎旅程"
-                  />
-                  <div className="absolute inset-y-0 right-0 flex items-center bg-primary-500 pl-2">
-                    <svg
-                      className="h-5 w-5 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                歷史建築
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                博物館導覽
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                文哲學巡禮
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                自然風光
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                法式美食
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                浪漫蜜月行
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                親子家庭遊
-              </button>
-              <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-                時尚購物
-              </button>
-            </div>
-          </div>
-        </SwiperSlide>
+        {SlidesData.map((data, index) => (
+          <SwiperSlide key={index}>
+            <SlideText imgUrl={data.imgUrl} />
+          </SwiperSlide>
+        ))}
       </Swiper>
 
       {/* <div className="group relative m-auto w-full max-w-[1920px] py-16 sm:h-[300px] md:h-[700px] lg:h-[780px]"> */}
@@ -895,15 +558,15 @@ function App() {
         <img
           src="src/assets/image/vector_title.png"
           alt=""
-          className="w-[30px inline-block h-[40px]"
+          className="inline-block h-[40px]"
         />
-        <h2 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
+        <h3 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
           分區搜尋專屬導遊
-        </h2>
+        </h3>
         <img
           src="src/assets/image/vector_title.png"
           alt=""
-          className="w-[30px inline-block h-[40px]"
+          className="inline-block h-[40px]"
         />
       </div>
       <div className="relative mt-[60px]">
@@ -1041,9 +704,9 @@ function App() {
               alt=""
               className="inline-block h-[40px] w-[30px]"
             />
-            <h2 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
+            <h4 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
               熱門旅程
-            </h2>
+            </h4>
             <img
               src="src/assets/image/vector_title.png"
               alt=""
@@ -1087,9 +750,9 @@ function App() {
             alt=""
             className="inline-block h-[40px]"
           />
-          <h2 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
+          <h5 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
             預約導遊和報名行程
-          </h2>
+          </h5>
           <img
             src="src/assets/image/vector_title.png"
             alt=""
@@ -1155,7 +818,7 @@ function App() {
                 </div>
               </div>
               <div className="flex justify-center">
-                <button className="flex max-w-full justify-center rounded-2xl bg-primary-600 px-[15%] py-4">
+                <button className="flex max-w-full justify-center rounded-2xl bg-primary-600 px-[15%] py-4 transition-colors duration-200 hover:bg-primary-300 active:border active:border-primary-600 active:bg-transparent">
                   <img
                     src="src/assets/image/BsHandIndex.svg"
                     alt=""
@@ -1247,7 +910,7 @@ function App() {
               </div>
 
               <div className="flex justify-center">
-                <button className="mt-2 flex max-w-full justify-center rounded-2xl bg-secondary-400 px-[15%] py-4">
+                <button className="mt-2 flex max-w-full justify-center rounded-2xl bg-secondary-400 px-[15%] py-4 transition-colors duration-200 hover:bg-secondary-200 active:border active:border-secondary-200 active:bg-transparent">
                   <img
                     src="src/assets/image/BsHandIndex.svg"
                     alt=""
