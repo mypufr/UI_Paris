@@ -49,18 +49,18 @@ function Footer() {
 
             <li className="flex space-x-6">
               <span className="">
-                <Link to="/">關於我們</Link>
+                <Link to="/about">關於我們</Link>
               </span>
 
               <span className="">
-                <Link to="/">聯絡我們</Link>
+                <Link to="#">聯絡我們</Link>
               </span>
             </li>
             <li>
-              <Link to="tel+3 765 3421">
+              <Link to="tel:+37653421">
                 <img
                   src="src/assets/image/call.svg"
-                  alt=""
+                  alt="call icon"
                   className="inline-block"
                 />
 

@@ -27,6 +27,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import TourguidesPage from "./pages/TourguidesPage";
+import TripsPage from "./pages/TripsPage";
+import SitesInfoPage from "./pages/SitesInfoPage";
+import TravelInfoPage from "./pages/TravelInfoPage";
+import About from "./pages/About";
+import SignUp from "./pages/SingUp";
+
 
 // import component
 
@@ -39,16 +46,17 @@ export default function App() {
   return (
     <>
       <BrowserRouter>
-      <Header />   
+        <Header />
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
-          {/* <Route path="/book-tourguides" element={<About />}></Route>
-    <Route path="/book-trips" element={<About />}></Route>
-    <Route path="/sites-recommadation" element={<About />}></Route>
-    <Route path="/travel-advice" element={<About />}></Route> */}
+          <Route path="/book-tourguides" element={<TourguidesPage />}></Route>
+          <Route path="/book-trips" element={<TripsPage />}></Route>
+          <Route path="/sites-info" element={<SitesInfoPage />}></Route>
+          <Route path="/travel-info" element={<TravelInfoPage />}></Route>
+          <Route path="/about" element={<About />}></Route>
 
           {/* <Route path="/sign-in" element={<SignIn />}></Route> */}
-          {/* <Route path="/sign-up" element={<SignUp />}></Route> */}
+          <Route path="/sign-up" element={<SignUp />}></Route>
 
           {/* <Route element={<PrivateRoute />}>        
     <Route path="/dashboard" element={<Dashboard />} />

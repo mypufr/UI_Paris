@@ -33,29 +33,29 @@ function Header() {
 
           <ul className="ms-[9.9%] flex items-center justify-between space-x-16">
             <li className="text-base leading-[22.4px] text-grey-950">
-              <Link to="/" className="text-primary-500 hover:font-bold">
+              <Link to="/book-tourguides" className="text-primary-500 hover:font-bold">
                 隨行導遊趣
               </Link>
             </li>
             <li className="text-base leading-[22.4px] text-grey-950">
-              <Link to="/" className="text-primary-500 hover:font-bold">
+              <Link to="/book-trips" className="text-primary-500 hover:font-bold">
                 行程搶先報
               </Link>
             </li>
             <li className="text-base leading-[22.4px] text-grey-950">
-              <Link href="/" className="text-primary-500 hover:font-bold">
+              <Link to="/sites-info" className="text-primary-500 hover:font-bold">
                 推薦景點
               </Link>
             </li>
             <li className="text-base leading-[22.4px] text-grey-950">
-              <Link to="/" className="text-primary-500 hover:font-bold">
+              <Link to="/travel-info" className="text-primary-500 hover:font-bold">
                 旅行指南
               </Link>
             </li>
             <li className="ps-[180px] text-base leading-[22.4px] text-grey-950">
               <button className="rounded-2xl bg-primary-600 text-base font-normal hover:bg-primary-300 active:bg-transparent active:border active:border-primary-600  transition-colors duration-200">
                 <Link
-                  to="/"
+                  to="/sign-up"
                   className="my-2 inline-block px-5 text-base text-white  active:text-primary-600"
                 >
                   註冊/登入

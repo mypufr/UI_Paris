@@ -1,10 +1,7 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import { RxDotFilled } from "react-icons/rx";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -16,8 +13,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { Navbar, Button, IconButton } from "@material-tailwind/react";
-import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 import data from "../data/data.json";
 import DistrictsData from "../data/districts.json";
@@ -28,8 +23,6 @@ import SlidesData from "../data/slides.json";
 
 import Card from "../components/Card";
 import TripCard from "../components/TripCard";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import TourguideList from "../components/TourguideList";
 import SlideText from "../components/SlideText";
 
@@ -58,40 +51,39 @@ export default function HomePage() {
     // navigation: true,
   };
 
-  const slides = [
-    {
-      url: "https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1520503652613-5a55d772ec77?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1504896287989-ff1fbde00199?q=80&w=2533&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1501622549218-2c3ef86627cb?q=80&w=2373&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1528535619428-a995242b9096?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-  ];
+  //   {
+  //     url: "https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   },
+  //   {
+  //     url: "https://images.unsplash.com/photo-1520503652613-5a55d772ec77?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   },
+  //   {
+  //     url: "https://images.unsplash.com/photo-1504896287989-ff1fbde00199?q=80&w=2533&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   },
+  //   {
+  //     url: "https://images.unsplash.com/photo-1501622549218-2c3ef86627cb?q=80&w=2373&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   },
+  //   {
+  //     url: "https://images.unsplash.com/photo-1528535619428-a995242b9096?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   },
+  // ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
+  // const prevSlide = () => {
+  //   const isFirstSlide = currentIndex === 0;
+  //   const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+  //   setCurrentIndex(newIndex);
+  // };
+  // const nextSlide = () => {
+  //   const isLastSlide = currentIndex === slides.length - 1;
+  //   const newIndex = isLastSlide ? 0 : currentIndex + 1;
+  //   setCurrentIndex(newIndex);
+  // };
 
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
+  // const goToSlide = (slideIndex) => {
+  //   setCurrentIndex(slideIndex);
+  // };
 
   const [selectedDistrict, setSelectedDistrict] = useState(null);
   const [popupPosition, setPopupPosition] = useState({
@@ -467,94 +459,6 @@ export default function HomePage() {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* <div className="group relative m-auto w-full max-w-[1920px] py-16 sm:h-[300px] md:h-[700px] lg:h-[780px]"> */}
-      {/* <div
-    style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-    className="relative h-full w-full bg-cover bg-center duration-500"
-  >
-    <div className="absolute left-[22%] top-[20%]">
-      <h1 className="noto-sans-tc-bold py-3 leading-[1.2] text-white drop-shadow-lg">
-        尋找你的完美巴黎旅程
-      </h1>
-      <p className="noto-sans-tc-semibold py-6 text-2xl font-bold text-white drop-shadow-lg">
-        輕盈漫步在巴黎的街巷。
-      </p>
-      <p className="noto-sans-tc-semibold text-2xl font-bold text-white drop-shadow-lg">
-        無論你心繫歷史的脈動、美食的馨香，還是藝術的深邃，
-      </p>
-      <p className="noto-sans-tc-semibold text-2xl font-bold text-white drop-shadow-lg">
-        我們都為你精選了最契合靈魂的旅程。
-      </p>
-      <p className="noto-sans-tc-semibold py-6 text-2xl font-bold text-white drop-shadow-lg">
-        一段符合你心之所向的旅程，正在靜靜等待與你邂逅。
-      </p>
-
-      <div className="flex items-center">
-        <div className="relative w-full max-w-lg">
-          <input
-            type="text"
-            className="w-full rounded-lg border border-gray-300 bg-white p-3 pr-4 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="尋找你的完美巴黎旅程"
-          />
-          <div className="absolute inset-y-0 right-0 flex items-center bg-primary-500 pl-2">
-            <svg
-              className="h-5 w-5 text-white"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-            </svg>
-          </div>
-        </div>
-      </div>
-      <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-        歷史建築
-      </button>
-      <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-        博物館導覽
-      </button>
-      <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-        文哲學巡禮
-      </button>
-      <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-        自然風光
-      </button>
-      <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-        法式美食
-      </button>
-      <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-        浪漫蜜月行
-      </button>
-      <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-        親子家庭遊
-      </button>
-      <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
-        時尚購物
-      </button>
-    </div>
-  </div> */}
-
-      {/* <div className="absolute left-5 top-[50%] hidden -translate-x-0 translate-y-[-50%] cursor-pointer rounded-full bg-black/20 p-2 text-2xl text-white group-hover:block">
-    <BsChevronCompactLeft onClick={prevSlide} size={30} />
-  </div>
-
-  <div className="absolute right-5 top-[50%] hidden -translate-x-0 translate-y-[-50%] cursor-pointer rounded-full bg-black/20 p-2 text-2xl text-white group-hover:block">
-    <BsChevronCompactRight onClick={nextSlide} size={30} />
-  </div> */}
-      {/* 
-  <div className="top-4 flex justify-center py-2">
-    {slides.map((slide, slideIndex) => (
-      <div
-        key={slideIndex}
-        onClick={() => goToSlide(slideIndex)}
-        className="cursor-pointer text-2xl"
-      >
-      </div>
-    ))}
-  </div> */}
-
-      {/* </div> */}
 
       <div className="mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
         <img

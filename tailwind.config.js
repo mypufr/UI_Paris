@@ -55,8 +55,12 @@ export default {
       },
       letterSpacing: {
         1.5: "1.5px",
-        4: '4%',
+        4: "4%",
       },
+      grayscale: {
+        120: "120%",
+        240: "240%",
+      }
     },
   },
   plugins: [],
