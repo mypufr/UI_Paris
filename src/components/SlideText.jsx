@@ -14,21 +14,21 @@ const SlideText = ({
     />
     <div className="absolute left-[22%] top-[10%]">
       <div className="flex-col space-y-5 text-start">
-        <p className="noto-sans-tc-bold py-3 leading-[1.2] text-white drop-shadow-lg">
+        <p className="noto-sans-tc-bold py-3 leading-[1.2] text-white tracking-4 drop-shadow-2xl shadow-black ">
           尋找你的完美巴黎旅程
         </p>
-        <p className="py-6 text-2xl font-bold text-white">
+        <p className="py-6 text-2xl font-bold text-white tracking-4 drop-shadow-2xl shadow-black">
           輕盈漫步在巴黎的街巷。
         </p>
         <div>
-          <p className="text-2xl font-bold leading-[28.8px] text-white">
+          <p className="text-2xl font-bold leading-[28.8px] tracking-4 text-white drop-shadow-2xl shadow-black">
             無論你心繫歷史的脈動、美食的馨香，還是藝術的深邃，
           </p>
-          <p className="text-2xl font-bold leading-[28.8px] text-white">
+          <p className="text-2xl font-bold leading-[28.8px] tracking-4 text-white drop-shadow-2xl  shadow-black">
             我們都為你精選了最契合靈魂的旅程。
           </p>
         </div>
-        <p className="py-6 text-2xl font-bold leading-[28.8px] text-white">
+        <p className="py-6 text-2xl font-bold leading-[28.8px] tracking-4 text-white drop-shadow-2xl  shadow-black">
           一段符合你心之所向的旅程，正在靜靜等待與你邂逅。
         </p>
 
