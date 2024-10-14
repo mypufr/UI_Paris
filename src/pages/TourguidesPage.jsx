@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 
@@ -53,8 +54,6 @@ function TourguidesPage() {
 
   return (
     <>
-      <div>Tourguides Page</div>
-
       <div className="group relative m-auto w-full py-16 sm:h-[300px] md:h-[700px] lg:h-[780px]">
         <div
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
@@ -89,7 +88,7 @@ function TourguidesPage() {
                         <line x1="4" y1="11" x2="20" y2="11" />{" "}
                         <rect x="8" y="15" width="2" height="2" />
                       </svg>
-                      <span className="text-xl text-primary-700 font-bold shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                      <span className="text-xl font-bold text-primary-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                         需求日期
                       </span>
                       <svg
@@ -125,7 +124,7 @@ function TourguidesPage() {
                           d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                         />
                       </svg>
-                      <span className="text-xl text-primary-700 font-bold shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                      <span className="text-xl font-bold text-primary-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                         參加人數
                       </span>
                       <svg
@@ -161,7 +160,7 @@ function TourguidesPage() {
                           d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
                         />
                       </svg>
-                      <span className="text-xl text-primary-700 font-bold shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                      <span className="text-xl font-bold text-primary-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                         參觀主題
                       </span>
                       <svg
@@ -182,32 +181,33 @@ function TourguidesPage() {
                 </div>
               </div>
             </div>
-          {/* Search Button */}
-          <div className="mt-10">
-            <Link>
-              <button className="absolute bottom-[-10%] left-[32%] flex w-[35%] rounded-3xl bg-primary-500 py-3">
-                <div className="relative flex-grow">
-                  <span className="text-xl font-bold text-white">立即搜尋</span>
-                  <svg
-                    className="absolute right-3 top-1 inline-block h-6 w-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="1"
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    />
-                  </svg>
-                </div>
-              </button>
-            </Link>
+            {/* Search Button */}
+            <div className="mt-10">
+              <Link to="/search-tourguides/search-results">
+                <button className="absolute bottom-[-10%] left-[32%] flex w-[35%] rounded-3xl bg-primary-500 py-3">
+                  <div className="relative flex-grow">
+                    <span className="text-xl font-bold text-white">
+                      立即搜尋
+                    </span>
+                    <svg
+                      className="absolute right-3 top-1 inline-block h-6 w-6 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="1"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
-          </div>
-
 
         <div className="absolute left-5 top-[50%] hidden -translate-x-0 translate-y-[-50%] cursor-pointer rounded-full bg-black/20 p-2 text-2xl text-white group-hover:block">
           <BsChevronCompactLeft onClick={prevSlide} size={30} />
@@ -228,9 +228,10 @@ function TourguidesPage() {
         </div>
       </div>
 
+        <Outlet />
       <div className="flex justify-center space-x-4 hover:cursor-pointer">
         <img
-          src="src/assets/image/vector_title.png"
+          src="../../src/assets/image/vector_title.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -238,7 +239,7 @@ function TourguidesPage() {
           特色服務
         </h2>
         <img
-          src="src/assets/image/vector_title.png"
+          src="../../src/assets/image/vector_title.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -252,7 +253,7 @@ function TourguidesPage() {
                 100%私人導覽
               </p>
               <img
-                src="src/assets/image/step-1-1.png"
+                src="../../src/assets/image/step-1-1.png"
                 alt=""
                 className="block object-cover"
               />
@@ -265,7 +266,7 @@ function TourguidesPage() {
                 客製化行程
               </p>
               <img
-                src="src/assets/image/step-1-1.png"
+                src="../../src/assets/image/step-1-1.png"
                 alt=""
                 className="block object-cover"
               />
@@ -278,7 +279,7 @@ function TourguidesPage() {
                 獲取當地視角
               </p>
               <img
-                src="src/assets/image/step-1-1.png"
+                src="../../src/assets/image/step-1-1.png"
                 alt=""
                 className="block object-cover"
               />
@@ -291,7 +292,7 @@ function TourguidesPage() {
                 彈性取消政策
               </p>
               <img
-                src="src/assets/image/step-1-1.png"
+                src="../../src/assets/image/step-1-1.png"
                 alt=""
                 className="block object-cover"
               />

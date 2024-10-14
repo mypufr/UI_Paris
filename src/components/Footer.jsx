@@ -8,7 +8,7 @@ function Footer() {
         <footer className="relative">
         <div>
           <img
-            src="src/assets/image/footer_background.png"
+            src="../../src/assets/image/footer_background.png"
             alt=""
             className="block w-full"
           />
@@ -17,7 +17,7 @@ function Footer() {
 
         <div>
           <img
-            src="src/assets/image/footer_img.png"
+            src="../../src/assets/image/footer_img.png"
             alt=""
             className="absolute bottom-[150px] right-[400px]"
           />
@@ -29,7 +29,7 @@ function Footer() {
             <li className="flex">
               <Link to="/" className="inline-flex cursor-pointer">
                 <div>
-                  <img src="src/assets/image/website_logo.png" alt="logo" />
+                  <img src="../../src/assets/image/website_logo.png" alt="logo" />
                 </div>
                 <div className="onClick={() => window.location.href = '/'} flex flex-col justify-around">
                   <div>
@@ -59,7 +59,7 @@ function Footer() {
             <li>
               <Link to="tel:+37653421">
                 <img
-                  src="src/assets/image/call.svg"
+                  src="../../src/assets/image/call.svg"
                   alt="call icon"
                   className="inline-block"
                 />
@@ -70,7 +70,7 @@ function Footer() {
             <li className="">
               <Link to="mailto:info@hexschool.com">
                 <img
-                  src="src/assets/image/location_on.svg"
+                  src="../../src/assets/image/location_on.svg"
                   alt=""
                   className="inline-block"
                 />
@@ -80,7 +80,7 @@ function Footer() {
             <li className="flex space-x-4">
               <Link to="/">
                 <img
-                  src="src/assets/image/facebook.svg"
+                  src="../../src/assets/image/facebook.svg"
                   alt="facebook-link"
                   className="inline-block"
                 />
@@ -90,14 +90,14 @@ function Footer() {
                 className="inline-block rounded-full border-2 border-white p-2"
               >
                 <img
-                  src="src/assets/image/Instagram.svg"
+                  src="../../src/assets/image/Instagram.svg"
                   alt="instagram-link"
                   className="inline-block h-auto w-4 rounded"
                 />
               </Link>
               <Link to="/">
                 <img
-                  src="src/assets/image/twitter_logo.svg"
+                  src="../../src/assets/image/twitter_logo.svg"
                   alt="line-link"
                   className="inline-block h-10 w-10 rounded-full"
                 />

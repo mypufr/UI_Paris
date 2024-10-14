@@ -11,7 +11,7 @@ function Header() {
             <Link to="/" className="inline-flex cursor-pointer">
               <div>
                 <img
-                  src="src/assets/image/website_logo.png"
+                  src="../../src/assets/image/website_logo.png"
                   alt="logo"
                 />
               </div>
@@ -33,7 +33,7 @@ function Header() {
 
           <ul className="ms-[9.9%] flex items-center justify-between space-x-16">
             <li className="text-base leading-[22.4px] text-grey-950">
-              <Link to="/book-tourguides" className="text-primary-500 hover:font-bold">
+              <Link to="/search-tourguides" className="text-primary-500 hover:font-bold">
                 隨行導遊趣
               </Link>
             </li>

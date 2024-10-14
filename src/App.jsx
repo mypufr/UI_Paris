@@ -28,12 +28,12 @@ import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TourguidesPage from "./pages/TourguidesPage";
+import SearchResultsPage from "./pages/SearchResultsPage";
 import TripsPage from "./pages/TripsPage";
 import SitesInfoPage from "./pages/SitesInfoPage";
 import TravelInfoPage from "./pages/TravelInfoPage";
 import About from "./pages/About";
 import SignUp from "./pages/SingUp";
-
 
 // import component
 
@@ -49,7 +49,9 @@ export default function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
-          <Route path="/book-tourguides" element={<TourguidesPage />}></Route>
+          <Route path="/search-tourguides" element={<TourguidesPage />}>
+            <Route path="search-results" element={<SearchResultsPage />} />
+          </Route>
           <Route path="/book-trips" element={<TripsPage />}></Route>
           <Route path="/sites-info" element={<SitesInfoPage />}></Route>
           <Route path="/travel-info" element={<TravelInfoPage />}></Route>
