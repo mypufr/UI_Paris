@@ -1,7 +1,8 @@
 [
   {
     "name": "李文雅",
-    "img": "src/assets/image/img_tourguide_1.png",
+    "img": "/images/img_tourguide_1.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "巴黎歷史 建築學 巴洛克時期",
     "speciality1":"巴黎歷史",
     "speciality2":"建築學",
@@ -11,7 +12,8 @@
   },
   {
     "name": "Kevin Martin",
-    "img": "src/assets/image/img_tourguide_4.png",
+    "img": "/images/img_tourguide_4.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "巴黎時尚 購物導覽 設計師品牌",
     "speciality1":"巴黎時尚",
     "speciality2":"購物導覽",
@@ -20,7 +22,8 @@
   },
   {
     "name": "Marie Leclerc",
-    "img": "src/assets/image/img_tourguide_2.png",
+    "img": "/images/img_tourguide_2.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "美食之旅 街頭文化",
     "speciality1":"美食之旅",
     "speciality2":"街頭文化",
@@ -29,7 +32,8 @@
   },
   {
     "name": "王淑芬",
-    "img": "src/assets/image/img_tourguide_5.png",
+    "img": "/images/img_tourguide_5.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "巴黎攝影 浪漫景點 旅遊攝影指導",
     "speciality1":"巴黎攝影",
     "speciality2":"浪漫景點",
@@ -38,7 +42,8 @@
   },
   {
     "name": "張曉明",
-    "img": "src/assets/image/img_tourguide_3.png",
+    "img": "/images/img_tourguide_3.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "當代藝術 巴黎博物館 街頭藝術",
     "speciality1":"當代藝術",
     "speciality2":"巴黎博物館",
@@ -47,7 +52,8 @@
   },
   {
     "name": "Claire Dubois",
-    "img": "src/assets/image/img_tourguide_6.png",
+    "img": "/images/img_tourguide_6.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "家庭導覽 兒童友好景點 親子活動",
     "speciality1":"家庭導覽",
     "speciality2":"兒童友好景點",

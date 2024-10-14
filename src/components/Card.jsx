@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Card = ({
-  imageSrc,
+  imgSrc,
   title,
   price,
   specialities1,
@@ -15,7 +15,7 @@ const Card = ({
         <div className="border-secondary-300 rounded-2xl border px-6 py-6">
           <img
             className="h-[360px] w-full rounded-2xl object-cover"
-            src={imageSrc}
+            src={imgSrc}
             alt={title}
           />
 

@@ -3,8 +3,9 @@ import React from "react";
 function TripsPage() {
   return (
     <>
-      <div>Trips Page</div>
-      <div className="h-[1000px] bg-green-800"></div>
+      <div className="h-[1000px] bg-green-800 text-center text-3xl font-bold text-white">
+        Trips Page
+      </div>
     </>
   );
 }

@@ -575,7 +575,7 @@ export default function HomePage() {
               <div key={index}>
                 <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                   <Card
-                    imageSrc={data.img}
+                    imgSrc={data.img}
                     title={data.name}
                     price={data.price}
                     specialities1={data.speciality1}

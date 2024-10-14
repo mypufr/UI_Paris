@@ -16,6 +16,9 @@ import "swiper/css/navigation";
 import { Navbar, Button, IconButton } from "@material-tailwind/react";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 
+
+import data from "../data/data.json"
+
 function TourguidesPage() {
   const slides = [
     {
