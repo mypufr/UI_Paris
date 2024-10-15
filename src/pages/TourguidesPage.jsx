@@ -59,9 +59,9 @@ function TourguidesPage() {
 
 const navigate = useNavigate();
 
-const handleSearchClick = ( ()=> {
+const handleSearchClick = ()=> {
   navigate("/search-tourguides/search-results");
-})
+}
 
   return (
     <>
@@ -241,7 +241,7 @@ const handleSearchClick = ( ()=> {
         </div>
       </div>
 
-      <Outlet />
+      {/* <Outlet /> */}
       <div className="flex justify-center space-x-4 hover:cursor-pointer">
         <img
           src="../../src/assets/image/vector_title.png"
