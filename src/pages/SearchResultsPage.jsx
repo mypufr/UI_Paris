@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -12,9 +14,25 @@ import Card from "../components/Card";
 import { settings3 } from "../components/helpers/sliderSettings";
 import { settings4 } from "../components/helpers/sliderSettings";
 
-function SearchResultPage() {
+function SearchResultsPage() {
+
+
+  const navigate = useNavigate();
+
+
+const handleCardClick = (id) => {
+
+  navigate(`/search-tourguides/tourguide-profile/${id}`)
+}
+
+
   return (
     <>
+
+
+<div>您的搜尋條件</div>
+
+
       <div className="flex justify-center space-x-4 hover:cursor-pointer">
         <img
           src="../../src/assets/image/vector_title.png"
@@ -42,7 +60,7 @@ function SearchResultPage() {
         <div className="mt-8">
           <Slider {...settings4}>
             {data.map((data, index) => (
-              <div key={index}>
+              <div key={index} onClick={()=> handleCardClick(data.id)}>
                 <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                   <Card
                     imgSrc={data.img}
@@ -111,4 +129,4 @@ function SearchResultPage() {
   );
 }
 
-export default SearchResultPage;
+export default SearchResultsPage;

@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 
@@ -16,8 +18,7 @@ import "swiper/css/navigation";
 import { Navbar, Button, IconButton } from "@material-tailwind/react";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 
-
-import data from "../data/data.json"
+import data from "../data/data.json";
 
 function TourguidesPage() {
   const slides = [
@@ -54,6 +55,13 @@ function TourguidesPage() {
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
+
+
+const navigate = useNavigate();
+
+const handleSearchClick = ( ()=> {
+  navigate("/search-tourguides/search-results");
+})
 
   return (
     <>
@@ -186,8 +194,10 @@ function TourguidesPage() {
             </div>
             {/* Search Button */}
             <div className="mt-10">
-              <Link to="/search-tourguides/search-results">
-                <button className="absolute bottom-[-10%] left-[32%] flex w-[35%] rounded-3xl bg-primary-500 py-3">
+              {/* <Link to="/search-tourguides/search-results"> */}
+                <button className="absolute bottom-[-10%] left-[32%] flex w-[35%] rounded-3xl bg-primary-500 py-3"
+                onClick={handleSearchClick}
+                >
                   <div className="relative flex-grow">
                     <span className="text-xl font-bold text-white">
                       立即搜尋
@@ -207,7 +217,7 @@ function TourguidesPage() {
                     </svg>
                   </div>
                 </button>
-              </Link>
+              {/* </Link> */}
             </div>
           </div>
         </div>
@@ -231,7 +241,7 @@ function TourguidesPage() {
         </div>
       </div>
 
-        <Outlet />
+      <Outlet />
       <div className="flex justify-center space-x-4 hover:cursor-pointer">
         <img
           src="../../src/assets/image/vector_title.png"

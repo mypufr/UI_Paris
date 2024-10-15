@@ -11,7 +11,7 @@ const Card = ({
 }) => {
   return (
     <div className="max-w-sm rounded-2xl border-red-900 shadow-lg">
-      <Link to="/">
+      <Link to="/search-results/:id">
         <div className="border-secondary-300 rounded-2xl border px-6 py-6">
           <img
             className="h-[360px] w-full rounded-2xl object-cover"

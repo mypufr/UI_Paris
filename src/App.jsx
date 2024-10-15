@@ -1,46 +1,17 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import { Link } from "react-router-dom";
-// import { useRef, useState } from "react";
-
-// import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-// import { RxDotFilled } from "react-icons/rx";
-
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, Pagination, Navigation } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
-
-// import { Navbar, Button, IconButton } from "@material-tailwind/react";
-// import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
-
-// import data from "./data/data.json";
-// import DistrictsData from "./data/districts.json";
-// import TripsData from "./data/trips.json";
-// import SlidesData from "./data/slides.json";
 
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TourguidesPage from "./pages/TourguidesPage";
 import SearchResultsPage from "./pages/SearchResultsPage";
+import TourguideProfilePage from "./pages/TourguideProfilePage";
 import TripsPage from "./pages/TripsPage";
 import SitesInfoPage from "./pages/SitesInfoPage";
 import TravelInfoPage from "./pages/TravelInfoPage";
 import About from "./pages/About";
 import SignUp from "./pages/SingUp";
-
-// import component
-
-// import Card from "./components/Card";
-// import TripCard from "./components/TripCard";
-// import TourguideList from "./components/TourguideList";
-// import SlideText from "./components/SlideText";
 
 export default function App() {
   return (
@@ -51,20 +22,19 @@ export default function App() {
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/search-tourguides" element={<TourguidesPage />}>
             <Route path="search-results" element={<SearchResultsPage />} />
+            <Route
+              path="tourguide-profile/:id"
+              element={<TourguideProfilePage />}
+            />
           </Route>
           <Route path="/book-trips" element={<TripsPage />}></Route>
           <Route path="/sites-info" element={<SitesInfoPage />}></Route>
           <Route path="/travel-info" element={<TravelInfoPage />}></Route>
           <Route path="/about" element={<About />}></Route>
 
-          {/* <Route path="/sign-in" element={<SignIn />}></Route> */}
+
           <Route path="/sign-up" element={<SignUp />}></Route>
 
-          {/* <Route element={<PrivateRoute />}>        
-    <Route path="/dashboard" element={<Dashboard />} />
-    </Route> */}
-
-          {/* <Route path="/projects" element={<Projects />}></Route> */}
         </Routes>
         <Footer />
       </BrowserRouter>
