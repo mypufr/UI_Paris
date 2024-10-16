@@ -6,13 +6,13 @@ import data from "../data/data.json";
 
 function OrderInfoPage() {
   const navigate = useNavigate();
-  // const handleGoBackClick = (id) => {
-  //   navigate(`/search-tourguides/tourguide-profile/${id}`);
-  // };
+  const handleGoBackClick = (id) => {
+    navigate(`/search-tourguides/tourguide-profile/${id}`);
+  };
 
-  const handleSubmitOrderClick = (id) => {
+  const handleConfirmOrderClick = (id) => {
     navigate(
-      `/search-tourguides/tourguide-profile/${id}/private-trips/confirm-order`,
+      `/search-tourguides/tourguide-profile/${id}/private-trips/payment`,
     );
   };
   const { id } = useParams();
@@ -27,11 +27,11 @@ function OrderInfoPage() {
       <div className="py-10 text-center text-3xl font-bold text-black">
         {/* subNavbar */}
         <div className="m-auto my-10 flex max-w-[75%] justify-center space-x-6 py-10">
-          <button className="max-w-60 rounded-2xl bg-secondary-300 px-2 py-2">
-            <p className="text-xl text-white">1. 預約項目</p>
-          </button>
           <button className="max-w-60 rounded-2xl border border-secondary-300 px-2 py-2">
-            <p className="text-xl text-secondary-500">2. 確認訂單</p>
+            <p className="text-xl text-secondary-500">1. 預約項目</p>
+          </button>
+          <button className="max-w-60 rounded-2xl bg-secondary-300  px-2 py-2">
+            <p className="text-xl text-white">2. 確認訂單</p>
           </button>
           <button className="max-w-60 rounded-2xl border border-secondary-300 px-2 py-2">
             <p className="text-xl text-secondary-500">3. 付款資料</p>
@@ -126,7 +126,7 @@ function OrderInfoPage() {
               <div className="my-20 space-y-4">
                 <button
                   className="flex max-w-80 justify-center space-x-20 rounded-3xl border border-secondary-300 bg-secondary-400 px-4 py-4 text-white"
-                  // onClick={handleSubmitOrderClick}
+                  // onClick={handleComfirmtOrderClick}
                 >
                   <p className="text-2xl">修改預約資料</p>
                 </button>
@@ -182,14 +182,14 @@ function OrderInfoPage() {
             <div className="my-20 space-y-4 items-center">
               <button
                 className="flex max-w-80 justify-center space-x-20 rounded-3xl border border-secondary-300 bg-secondary-400 px-4 py-4 text-white"
-                // onClick={()=>handleSubmitOrderClick(id)}
+                onClick={()=>handleConfirmOrderClick(id)}
               >
                 <p className="text-2xl">立刻預約</p>
               </button>
 
               <button
                 className="flex max-w-80 justify-center space-x-20 rounded-3xl border border-secondary-600 bg-transparent px-4 py-4 text-secondary-600"
-                // onClick={handleGoBackClick}
+                onClick={()=>handleGoBackClick(id)}
               >
                 <p className="text-2xl">回上一頁</p>
               </button>

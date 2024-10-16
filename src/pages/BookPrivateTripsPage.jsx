@@ -49,7 +49,7 @@ function BookPrivateTripsPage() {
           <button className="max-w-60 rounded-2xl bg-secondary-300 px-2 py-2">
             <p className="text-xl text-white">1. 預約項目</p>
           </button>
-          <button className="max-w-60 rounded-2xl border border-secondary-300 px-2 py-2">
+          <button className="max-w-60 rounded-2xl  border border-secondary-300 px-2 py-2">
             <p className="text-xl text-secondary-500">2. 確認訂單</p>
           </button>
           <button className="max-w-60 rounded-2xl border border-secondary-300 px-2 py-2">
