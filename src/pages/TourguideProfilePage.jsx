@@ -38,9 +38,7 @@ function TourguideProfilePage() {
   return (
     <>
       <div className="flex flex-col justify-center bg-background-2 py-[10vh] text-3xl font-bold text-grey-950">
-        {CardData.name} Profile Page
-        {CardData.review}
-        {CardData.price}€
+     
         <div className="flex justify-evenly">
           {/* Search criteria */}
 
