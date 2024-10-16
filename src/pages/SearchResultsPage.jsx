@@ -29,10 +29,6 @@ const handleCardClick = (id) => {
   return (
     <>
 
-
-<div>您的搜尋條件</div>
-
-
       <div className="flex justify-center space-x-4 hover:cursor-pointer">
         <img
           src="../../src/assets/image/vector_title.png"
@@ -58,9 +54,9 @@ const handleCardClick = (id) => {
       {/* slides show 1: search results */}
       <div className="m-auto my-20 w-[67.5%]">
         <div className="mt-8">
-          <Slider {...settings4}>
+          <Slider {...settings4} className="">
             {data.map((data, index) => (
-              <div key={index} onClick={()=> handleCardClick(data.id)}>
+              <div key={index} onClick={()=> handleCardClick(data.id)} className="">
                 <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                   <Card
                     imgSrc={data.img}
@@ -86,8 +82,8 @@ const handleCardClick = (id) => {
       </div>
       {/* slides show 2: other recommandations */}
 
-      <div className="m-auto my-20 w-[67.5%]">
-        <div className="mt-20">
+      <div className="m-auto py-10 w-[67.5%]">
+        <div className="mb-20">
           {/* <Slider {...settings2}>
               {TripsData.map((data, index) => (
                 <div key={index}>
@@ -109,7 +105,7 @@ const handleCardClick = (id) => {
             </Slider> */}
           <Slider {...settings3}>
             {data.map((data, index) => (
-              <div key={index}>
+              <div key={index} className="">
                 <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                   <Card
                     imgSrc={data.img}

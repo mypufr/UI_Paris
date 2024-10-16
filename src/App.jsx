@@ -14,6 +14,7 @@ import TravelInfoPage from "./pages/TravelInfoPage";
 import About from "./pages/About";
 import SignUp from "./pages/SingUp";
 import BookPrivateTripsPage from "./pages/BookPrivateTripsPage";
+import OrderInfoPage from "./pages/OrderInfoPage";
 
 export default function App() {
   return (
@@ -37,9 +38,14 @@ export default function App() {
             element={<EditMessagePage />}
           />
 
-<Route
+          <Route
             path="/search-tourguides/tourguide-profile/:id/private-trips"
             element={<BookPrivateTripsPage />}
+          />
+
+          <Route
+            path="/search-tourguides/tourguide-profile/:id/private-trips/confirm-order"
+            element={<OrderInfoPage />}
           />
 
           {/* 

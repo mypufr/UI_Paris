@@ -432,7 +432,7 @@ function TourguideProfilePage() {
           <div className="mt-8">
             <Slider {...settings3}>
               {data.map((data, index) => (
-                <div key={index} onClick={() => handleCardClick(data.id)}>
+                <div key={index} onClick={() => handleCardClick(data.id)} className="p-3">
                   <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                     <Card
                       imgSrc={data.img}

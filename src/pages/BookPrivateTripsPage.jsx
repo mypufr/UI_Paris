@@ -1,9 +1,21 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import data from "../data/data.json";
 
 function BookPrivateTripsPage() {
+
+  const navigate = useNavigate(); 
+
+  const handleGoBackClick = (id) => {
+    navigate(`/search-tourguides/tourguide-profile/${id}`);
+  };
+
+
+  const handleSubmitOrderClick = (id) => {
+    navigate(`/search-tourguides/tourguide-profile/${id}/private-trips/confirm-order`);
+  };
   const { id } = useParams();
   const CardData = data.find((item) => item.id === parseInt(id));
   console.log(CardData);
@@ -180,18 +192,18 @@ function BookPrivateTripsPage() {
           </div>
 
           </div>
-
+{/* submit buttons */}
           <div className="space-y-4 my-20">
             <button
               className="flex w-80 justify-center space-x-20 rounded-3xl border border-secondary-300 bg-secondary-400 px-4 py-4 text-white"
-              // onClick={handlePrivateTripsClick}
+              onClick={()=>handleSubmitOrderClick(id)}
             >
               <p className="text-2xl">立刻預約</p>
             </button>
 
             <button
               className="flex w-80 justify-center space-x-20 rounded-3xl border border-secondary-600 bg-transparent px-4 py-4 text-secondary-600"
-              // onClick={handlePrivateTripsClick}
+              onClick={handleGoBackClick}
             >
               <p className="text-2xl">回上一頁</p>
             </button>

@@ -572,7 +572,7 @@ export default function HomePage() {
         <div className="mt-8">
           <Slider {...settings1}>
             {data.map((data, index) => (
-              <div key={index}>
+              <div key={index} className="p-10">
                 <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                   <Card
                     imgSrc={data.img}
@@ -608,7 +608,7 @@ export default function HomePage() {
             <img
               src="src/assets/image/vector_title.png"
               alt=""
-              className="inline-block h-[40px] w-[30px]"
+              className="inline-block h-[40px] "
             />
             <h4 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
               熱門旅程
@@ -616,7 +616,7 @@ export default function HomePage() {
             <img
               src="src/assets/image/vector_title.png"
               alt=""
-              className="inline-block h-[40px] w-[30px]"
+              className="inline-block h-[40px] "
             />
           </div>
         </div>
@@ -626,7 +626,7 @@ export default function HomePage() {
           <div className="mt-20">
             <Slider {...settings2}>
               {TripsData.map((data, index) => (
-                <div key={index}>
+                <div key={index} className="p-4">
                   <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                     <TripCard
                       tripName={data.tripName}
