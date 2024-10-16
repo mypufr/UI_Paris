@@ -6,7 +6,7 @@ function Header() {
   return (
     <>
       <div>
-        <div className="flex py-5 max-w-1296px mx-auto">
+        <div className="flex py-5 max-w-[1296px] mx-auto">
           <div className="flex">
             <Link to="/" className="inline-flex cursor-pointer">
               <div>

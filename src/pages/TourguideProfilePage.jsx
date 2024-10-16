@@ -48,7 +48,7 @@ function TourguideProfilePage() {
                 <Link>
                   <button className="flex w-full space-x-20 rounded-lg border border-gray-300 bg-background-2 px-4 py-4">
                     <svg
-                      className="h-8 w-8"
+                      className="h-8"
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
@@ -70,7 +70,7 @@ function TourguideProfilePage() {
                       需求日期
                     </span>
                     <svg
-                      className="h-8 w-8 text-red-500"
+                      className="h-8 text-red-500"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="grey"
@@ -90,7 +90,7 @@ function TourguideProfilePage() {
                 <Link>
                   <button className="flex w-full space-x-20 rounded-lg border border-gray-300 bg-background-2 px-4 py-4">
                     <svg
-                      className="h-8 w-8"
+                      className="h-8"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="grey"
@@ -106,7 +106,7 @@ function TourguideProfilePage() {
                       參加人數
                     </span>
                     <svg
-                      className="h-8 w-8"
+                      className="h-8"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="grey"
@@ -126,7 +126,7 @@ function TourguideProfilePage() {
                 <Link>
                   <button className="flex w-full space-x-20 rounded-lg border border-gray-300 bg-background-2 px-4 py-4">
                     <svg
-                      className="inline-block h-8 w-8"
+                      className="inline-block h-8"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="grey"
@@ -142,7 +142,7 @@ function TourguideProfilePage() {
                       參觀主題
                     </span>
                     <svg
-                      className="h-8 w-8"
+                      className="h-8"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="grey"
@@ -184,7 +184,7 @@ function TourguideProfilePage() {
           </div>
 
           {/* Tourguide profile */}
-          <div className="w-[50%]">
+          <div className="max-w-[50%]">
             <h2>您的專屬導遊</h2>
             <img src="" alt="" />
             <div className="">
@@ -196,11 +196,11 @@ function TourguideProfilePage() {
               {/* <img src="" alt="notes-star" /> */}
           
               <span className="flex">
-              <img src="src/assets/image/star.svg" alt="full star" className="w-6"/>
-              <img src="src/assets/image/star.svg" alt="" className="w-6"/>
-              <img src="src/assets/image/star.svg" alt="" className="w-6"/>
-              <img src="src/assets/image/star.svg" alt="" className="w-6"/>
-              <img src="src/assets/image/empty-star.svg" alt="" className="w-6"/>
+              <img src="src/assets/image/star.svg" alt="full star" className="max-w-6"/>
+              <img src="src/assets/image/star.svg" alt="" className="max-w-6"/>
+              <img src="src/assets/image/star.svg" alt="" className="max-w-6"/>
+              <img src="src/assets/image/star.svg" alt="" className="max-w-6"/>
+              <img src="src/assets/image/empty-star.svg" alt="" className="max-w-6"/>
               </span>
               <p>80人已評價</p>
               <p>語言：中文、英文</p>
@@ -251,14 +251,14 @@ function TourguideProfilePage() {
                       <img
                         src="../../src/assets/image/Instagram.svg"
                         alt="instagram-link"
-                        className="inline-block h-auto w-4 rounded"
+                        className="inline-block h-auto max-w-4 rounded"
                       />
                     </Link>
                     <Link to="/">
                       <img
                         src="../../src/assets/image/twitter_logo.svg"
                         alt="line-link"
-                        className="inline-block h-10 w-10 rounded-full"
+                        className="inline-block h-10  rounded-full"
                       />
                     </Link>
                   </li>

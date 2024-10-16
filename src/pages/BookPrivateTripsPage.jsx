@@ -45,30 +45,30 @@ function BookPrivateTripsPage() {
         </div>
 
 {/* subNavbar */}
-        <div className="m-auto my-10 flex w-[75%] justify-center space-x-6 py-10">
-          <button className="w-60 rounded-2xl bg-secondary-300 px-2 py-2">
+        <div className="m-auto my-10 flex max-w-[75%] justify-center space-x-6 py-10">
+          <button className="max-w-60 rounded-2xl bg-secondary-300 px-2 py-2">
             <p className="text-xl text-white">1. 預約項目</p>
           </button>
-          <button className="w-60 rounded-2xl border border-secondary-300 px-2 py-2">
+          <button className="max-w-60 rounded-2xl border border-secondary-300 px-2 py-2">
             <p className="text-xl text-secondary-500">2. 確認訂單</p>
           </button>
-          <button className="w-60 rounded-2xl border border-secondary-300 px-2 py-2">
+          <button className="max-w-60 rounded-2xl border border-secondary-300 px-2 py-2">
             <p className="text-xl text-secondary-500">3. 付款資料</p>
           </button>
-          <button className="w-60 rounded-2xl border border-secondary-300 px-2 py-2">
+          <button className="max-w-60 rounded-2xl border border-secondary-300 px-2 py-2">
             <p className="text-xl text-secondary-500">4. 完成預約</p>
           </button>
         </div>
 
 {/* Selected Tourguide  */}
-        <div className="m-auto flex w-[55%] flex-col items-center justify-center space-y-8 border border-background-2 px-8 py-6 bg-background-2">
+        <div className="m-auto flex max-w-[55%] flex-col items-center justify-center space-y-8 border border-background-2 px-8 py-6 bg-background-2">
           <p className="text-3xl text-secondary-500">您目前選擇的導遊是：</p>
 
           <div className="flex items-center justify-center space-x-4">
             <img
               src={CardData.img}
               alt=""
-              className="inline-block h-20 w-20 rounded-full"
+              className="inline-block h-20 max-w-20 rounded-full"
             />
             <p className="text-secondary-700 text-3xl">{CardData.name}</p>
           </div>
@@ -79,7 +79,7 @@ function BookPrivateTripsPage() {
         </div>
 
 {/* Options */}
-        <div className="flex flex-col items-center w-[55%] m-auto border border-background-2 border-spacing-4 pt-20">
+        <div className="flex flex-col items-center max-w-[55%] m-auto border border-background-2 border-spacing-4 pt-20">
 
           <div className="flex flex-col items-center space-y-6">
 
@@ -94,7 +94,7 @@ function BookPrivateTripsPage() {
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center rounded-lg bg-primary-500 pl-2">
                   <svg
-                    className="h-8 w-8 text-white"
+                    className="h-8 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -121,7 +121,7 @@ function BookPrivateTripsPage() {
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center rounded-lg bg-primary-500 pl-2">
                   <svg
-                    className="h-8 w-8 text-white"
+                    className="h-8 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -148,7 +148,7 @@ function BookPrivateTripsPage() {
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center rounded-lg bg-primary-500 pl-2">
                   <svg
-                    className="h-8 w-8 text-white"
+                    className="h-8 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -175,7 +175,7 @@ function BookPrivateTripsPage() {
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center rounded-lg bg-primary-500 pl-2">
                   <svg
-                    className="h-8 w-8 text-white"
+                    className="h-8 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -195,14 +195,14 @@ function BookPrivateTripsPage() {
 {/* submit buttons */}
           <div className="space-y-4 my-20">
             <button
-              className="flex w-80 justify-center space-x-20 rounded-3xl border border-secondary-300 bg-secondary-400 px-4 py-4 text-white"
+              className="flex max-w-80 justify-center space-x-20 rounded-3xl border border-secondary-300 bg-secondary-400 px-4 py-4 text-white"
               onClick={()=>handleSubmitOrderClick(id)}
             >
               <p className="text-2xl">立刻預約</p>
             </button>
 
             <button
-              className="flex w-80 justify-center space-x-20 rounded-3xl border border-secondary-600 bg-transparent px-4 py-4 text-secondary-600"
+              className="flex max-w-80 justify-center space-x-20 rounded-3xl border border-secondary-600 bg-transparent px-4 py-4 text-secondary-600"
               onClick={handleGoBackClick}
             >
               <p className="text-2xl">回上一頁</p>

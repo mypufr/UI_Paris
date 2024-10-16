@@ -27,7 +27,7 @@ const TripCard = ({
               <img
                 src="src/assets/image/vector_title.png"
                 alt=""
-                className="inline-block h-5 w-5"
+                className="inline-block h-5 max-w-5"
               />
               <h6 className="text-grey-500 text-xl font-bold">
                 {tripName}

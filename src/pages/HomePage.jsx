@@ -395,7 +395,7 @@ export default function HomePage() {
     <>
 
       {/* trip themes */}
-      <ul className="mx-auto flex max-w-1296px items-center justify-center py-7 text-base leading-[22.4px] text-grey-400">
+      <ul className="mx-auto flex max-w-[1296px] items-center justify-center py-7 text-base leading-[22.4px] text-grey-400">
         <li className="border border-y-0 border-grey-100 pr-11">
           <Link to="/" className="text-base">
             <span>法式美食</span>
@@ -484,7 +484,7 @@ export default function HomePage() {
             src="src/assets/image/parismap_dist_web.png"
             useMap="#parisMap"
             alt="Paris District Map"
-            className="w-100 h-100"
+            // className="max-w-100 max-h-100"
           />
         </div>
 
@@ -568,7 +568,7 @@ export default function HomePage() {
           />
         </div>
       </div>
-      <div className="m-auto w-[67.5%]">
+      <div className="m-auto max-w-[67.5%]">
         <div className="mt-8">
           <Slider {...settings1}>
             {data.map((data, index) => (
@@ -622,7 +622,7 @@ export default function HomePage() {
         </div>
 
         {/* slides show: popular sites */}
-        <div className="absolute left-[15%] top-[40%] w-[67.5%]">
+        <div className="absolute left-[15%] top-[40%] max-w-[67.5%]">
           <div className="mt-20">
             <Slider {...settings2}>
               {TripsData.map((data, index) => (
@@ -848,7 +848,7 @@ export default function HomePage() {
           <img
             src="src/assets/image/left_tree.png"
             alt=""
-            className="h-auto w-[98%]"
+            className="h-auto max-w-[98%]"
           />
         </div>
 
@@ -856,7 +856,7 @@ export default function HomePage() {
           <img
             src="src/assets/image/deco_middle_tree.png"
             alt=""
-            className="h-auto w-[89%]"
+            className="h-auto max-w-[89%]"
           />
         </div>
 
@@ -864,7 +864,7 @@ export default function HomePage() {
           <img
             src="src/assets/image/deco_right_tree.png"
             alt=""
-            className="h-auto w-[98%]"
+            className="h-auto max-w-[98%]"
           />
         </div>
       </div>

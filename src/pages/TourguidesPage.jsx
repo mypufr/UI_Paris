@@ -81,7 +81,7 @@ const handleSearchClick = ()=> {
                   <Link>
                     <button className="flex w-full space-x-20 rounded-lg border border-gray-300 bg-background-2 px-4 py-4">
                       <svg
-                        className="h-8 w-8"
+                        className="h-8"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -103,7 +103,7 @@ const handleSearchClick = ()=> {
                         需求日期
                       </span>
                       <svg
-                        className="h-8 w-8 text-red-500"
+                        className="h-8 text-red-500"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="grey"
@@ -123,7 +123,7 @@ const handleSearchClick = ()=> {
                   <Link>
                     <button className="flex w-full space-x-20 rounded-lg border border-gray-300 bg-background-2 px-4 py-4">
                       <svg
-                        className="h-8 w-8"
+                        className="h-8"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="grey"
@@ -139,7 +139,7 @@ const handleSearchClick = ()=> {
                         參加人數
                       </span>
                       <svg
-                        className="h-8 w-8"
+                        className="h-8"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="grey"
@@ -159,7 +159,7 @@ const handleSearchClick = ()=> {
                   <Link>
                     <button className="flex w-full space-x-20 rounded-lg border border-gray-300 bg-background-2 px-4 py-4">
                       <svg
-                        className="inline-block h-8 w-8"
+                        className="inline-block h-8 "
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="grey"

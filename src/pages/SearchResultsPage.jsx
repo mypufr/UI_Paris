@@ -52,7 +52,7 @@ const handleCardClick = (id) => {
       </div>
 
       {/* slides show 1: search results */}
-      <div className="m-auto my-20 w-[67.5%]">
+      <div className="m-auto my-20 max-w-[67.5%]">
         <div className="mt-8">
           <Slider {...settings4} className="">
             {data.map((data, index) => (
@@ -82,7 +82,7 @@ const handleCardClick = (id) => {
       </div>
       {/* slides show 2: other recommandations */}
 
-      <div className="m-auto py-10 w-[67.5%]">
+      <div className="m-auto py-10 max-w-[67.5%]">
         <div className="mb-20">
           {/* <Slider {...settings2}>
               {TripsData.map((data, index) => (

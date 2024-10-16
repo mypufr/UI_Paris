@@ -26,17 +26,17 @@ function OrderInfoPage() {
     <>
       <div className="py-10 text-center text-3xl font-bold text-black">
         {/* subNavbar */}
-        <div className="m-auto my-10 flex w-[75%] justify-center space-x-6 py-10">
-          <button className="w-60 rounded-2xl bg-secondary-300 px-2 py-2">
+        <div className="m-auto my-10 flex max-w-[75%] justify-center space-x-6 py-10">
+          <button className="max-w-60 rounded-2xl bg-secondary-300 px-2 py-2">
             <p className="text-xl text-white">1. 預約項目</p>
           </button>
-          <button className="w-60 rounded-2xl border border-secondary-300 px-2 py-2">
+          <button className="max-w-60 rounded-2xl border border-secondary-300 px-2 py-2">
             <p className="text-xl text-secondary-500">2. 確認訂單</p>
           </button>
-          <button className="w-60 rounded-2xl border border-secondary-300 px-2 py-2">
+          <button className="max-w-60 rounded-2xl border border-secondary-300 px-2 py-2">
             <p className="text-xl text-secondary-500">3. 付款資料</p>
           </button>
-          <button className="w-60 rounded-2xl border border-secondary-300 px-2 py-2">
+          <button className="max-w-60 rounded-2xl border border-secondary-300 px-2 py-2">
             <p className="text-xl text-secondary-500">4. 完成預約</p>
           </button>
         </div>
@@ -58,8 +58,8 @@ function OrderInfoPage() {
           />
         </div>
 
-        <div className="m-auto my-10 flex w-[75%] justify-center space-x-6 py-10">
-          <div className="w-[30%] border-spacing-3 border">
+        <div className="m-auto my-10 flex max-w-[75%] justify-center space-x-6 py-10">
+          <div className="max-w-[30%] border-spacing-3 border">
             {/* Selected Tourguide  */}
             <div className="m-auto flex w-full flex-col items-center justify-center space-y-8 border border-background-2 bg-background-2 px-8 py-6">
               <p className="text-3xl text-secondary-500">您預約的導遊是：</p>
@@ -68,7 +68,7 @@ function OrderInfoPage() {
                 <img
                   src={CardData.img}
                   alt=""
-                  className="inline-block h-20 w-20 rounded-full"
+                  className="inline-block h-20 max-w-20 rounded-full"
                 />
                 <p className="text-3xl text-secondary-700">{CardData.name}</p>
               </div>
@@ -125,14 +125,14 @@ function OrderInfoPage() {
 
               <div className="my-20 space-y-4">
                 <button
-                  className="flex w-80 justify-center space-x-20 rounded-3xl border border-secondary-300 bg-secondary-400 px-4 py-4 text-white"
+                  className="flex max-w-80 justify-center space-x-20 rounded-3xl border border-secondary-300 bg-secondary-400 px-4 py-4 text-white"
                   // onClick={handleSubmitOrderClick}
                 >
                   <p className="text-2xl">修改預約資料</p>
                 </button>
 
                 <button
-                  className="flex w-80 justify-center space-x-20 rounded-3xl border border-secondary-600 bg-transparent px-4 py-4 text-secondary-600"
+                  className="flex max-w-80 justify-center space-x-20 rounded-3xl border border-secondary-600 bg-transparent px-4 py-4 text-secondary-600"
                   // onClick={handleGoBackClick}
                 >
                   <p className="text-2xl">回上一頁</p>
@@ -142,7 +142,7 @@ function OrderInfoPage() {
           </div>
 
           {/* Order Detail */}
-          <div className="flex h-[1000px] w-[50%] flex-col border">
+          <div className="flex h-[1000px] min-w-[50%] flex-col border">
             <h3 className="border-b-4 border-b-secondary-200 py-6 pl-4 text-start text-3xl text-primary-950">
               私人行程訂單
             </h3>
@@ -154,7 +154,7 @@ function OrderInfoPage() {
                     <img
                       src={CardData.img}
                       alt=""
-                      className="inline-block h-20 w-20 rounded-full"
+                      className="inline-block h-20 max-w-20 rounded-full"
                     />
                     <p className="text-3xl text-secondary-700">
                       {CardData.name}
@@ -181,14 +181,14 @@ function OrderInfoPage() {
 
             <div className="my-20 space-y-4 items-center">
               <button
-                className="flex w-80 justify-center space-x-20 rounded-3xl border border-secondary-300 bg-secondary-400 px-4 py-4 text-white"
+                className="flex max-w-80 justify-center space-x-20 rounded-3xl border border-secondary-300 bg-secondary-400 px-4 py-4 text-white"
                 // onClick={()=>handleSubmitOrderClick(id)}
               >
                 <p className="text-2xl">立刻預約</p>
               </button>
 
               <button
-                className="flex w-80 justify-center space-x-20 rounded-3xl border border-secondary-600 bg-transparent px-4 py-4 text-secondary-600"
+                className="flex max-w-80 justify-center space-x-20 rounded-3xl border border-secondary-600 bg-transparent px-4 py-4 text-secondary-600"
                 // onClick={handleGoBackClick}
               >
                 <p className="text-2xl">回上一頁</p>

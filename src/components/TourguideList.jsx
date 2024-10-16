@@ -20,13 +20,13 @@ const TourguideList = ({ name, img, specialities, language }) => {
               <span className="text-base font-bold text-secondary-950">
                 {name}
               </span>
-              <span className="flex">
+              {/* <span className="flex">
               <img src="src/assets/image/star.svg" alt="" className="w-6"/>
               <img src="src/assets/image/star.svg" alt="" className="w-6"/>
               <img src="src/assets/image/star.svg" alt="" className="w-6"/>
               <img src="src/assets/image/star.svg" alt="" className="w-6"/>
               <img src="src/assets/image/empty-star.svg" alt="" className="w-6"/>
-              </span>
+              </span> */}
               </div>
               <span className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
                 專長：{specialities}

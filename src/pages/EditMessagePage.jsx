@@ -23,7 +23,7 @@ function EditMessagePage() {
   }
   return (
     <>
-      <div className="h-[1000px] text-center text-3xl font-bold text-white w-[70%] m-auto">
+      <div className="h-[1000px] text-center text-3xl font-bold text-white max-w-[70%] m-auto">
         EditMessage Page
         <div>
           <p className="bg-background-2 text-primary-500">
@@ -41,7 +41,7 @@ function EditMessagePage() {
             <img
               src={CardData.img}
               alt=""
-              className="inline-block h-20 w-20 rounded-full"
+              className="inline-block h-20 max-w-20 rounded-full"
             />
             <p className="flex flex-col items-start space-y-2 text-xl text-grey-950">
               <span>{CardData.name}</span>
@@ -54,14 +54,14 @@ function EditMessagePage() {
           className="cursor-text text-grey-950 placeholder-grey-200 border border-grey-100 pb-80 pl-4 pr-40 pt-4 placeholder:text-xl placeholder:italic placeholder:opacity-75"
         />
         <button
-          className="flex w-60 justify-center space-x-20 rounded-lg border border-gray-300 bg-primary-700 px-4 py-4 text-white"
+          className="flex max-w-60 justify-center space-x-20 rounded-lg border border-gray-300 bg-primary-700 px-4 py-4 text-white"
           onClick={handleSubmitMessageClick}
         >
           <p>送出訊息</p>
         </button>
 
         <button
-          className="flex w-60 justify-center space-x-20 rounded-lg border border-gray-300 bg-secondary-400 px-4 py-4 text-white"
+          className="flex max-w-60 justify-center space-x-20 rounded-lg border border-gray-300 bg-secondary-400 px-4 py-4 text-white"
           onClick={() => handleGoBackClick(id)}
         >
           <p>回上一頁</p>

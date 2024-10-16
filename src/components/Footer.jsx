@@ -92,14 +92,14 @@ function Footer() {
                 <img
                   src="../../src/assets/image/Instagram.svg"
                   alt="instagram-link"
-                  className="inline-block h-auto w-4 rounded"
+                  className="inline-block h-auto max-w-4 rounded"
                 />
               </Link>
               <Link to="/">
                 <img
                   src="../../src/assets/image/twitter_logo.svg"
                   alt="line-link"
-                  className="inline-block h-10 w-10 rounded-full"
+                  className="inline-block h-10 max-w-10 rounded-full"
                 />
               </Link>
             </li>
