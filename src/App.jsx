@@ -13,6 +13,7 @@ import SitesInfoPage from "./pages/SitesInfoPage";
 import TravelInfoPage from "./pages/TravelInfoPage";
 import About from "./pages/About";
 import SignUp from "./pages/SingUp";
+import BookPrivateTripsPage from "./pages/BookPrivateTripsPage";
 
 export default function App() {
   return (
@@ -34,6 +35,11 @@ export default function App() {
           <Route
             path="/search-tourguides/tourguide-profile/:id/message"
             element={<EditMessagePage />}
+          />
+
+<Route
+            path="/search-tourguides/tourguide-profile/:id/private-trips"
+            element={<BookPrivateTripsPage />}
           />
 
           {/* 
