@@ -3,12 +3,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Footer() {
-  return <>
-        {/* footer */}
-        <footer className="relative">
+  return (
+    <>
+      {/* footer */}
+      <footer className="relative">
         <div>
           <img
-            src="../../src/assets/image/footer_background.png"
+            src="../../images/footer_background.png"
             alt=""
             className="block w-full"
           />
@@ -17,7 +18,7 @@ function Footer() {
 
         <div>
           <img
-            src="../../src/assets/image/footer_img.png"
+            src="../../images/footer_img.png"
             alt=""
             className="absolute bottom-[150px] right-[400px]"
           />
@@ -29,7 +30,7 @@ function Footer() {
             <li className="flex">
               <Link to="/" className="inline-flex cursor-pointer">
                 <div>
-                  <img src="../../src/assets/image/website_logo.png" alt="logo" />
+                  <img src="../../images/website_logo.png" alt="logo" />
                 </div>
                 <div className="onClick={() => window.location.href = '/'} flex flex-col justify-around">
                   <div>
@@ -59,7 +60,7 @@ function Footer() {
             <li>
               <Link to="tel:+37653421">
                 <img
-                  src="../../src/assets/image/call.svg"
+                  src="/images/call.svg"
                   alt="call icon"
                   className="inline-block"
                 />
@@ -70,7 +71,7 @@ function Footer() {
             <li className="">
               <Link to="mailto:info@hexschool.com">
                 <img
-                  src="../../src/assets/image/location_on.svg"
+                  src="/images/location_on.svg"
                   alt=""
                   className="inline-block"
                 />
@@ -80,7 +81,7 @@ function Footer() {
             <li className="flex space-x-4">
               <Link to="/">
                 <img
-                  src="../../src/assets/image/facebook.svg"
+                  src="/images/facebook.svg"
                   alt="facebook-link"
                   className="inline-block"
                 />
@@ -90,14 +91,14 @@ function Footer() {
                 className="inline-block rounded-full border-2 border-white p-2"
               >
                 <img
-                  src="../../src/assets/image/Instagram.svg"
+                  src="/images/Instagram.svg"
                   alt="instagram-link"
                   className="inline-block h-auto max-w-4 rounded"
                 />
               </Link>
               <Link to="/">
                 <img
-                  src="../../src/assets/image/twitter_logo.svg"
+                  src="../../images/twitter_logo.svg"
                   alt="line-link"
                   className="inline-block h-10 max-w-10 rounded-full"
                 />
@@ -109,10 +110,8 @@ function Footer() {
           <p className="text-base text-grey-100">© 2024 樂遊巴黎版權所有</p>
         </div>
       </footer>
-  
-  
-  
-  </>;
+    </>
+  );
 }
 
 export default Footer;

@@ -452,7 +452,7 @@ export default function HomePage() {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -471,7 +471,7 @@ export default function HomePage() {
 
       <div className="mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
         <img
-          src="src/assets/image/vector_title.png"
+          src="images/vector_title.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -479,7 +479,7 @@ export default function HomePage() {
           分區搜尋專屬導遊
         </h3>
         <img
-          src="src/assets/image/vector_title.png"
+          src="images/vector_title.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -490,7 +490,7 @@ export default function HomePage() {
             4
           </p>
           <img
-            src="src/assets/image/parismap_dist_web.png"
+            src="images/parismap_dist_web.png"
             useMap="#parisMap"
             alt="Paris District Map"
             // className="max-w-100 max-h-100"
@@ -511,7 +511,7 @@ export default function HomePage() {
             >
               <h3 className="space-x-2 py-6 text-xl font-bold leading-7 tracking-4 text-primary-600">
                 <img
-                  src="src/assets/image/vector_title.png"
+                  src="images/vector_title.png"
                   alt=""
                   className="inline-block"
                 />
@@ -521,7 +521,7 @@ export default function HomePage() {
               <div>{districts[selectedDistrict]}</div>
               <div className="mt-6 space-y-4">
                 <button className="flex w-full justify-center rounded-2xl bg-primary-600 py-4 font-bold tracking-1.5 text-white">
-                  <img src="src/assets/image/BsHandIndex.svg" alt="" />
+                  <img src="images/BsHandIndex.svg" alt="" />
 
                   <span className="ml-2">馬上預約</span>
                 </button>
@@ -556,7 +556,7 @@ export default function HomePage() {
 
       <div>
         <img
-          src="src/assets/image/deco_sites.png"
+          src="images/deco_sites.png"
           alt="decorations Paris sites"
         />
       </div>
@@ -565,7 +565,7 @@ export default function HomePage() {
       <div className="">
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="src/assets/image/vector_title.png"
+            src="images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -573,7 +573,7 @@ export default function HomePage() {
             熱門導遊
           </h2>
           <img
-            src="src/assets/image/vector_title.png"
+            src="images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -603,21 +603,21 @@ export default function HomePage() {
       <div className="bg-popular_sites relative">
         <div className="">
           <img
-            src="src/assets/image/upper-background_popular_sites_w1914.png"
+            src="images/upper-background_popular_sites_w1914.png"
             alt=""
             className="h-[328px] w-full object-cover"
           />
           <img
-            src="src/assets/image/background_popular_sites_cutted.png"
+            src="images/background_popular_sites_cutted.png"
             alt=""
-            className="h-[733px] w-full"
+            className="h-[900px] w-full"
           />
         </div>
 
         <div className="absolute left-[43%] top-[30%] mt-16">
           <div className="flex justify-center space-x-4 hover:cursor-pointer">
             <img
-              src="src/assets/image/vector_title.png"
+              src="images/vector_title.png"
               alt=""
               className="inline-block h-[40px] "
             />
@@ -625,7 +625,7 @@ export default function HomePage() {
               熱門旅程
             </h4>
             <img
-              src="src/assets/image/vector_title.png"
+              src="images/vector_title.png"
               alt=""
               className="inline-block h-[40px] "
             />
@@ -663,7 +663,7 @@ export default function HomePage() {
       <div className="">
         <div className="mb-8 mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="src/assets/image/vector_title.png"
+            src="images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -671,7 +671,7 @@ export default function HomePage() {
             預約導遊和報名行程
           </h5>
           <img
-            src="src/assets/image/vector_title.png"
+            src="images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -686,7 +686,7 @@ export default function HomePage() {
             <div className="space-y-[149px] pb-6">
               <div className="mt-6 flex px-8">
                 <img
-                  src="src/assets/image/step-1-1.png"
+                  src="images/step-1-1.png"
                   alt=""
                   className="inline-block max-w-[200px] object-cover"
                 />
@@ -703,7 +703,7 @@ export default function HomePage() {
               <div className="flex px-8">
                 <div className="">
                   <img
-                    src="src/assets/image/step-1-2.png"
+                    src="images/step-1-2.png"
                     alt=""
                     className="inline-block max-w-[200px] object-cover"
                   />
@@ -720,7 +720,7 @@ export default function HomePage() {
               <div className="flex px-8">
                 <div className="">
                   <img
-                    src="src/assets/image/step-1-3.png"
+                    src="images/step-1-3.png"
                     alt=""
                     className="inline-block max-w-[200px] object-cover"
                   />
@@ -737,7 +737,7 @@ export default function HomePage() {
               <div className="flex justify-center">
                 <button className="flex max-w-full justify-center rounded-2xl bg-primary-600 px-[15%] py-4 transition-colors duration-200 hover:bg-primary-300 active:border active:border-primary-600 active:bg-transparent">
                   <img
-                    src="src/assets/image/BsHandIndex.svg"
+                    src="images/BsHandIndex.svg"
                     alt=""
                     className="inline-block"
                   />
@@ -758,7 +758,7 @@ export default function HomePage() {
             <div className="mt-10 flex-col space-y-10">
               <div className="mt-6 flex px-8">
                 <img
-                  src="src/assets/image/step-2-1.png"
+                  src="images/step-2-1.png"
                   alt=""
                   className="inline-block max-w-[188px] object-cover"
                 />
@@ -776,7 +776,7 @@ export default function HomePage() {
               <div className="flex px-8">
                 <div className="">
                   <img
-                    src="src/assets/image/step-2-2.png"
+                    src="images/step-2-2.png"
                     alt=""
                     className="inline-block max-w-[188px] object-cover"
                   />
@@ -793,7 +793,7 @@ export default function HomePage() {
               <div className="flex px-8">
                 <div className="">
                   <img
-                    src="src/assets/image/step-2-3.png"
+                    src="images/step-2-3.png"
                     alt=""
                     className="inline-block max-w-[188px] object-cover"
                   />
@@ -811,7 +811,7 @@ export default function HomePage() {
               <div className="flex px-8">
                 <div className="">
                   <img
-                    src="src/assets/image/step-2-4.png"
+                    src="images/step-2-4.png"
                     alt=""
                     className="max-w-[188px] object-cover"
                   />
@@ -829,7 +829,7 @@ export default function HomePage() {
               <div className="flex justify-center">
                 <button className="mt-2 flex max-w-full justify-center rounded-2xl bg-secondary-400 px-[15%] py-4 transition-colors duration-200 hover:bg-secondary-200 active:border active:border-secondary-200 active:bg-transparent">
                   <img
-                    src="src/assets/image/BsHandIndex.svg"
+                    src="images/BsHandIndex.svg"
                     alt=""
                     className="inline-block"
                   />
@@ -847,17 +847,17 @@ export default function HomePage() {
       {/* Clouds decorations */}
       <div className="relative mb-[20%]">
         <div className="absolute -top-6 left-[1%] -rotate-12">
-          <img src="src/assets/image/deco_footer_clouds.png" alt="" />
+          <img src="images/deco_footer_clouds.png" alt="" />
         </div>
 
         <div className="rotate-10 absolute -top-40 right-[3%]">
-          <img src="src/assets/image/deco_footer_clouds.png" alt="" />
+          <img src="images/deco_footer_clouds.png" alt="" />
         </div>
 
         {/* Tree decorations */}
         <div className="absolute left-16 top-[85px]">
           <img
-            src="src/assets/image/left_tree.png"
+            src="images/left_tree.png"
             alt=""
             className="h-auto max-w-[98%]"
           />
@@ -865,7 +865,7 @@ export default function HomePage() {
 
         <div className="absolute right-[7%] top-[190px] -rotate-3">
           <img
-            src="src/assets/image/deco_middle_tree.png"
+            src="images/deco_middle_tree.png"
             alt=""
             className="h-auto max-w-[89%]"
           />
@@ -873,7 +873,7 @@ export default function HomePage() {
 
         <div className="absolute -top-5 right-2">
           <img
-            src="src/assets/image/deco_right_tree.png"
+            src="images/deco_right_tree.png"
             alt=""
             className="h-auto max-w-[98%]"
           />

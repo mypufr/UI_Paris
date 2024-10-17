@@ -56,12 +56,11 @@ function TourguidesPage() {
     setCurrentIndex(slideIndex);
   };
 
+  const navigate = useNavigate();
 
-const navigate = useNavigate();
-
-const handleSearchClick = ()=> {
-  navigate("/search-tourguides/search-results");
-}
+  const handleSearchClick = () => {
+    navigate("/search-tourguides/search-results");
+  };
 
   return (
     <>
@@ -159,7 +158,7 @@ const handleSearchClick = ()=> {
                   <Link>
                     <button className="flex w-full space-x-20 rounded-lg border border-gray-300 bg-background-2 px-4 py-4">
                       <svg
-                        className="inline-block h-8 "
+                        className="inline-block h-8"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="grey"
@@ -195,28 +194,27 @@ const handleSearchClick = ()=> {
             {/* Search Button */}
             <div className="mt-10">
               {/* <Link to="/search-tourguides/search-results"> */}
-                <button className="absolute bottom-[-10%] left-[32%] flex w-[35%] rounded-3xl bg-primary-500 py-3"
+              <button
+                className="absolute bottom-[-10%] left-[32%] flex w-[35%] rounded-3xl bg-primary-500 py-3"
                 onClick={handleSearchClick}
-                >
-                  <div className="relative flex-grow">
-                    <span className="text-xl font-bold text-white">
-                      立即搜尋
-                    </span>
-                    <svg
-                      className="absolute right-3 top-1 inline-block h-6 w-6 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
-                  </div>
-                </button>
+              >
+                <div className="relative flex-grow">
+                  <span className="text-xl font-bold text-white">立即搜尋</span>
+                  <svg
+                    className="absolute right-3 top-1 inline-block h-6 w-6 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                </div>
+              </button>
               {/* </Link> */}
             </div>
           </div>
@@ -244,7 +242,7 @@ const handleSearchClick = ()=> {
       {/* <Outlet /> */}
       <div className="flex justify-center space-x-4 hover:cursor-pointer">
         <img
-          src="../../src/assets/image/vector_title.png"
+          src="../../images/vector_title.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -252,7 +250,7 @@ const handleSearchClick = ()=> {
           特色服務
         </h2>
         <img
-          src="../../src/assets/image/vector_title.png"
+          src="../../images/vector_title.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -266,7 +264,7 @@ const handleSearchClick = ()=> {
                 100%私人導覽
               </p>
               <img
-                src="../../src/assets/image/step-1-1.png"
+                src="../../images/step-1-1.png"
                 alt=""
                 className="block object-cover"
               />
@@ -279,7 +277,7 @@ const handleSearchClick = ()=> {
                 客製化行程
               </p>
               <img
-                src="../../src/assets/image/step-1-1.png"
+                src="../../images/step-1-1.png"
                 alt=""
                 className="block object-cover"
               />
@@ -292,7 +290,7 @@ const handleSearchClick = ()=> {
                 獲取當地視角
               </p>
               <img
-                src="../../src/assets/image/step-1-1.png"
+                src="../../images/step-1-1.png"
                 alt=""
                 className="block object-cover"
               />
@@ -305,7 +303,7 @@ const handleSearchClick = ()=> {
                 彈性取消政策
               </p>
               <img
-                src="../../src/assets/image/step-1-1.png"
+                src="../../images/step-1-1.png"
                 alt=""
                 className="block object-cover"
               />

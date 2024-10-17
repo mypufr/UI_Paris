@@ -2,28 +2,28 @@
   {
     "name": "劉洋",
     "district": "17",
-    "img": "src/assets/image/img_tourguide_8.png",
+    "img": "/images/img_tourguide_8.png",
     "specialities": "浪漫景點、情侶拍攝",
     "language": "中文、英文"
   },
   {
     "name": "Lucie",
     "district": "17",
-    "img": "src/assets/image/img_tourguide_7.png",
+    "img": "/images/img_tourguide_7.png",
     "specialities": "藝館之旅、畫廊導覽",
     "language": "中文、法文"
   },
   {
     "name": "張志強",
     "district": "16",
-    "img": "src/assets/image/img_tourguide_3.png",
+    "img": "/images/img_tourguide_3.png",
     "specialities": "家庭旅遊、親子活動",
     "language": "中文、英文、法文"
   },
   {
     "name": "Michel",
     "district": "17",
-    "img": "src/assets/image/img_tourguide_4.png",
+    "img": "/images/img_tourguide_4.png",
     "specialities": "當地市場、手工藝品",
     "language": "中文、英文"
   }

@@ -46,7 +46,7 @@ function TourguideProfilePage() {
 
   return (
     <>
-      <div className="flex flex-col justify-center bg-background-2 py-[5vh] text-3xl font-bold text-grey-950">
+      <div className="flex flex-col justify-center  py-[5vh] text-3xl font-bold text-grey-950">
         <div className="flex justify-evenly">
           {/* left: Search criteria */}
           <div className="mt-10">
@@ -315,7 +315,7 @@ function TourguideProfilePage() {
                   <li className="flex space-x-4">
                     <Link to="/">
                       <img
-                        src="../../src/assets/image/facebook.svg"
+                        src="../../images/facebook.svg"
                         alt="facebook-link"
                         className="inline-block rounded-full border-2 border-primary-950 p-2"
                       />
@@ -325,14 +325,14 @@ function TourguideProfilePage() {
                       className="inline-block rounded-full border-2 border-white p-2"
                     >
                       <img
-                        src="../../src/assets/image/Instagram.svg"
+                        src="../../images/Instagram.svg"
                         alt="instagram-link"
                         className="inline-block h-auto min-w-10 rounded bg-primary-950"
                       />
                     </Link>
                     <Link to="/">
                       <img
-                        src="../../src/assets/image/twitter_logo.svg"
+                        src="../../images/twitter_logo.svg"
                         alt="line-link"
                         className="inline-block h-10 rounded-full"
                       />
@@ -346,7 +346,7 @@ function TourguideProfilePage() {
         {/* single trip title */}
         <div className="mt-10 flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="../../src/assets/image/vector_title.png"
+            src="../../images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -354,7 +354,7 @@ function TourguideProfilePage() {
             {CardData.name} 的定點深度導覽
           </h2>
           <img
-            src="../../src/assets/image/vector_title.png"
+            src="../../images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -406,7 +406,7 @@ function TourguideProfilePage() {
         {/* thematic trip title */}
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="../../src/assets/image/vector_title.png"
+            src="../../images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -414,7 +414,7 @@ function TourguideProfilePage() {
             {CardData.name} 的主題式導覽行程
           </h2>
           <img
-            src="../../src/assets/image/vector_title.png"
+            src="../../images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -461,7 +461,7 @@ function TourguideProfilePage() {
         {/* service*/}
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="../../src/assets/image/vector_title.png"
+            src="../../images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -469,7 +469,7 @@ function TourguideProfilePage() {
             {CardData.name} 的服務內容
           </h2>
           <img
-            src="../../src/assets/image/vector_title.png"
+            src="../../images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -482,7 +482,7 @@ function TourguideProfilePage() {
                   100%私人導覽
                 </p>
                 <img
-                  src="../../src/assets/image/step-1-1.png"
+                  src="../../images/step-1-1.png"
                   alt=""
                   className="block object-cover"
                 />
@@ -495,7 +495,7 @@ function TourguideProfilePage() {
                   客製化行程
                 </p>
                 <img
-                  src="../../src/assets/image/step-1-1.png"
+                  src="../../images/step-1-1.png"
                   alt=""
                   className="block object-cover"
                 />
@@ -508,7 +508,7 @@ function TourguideProfilePage() {
                   獲取當地視角
                 </p>
                 <img
-                  src="../../src/assets/image/step-1-1.png"
+                  src="../../images/step-1-1.png"
                   alt=""
                   className="block object-cover"
                 />
@@ -521,7 +521,7 @@ function TourguideProfilePage() {
                   彈性取消政策
                 </p>
                 <img
-                  src="../../src/assets/image/step-1-1.png"
+                  src="../../images/step-1-1.png"
                   alt=""
                   className="block object-cover"
                 />
@@ -534,7 +534,7 @@ function TourguideProfilePage() {
         </div>
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="../../src/assets/image/vector_title.png"
+            src="../../images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -542,7 +542,7 @@ function TourguideProfilePage() {
             {CardData.name} 15位客人的評價
           </h2>
           <img
-            src="../../src/assets/image/vector_title.png"
+            src="../../images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -574,7 +574,7 @@ function TourguideProfilePage() {
         {/* More recommaned tourguides */}
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="../../src/assets/image/vector_title.png"
+            src="../../images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -582,7 +582,7 @@ function TourguideProfilePage() {
             還有下面9位導遊，等你隨時預約!
           </h2>
           <img
-            src="../../src/assets/image/vector_title.png"
+            src="../../images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />

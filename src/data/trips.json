@@ -2,7 +2,7 @@
   {
     "id": 1,
     "tripName": "巴黎經典三日遊",
-    "imgUrl": "/images/singleSite-1.png",
+    "imgUrl": "/images/singleSite-1.jpg",
     "date": "8月23日、9月15日",
     "site1": "艾非爾鐵塔",
     "site2": "羅浮宮",
@@ -17,7 +17,7 @@
   {
     "id": 2,
     "tripName": "巴黎美食與藝術二日遊",
-    "imgUrl": "/images/singleSite-2.png",
+    "imgUrl": "/images/singleSite-2.jpg",
     "date": "8月26日、8月26日",
     "site1": "蒙馬特區",
     "site2": "美味市集",
@@ -32,7 +32,7 @@
   {
     "id": 3,
     "tripName": "巴黎隱藏秘境探索三日遊",
-    "imgUrl": "/images/singleSite-3.png",
+    "imgUrl": "/images/singleSite-3.jpg",
     "date": "8月29日、8月31日",
     "site1": "瑪黑區",
     "site2": "地下墓穴",
@@ -77,7 +77,7 @@
   {
     "id": 6,
     "tripName": "巴黎夜生活體驗二日遊",
-    "imgUrl": "/images/singleSite-1.png",
+    "imgUrl": "/images/singleSite-1.jpg",
     "date": "9月22日、9月29日",
     "site1": "紅磨坊",
     "site2": "香檳酒吧",
@@ -92,7 +92,7 @@
   {
     "id": 7,
     "tripName": "巴黎博物館巡禮二日遊",
-    "imgUrl": "/images/singleSite-2.png",
+    "imgUrl": "/images/singleSite-2.jpg",
     "date": "10月1日、10月8日",
     "site1": "羅浮宮",
     "site2": "奧賽博物館",
@@ -107,7 +107,7 @@
   {
     "id": 8,
     "tripName": "巴黎古典音樂文化一日遊",
-    "imgUrl": "/images/singleSite-3.png",
+    "imgUrl": "/images/singleSite-3.jpg",
     "date": "10月15日、10月20日",
     "site1": "巴黎歌劇院",
     "site2": "香榭麗舍劇院",

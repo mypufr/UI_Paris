@@ -51,7 +51,7 @@ export default {
       cursor: {
         // Define a custom cursor style
         pointer: "pointer",
-        custom: "url(./src/assets/image/parismap_dist_web.png), auto",
+        custom: "url(/images/parismap_dist_web.png), auto",
       },
       letterSpacing: {
         1.5: "1.5px",

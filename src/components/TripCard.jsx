@@ -17,7 +17,7 @@ const TripCard = ({
       <Link to="/">
         <div className="rounded-3xl border border-secondary-300">
           <img
-            className="rounded-t-3xl inline-block object-cover"
+            className="rounded-t-3xl inline-block ob h-[300px]"
             src={imageUrl}
             alt={tripName}
           />

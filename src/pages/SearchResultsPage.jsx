@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,23 +14,17 @@ import { settings3 } from "../components/helpers/sliderSettings";
 import { settings4 } from "../components/helpers/sliderSettings";
 
 function SearchResultsPage() {
-
-
   const navigate = useNavigate();
 
-
-const handleCardClick = (id) => {
-
-  navigate(`/search-tourguides/tourguide-profile/${id}`)
-}
-
+  const handleCardClick = (id) => {
+    navigate(`/search-tourguides/tourguide-profile/${id}`);
+  };
 
   return (
     <>
-
       <div className="flex justify-center space-x-4 hover:cursor-pointer">
         <img
-          src="../../src/assets/image/vector_title.png"
+          src="../../images/vector_title.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -39,7 +32,7 @@ const handleCardClick = (id) => {
           搜尋您的專屬導遊區
         </h2>
         <img
-          src="../../src/assets/image/vector_title.png"
+          src="../../images/vector_title.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -56,7 +49,11 @@ const handleCardClick = (id) => {
         <div className="mt-8">
           <Slider {...settings4} className="">
             {data.map((data, index) => (
-              <div key={index} onClick={()=> handleCardClick(data.id)} className="">
+              <div
+                key={index}
+                onClick={() => handleCardClick(data.id)}
+                className=""
+              >
                 <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                   <Card
                     imgSrc={data.img}
@@ -82,7 +79,7 @@ const handleCardClick = (id) => {
       </div>
       {/* slides show 2: other recommandations */}
 
-      <div className="m-auto py-10 max-w-[67.5%]">
+      <div className="m-auto max-w-[67.5%] py-10">
         <div className="mb-20">
           {/* <Slider {...settings2}>
               {TripsData.map((data, index) => (

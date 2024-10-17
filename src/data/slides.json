@@ -25,11 +25,11 @@
   },
   {
     "slideNum": "7",
-    "imgUrl": "src/assets/image/slide-7.png"
+    "imgUrl": "/images/slide-7.png"
   },
   {
     "slideNum": "8",
-    "imgUrl": "src/assets/image/slide-8.png"
+    "imgUrl": "/images/slide-8.png"
   }
   
 
