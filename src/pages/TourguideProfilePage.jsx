@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import data from "../data/data.json";
 import TripsData from "../data/trips.json";
 import TripCard from "../components/TripCard";
+import SiteCard from "../components/SiteCard";
 import Card from "../components/Card";
 
 import Slider from "react-slick";
@@ -34,14 +35,11 @@ function TourguideProfilePage() {
     navigate(`/search-tourguides/tourguide-profile/${id}/private-trips`);
   };
 
-
   return (
     <>
-      <div className="flex flex-col justify-center bg-background-2 py-[10vh] text-3xl font-bold text-grey-950">
-     
+      <div className="flex flex-col justify-center bg-background-2 py-[5vh] text-3xl font-bold text-grey-950">
         <div className="flex justify-evenly">
-          {/* Search criteria */}
-
+          {/* left: Search criteria */}
           <div className="mt-10">
             <div className="border-grey-200 flex w-full max-w-lg flex-col items-center justify-center space-y-8 border p-10">
               <div className="flex justify-center">
@@ -159,9 +157,9 @@ function TourguideProfilePage() {
               </div>
 
               <div className="flex flex-col items-center justify-center space-y-8 px-8">
-                <p className="text-xl">您目前選擇的導遊</p>
+                <p className="text-2xl">您目前選擇的導遊</p>
 
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center space-x-6">
                   <img
                     src={CardData.img}
                     alt=""
@@ -183,39 +181,98 @@ function TourguideProfilePage() {
             </div>
           </div>
 
-          {/* Tourguide profile */}
+          {/* right: Tourguide profile */}
           <div className="max-w-[50%]">
-            <h2>您的專屬導遊</h2>
-            <img src="" alt="" />
-            <div className="">
-              <p>巴黎歷史建築、博物館專業導覽</p>
-              <div>
-                <span>大人   {CardData.price}€ /小時</span>
-                <span>兒童   {CardData.price -3 }€ /小時</span>
-              </div>
-              {/* <img src="" alt="notes-star" /> */}
-          
-              <span className="flex">
-              <img src="src/assets/image/star.svg" alt="full star" className="max-w-6"/>
-              <img src="src/assets/image/star.svg" alt="" className="max-w-6"/>
-              <img src="src/assets/image/star.svg" alt="" className="max-w-6"/>
-              <img src="src/assets/image/star.svg" alt="" className="max-w-6"/>
-              <img src="src/assets/image/empty-star.svg" alt="" className="max-w-6"/>
-              </span>
-              <p>80人已評價</p>
-              <p>語言：中文、英文</p>
+            {/* title */}
+            <div className="m-10 flex justify-center space-x-4 hover:cursor-pointer">
+              <img
+                src="/images/vector_title.png"
+                alt=""
+                className="inline-block h-[40px]"
+              />
+              <h2 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
+                您的專屬導遊 : {CardData.name}
+              </h2>
+              <img
+                src="/images/vector_title.png"
+                alt=""
+                className="inline-block h-[40px]"
+              />
+            </div>
+            <img
+              src={`/images/img_tourguide_${id}.png`}
+              alt=""
+              className="object-center-30 inline-block max-h-[640.31px] w-full rounded-3xl object-cover"
+            />
+            <div className="py-10">
+              <div className="my-4 flex justify-between">
+                <div className="flex space-x-2">
+                  <button className="inline-block rounded-full border border-secondary-300 px-5">
+                    <p className="text-xl text-secondary-600">
+                      {CardData.speciality1}
+                    </p>
+                  </button>
+                  <button className="inline-block rounded-full border border-secondary-300 px-5">
+                    <p className="text-xl text-secondary-600">
+                      {CardData.speciality2}
+                    </p>
+                  </button>
+                  <button className="inline-block rounded-full border border-secondary-300 px-5">
+                    <p className="text-xl text-secondary-600">
+                      {CardData.speciality3}
+                    </p>
+                  </button>
+                </div>
 
-              <button
-                className="flex w-full justify-center space-x-20 rounded-lg border border-gray-300 bg-primary-700 px-4 py-4 text-white"
-                onClick={handleSendMessageClick}
-              >
-                <p>留言給{CardData.name}</p>
-              </button>
+                <div className="flex flex-col">
+                  <span>大人 {CardData.price}€ /小時</span>
+                  <span>兒童 {CardData.price - 3}€ /小時</span>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-6">
+                <span className="flex">
+                  <img
+                    src="/images/star.svg"
+                    alt=""
+                    className="inline-block h-20 max-w-6"
+                  />
+                  <img src="/images/star.svg" alt="" className="max-w-6" />
+                  <img src="/images/star.svg" alt="" className="max-w-6" />
+                  <img src="/images/star.svg" alt="" className="max-w-6" />
+                  <img
+                    src="/images/empty-star.svg"
+                    alt=""
+                    className="max-w-6"
+                  />
+                </span>
+                <p>80人已評價</p>
+              </div>
+
+              <div className="flex items-center justify-between space-x-6">
+                <p>語言：中文、英文</p>
+
+                <button
+                  className="flex max-w-full justify-center space-x-20 rounded-lg border border-gray-300 bg-primary-700 px-4 py-4 text-white"
+                  onClick={handleSendMessageClick}
+                >
+                  <p>留言給{CardData.name}</p>
+                </button>
+              </div>
 
               {/* Profile description */}
-              <div>
-                <h3>關於{CardData.name}</h3>
-                <p>
+              <div className="mt-6 border-spacing-2 space-y-4 rounded-2xl border border-primary-200 px-4 py-6">
+                <div className="my-6 flex space-x-6">
+                  <img
+                    src="/images/website_logo.png"
+                    alt=""
+                    className="h-3xl inline-block"
+                  />
+                  <h3 className="text-3xl font-bold leading-[3rem] tracking-4 text-primary-600">
+                    關於{CardData.name}
+                  </h3>
+                </div>
+                <p className="text-2xl">
                   大家好，我是{CardData.name}，您的專屬巴黎導遊！
                   <br />
                   <br />
@@ -233,7 +290,17 @@ function TourguideProfilePage() {
                   <br />
                   希望能在巴黎與您相遇，一起走過這座充滿故事的城市，留下屬於您的巴黎篇章！
                 </p>
-                <h4>{CardData.name}的連結</h4>
+
+                <div className="flex space-x-6 py-6">
+                  <img
+                    src="/images/website_logo.png"
+                    alt=""
+                    className="h-3xl inline-block"
+                  />
+                  <h4 className="text-3xl font-bold leading-[3rem] tracking-4 text-primary-600">
+                    關於{CardData.name}的連結
+                  </h4>
+                </div>
 
                 <ul>
                   <li className="flex space-x-4">
@@ -241,7 +308,7 @@ function TourguideProfilePage() {
                       <img
                         src="../../src/assets/image/facebook.svg"
                         alt="facebook-link"
-                        className="inline-block"
+                        className="inline-block rounded-full border-2 border-primary-950 p-2"
                       />
                     </Link>
                     <Link
@@ -251,14 +318,14 @@ function TourguideProfilePage() {
                       <img
                         src="../../src/assets/image/Instagram.svg"
                         alt="instagram-link"
-                        className="inline-block h-auto max-w-4 rounded"
+                        className="inline-block h-auto min-w-10 rounded bg-primary-950"
                       />
                     </Link>
                     <Link to="/">
                       <img
                         src="../../src/assets/image/twitter_logo.svg"
                         alt="line-link"
-                        className="inline-block h-10  rounded-full"
+                        className="inline-block h-10 rounded-full"
                       />
                     </Link>
                   </li>
@@ -268,7 +335,7 @@ function TourguideProfilePage() {
           </div>
         </div>
         {/* single trip title */}
-        <div className="flex justify-center space-x-4 hover:cursor-pointer">
+        <div className="flex justify-center space-x-4 hover:cursor-pointer mt-10">
           <img
             src="../../src/assets/image/vector_title.png"
             alt=""
@@ -283,8 +350,8 @@ function TourguideProfilePage() {
             className="inline-block h-[40px]"
           />
         </div>
-        {/* single trips*/}
-        <div className="mt-20 flex flex-wrap justify-center space-x-4">
+      
+        {/* <div className="max-w-[75%] m-auto mt-20 flex flex-wrap justify-center space-x-10 space-y-10">
           {TripsData.map((data, index) => (
             <div key={index}>
               <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
@@ -302,7 +369,25 @@ function TourguideProfilePage() {
               </div>
             </div>
           ))}
+        </div> */}
+  {/* single trips : Grid*/}
+        <div className="m-auto my-20 grid max-w-[75%] grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {TripsData.slice(0, 6).map((data, index) => (
+            <div key={index}>
+              <div className="transform transition-transform duration-300 hover:scale-105">
+                <TripCard
+                  tripName={data.tripName}
+                  imageUrl={data.imgUrl}
+                  description={data.description}
+                  date={data.date}
+                  duration={data.duration}
+                  NumPeople={data.NumPeople}
+                />
+              </div>
+            </div>
+          ))}
         </div>
+
         {/* thematic trip title */}
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
@@ -319,8 +404,10 @@ function TourguideProfilePage() {
             className="inline-block h-[40px]"
           />
         </div>
-        {/* thematic trips*/}
-        <div className="mt-20 flex flex-wrap justify-center space-x-4">
+        {/* thematic trips : Grid*/}
+
+
+        {/* <div className="mt-20 flex flex-wrap justify-center space-x-4">
           {TripsData.map((data, index) => (
             <div key={index}>
               <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
@@ -338,7 +425,26 @@ function TourguideProfilePage() {
               </div>
             </div>
           ))}
+        </div> */}
+
+        <div className="m-auto my-20 grid max-w-[75%] grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {TripsData.slice(0, 6).map((data, index) => (
+            <div key={index}>
+              <div className="transform transition-transform duration-300 hover:scale-105">
+                <TripCard
+                  tripName={data.tripName}
+                  imageUrl={data.imgUrl}
+                  description={data.description}
+                  date={data.date}
+                  duration={data.duration}
+                  NumPeople={data.NumPeople}
+                />
+              </div>
+            </div>
+          ))}
         </div>
+
+
         {/* service*/}
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
@@ -432,7 +538,11 @@ function TourguideProfilePage() {
           <div className="mt-8">
             <Slider {...settings3}>
               {data.map((data, index) => (
-                <div key={index} onClick={() => handleCardClick(data.id)} className="p-3">
+                <div
+                  key={index}
+                  // onClick={() => handleCardClick(data.id)}
+                  className="p-3"
+                >
                   <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                     <Card
                       imgSrc={data.img}

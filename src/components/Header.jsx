@@ -11,7 +11,7 @@ function Header() {
             <Link to="/" className="inline-flex cursor-pointer">
               <div>
                 <img
-                  src="../../src/assets/image/website_logo.png"
+                  src="images/website_logo.png"
                   alt="logo"
                 />
               </div>

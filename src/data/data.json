@@ -12,7 +12,7 @@
 
   },
   {
-    "id": 2,
+    "id": 4,
     "name": "Kevin Martin",
     "img": "/images/img_tourguide_4.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
@@ -23,18 +23,18 @@
     "price":"16"
   },
   {
-    "id": 3,
+    "id": 2,
     "name": "Marie Leclerc",
     "img": "/images/img_tourguide_2.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "美食之旅 街頭文化",
     "speciality1":"美食之旅",
     "speciality2":"街頭文化",
-    "speciality3":"",
+    "speciality3":"時尚購物",
     "price":"13"
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "王淑芬",
     "img": "/images/img_tourguide_5.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
@@ -45,7 +45,7 @@
     "price":"12"
   },
   {
-    "id": 5,
+    "id": 3,
     "name": "張曉明",
     "img": "/images/img_tourguide_3.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
