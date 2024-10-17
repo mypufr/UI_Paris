@@ -10,11 +10,11 @@ function PaymentPage() {
   //   navigate(`/search-tourguides/tourguide-profile/${id}`);
   // };
 
-  // const handleConfirmOrderClick = (id) => {
-  //   navigate(
-  //     `/search-tourguides/tourguide-profile/${id}/private-trips/payment`,
-  //   );
-  // };
+  const handleConfirmOrderClick = (id) => {
+    navigate(
+      `/search-tourguides/tourguide-profile/${id}/private-trips/payment-success`,
+    );
+  };
   const { id } = useParams();
   const CardData = data.find((item) => item.id === parseInt(id));
   console.log(CardData);
@@ -59,10 +59,10 @@ function PaymentPage() {
         </div>
 
         <div className="m-auto my-10 flex max-w-[90%] justify-center space-x-8 py-10">
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-6">
             {/* left: Order info */}
             {/* 1st order */}
-            <div className="border p-4">
+            <div className="border border-secondary-200 bg-background-2 p-4">
               <div className="flex max-w-full flex-col">
                 <h3 className="border-b-4 border-b-secondary-200 py-6 pl-4 text-start text-3xl text-secondary-500">
                   私人行程訂單
@@ -95,7 +95,7 @@ function PaymentPage() {
 
             {/* 2nd order */}
 
-            <div className="border p-4">
+            <div className="border border-secondary-200 bg-background-2 p-4">
               <div className="flex max-w-full flex-col">
                 <h3 className="border-b-4 border-b-secondary-200 py-6 pl-4 text-start text-3xl text-secondary-500">
                   定點行程訂單
@@ -247,7 +247,7 @@ function PaymentPage() {
               <div className="my-20">
                 <button
                   className="flex max-w-80 justify-center space-x-20 rounded-3xl bg-primary-700 px-4 py-4 text-white"
-                  // onClick={()=>handleConfirmOrderClick(id)}
+                  onClick={()=>handleConfirmOrderClick(id)}
                 >
                   <p className="text-2xl">送出資料</p>
                 </button>

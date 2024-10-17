@@ -16,6 +16,7 @@ import SignUp from "./pages/SingUp";
 import BookPrivateTripsPage from "./pages/BookPrivateTripsPage";
 import OrderInfoPage from "./pages/OrderInfoPage";
 import PaymentPage from "./pages/PaymentPage";
+import PaymentSuccessPage from "./pages/PaymentSuccessPage";
 
 export default function App() {
   return (
@@ -52,6 +53,11 @@ export default function App() {
           <Route
             path="/search-tourguides/tourguide-profile/:id/private-trips/payment"
             element={<PaymentPage />}
+          />
+
+          <Route
+            path="/search-tourguides/tourguide-profile/:id/private-trips/payment-success"
+            element={<PaymentSuccessPage />}
           />
 
           {/* 
