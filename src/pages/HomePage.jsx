@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 import Slider from "react-slick";
@@ -391,6 +394,12 @@ export default function HomePage() {
     console.log(popupPosition);
   };
 
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Animation duration can be adjusted here
+  }, []);
+
+
   return (
     <>
 
@@ -485,6 +494,8 @@ export default function HomePage() {
             useMap="#parisMap"
             alt="Paris District Map"
             // className="max-w-100 max-h-100"
+            data-aos="zoom-in-left"
+            data-aos-easing="ease-in-sine"
           />
         </div>
 

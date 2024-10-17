@@ -57,7 +57,7 @@ const TripCard = ({
             </p>
 
             <div className="flex justify-end space-x-2">
-              <img src="src/assets/image/Group.svg" alt="" />
+              <img src="/images/Group.svg" alt="" />
               <p className="text-[11px] leading-[15.4px] tracking-1.5 text-primary-500">
                 {date}
               </p>

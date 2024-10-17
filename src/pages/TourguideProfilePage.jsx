@@ -2,9 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 import data from "../data/data.json";
 import TripsData from "../data/trips.json";
+import SingleTripData from "../data/singleSite.json";
 import TripCard from "../components/TripCard";
 import SiteCard from "../components/SiteCard";
 import Card from "../components/Card";
@@ -12,6 +14,9 @@ import Card from "../components/Card";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import { settings3 } from "../components/helpers/sliderSettings";
 import { settings4 } from "../components/helpers/sliderSettings";
@@ -34,6 +39,10 @@ function TourguideProfilePage() {
   const handlePrivateTripsClick = () => {
     navigate(`/search-tourguides/tourguide-profile/${id}/private-trips`);
   };
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Animation duration can be adjusted here
+  }, []);
 
   return (
     <>
@@ -335,7 +344,7 @@ function TourguideProfilePage() {
           </div>
         </div>
         {/* single trip title */}
-        <div className="flex justify-center space-x-4 hover:cursor-pointer mt-10">
+        <div className="mt-10 flex justify-center space-x-4 hover:cursor-pointer">
           <img
             src="../../src/assets/image/vector_title.png"
             alt=""
@@ -350,7 +359,7 @@ function TourguideProfilePage() {
             className="inline-block h-[40px]"
           />
         </div>
-      
+
         {/* <div className="max-w-[75%] m-auto mt-20 flex flex-wrap justify-center space-x-10 space-y-10">
           {TripsData.map((data, index) => (
             <div key={index}>
@@ -370,18 +379,24 @@ function TourguideProfilePage() {
             </div>
           ))}
         </div> */}
-  {/* single trips : Grid*/}
+        {/* single trips : Grid*/}
         <div className="m-auto my-20 grid max-w-[75%] grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {TripsData.slice(0, 6).map((data, index) => (
+          {SingleTripData.slice(0, 6).map((data, index) => (
             <div key={index}>
-              <div className="transform transition-transform duration-300 hover:scale-105">
-                <TripCard
+              <div
+                className=""
+                data-aos="zoom-in"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
+                <SiteCard
                   tripName={data.tripName}
                   imageUrl={data.imgUrl}
                   description={data.description}
                   date={data.date}
                   duration={data.duration}
                   NumPeople={data.NumPeople}
+                  price={data.price}
                 />
               </div>
             </div>
@@ -405,7 +420,6 @@ function TourguideProfilePage() {
           />
         </div>
         {/* thematic trips : Grid*/}
-
 
         {/* <div className="mt-20 flex flex-wrap justify-center space-x-4">
           {TripsData.map((data, index) => (
@@ -443,7 +457,6 @@ function TourguideProfilePage() {
             </div>
           ))}
         </div>
-
 
         {/* service*/}
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
@@ -578,7 +591,10 @@ function TourguideProfilePage() {
           <div className="mt-8">
             <Slider {...settings3}>
               {data.map((data, index) => (
-                <div key={index} onClick={() => handleCardClick(data.id)}>
+                <div
+                  key={index}
+                  // onClick={() => handleCardClick(data.id)}
+                >
                   <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                     <Card
                       imgSrc={data.img}

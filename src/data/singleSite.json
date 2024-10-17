@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "tripName": "羅浮宮博物館",
+    "imgUrl": "/images/singleSite-1.jpg",
+    "date": "8月23日、9月15日",
+    "description": "從早晨開始在艾菲爾鐵塔前拍照,接著前往盧浮宮欣賞帶領您穿越古今,深入了解每一幅畫作背後的故事。",
+    "duration": "5小時",
+    "NumPeople": 15,
+    "price": 75
+  },
+  {
+    "id": 2,
+    "tripName": "奧賽美術館",
+    "imgUrl": "/images/singleSite-2.jpg",
+    "date": "8月26日、8月26日",
+    "description": "十九世紀藝術收藏重鎮，不僅僅是觀賞藝術,讓觀者更能理解藝術家的創作背景與心路歷程，讓奧賽博物館的每一次參觀都成為一次豐富的藝術盛宴。",
+    "duration": "4小時",
+    "NumPeople": 20,
+    "price": 60
+  },
+  {
+    "id": 3,
+    "tripName": "畢加索博物館",
+    "imgUrl": "/images/singleSite-3.jpg",
+    "date": "8月29日、8月31日",
+ 
+    "description": "帶領遊客探索畢加索博物館這座充滿創意與革命性的藝術殿堂，聚焦畢加索重要但鮮為人知的作品導覽。",
+    "duration": "2小時",
+    "NumPeople": 20,
+    "price": 30
+  },
+  {
+    "id": 4,
+    "tripName": "龐畢度中心",
+    "imgUrl": "/images/singleSite-4.png",
+    "date": "9月5日、9月12日",
+    "description": "無論是欣賞前衛的裝置藝術，還是深入了解藝術家的創作理念,我都能為您帶來一次富有深度且引人入勝的藝術之旅。",
+    "duration": "3小時",
+    "NumPeople": 20,
+    "price": 45
+  },
+  {
+    "id": 5,
+    "tripName": "克呂尼博物館",
+    "imgUrl": "/images/singleSite-5.png",
+    "date": "9月10日、9月17日",
+    "description": "專為家庭設計的親子旅遊，帶孩子們到迪士尼樂園和巴黎動物園體驗戶外樂趣，並在盧森堡公園野餐。",
+    "duration": "2小時",
+    "NumPeople": 15,
+    "price": 30
+  },
+  {
+    "id": 6,
+    "tripName": "巴黎軍事博物館",
+    "imgUrl": "/images/singleSite-6.png",
+    "date": "9月22日、9月29日",
+    "description": "文雅將帶您深入了解法國的軍事傳統和英雄人物,並講述這些戰爭如何塑造了今日的法國，綜覽法國昨日和今日全貌",
+    "duration": "2小時",
+    "NumPeople": 20,
+    "price": 30
+  }
+]
