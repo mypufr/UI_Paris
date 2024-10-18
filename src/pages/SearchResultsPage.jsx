@@ -6,6 +6,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import { LuSearchCheck } from "react-icons/lu";
+
 import data from "../data/data.json";
 
 import Card from "../components/Card";
@@ -22,14 +24,15 @@ function SearchResultsPage() {
 
   return (
     <>
-      <div className="flex justify-center space-x-4 hover:cursor-pointer">
+
+<div className="flex justify-center space-x-4 mt-10">
         <img
-          src="../../images/vector_title.png"
+          src="/images/vector_title.png"
           alt=""
           className="inline-block h-[40px]"
         />
         <h2 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
-          搜尋您的專屬導遊區
+        您選定的搜尋條件
         </h2>
         <img
           src="../../images/vector_title.png"
@@ -38,10 +41,32 @@ function SearchResultsPage() {
         />
       </div>
 
-      <div className="my-10 flex justify-center space-x-4 hover:cursor-pointer">
+<div className="relative flex items-center justify-center h-[50vh] mt-[-20px] ">
+  {/* Background Icon */}
+  <LuSearchCheck className="absolute h-[40vh] w-[40vh] opacity-10 z-0" />
+
+  {/* Overlay content */}
+  <div className="relative z-10 text">
+    <h2 className="text-2xl font-bold text-primary-700 mb-4">需求日期：2024年10月19日</h2>
+    <h2 className="text-2xl font-bold text-primary-700 mb-4">參加人數：4位成人，4位兒童 </h2>
+    <h2 className="text-2xl font-bold text-primary-700">參觀主題：博物館導覽</h2>
+  </div>
+</div>
+
+      <div className="flex justify-center space-x-4 mt-[-20px]">
+        <img
+          src="../../images/vector_title.png"
+          alt=""
+          className="inline-block h-[40px]"
+        />
         <h2 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
-          有10位導遊可為您服務
+          搜尋您的專屬導遊區，有10位導遊可為您服務
         </h2>
+        <img
+          src="../../images/vector_title.png"
+          alt=""
+          className="inline-block h-[40px]"
+        />
       </div>
 
       {/* slides show 1: search results */}

@@ -1,15 +1,24 @@
 import React from "react";
+import {useState} from "react";
+import { RiInstagramFill } from "react-icons/ri";
 
 import { Link } from "react-router-dom";
 
+
+
 function Footer() {
+
+  const [startDate, setStartDate] = useState(null);
+  const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
+
+  
   return (
     <>
       {/* footer */}
       <footer className="relative">
         <div>
           <img
-            src="../../images/footer_background.png"
+            src="/images/footer_background.png"
             alt=""
             className="block w-full"
           />
@@ -18,7 +27,7 @@ function Footer() {
 
         <div>
           <img
-            src="../../images/footer_img.png"
+            src="/images/footer_img.png"
             alt=""
             className="absolute bottom-[150px] right-[400px]"
           />
@@ -30,7 +39,7 @@ function Footer() {
             <li className="flex">
               <Link to="/" className="inline-flex cursor-pointer">
                 <div>
-                  <img src="../../images/website_logo.png" alt="logo" />
+                  <img src="/images/website_logo.png" alt="logo" />
                 </div>
                 <div className="onClick={() => window.location.href = '/'} flex flex-col justify-around">
                   <div>
@@ -90,11 +99,9 @@ function Footer() {
                 to="/"
                 className="inline-block rounded-full border-2 border-white p-2"
               >
-                <img
-                  src="/images/Instagram.svg"
-                  alt="instagram-link"
-                  className="inline-block h-auto max-w-4 rounded"
-                />
+    
+
+<RiInstagramFill className="text-xl" />
               </Link>
               <Link to="/">
                 <img

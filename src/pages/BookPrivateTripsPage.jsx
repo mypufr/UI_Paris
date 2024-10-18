@@ -195,14 +195,14 @@ function BookPrivateTripsPage() {
 {/* submit buttons */}
           <div className="space-y-4 my-20">
             <button
-              className="flex max-w-80 justify-center space-x-20 rounded-3xl border border-secondary-300 bg-secondary-400 px-4 py-4 text-white"
+              className="flex min-w-60 justify-center space-x-20 rounded-3xl border border-secondary-300 bg-secondary-400 px-4 py-4 text-white"
               onClick={()=>handleSubmitOrderClick(id)}
             >
               <p className="text-2xl">立刻預約</p>
             </button>
 
             <button
-              className="flex max-w-80 justify-center space-x-20 rounded-3xl border border-secondary-600 bg-transparent px-4 py-4 text-secondary-600"
+              className="flex min-w-60 justify-center space-x-20 rounded-3xl border border-secondary-600 bg-transparent px-4 py-4 text-secondary-600"
               onClick={handleGoBackClick}
             >
               <p className="text-2xl">回上一頁</p>

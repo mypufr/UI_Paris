@@ -471,7 +471,7 @@ export default function HomePage() {
 
       <div className="mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
         <img
-          src="images/vector_title.png"
+          src="/images/vector_title.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -479,7 +479,7 @@ export default function HomePage() {
           分區搜尋專屬導遊
         </h3>
         <img
-          src="images/vector_title.png"
+          src="/images/vector_title.png"
           alt=""
           className="inline-block h-[40px]"
         />
