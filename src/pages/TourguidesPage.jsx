@@ -282,7 +282,7 @@ function TourguidesPage() {
               <img
                 src="https://images.unsplash.com/photo-1609126133105-5c00c5cdd30f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
-                className="block h-[200px] object-cover"
+                className="block h-[200px] object-cover rounded-xl"
               />
               <p className="mt-2 flex-grow py-3 text-justify text-xl tracking-1.5 text-primary-950">
                 享受完全專屬於您的私人導遊體驗，不會與其他遊客分享導遊。
@@ -295,7 +295,7 @@ function TourguidesPage() {
               <img
                 src="https://images.unsplash.com/photo-1473969631237-f466cf342b1f?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
-                className="block h-[200px] object-cover"
+                className="block h-[200px] object-cover rounded-xl"
               />
               <p className="mt-2 flex-grow py-3 text-justify text-xl tracking-1.5 text-primary-950">
                 根據您的興趣和需求，設計出 完全符合您個人偏好的獨特行程
@@ -308,7 +308,7 @@ function TourguidesPage() {
               <img
                 src="https://images.unsplash.com/photo-1499591934245-40b55745b905?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
-                className="block h-[200px] object-cover"
+                className="block h-[200px] object-cover rounded-xl"
               />
               <p className="mt-2 flex-grow py-3 text-justify text-xl tracking-1.5 text-primary-950">
                 透過我們的專家帶領，發掘旅遊指南中找不到的熱點
@@ -321,7 +321,7 @@ function TourguidesPage() {
               <img
                 src="https://images.unsplash.com/photo-1468818438311-4bab781ab9b8?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
-                className="block h-[200px] object-cover"
+                className="block h-[200px] object-cover rounded-xl"
               />
               <p className="mt-2 flex-grow py-3 text-justify text-xl tracking-1.5 text-primary-950">
                 無論是計劃有變,還是臨時有事，您都可以輕鬆取消或更改預訂，而不會產生任何額外費用

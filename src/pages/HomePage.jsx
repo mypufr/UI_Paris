@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -30,6 +31,15 @@ import TourguideList from "../components/TourguideList";
 import SlideText from "../components/SlideText";
 
 export default function HomePage() {
+
+
+    const navigate = useNavigate();
+  
+    const handleCardClick = (id) => {
+      navigate(`/search-tourguides/tourguide-profile/${id}`);
+    };
+  
+
   const settings1 = {
     dots: true,
     infinite: true,
@@ -583,9 +593,12 @@ export default function HomePage() {
         <div className="mt-8">
           <Slider {...settings1}>
             {data.map((data, index) => (
-              <div key={index} className="p-10">
+              <div key={index} className="p-10" 
+              onClick={() => handleCardClick(data.id)}
+              >
                 <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                   <Card
+            
                     imgSrc={data.img}
                     title={data.name}
                     price={data.price}
