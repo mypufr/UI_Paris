@@ -7,8 +7,11 @@ import { useEffect } from "react";
 import data from "../data/data.json";
 import TripsData from "../data/trips.json";
 import SingleTripData from "../data/singleSite.json";
+import CommentaryData from "../data/commentaries.json";
+
 import TripCard from "../components/TripCard";
 import SiteCard from "../components/SiteCard";
+import CommentaryList from "../components/CommentaryList";
 import Card from "../components/Card";
 
 import Slider from "react-slick";
@@ -18,8 +21,21 @@ import "slick-carousel/slick/slick-theme.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { FaFacebook } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { MdOutlineEmojiTransportation } from "react-icons/md";
+import { MdRestaurant } from "react-icons/md";
+import { FaShoppingBag } from "react-icons/fa";
+import { MdAddAPhoto } from "react-icons/md";
+import { LuHelpingHand } from "react-icons/lu";
+import { MdNightlight } from "react-icons/md";
+import { MdFlight } from "react-icons/md";
+import { MdGTranslate } from "react-icons/md";
+
 import { settings3 } from "../components/helpers/sliderSettings";
 import { settings4 } from "../components/helpers/sliderSettings";
+
 
 function TourguideProfilePage() {
   const { id } = useParams();
@@ -46,7 +62,7 @@ function TourguideProfilePage() {
 
   return (
     <>
-      <div className="flex flex-col justify-center  py-[5vh] text-3xl font-bold text-grey-950">
+      <div className="flex flex-col justify-center py-[5vh] text-3xl font-bold text-grey-950">
         <div className="flex justify-evenly">
           {/* left: Search criteria */}
           <div className="mt-10">
@@ -271,7 +287,7 @@ function TourguideProfilePage() {
 
               {/* Profile description */}
               <div className="mt-6 border-spacing-2 space-y-4 rounded-2xl border border-primary-200 px-4 py-6">
-                <div className="my-6 flex space-x-6">
+                <div className="my-6 flex justify-center space-x-6">
                   <img
                     src="/images/website_logo.png"
                     alt=""
@@ -300,7 +316,7 @@ function TourguideProfilePage() {
                   希望能在巴黎與您相遇，一起走過這座充滿故事的城市，留下屬於您的巴黎篇章！
                 </p>
 
-                <div className="flex space-x-6 py-6">
+                <div className="flex justify-center space-x-6 pt-4">
                   <img
                     src="/images/website_logo.png"
                     alt=""
@@ -312,30 +328,18 @@ function TourguideProfilePage() {
                 </div>
 
                 <ul>
-                  <li className="flex space-x-4">
+                  <li className="flex items-center justify-center space-x-4">
                     <Link to="/">
-                      <img
-                        src="../../images/facebook.svg"
-                        alt="facebook-link"
-                        className="inline-block rounded-full border-2 border-primary-950 p-2"
-                      />
+                      <FaFacebook className="text-[40px]" />
                     </Link>
                     <Link
                       to="/"
                       className="inline-block rounded-full border-2 border-white p-2"
                     >
-                      <img
-                        src="../../images/Instagram.svg"
-                        alt="instagram-link"
-                        className="inline-block h-auto min-w-10 rounded bg-primary-950"
-                      />
+                      <RiInstagramFill className="text-[48px]" />
                     </Link>
                     <Link to="/">
-                      <img
-                        src="../../images/twitter_logo.svg"
-                        alt="line-link"
-                        className="inline-block h-10 rounded-full"
-                      />
+                      <AiFillTwitterCircle className="text-[48px]" />
                     </Link>
                   </li>
                 </ul>
@@ -346,7 +350,7 @@ function TourguideProfilePage() {
         {/* single trip title */}
         <div className="mt-10 flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="../../images/vector_title.png"
+            src="/images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -354,31 +358,12 @@ function TourguideProfilePage() {
             {CardData.name} 的定點深度導覽
           </h2>
           <img
-            src="../../images/vector_title.png"
+            src="/images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
         </div>
 
-        {/* <div className="max-w-[75%] m-auto mt-20 flex flex-wrap justify-center space-x-10 space-y-10">
-          {TripsData.map((data, index) => (
-            <div key={index}>
-              <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
-                <TripCard
-                  tripName={data.tripName}
-                  imageUrl={data.imgUrl}
-                  description={data.description}
-                  date={data.date}
-                  site1={data.site1}
-                  site2={data.site2}
-                  site3={data.site3}
-                  site4={data.site4}
-                  site5={data.site5}
-                />
-              </div>
-            </div>
-          ))}
-        </div> */}
         {/* single trips : Grid*/}
         <div className="m-auto my-20 grid max-w-[75%] grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {SingleTripData.slice(0, 6).map((data, index) => (
@@ -406,7 +391,7 @@ function TourguideProfilePage() {
         {/* thematic trip title */}
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="../../images/vector_title.png"
+            src="/images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -414,22 +399,29 @@ function TourguideProfilePage() {
             {CardData.name} 的主題式導覽行程
           </h2>
           <img
-            src="../../images/vector_title.png"
+            src="/images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
         </div>
         {/* thematic trips : Grid*/}
 
-        {/* <div className="mt-20 flex flex-wrap justify-center space-x-4">
-          {TripsData.map((data, index) => (
+        <div className="m-auto my-20 grid max-w-[75%] grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {TripsData.slice(0, 6).map((data, index) => (
             <div key={index}>
-              <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
+              <div
+                className="duration-400 relative transform overflow-hidden rounded-3xl transition-all hover:scale-105 hover:bg-gray-100 hover:shadow-xl"
+                data-aos="zoom-in-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 <TripCard
                   tripName={data.tripName}
                   imageUrl={data.imgUrl}
                   description={data.description}
                   date={data.date}
+                  duration={data.duration}
+                  NumPeople={data.NumPeople}
                   site1={data.site1}
                   site2={data.site2}
                   site3={data.site3}
@@ -439,29 +431,12 @@ function TourguideProfilePage() {
               </div>
             </div>
           ))}
-        </div> */}
-
-        <div className="m-auto my-20 grid max-w-[75%] grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {TripsData.slice(0, 6).map((data, index) => (
-            <div key={index}>
-              <div className="transform transition-transform duration-300 hover:scale-105">
-                <TripCard
-                  tripName={data.tripName}
-                  imageUrl={data.imgUrl}
-                  description={data.description}
-                  date={data.date}
-                  duration={data.duration}
-                  NumPeople={data.NumPeople}
-                />
-              </div>
-            </div>
-          ))}
         </div>
 
         {/* service*/}
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="../../images/vector_title.png"
+            src="/images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -469,72 +444,176 @@ function TourguideProfilePage() {
             {CardData.name} 的服務內容
           </h2>
           <img
-            src="../../images/vector_title.png"
+            src="/images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
         </div>
-        <div className="my-[80px] py-[1%]">
+
+
+{/* service : flex rwd */}
+{/* <div className="my-[80px] py-[1%]">
           <div className="m-auto mb-[5%] max-w-[1296px]">
-            <ul className="flex justify-evenly">
-              <li className="flex h-full max-w-[240px] flex-col items-center justify-center">
-                <p className="py-5 text-2xl font-bold tracking-4 text-grey-950">
-                  100%私人導覽
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 my-6">
+              <div className="flex flex-col items-center justify-center">
+                <p className="py-5 text-2xl font-bold tracking-4 text-primary-500">
+                  行程規畫建議
                 </p>
-                <img
-                  src="../../images/step-1-1.png"
-                  alt=""
-                  className="block object-cover"
-                />
+                <MdFlight className="text-[48px]"/>
+
                 <p className="mt-2 flex-grow py-3 text-justify text-xl tracking-1.5 text-primary-950">
-                  享受完全專屬於您的私人導遊體驗，不會與其他遊客分享導遊。
+                  針對個人或小團體的專屬導覽行程,根據客戶需求量身定制
                 </p>
-              </li>
-              <li className="flex h-full max-w-[240px] flex-col items-center justify-center">
-                <p className="py-5 text-2xl font-bold tracking-4 text-grey-950">
-                  客製化行程
+              </div>
+              <div className="flex h-full max-w-[240px] flex-col items-center justify-center space-y-2">
+                <p className="py-5 text-2xl font-bold tracking-4 text-primary-500">
+                  語言翻譯
                 </p>
-                <img
-                  src="../../images/step-1-1.png"
-                  alt=""
-                  className="block object-cover"
-                />
+                <MdGTranslate className="text-[48px]"/>
                 <p className="mt-2 flex-grow py-3 text-justify text-xl tracking-1.5 text-primary-950">
-                  根據您的興趣和需求，設計出 完全符合您個人偏好的獨特行程
+                  提供雙語或多語導覽,並在必要時進行語言翻譯,幫助遊客與當地人交流
                 </p>
-              </li>
-              <li className="flex h-full max-w-[240px] flex-col items-center justify-center">
-                <p className="py-5 text-2xl font-bold tracking-4 text-grey-950">
-                  獲取當地視角
+              </div>
+              <div className="flex h-full max-w-[240px] flex-col items-center justify-center space-y-2">
+                <p className="py-5 text-2xl font-bold tracking-4 text-primary-500">
+                  交通協助
                 </p>
-                <img
-                  src="../../images/step-1-1.png"
-                  alt=""
-                  className="block object-cover"
-                />
+                <MdOutlineEmojiTransportation className="text-[48px]"/>
+                <p className="mt-2 flex-grow py-3 text-justify text-xl tracking-1.5 text-primary-950">
+                  協助安排機場接送、地鐵指導、出租車預訂等交通需求
+                </p>
+              </div>
+              <div className="flex h-full max-w-[240px] flex-col items-center justify-center space-y-2">
+                <p className="py-5 text-2xl font-bold tracking-4 text-primary-500">
+                  美食餐廳推薦和預訂
+                </p>
+                <MdRestaurant className="text-[48px]"/>
+                <p className="mt-2 flex-grow py-3 text-justify text-xl tracking-1.5 text-primary-950">
+                  根據遊客口味推薦當地特色餐廳,並協助預訂座位
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 my-6">
+              <div className="flex h-full max-w-[240px] flex-col items-center justify-center space-y-2">
+                <p className="py-5 text-2xl font-bold tracking-4 text-primary-500">
+                  購物導覽
+                </p>
+                <FaShoppingBag className="text-[48px]"/>
                 <p className="mt-2 flex-grow py-3 text-justify text-xl tracking-1.5 text-primary-950">
                   透過我們的專家帶領，發掘旅遊指南中找不到的熱點
                 </p>
-              </li>
-              <li className="flex h-full max-w-[240px] flex-col items-center justify-center">
-                <p className="py-5 text-2xl font-bold tracking-4 text-grey-950">
-                  彈性取消政策
+              </div>
+              <div className="flex h-full max-w-[240px] flex-col items-center justify-center space-y-2">
+                <p className="py-5 text-2xl font-bold tracking-4 text-primary-500">
+                  攝影服務
                 </p>
-                <img
-                  src="../../images/step-1-1.png"
-                  alt=""
-                  className="block object-cover"
-                />
+                <MdAddAPhoto className="text-[48px]"/>
                 <p className="mt-2 flex-grow py-3 text-justify text-xl tracking-1.5 text-primary-950">
-                  無論是計劃有變,還是臨時有事，您都可以輕鬆取消或更改預訂，而不會產生任何額外費用
+                  透提供旅途中的攝影服務,幫助遊客記錄美好瞬間
                 </p>
-              </li>
-            </ul>
+              </div>
+              <div className="flex h-full max-w-[240px] flex-col items-center justify-center space-y-2">
+                <p className="py-5 text-2xl font-bold tracking-4 text-primary-500">
+                  24/小時緊急支援
+                </p>
+                <LuHelpingHand className="text-[48px]"/>
+                <p className="mt-2 flex-grow py-3 text-justify text-xl tracking-1.5 text-primary-950">
+                  在旅遊期間提供全天候的緊急支援服務,確保客人安全無憂
+                </p>
+              </div>
+              <div className="flex h-full max-w-[240px] flex-col items-center justify-center space-y-2">
+                <p className="py-5 text-2xl font-bold tracking-4 text-primary-500">
+                  夜間導覽
+                </p>
+                <MdNightlight className="text-[48px]"/>
+
+                <p className="mt-2 flex-grow py-3 text-justify text-xl tracking-1.5 text-primary-950">
+                  提供巴黎夜景導覽,如塞納河遊船、夜間燈光秀、夜市探訪等
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
+        </div> */}
+
+
+
+{/* service: Grid rwd */}
+<div className="my-[80px] ">
+  <div className="m-auto  max-w-[1296px]">
+      {/* ul */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10  space-y-[1%]">
+
+      <div className="flex flex-col items-center justify-center ">
+        <p className="py-5 text-2xl font-bold  tracking-4 text-primary-700">行程規畫建議</p>
+        <MdFlight className="text-[48px]" />
+        <p className="mt-2 text-xl tracking-1.5 text-primary-950 text-justify">
+          針對個人或小團體的專屬導覽行程,根據客戶需求量身定制
+        </p>
+      </div>
+      <div className="flex flex-col items-center justify-center ">
+        <p className="py-5 text-2xl font-bold tracking-4 text-primary-700 ">語言翻譯</p>
+        <MdGTranslate className="text-[48px]" />
+        <p className="mt-2 text-xl tracking-1.5 text-primary-950">
+          提供雙語或多語導覽,並在必要時進行語言翻譯
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center justify-center ">
+        <p className="py-5 text-2xl font-bold tracking-4 text-primary-700">交通協助</p>
+        <MdOutlineEmojiTransportation className="text-[48px]" />
+        <p className="mt-2 text-xl tracking-1.5 text-primary-950">
+          協助安排機場接送、地鐵指導、出租車預訂等交通需求
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center justify-center ">
+        <p className="py-5 text-2xl font-bold tracking-4 text-primary-700">美食餐廳推薦和預訂</p>
+        <MdRestaurant className="text-[48px]" />
+        <p className="mt-2 text-xl tracking-1.5 text-primary-950">
+          根據遊客口味推薦當地特色餐廳,並協助預訂座位
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center justify-center ">
+        <p className="py-5 text-2xl font-bold tracking-4 text-primary-700">購物導覽</p>
+        <FaShoppingBag className="text-[48px]" />
+        <p className="mt-2 text-xl tracking-1.5 text-primary-950">
+          透過我們的專家帶領，發掘旅遊指南中找不到的熱點
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center justify-center ">
+        <p className="py-5 text-2xl font-bold tracking-4 text-primary-700">攝影服務</p>
+        <MdAddAPhoto className="text-[48px]" />
+        <p className="mt-2 text-xl tracking-1.5 text-primary-950">
+          透提供旅途中的攝影服務,幫助遊客記錄美好瞬間
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center justify-center ">
+        <p className="py-5 text-2xl font-bold tracking-4 text-primary-700">24/小時緊急支援</p>
+        <LuHelpingHand className="text-[48px]" />
+        <p className="mt-2 text-xl tracking-1.5 text-primary-950">
+          在旅遊期間提供全天候的緊急支援服務,確保客人安全無憂
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center justify-center text-center">
+        <p className="py-5 text-2xl font-bold tracking-4 text-primary-700">夜間導覽</p>
+        <MdNightlight className="text-[48px]" />
+        <p className="mt-2 text-xl tracking-1.5 text-primary-950">
+          提供巴黎夜景導覽,如塞納河遊船、夜間燈光秀、夜市探訪等
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* Commentary title */}
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="../../images/vector_title.png"
+            src="/images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -542,28 +621,27 @@ function TourguideProfilePage() {
             {CardData.name} 15位客人的評價
           </h2>
           <img
-            src="../../images/vector_title.png"
+            src="/images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
         </div>
-        <div className="m-auto my-20 w-[67.5%]">
+        <div className="m-auto my-20 w-full md:w-[85%] lg:w-[75%] xl:w-[67.5%]">
           <div className="mt-8">
             <Slider {...settings3}>
-              {data.map((data, index) => (
+              {CommentaryData.map((data, index) => (
                 <div
                   key={index}
                   // onClick={() => handleCardClick(data.id)}
                   className="p-3"
                 >
                   <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
-                    <Card
-                      imgSrc={data.img}
-                      title={data.name}
-                      price={data.price}
-                      specialities1={data.speciality1}
-                      specialities2={data.speciality2}
-                      specialities3={data.speciality3}
+                    <CommentaryList
+                      userImg={data.userImg}
+                      name={data.name}
+                      commentaryText={data.commentaryText}
+                      date={data.date}
+                 
                     />
                   </div>
                 </div>
@@ -574,7 +652,7 @@ function TourguideProfilePage() {
         {/* More recommaned tourguides */}
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="../../images/vector_title.png"
+            src="/images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -582,7 +660,7 @@ function TourguideProfilePage() {
             還有下面9位導遊，等你隨時預約!
           </h2>
           <img
-            src="../../images/vector_title.png"
+            src="/images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />

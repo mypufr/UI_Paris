@@ -98,7 +98,7 @@ function Footer() {
               </Link>
               <Link to="/">
                 <img
-                  src="../../images/twitter_logo.svg"
+                  src="/images/twitter_logo.svg"
                   alt="line-link"
                   className="inline-block h-10 max-w-10 rounded-full"
                 />

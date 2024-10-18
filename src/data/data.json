@@ -65,5 +65,118 @@
     "speciality2":"兒童友好景點",
     "speciality3":"親子活動",
     "price":"14"
+  },
+  {
+    "id": 7,
+    "name": "劉建國",
+    "img": "/images/img_tourguide_6.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
+    "review": "古典音樂 歷史遺跡 歐洲文學",
+    "speciality1": "古典音樂",
+    "speciality2": "歷史遺跡",
+    "speciality3": "歐洲文學",
+    "price": "18"
+  },
+  {
+    "id": 8,
+    "name": "Anna Dubois",
+    "img": "/images/img_tourguide_6.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
+    "review": "巴黎公園 自然景觀 步行導覽",
+    "speciality1": "巴黎公園",
+    "speciality2": "自然景觀",
+    "speciality3": "步行導覽",
+    "price": "11"
+  },
+  {
+    "id": 9,
+    "name": "黃子軒",
+    "img": "/images/img_tourguide_6.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
+    "review": "現代建築 街區文化 城市發展",
+    "speciality1": "現代建築",
+    "speciality2": "街區文化",
+    "speciality3": "城市發展",
+    "price": "17"
+  },
+  {
+    "id": 10,
+    "name": "Sophia Muller",
+    "img": "/images/img_tourguide_6.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
+    "review": "藝術博物館 文化遺產 巴黎歷史",
+    "speciality1": "藝術博物館",
+    "speciality2": "文化遺產",
+    "speciality3": "巴黎歷史",
+    "price": "15"
+  },
+  {
+    "id": 11,
+    "name": "李志明",
+    "img": "/images/img_tourguide_6.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
+    "review": "音樂文化 歷史建築 浪漫巴黎",
+    "speciality1": "音樂文化",
+    "speciality2": "歷史建築",
+    "speciality3": "浪漫巴黎",
+    "price": "16"
+  },
+  {
+    "id": 12,
+    "name": "Isabelle Petit",
+    "img": "/images/img_tourguide_6.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
+    "review": "巴黎夜生活 酒吧文化 美食體驗",
+    "speciality1": "巴黎夜生活",
+    "speciality2": "酒吧文化",
+    "speciality3": "美食體驗",
+    "price": "13"
+  },
+  {
+    "id": 13,
+    "name": "王耀輝",
+    "img": "/images/img_tourguide_6.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
+    "review": "歷史戰役 古蹟導覽 軍事歷史",
+    "speciality1": "歷史戰役",
+    "speciality2": "古蹟導覽",
+    "speciality3": "軍事歷史",
+    "price": "14"
+  },
+  {
+    "id": 14,
+    "name": "Emily Laurent",
+    "img": "/images/img_tourguide_6.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
+    "review": "法國文學 巴黎書店 文藝文化",
+    "speciality1": "法國文學",
+    "speciality2": "巴黎書店",
+    "speciality3": "文藝文化",
+    "price": "12"
+  },
+  {
+    "id": 15,
+    "name": "周子晴",
+    "img": "/images/img_tourguide_6.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
+    "review": "法式甜點 烹飪課程 美食探索",
+    "speciality1": "法式甜點",
+    "speciality2": "烹飪課程",
+    "speciality3": "美食探索",
+    "price": "17"
+  },
+  {
+    "id": 16,
+    "name": "Alexandre Moreau",
+    "img": "/images/img_tourguide_6.png",
+    "imgUrl": "https://imgur.com/a/qtdT0t7",
+    "review": "法國啤酒 葡萄酒導覽 美食文化",
+    "speciality1": "法國啤酒",
+    "speciality2": "葡萄酒導覽",
+    "speciality3": "美食文化",
+    "price": "19"
   }
-]
+
+]  
+
+

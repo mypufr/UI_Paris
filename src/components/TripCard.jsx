@@ -13,11 +13,11 @@ const TripCard = ({
   description,
 }) => {
   return (
-    <div className="max-w-sm border-secondary-200 rounded-3xl border-2 bg-white shadow-lg">
+    <div className="max-w-sm border-secondary-200 rounded-3xl border-2 bg-white shadow-lg ">
       <Link to="/">
         <div className="rounded-3xl border border-secondary-300">
           <img
-            className="rounded-t-3xl inline-block ob h-[300px]"
+            className="rounded-t-3xl inline-block object-cover h-[300px]"
             src={imageUrl}
             alt={tripName}
           />
