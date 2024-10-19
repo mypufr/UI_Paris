@@ -6,9 +6,9 @@ import data from "../data/data.json";
 function EditMessagePage() {
   const navigate = useNavigate();
 
-  const handleSubmitMessageClick = (id) => {
-    navigate(`/search-tourguides/tourguide-profile/${id}/success`);
-  };
+  // const handleSubmitMessageClick = (id) => {
+  //   navigate(`/search-tourguides/tourguide-profile/${id}/success`);
+  // };
 
   const handleGoBackClick = (id) => {
     navigate(`/search-tourguides/tourguide-profile/${id}`);
@@ -80,7 +80,7 @@ function EditMessagePage() {
             </p>
           <button
             className="flex min-w-60 justify-center space-x-20 rounded-lg border border-gray-300 bg-primary-700 px-4 py-4 text-white"
-            onClick={handleSubmitMessageClick}
+            // onClick={handleSubmitMessageClick}
           >
             <p>送出訊息</p>
           </button>

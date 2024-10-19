@@ -3,8 +3,14 @@ export default {
   content: ["./index.html", "./src/**/*.{html, js,jsx}"],
   theme: {
     extend: {
+      screens: {
+        "1830px" : "1830px",
+      },
       maxWidth: {
         "1296px": "1296px",
+        "1200px": "1200px",
+        "max-1200px": {"max":"1200px"},
+        "min-1200px": {"min":"1200px"}
       },
       colors: {
         primary: {

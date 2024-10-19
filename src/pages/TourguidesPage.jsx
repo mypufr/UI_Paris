@@ -71,8 +71,13 @@ function TourguidesPage() {
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
           className="relative h-full w-full bg-cover bg-center duration-500"
         >
-          <div className="absolute left-[33%] top-[10%]">
-            <h1 className="noto-sans-tc-bold py-3 leading-[1.2] text-white drop-shadow-lg">
+          <div className="absolute  left-[33%] top-[10%]"
+          
+          
+
+
+      >
+            <h1 className="noto-sans-tc-bold py-3 leading-[1.2] text-white drop-shadow-lg ">
               尋找你的專屬在地導遊
             </h1>
             {/* Search options */}
@@ -120,19 +125,7 @@ function TourguidesPage() {
                   </Link>
                 </div>
 
-                {/* Date Picker 彈出視窗 */}
-                {/* {isDatePickerOpen && (
-                  <div className="absolute z-50 mt-2">
-                    <DatePicker
-                      selected={startDate}
-                      onChange={(date) => {
-                        setStartDate(date);
-                        setIsDatePickerOpen(false); // 選擇日期後關閉彈出框
-                      }}
-                      inline
-                    />
-                  </div>
-                )} */}
+  
 
                 <div className="flex justify-center">
                   <Link>
@@ -255,7 +248,7 @@ function TourguidesPage() {
         </div>
       </div>
 
-      {/* <Outlet /> */}
+    
       <div className="flex justify-center space-x-4 hover:cursor-pointer">
         <img
           src="/images/vector_title.png"
@@ -330,6 +323,10 @@ function TourguidesPage() {
           </ul>
         </div>
       </div>
+
+
+
+  
     </>
   );
 }

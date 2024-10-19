@@ -38,6 +38,8 @@ import { settings4 } from "../components/helpers/sliderSettings";
 
 
 function TourguideProfilePage() {
+
+
   const { id } = useParams();
   const CardData = data.find((item) => item.id === parseInt(id));
   console.log(CardData);
@@ -55,6 +57,11 @@ function TourguideProfilePage() {
   const handlePrivateTripsClick = () => {
     navigate(`/search-tourguides/tourguide-profile/${id}/private-trips`);
   };
+
+  const handleCardClick = (id) => {
+    navigate(`/search-tourguides/tourguide-profile/${id}`);
+  };
+
 
   useEffect(() => {
     AOS.init({ duration: 1000 }); // Animation duration can be adjusted here
@@ -671,7 +678,7 @@ function TourguideProfilePage() {
               {data.map((data, index) => (
                 <div
                   key={index}
-                  // onClick={() => handleCardClick(data.id)}
+                  onClick={() => handleCardClick(data.id)}
                 >
                   <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                     <Card

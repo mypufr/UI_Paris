@@ -22,7 +22,7 @@ const Card = ({
           <div className="pt-6">
             <div className="flex justify-between">
               <h6 className="mb-2 text-xl font-bold text-blue-50">{title}</h6>
-              <span className="text-xl font-bold text-secondary-700">
+              <span className="text-xl font-bold text-secondary-700 sm">
                 {price}€ /小時
               </span>
             </div>

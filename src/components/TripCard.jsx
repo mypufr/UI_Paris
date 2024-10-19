@@ -17,7 +17,7 @@ const TripCard = ({
       <Link to="/">
         <div className="rounded-3xl border border-secondary-300">
           <img
-            className="rounded-t-3xl inline-block object-cover h-[300px]"
+            className="rounded-t-3xl inline-block object-cover h-[300px] "
             src={imageUrl}
             alt={tripName}
           />
@@ -29,7 +29,7 @@ const TripCard = ({
                 alt=""
                 className="inline-block h-5 max-w-5"
               />
-              <h6 className="text-grey-500 text-xl font-bold">
+              <h6 className="text-grey-500 text-xl font-bold sm:text-sm">
                 {tripName}
               </h6>
             </div>

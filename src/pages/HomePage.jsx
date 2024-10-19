@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -16,7 +15,6 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 
 import data from "../data/data.json";
 import DistrictsData from "../data/districts.json";
@@ -31,14 +29,11 @@ import TourguideList from "../components/TourguideList";
 import SlideText from "../components/SlideText";
 
 export default function HomePage() {
+  const navigate = useNavigate();
 
-
-    const navigate = useNavigate();
-  
-    const handleCardClick = (id) => {
-      navigate(`/search-tourguides/tourguide-profile/${id}`);
-    };
-  
+  const handleCardClick = (id) => {
+    navigate(`/search-tourguides/tourguide-profile/${id}`);
+  };
 
   const settings1 = {
     dots: true,
@@ -404,17 +399,14 @@ export default function HomePage() {
     console.log(popupPosition);
   };
 
-
   useEffect(() => {
     AOS.init({ duration: 1000 }); // Animation duration can be adjusted here
   }, []);
 
-
   return (
     <>
-
       {/* trip themes */}
-      <ul className="mx-auto flex max-w-[1296px] items-center justify-center py-7 text-base leading-[22.4px] text-grey-400">
+      <ul className="mx-auto hidden max-w-[1296px] items-center justify-center py-7 text-base leading-[22.4px] text-grey-400 lg:flex">
         <li className="border border-y-0 border-grey-100 pr-11">
           <Link to="/" className="text-base">
             <span>法式美食</span>
@@ -559,16 +551,97 @@ export default function HomePage() {
               alt="Paris 2"
               className="cursor-pointer"
             />
+            {/* 3 */}
+            <area
+              shape="poly"
+              coords="675,333,673,342,669,349,666,356,662,365,668,376,659,372,675,376,684,382,696,394,704,394,709,398,712,405,718,407,724,410,724,399,723,390,720,379,717,367,714,358,712,350,707,344,697,341,691,335,685,333"
+              href="#"
+              onClick={(event) => handleDistrictClick(event, 3)}
+              alt="Paris 2"
+              className="cursor-pointer"
+            />
+            {/* 4 */}
+            <area
+              shape="poly"
+              coords="658,381,652,387,651,403,647,397,658,406,666,411,673,414,682,415,687,421,692,428,698,433,705,439,713,441,717,447,722,452,726,458,728,447,731,441,728,431,725,422,723,415,714,410,707,407,700,401,687,395,679,389,670,386"
+              href="#"
+              onClick={(event) => handleDistrictClick(event, 4)}
+              alt="Paris 2"
+              className="cursor-pointer"
+            />
+            {/* 5  */}
+
+            <area
+              shape="poly"
+              coords="582,399,580,409,578,414,574,421,572,430,568,437,564,449,557,452,549,451,543,455,536,459,533,466,527,470,520,476,512,479,505,484,504,492,513,494,520,498,527,501,535,502,541,506,549,507,555,514,562,516,570,518,576,521,582,522,588,526,595,523,598,513,602,500,607,492,610,479,614,471,618,462,620,453,622,445,625,435,622,426,614,418,606,412,598,406,590,403"
+              href="#"
+              onClick={(event) => handleDistrictClick(event, 5)}
+              alt="Paris 2"
+              className="cursor-pointer"
+            />
+
+            {/* 6  */}
+
+            <area
+              shape="poly"
+              coords="582,399,580,409,578,414,574,421,572,430,568,437,564,449,557,452,549,451,543,455,536,459,533,466,527,470,520,476,512,479,505,484,504,492,513,494,520,498,527,501,535,502,541,506,549,507,555,514,562,516,570,518,576,521,582,522,588,526,595,523,598,513,602,500,607,492,610,479,614,471,618,462,620,453,622,445,625,435,622,426,614,418,606,412,598,406,590,403"
+              href="#"
+              onClick={(event) => handleDistrictClick(event, 6)}
+              alt="Paris 2"
+              className="cursor-pointer"
+            />
+
+            {/* 7  */}
+
+            <area
+              shape="poly"
+              coords="432,372,428,379,424,383,421,391,413,402,406,409,401,415,400,426,406,429,412,441,420,446,425,451,431,457,437,460,441,469,446,474,453,477,459,482,465,483,472,482,480,476,486,483,489,491,499,488,503,482,510,478,516,473,524,468,532,463,536,455,543,451,552,449,562,447,563,435,568,428,572,417,575,405,580,396,572,390,564,385,551,380,559,380,544,376,536,376,523,374,515,371,501,368,491,372,483,373,472,371,462,371,451,367,439,366,445,368
+"
+              href="#"
+              onClick={(event) => handleDistrictClick(event, 7)}
+              alt="Paris 2"
+              className="cursor-pointer"
+            />
+
+            {/* 8 */}
+            {/* 9 */}
+            {/* 10 */}
+            {/* 11 */}
+            {/* 12 */}
+            <area
+              shape="poly"
+              coords="739,448,736,456,735,466,740,472,740,478,743,487,748,495,754,505,759,512,764,519,771,529,775,538,785,545,790,554,796,563,801,570,806,575,810,581,815,588,822,596,827,601,835,606,837,612,843,618,853,617,864,617,872,614,884,610,892,604,884,593,881,586,884,577,890,571,897,565,902,561,908,554,914,552,923,553,932,556,940,560,945,552,945,540,945,530,948,522,949,512,951,501,954,492,952,481,943,481,934,481,923,477,913,478,905,480,893,480,884,477,874,477,866,477,858,477,848,475,840,474,833,474,822,473,813,468,803,465,795,461,787,454,776,450,764,446,757,445,748,443
+"
+              href="#"
+              onClick={(event) => handleDistrictClick(event, 12)}
+              alt="Paris 2"
+              className="cursor-pointer"
+            />
+            {/* 13 */}
+            {/* 14 */}
+            {/* 15 */}
+            {/* 16 */}
+            {/* 17 */}
+            {/* 18 */}
+            <area
+              shape="poly"
+              coords="564,109,559,123,557,130,556,139,554,147,551,157,550,165,546,173,545,183,545,193,546,201,546,210,548,219,551,226,559,222,568,220,575,223,582,227,596,233,602,238,608,236,614,234,623,233,629,230,639,227,651,222,664,220,670,215,679,215,687,217,695,219,707,218,717,215,723,210,725,202,727,194,734,185,735,177,738,171,743,164,747,156,750,148,747,142,743,133,741,126,739,115,739,108,732,107,723,109,714,109,706,108,698,110,688,109,678,111,668,109,659,108,649,108,640,110,630,110,623,111,612,111,603,110,592,110,583,109,576,106
+"
+              href="#"
+              onClick={(event) => handleDistrictClick(event, 18)}
+              alt="Paris 2"
+              className="cursor-pointer"
+            />
+
+            {/* 19 */}
+            {/* 20 */}
             {/* Add more <area> elements for other districts */}
           </map>
         </div>
       </div>
 
       <div>
-        <img
-          src="images/deco_sites.png"
-          alt="decorations Paris sites"
-        />
+        <img src="images/deco_sites.png" alt="decorations Paris sites" />
       </div>
 
       {/* slides show: popular tourist guides */}
@@ -593,12 +666,13 @@ export default function HomePage() {
         <div className="mt-8">
           <Slider {...settings1}>
             {data.map((data, index) => (
-              <div key={index} className="p-10" 
-              onClick={() => handleCardClick(data.id)}
+              <div
+                key={index}
+                className="p-10 sm:p-4"
+                onClick={() => handleCardClick(data.id)}
               >
                 <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                   <Card
-            
                     imgSrc={data.img}
                     title={data.name}
                     price={data.price}
@@ -632,7 +706,7 @@ export default function HomePage() {
             <img
               src="images/vector_title.png"
               alt=""
-              className="inline-block h-[40px] "
+              className="inline-block h-[40px]"
             />
             <h4 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
               熱門旅程
@@ -640,7 +714,7 @@ export default function HomePage() {
             <img
               src="images/vector_title.png"
               alt=""
-              className="inline-block h-[40px] "
+              className="inline-block h-[40px]"
             />
           </div>
         </div>
@@ -672,6 +746,190 @@ export default function HomePage() {
       </div>
 
       {/* 預約導遊和報名行程 */}
+
+      {/* <div className="">
+        <div className="mb-8 mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
+          <img
+            src="images/vector_title.png"
+            alt=""
+            className="inline-block h-[40px]"
+          />
+          <h5 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
+            預約導遊和報名行程
+          </h5>
+          <img
+            src="images/vector_title.png"
+            alt=""
+            className="inline-block h-[40px]"
+          />
+        </div>
+
+        <div className="flex items-center justify-center space-x-6 ">
+          <div className="border-grey-200 max-w-[34%] rounded-2xl border">
+            <span className="block rounded-t-2xl bg-primary-300 py-10 text-center text-2xl font-bold text-white">
+              預約導遊
+            </span>
+
+            <div className="space-y-[149px] pb-6">
+              <div className="mt-6 flex px-8">
+                <img
+                  src="images/step-1-1.png"
+                  alt=""
+                  className="inline-block max-w-[200px] object-cover"
+                />
+                <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
+                  <p className="text-xl font-bold tracking-4 text-grey-950">
+                    Step 1 瀏覽導遊資歷與專長
+                  </p>
+                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                    在平台上探索各種導遊的個人檔案，了解他們的資歷、專長領域，並觀看他們的自我介紹影片。挑選最適合你需求的在地專家。
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex px-8">
+                <div className="">
+                  <img
+                    src="images/step-1-2.png"
+                    alt=""
+                    className="inline-block max-w-[200px] object-cover"
+                  />
+                </div>
+                <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
+                  <p className="text-xl font-bold tracking-4 text-grey-950">
+                    Step 2 與導遊聯絡
+                  </p>
+                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                    登入會員後，通過私訊與選定的導遊聯絡，詳細溝通你的旅行需求、預期時間和特別喜好，確保導遊能為你提供量身定制的服務
+                  </p>
+                </div>
+              </div>
+              <div className="flex px-8">
+                <div className="">
+                  <img
+                    src="images/step-1-3.png"
+                    alt=""
+                    className="inline-block max-w-[200px] object-cover"
+                  />
+                </div>
+                <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
+                  <p className="text-xl font-bold tracking-4 text-grey-950">
+                    Step 3 開啟旅程
+                  </p>
+                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                    一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <button className="flex max-w-full justify-center rounded-2xl bg-primary-600 px-[15%] py-4 transition-colors duration-200 hover:bg-primary-300 active:border active:border-primary-600 active:bg-transparent">
+                  <img
+                    src="images/BsHandIndex.svg"
+                    alt=""
+                    className="inline-block"
+                  />
+
+                  <span className="ml-2 font-bold tracking-1.5 text-white">
+                    我要預約導遊
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-grey-200 max-w-[34%] rounded-2xl border">
+            <span className="block rounded-t-2xl bg-secondary-300 py-10 text-center text-2xl font-bold text-white">
+              報名行程
+            </span>
+
+            <div className="mt-10 flex-col space-y-10">
+              <div className="mt-6 flex px-8">
+                <img
+                  src="images/step-2-1.png"
+                  alt=""
+                  className="inline-block max-w-[188px] object-cover"
+                />
+
+                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
+                  <p className="text-xl font-bold tracking-4 text-grey-950">
+                    Step 1 瀏覽行程提案
+                  </p>
+                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                    在平台上瀏覽各種精心策劃的行程提案，從文化探險到美食之旅，總有一個行程能讓你心動不已。
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex px-8">
+                <div className="">
+                  <img
+                    src="images/step-2-2.png"
+                    alt=""
+                    className="inline-block max-w-[188px] object-cover"
+                  />
+                </div>
+                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
+                  <p className="text-xl font-bold tracking-4 text-grey-950">
+                    Step 2 報名行程
+                  </p>
+                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                    選定心儀的行程後，立即登入會員報名，確保你的名額。你還可以和其他參與者交流，分享期待與興奮
+                  </p>
+                </div>
+              </div>
+              <div className="flex px-8">
+                <div className="">
+                  <img
+                    src="images/step-2-3.png"
+                    alt=""
+                    className="inline-block max-w-[188px] object-cover"
+                  />
+                </div>
+                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
+                  <p className="text-xl font-bold tracking-4 text-grey-950">
+                    Step 3 開團確認通知
+                  </p>
+                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                    當行程人數達到標準時，我們將向你發送開團確認通知，讓你準備好出發。
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex px-8">
+                <div className="">
+                  <img
+                    src="images/step-2-4.png"
+                    alt=""
+                    className="max-w-[188px] object-cover"
+                  />
+                </div>
+                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
+                  <p className="text-xl font-bold tracking-4 text-grey-950">
+                    Step 4 開啟旅程
+                  </p>
+                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                    一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex justify-center">
+                <button className="mt-2 flex max-w-full justify-center rounded-2xl bg-secondary-400 px-[15%] py-4 transition-colors duration-200 hover:bg-secondary-200 active:border active:border-secondary-200 active:bg-transparent">
+                  <img
+                    src="images/BsHandIndex.svg"
+                    alt=""
+                    className="inline-block"
+                  />
+
+                  <span className="ml-2 font-bold tracking-1.5 text-white">
+                    馬上報名行程
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
 
       <div className="">
         <div className="mb-8 mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
