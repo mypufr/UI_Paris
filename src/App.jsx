@@ -17,6 +17,7 @@ import BookPrivateTripsPage from "./pages/BookPrivateTripsPage";
 import OrderInfoPage from "./pages/OrderInfoPage";
 import PaymentPage from "./pages/PaymentPage";
 import PaymentSuccessPage from "./pages/PaymentSuccessPage";
+import Policy from "./pages/Policy";
 
 export default function App() {
   return (
@@ -72,7 +73,17 @@ export default function App() {
           <Route path="/book-trips" element={<TripsPage />}></Route>
           <Route path="/sites-info" element={<SitesInfoPage />}></Route>
           <Route path="/travel-info" element={<TravelInfoPage />}></Route>
-          <Route path="/about" element={<About />}></Route>
+
+   
+          <Route path="/about" element={<Policy />}/>    
+          
+          
+   
+          <Route path="/about/privacy-policy" element={<About />}/>
+          
+          
+          
+       
           <Route path="/sign-up" element={<SignUp />}></Route>
         </Routes>
         <Footer />

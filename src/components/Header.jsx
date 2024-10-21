@@ -144,7 +144,7 @@
 // RWD
 
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
 import { SlArrowRight } from "react-icons/sl";
 
@@ -233,58 +233,78 @@ function Header() {
 
       {/* Mobile Menu - visible when isOpen is true */}
       {isOpen && (
-        <div className="absolute left-0 top-full z-10 w-full bg-white shadow-lg lg:hidden">
-          <ul className="flex flex-col justify-items-end space-y-4 p-4">
-            <li className="flex items-center justify-between">
-              <Link
-                to="/search-tourguides"
-                className="block text-base text-primary-500 hover:bg-primary-700 hover:font-bold"
-                onClick={toggleMenu}
-              >
-                隨行導遊趣
-              </Link>
-              <SlArrowRight className="" />
-            </li>
-            <li className="flex items-center justify-between">
-              <Link
-                to="/book-trips"
-                className="block text-base text-primary-500 hover:font-bold"
-                onClick={toggleMenu}
-              >
-                行程搶先報
-              </Link>
-              <SlArrowRight className="" />
-            </li>
-            <li className="flex items-center justify-between">
-              <Link
-                to="/sites-info"
-                className="block text-base text-primary-500 hover:font-bold"
-                onClick={toggleMenu}
-              >
-                推薦景點
-              </Link>
-              <SlArrowRight className="" />
-            </li>
-            <li className="flex items-center justify-between">
+        <div className="absolute left-0 top-full z-10 shadow-lg lg:hidden w-full">
+
+          <div className="absolute right-0 top-0 bg-white w-[45%]">
+
+          <ul className="flex flex-col justify-items-end">
+
+
+            <li className="flex items-center justify-between px-2 py-4 transition-colors duration-300 hover:bg-grey-100  hover:text-white">
               <Link
                 to="/travel-info"
-                className="block text-base text-primary-500 hover:font-bold"
+                className="block w-full text-base text-primary-500 transition-colors duration-300 hover:font-bold hover:text-white"
                 onClick={toggleMenu}
               >
-                旅行指南
+                <p className="text-base text-primary-500 hover:font-bold hover:text-white">
+                  隨行導遊趣
+                </p>
               </Link>
               <SlArrowRight className="" />
             </li>
-            <li>
+
+            <li className="flex items-center justify-between px-2 py-4 transition-colors duration-300 hover:bg-grey-100  hover:text-white">
               <Link
+                to="/travel-info"
+                className="block w-full text-base text-primary-500 transition-colors duration-300 hover:font-bold hover:text-white"
+                onClick={toggleMenu}
+              >
+                <p className="text-base text-primary-500 hover:font-bold hover:text-white">
+                  行程搶先報
+                </p>
+              </Link>
+              <SlArrowRight className="" />
+            </li>
+
+            <li className="flex items-center justify-between px-2 py-4 transition-colors duration-300 hover:bg-grey-100  hover:text-white">
+              <Link
+                to="/travel-info"
+                className="block w-full text-base text-primary-500 transition-colors duration-300 hover:font-bold hover:text-white"
+                onClick={toggleMenu}
+              >
+                <p className="text-base text-primary-500 hover:font-bold hover:text-white">
+                  推薦景點
+                </p>
+              </Link>
+              <SlArrowRight className="" />
+            </li>
+
+            <li className="flex items-center justify-between px-2 py-4 transition-colors duration-300 hover:bg-grey-100  hover:text-white">
+              <Link
+                to="/travel-info"
+                className="block w-full text-base text-primary-500 transition-colors duration-300 hover:font-bold hover:text-white"
+                onClick={toggleMenu}
+              >
+                <p className="text-base text-primary-500 hover:font-bold hover:text-white">
+                  旅行指南
+                </p>
+              </Link>
+              <SlArrowRight className="" />
+            </li>
+
+
+            <li className="">
+              <button
                 to="/sign-up"
                 className="block w-full bg-primary-600 px-4 py-2 text-center text-base text-white"
                 onClick={toggleMenu}
               >
                 註冊/登入
-              </Link>
+              </button>
             </li>
           </ul>
+
+          </div>
         </div>
       )}
     </div>
