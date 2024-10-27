@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -406,51 +407,51 @@ export default function HomePage() {
   return (
     <>
       {/* trip themes */}
-      <ul className="mx-auto hidden max-w-[1296px] items-center justify-center py-7 text-base leading-[22.4px] text-grey-400 lg:flex">
-        <li className="border border-y-0 border-grey-100 pr-11">
+      {/* <ul className="hidden lg:mx-auto lg:container lg:items-center lg: justify-between lg:py-7 lg:text-base lg:leading-[22.4px] lg:text-grey-400 lg:flex">
+        <li className="border border-y-0 border-grey-100 border-x-1 border-l-0  pr-11">
           <Link to="/" className="text-base">
             <span>法式美食</span>
           </Link>
         </li>
-        <li className="border border-y-0 border-grey-100 px-11">
+        <li className="border border-y-0 border-grey-100 border-x-1 border-r-0  border-l-0 px-11">
           <Link to="/">
             <span>浪漫蜜月行</span>
           </Link>
         </li>
-        <li className="border border-y-0 border-grey-100 px-11">
+        <li className="border border-y-0 border-grey-100 border-x-1 border-r-0 px-11">
           <Link to="/">
             <span>親子家庭遊</span>
           </Link>
         </li>
-        <li className="border border-y-0 border-grey-100 px-11">
+        <li className="border border-y-0 border-grey-100 border-x-1 border-r-0 px-11">
           <Link to="/">
             <span>時尚購物</span>
           </Link>
         </li>
-        <li className="border border-y-0 border-grey-100 px-11">
+        <li className="border border-y-0 border-grey-100 border-x-1 border-r-0 px-11">
           <Link to="/">
             <span>歷史建築</span>
           </Link>
         </li>
-        <li className="border border-y-0 border-grey-100 px-11">
+        <li className="border border-y-0 border-grey-100 border-x-1 border-r-0 px-11">
           <Link to="/">
             <span>藝術博物館</span>
           </Link>
         </li>
-        <li className="border border-y-0 border-grey-100 px-11">
+        <li className="border border-y-0 border-grey-100 border-x-1 border-r-0 px-11">
           <Link to="/">
             <span>文哲學巡禮</span>
           </Link>
         </li>
-        <li className="border border-y-0 border-grey-100 px-11">
+        <li className="border border-y-0 border-grey-100 border-x-1 border-r-0 px-11 pr-0">
           <Link to="/">
             <span>自然風光</span>
           </Link>
         </li>
-      </ul>
+      </ul> */}
 
       {/* banner: Slides show */}
-      <div className="relative">
+      {/* <div className="relative">
         <Swiper
           effect={"fade"}
           spaceBetween={30}
@@ -473,28 +474,28 @@ export default function HomePage() {
           ))}
         </Swiper>
 
-        <div className="absolute left-[22%] top-[10%] z-10">
-          <div className="flex-col space-y-5 text-start">
-            <p className="noto-sans-tc-bold py-3 leading-[1.2] tracking-4 text-white shadow-black drop-shadow-2xl">
+        <div className="absolute left-[18%] top-[17%] z-10">
+          <div className="flex-col text-start">
+            <p className="noto-sans-tc-bold leading-[1.2] tracking-4 text-white shadow-black drop-shadow-2xl text-shadow">
               尋找你的完美巴黎旅程
             </p>
-            <p className="py-6 text-2xl font-bold tracking-4 text-white shadow-black drop-shadow-2xl">
+            <p className="pt-20 text-2xl font-bold tracking-4 text-white shadow-black drop-shadow-2xl text-shadow">
               輕盈漫步在巴黎的街巷。
             </p>
             <div>
-              <p className="text-2xl font-bold leading-[28.8px] tracking-4 text-white shadow-black drop-shadow-2xl">
+              <p className="pt-10 text-2xl font-bold leading-[28.8px] tracking-4 text-white shadow-black drop-shadow-2xl text-shadow">
                 無論你心繫歷史的脈動、美食的馨香，還是藝術的深邃，
               </p>
-              <p className="text-2xl font-bold leading-[28.8px] tracking-4 text-white shadow-black drop-shadow-2xl">
+              <p className="text-2xl font-bold leading-[28.8px] tracking-4 text-white shadow-black drop-shadow-2xl text-shadow">
                 我們都為你精選了最契合靈魂的旅程。
               </p>
             </div>
-            <p className="py-6 text-2xl font-bold leading-[28.8px] tracking-4 text-white shadow-black drop-shadow-2xl">
+            <p className="pt-10 text-2xl font-bold leading-[28.8px] tracking-4 text-white shadow-black drop-shadow-2xl text-shadow">
               一段符合你心之所向的旅程，正在靜靜等待與你邂逅。
             </p>
 
             <div className="flex items-center">
-              <div className="relative w-full">
+              <div className="relative w-full mt-20">
                 <input
                   type="text"
                   className="w-full rounded-lg border border-gray-300 bg-white p-3 pr-4 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -512,35 +513,35 @@ export default function HomePage() {
               </div>
             </div>
 
-            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
               法式美食
             </button>
-            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
               浪漫蜜月行
             </button>
-            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
               親子家庭遊
             </button>
-            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
               時尚購物
             </button>
-            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
               歷史建築
             </button>
-            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
               藝術博物館
             </button>
-            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
               文哲學巡禮
             </button>
-            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
               自然風光
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
+      {/* <div className="mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
         <img
           src="/images/vector_title.png"
           alt=""
@@ -554,9 +555,9 @@ export default function HomePage() {
           alt=""
           className="inline-block h-[40px]"
         />
-      </div>
+      </div> */}
       <div className="relative mt-[60px]">
-        <div className="flex items-center justify-center">
+        {/* <div className="flex items-center justify-center">
           <p className="text-1xl absolute left-[51.5%] top-[45.5%] text-secondary-700 text-white">
             4
           </p>
@@ -564,15 +565,14 @@ export default function HomePage() {
             src="images/parismap_dist_web.png"
             useMap="#parisMap"
             alt="Paris District Map"
-            // className="max-w-100 max-h-100"
             data-aos="zoom-in-left"
             data-aos-easing="ease-in-sine"
           />
-        </div>
+        </div> */}
 
         <div className="">
           {/* Display selected district info */}
-          {selectedDistrict && (
+          {/* {selectedDistrict && (
             <div
               className="absolute rounded-[28px] border border-gray-300 bg-background-blur p-4 shadow-lg"
               style={{
@@ -601,9 +601,9 @@ export default function HomePage() {
                 </button>
               </div>
             </div>
-          )}
+          )} */}
           {/* Map for clickable areas */}
-          <map name="parisMap">
+          {/* <map name="parisMap">
             <area
               shape="poly"
               coords="536,334,531,340,527,347,523,356,524,367,531,368,539,367,547,370,561,375,567,379,577,383,584,385,592,389,600,394,609,395,616,399,623,404,637,412,631,405,646,412,646,404,643,396,643,388,647,382,650,375,643,366,635,362,625,358,617,355,607,351,595,349,588,346,582,342,574,339,567,335,558,332,547,328,539,326"
@@ -620,7 +620,7 @@ export default function HomePage() {
               alt="Paris 2"
               className="cursor-pointer"
             />
-            {/* 3 */}
+
             <area
               shape="poly"
               coords="675,333,673,342,669,349,666,356,662,365,668,376,659,372,675,376,684,382,696,394,704,394,709,398,712,405,718,407,724,410,724,399,723,390,720,379,717,367,714,358,712,350,707,344,697,341,691,335,685,333"
@@ -629,7 +629,7 @@ export default function HomePage() {
               alt="Paris 3"
               className="cursor-pointer"
             />
-            {/* 4 */}
+
             <area
               shape="poly"
               coords="658,381,652,387,651,403,647,397,658,406,666,411,673,414,682,415,687,421,692,428,698,433,705,439,713,441,717,447,722,452,726,458,728,447,731,441,728,431,725,422,723,415,714,410,707,407,700,401,687,395,679,389,670,386"
@@ -638,7 +638,6 @@ export default function HomePage() {
               alt="Paris 4"
               className="cursor-pointer"
             />
-            {/* 5 ????  */}
 
             <area
               shape="poly"
@@ -651,8 +650,6 @@ export default function HomePage() {
               className="cursor-pointer"
             />
 
-            {/* 6  ??*/}
-
             <area
               shape="poly"
               coords="583,406,582,415,578,422,576,431,572,438,568,446,563,453,556,455,547,455,541,461,536,473,524,478,515,485,518,491,524,493,539,500,532,497,546,502,555,504,560,508,567,512,573,514,579,516,586,520,592,522,595,512,597,504,603,496,605,488,607,478,612,473,613,462,614,452,618,446,623,437,619,427,614,420,607,415,598,412,589,407"
@@ -661,8 +658,6 @@ export default function HomePage() {
               alt="Paris 6"
               className="cursor-pointer"
             />
-
-            {/* 7  */}
 
             <area
               shape="poly"
@@ -674,7 +669,6 @@ export default function HomePage() {
               className="cursor-pointer"
             />
 
-            {/* 8 */}
             <area
               shape="poly"
               coords="407,315,407,304,412,320,413,330,414,338,417,344,422,349,429,355,439,362,446,365,452,370,463,370,470,368,478,368,487,368,498,370,507,367,514,368,514,360,517,352,522,346,525,336,530,331,533,324,537,317,541,311,543,304,546,295,543,285,545,277,542,265,542,252,542,244,539,236,532,239,522,240,511,243,502,244,494,246,484,248,474,253,464,254,456,256,448,261,441,265,431,270,422,274,415,277,412,283,406,290,409,295"
@@ -684,7 +678,6 @@ export default function HomePage() {
               className="cursor-pointer"
             />
 
-            {/* 9 */}
             <area
               shape="poly"
               coords="550,238,551,246,552,257,551,275,552,268,552,282,552,288,551,296,548,303,544,311,543,318,540,327,534,336,530,346,525,352,526,357,520,362,532,360,539,359,544,351,551,341,559,332,565,323,574,314,579,301,575,307,589,300,598,302,605,302,613,306,619,309,628,311,641,315,635,309,641,296,642,287,645,279,646,271,650,263,650,253,650,244,650,237,644,229,636,232,631,237,621,240,612,243,602,243,594,236,586,232,576,231,567,227,559,227,551,227"
@@ -693,7 +686,7 @@ export default function HomePage() {
               alt="Paris 9"
               className="cursor-pointer"
             />
-            {/* 10 */}
+
             <area
               shape="poly"
               coords="652,233,654,240,658,249,655,257,657,267,655,275,653,283,653,289,650,295,647,303,654,320,649,311,660,322,667,321,670,327,677,327,684,330,691,335,699,334,706,336,714,336,723,330,729,329,742,323,750,323,756,318,763,315,771,314,765,304,756,294,748,289,746,280,744,270,741,259,741,249,742,239,737,234,725,231,715,227,708,227,699,230,690,228,679,225,670,226,661,228"
@@ -702,7 +695,7 @@ export default function HomePage() {
               alt="Paris 10"
               className="cursor-pointer"
             />
-            {/* 11 */}
+
             <area
               shape="poly"
               coords="717,347,721,363,722,354,726,371,728,376,731,388,732,397,733,409,737,415,739,423,740,430,744,436,752,436,761,436,765,443,772,444,778,445,785,451,794,454,803,455,811,460,821,462,827,465,836,466,842,463,849,467,859,467,867,469,867,458,865,446,860,436,857,426,850,421,840,418,836,410,833,403,826,391,826,379,821,368,815,362,807,356,800,349,793,343,788,334,780,326,776,316,770,319,763,323,754,325,746,330,737,333,730,336,722,342"
@@ -711,7 +704,7 @@ export default function HomePage() {
               alt="Paris 11"
               className="cursor-pointer"
             />
-            {/* 12 */}
+
             <area
               shape="poly"
               coords="739,448,736,456,735,466,740,472,740,478,743,487,748,495,754,505,759,512,764,519,771,529,775,538,785,545,790,554,796,563,801,570,806,575,810,581,815,588,822,596,827,601,835,606,837,612,843,618,853,617,864,617,872,614,884,610,892,604,884,593,881,586,884,577,890,571,897,565,902,561,908,554,914,552,923,553,932,556,940,560,945,552,945,540,945,530,948,522,949,512,951,501,954,492,952,481,943,481,934,481,923,477,913,478,905,480,893,480,884,477,874,477,866,477,858,477,848,475,840,474,833,474,822,473,813,468,803,465,795,461,787,454,776,450,764,446,757,445,748,443
@@ -721,7 +714,7 @@ export default function HomePage() {
               alt="Paris 12"
               className="cursor-pointer"
             />
-            {/* 13 */}
+
             <area
               shape="poly"
               coords="621,547,623,564,623,557,620,570,621,579,621,587,620,596,620,605,622,613,622,624,621,634,620,642,628,646,633,658,636,664,638,676,637,684,636,693,634,699,646,697,652,691,660,690,666,688,676,691,684,693,691,697,701,694,710,692,717,693,726,692,733,688,740,684,746,680,754,677,761,673,768,669,775,662,783,657,791,652,800,645,808,641,813,636,820,632,827,628,834,624,824,618,817,613,810,606,805,597,799,586,793,581,789,575,784,570,779,564,772,558,765,550,758,542,753,534,747,529,744,515,739,508,734,499,729,493,728,503,722,513,720,521,715,526,716,534,714,541,707,547,698,547,690,553,679,554,670,554,661,554,652,551,645,550,637,550,627,550"
@@ -730,7 +723,7 @@ export default function HomePage() {
               alt="Paris 13"
               className="cursor-pointer"
             />
-            {/* 14 */}
+
             <area
               shape="poly"
               coords="538,510,548,517,556,522,563,525,572,528,580,532,589,538,596,540,606,543,613,544,612,557,611,564,611,571,610,580,610,590,611,599,611,606,610,615,610,625,610,633,611,643,613,651,620,658,623,663,626,669,628,676,627,684,627,693,623,698,615,694,609,693,602,693,596,691,589,687,582,681,573,676,565,671,558,669,551,666,542,665,535,662,526,658,518,653,503,649,510,657,494,646,486,645,480,644,472,645,465,639,457,636,449,636,438,636,444,627,453,621,461,613,467,606,472,597,480,588,488,579,492,571,497,563,503,558,513,554,520,548,524,540,530,532,533,525,535,517"
@@ -739,7 +732,7 @@ export default function HomePage() {
               alt="Paris 14"
               className="cursor-pointer"
             />
-            {/* 15 */}
+
             <area
               shape="poly"
               coords="394,430,388,438,380,445,373,451,367,459,361,466,357,471,350,474,350,482,342,482,340,488,336,496,332,504,326,507,321,515,317,523,312,531,305,541,301,549,295,556,291,565,286,571,291,578,294,592,289,600,292,607,294,616,302,615,311,613,318,610,323,604,327,594,334,590,342,595,351,599,357,602,364,608,372,611,383,615,389,616,395,620,404,624,411,628,418,631,424,632,431,631,435,625,439,617,445,613,452,603,458,596,462,590,465,584,469,577,475,571,483,566,487,561,492,555,497,548,503,541,509,534,515,528,519,518,524,510,526,505,517,502,508,499,500,497,491,497,484,497,478,488,471,488,464,492,455,491,449,485,442,477,436,471,430,466,424,461,417,455,412,450,407,445,401,438"
@@ -748,7 +741,7 @@ export default function HomePage() {
               alt="Paris 15"
               className="cursor-pointer"
             />
-            {/* 16 */}
+
             <area
               shape="poly"
               coords="325,273,332,276,341,275,346,279,353,284,359,288,367,292,374,294,382,299,389,300,396,304,399,313,400,320,404,326,407,334,408,342,411,348,412,355,416,361,420,367,419,374,415,382,412,389,405,390,403,398,398,404,392,406,388,414,384,420,375,423,371,431,366,437,360,443,353,450,346,455,341,463,335,469,330,475,325,484,319,487,314,493,311,501,305,507,302,518,296,526,292,534,287,541,284,549,278,555,272,564,266,572,258,578,249,578,242,575,233,577,229,570,224,563,222,555,217,548,214,541,221,539,226,533,231,527,231,521,234,513,238,503,239,494,242,485,238,478,231,475,232,462,236,453,240,445,244,438,247,430,249,421,252,413,256,404,259,397,263,388,267,382,270,375,271,367,278,358,282,349,286,342,289,334,293,327,296,318,303,309,312,302,313,294,318,287,319,278"
@@ -757,7 +750,7 @@ export default function HomePage() {
               alt="Paris 16"
               className="cursor-pointer"
             />
-            {/* 17 */}
+
             <area
               shape="poly"
               coords="341,269,350,269,359,272,365,277,374,279,380,284,388,287,394,291,401,291,406,285,414,278,420,270,429,268,438,262,445,256,456,254,463,252,472,248,480,245,488,243,496,243,503,239,510,238,517,236,524,233,532,230,535,222,535,212,534,201,534,191,536,182,536,175,538,166,541,158,542,149,544,141,547,130,549,121,554,113,544,111,536,113,526,118,517,121,509,122,501,127,494,132,485,134,476,135,469,138,462,141,453,143,452,151,441,158,438,165,431,171,425,174,417,180,413,188,407,196,396,198,388,196,381,193,378,201,373,206,367,212,360,216,355,224,349,229,343,236,341,244,341,252,337,263"
@@ -766,19 +759,17 @@ export default function HomePage() {
               alt="Paris 17"
               className="cursor-pointer"
             />
-            {/* 18 */}
+
             <area
               shape="poly"
               coords="564,109,559,123,557,130,556,139,554,147,551,157,550,165,546,173,545,183,545,193,546,201,546,210,548,219,551,226,559,222,568,220,575,223,582,227,596,233,602,238,608,236,614,234,623,233,629,230,639,227,651,222,664,220,670,215,679,215,687,217,695,219,707,218,717,215,723,210,725,202,727,194,734,185,735,177,738,171,743,164,747,156,750,148,747,142,743,133,741,126,739,115,739,108,732,107,723,109,714,109,706,108,698,110,688,109,678,111,668,109,659,108,649,108,640,110,630,110,623,111,612,111,603,110,592,110,583,109,576,106
 "
-              // 564,112,561,118,560,125,558,133,555,140,553,148,551,156,548,175,552,163,543,183,540,192,540,200,543,210,544,220,544,227,551,227,555,220,563,218,570,221,576,226,583,228,589,230,594,235,603,237,611,236,619,234,627,228,634,226,641,222,650,221,659,215,666,214,673,213,679,215,686,216,693,216,701,216,708,216,717,216,721,208,723,202,728,194,730,184,731,178,734,171,737,164,741,156,745,147,740,142,739,133,737,125,737,116,737,107,728,105,722,110,714,107,705,108,697,110,687,111,679,107,671,108,661,108,651,109,642,108,635,111,626,108,614,108,606,109,597,106,590,108,581,111,572,108
               href="#"
               onClick={(event) => handleDistrictClick(event, 18)}
               alt="Paris 18"
               className="cursor-pointer"
             />
 
-            {/* 19 */}
             <area
               shape="poly"
               coords="747,111,747,121,747,129,744,137,752,142,754,150,750,158,746,167,744,176,740,183,737,192,736,201,732,213,730,221,736,225,742,230,748,233,750,239,750,247,750,256,752,264,750,273,757,278,762,285,766,292,770,300,776,305,784,304,793,302,800,299,808,297,816,293,824,288,832,287,842,287,849,287,858,286,864,285,871,286,879,284,886,279,892,275,899,272,905,270,911,265,920,262,927,256,918,252,910,248,900,242,890,236,882,233,876,228,873,222,868,215,867,207,867,200,871,192,873,184,872,175,867,168,868,159,860,147,855,141,850,134,845,128,841,122,837,117,828,119,818,114,808,114,799,114,788,115,781,114,773,113,765,111,753,109"
@@ -787,7 +778,7 @@ export default function HomePage() {
               alt="Paris 19"
               className="cursor-pointer"
             />
-            {/* 20 */}
+
             <area
               shape="poly"
               coords="789,317,796,322,799,327,804,332,808,339,813,346,819,354,824,363,829,370,834,377,839,387,839,395,841,403,842,411,850,413,859,417,866,422,870,430,872,440,876,448,876,456,879,465,883,470,891,467,899,468,918,470,908,469,924,467,929,472,937,472,944,472,952,473,954,462,954,453,954,444,955,436,958,430,955,421,951,412,945,403,945,394,944,382,944,373,944,364,944,355,944,345,945,333,945,322,945,311,943,301,939,290,936,284,933,274,931,263,926,269,916,271,910,278,902,280,896,286,888,290,880,293,872,294,863,292,855,292,845,293,837,293,831,296,825,302,819,303,811,307,802,309,794,311"
@@ -796,16 +787,16 @@ export default function HomePage() {
               alt="Paris 20"
               className="cursor-pointer"
             />
-          </map>
+          </map> */}
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <img src="images/deco_sites.png" alt="decorations Paris sites" />
-      </div>
+      </div> */}
 
       {/* slides show: popular tourist guides */}
-      <div className="">
+      {/* <div className="">
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
             src="images/vector_title.png"
@@ -821,8 +812,8 @@ export default function HomePage() {
             className="inline-block h-[40px]"
           />
         </div>
-      </div>
-      <div className="m-auto max-w-[67.5%]">
+      </div> */}
+      {/* <div className="m-auto max-w-[67.5%]">
         <div className="mt-8">
           <Slider {...settings1}>
             {data.map((data, index) => (
@@ -845,10 +836,10 @@ export default function HomePage() {
             ))}
           </Slider>
         </div>
-      </div>
+      </div> */}
       {/* background settings */}
       <div className="bg-popular_sites relative">
-        <div className="">
+        {/* <div className="">
           <img
             src="images/upper-background_popular_sites_w1914.png"
             alt=""
@@ -859,9 +850,9 @@ export default function HomePage() {
             alt=""
             className="h-[900px] w-full"
           />
-        </div>
+        </div> */}
 
-        <div className="absolute left-[43%] top-[30%] mt-16">
+        {/* <div className="absolute left-[43%] top-[30%] mt-16">
           <div className="flex justify-center space-x-4 hover:cursor-pointer">
             <img
               src="images/vector_title.png"
@@ -877,10 +868,10 @@ export default function HomePage() {
               className="inline-block h-[40px]"
             />
           </div>
-        </div>
+        </div> */}
 
         {/* slides show: popular sites */}
-        <div className="absolute left-[15%] top-[40%] max-w-[67.5%]">
+        {/* <div className="absolute left-[15%] top-[40%] max-w-[67.5%]">
           <div className="mt-20">
             <Slider {...settings2}>
               {TripsData.map((data, index) => (
@@ -902,7 +893,7 @@ export default function HomePage() {
               ))}
             </Slider>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* 預約導遊和報名行程 */}
@@ -1091,7 +1082,7 @@ export default function HomePage() {
         </div>
       </div> */}
 
-      <div className="">
+      {/* <div className="">
         <div className="mb-8 mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
           <img
             src="images/vector_title.png"
@@ -1287,42 +1278,42 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Clouds decorations */}
       <div className="relative mb-[20%]">
-        <div className="absolute -top-6 left-[1%] -rotate-12">
+        {/* <div className="absolute -top-6 left-[1%] -rotate-12">
           <img src="images/deco_footer_clouds.png" alt="" />
-        </div>
+        </div> */}
 
-        <div className="rotate-10 absolute -top-40 right-[3%]">
+        {/* <div className="rotate-10 absolute -top-40 right-[3%]">
           <img src="images/deco_footer_clouds.png" alt="" />
-        </div>
+        </div> */}
 
         {/* Tree decorations */}
-        <div className="absolute left-16 top-[85px]">
+        {/* <div className="absolute left-16 top-[85px]">
           <img
             src="images/left_tree.png"
             alt=""
             className="h-auto max-w-[98%]"
           />
-        </div>
+        </div> */}
 
-        <div className="absolute right-[7%] top-[190px] -rotate-3">
+        {/* <div className="absolute right-[7%] top-[190px] -rotate-3">
           <img
             src="images/deco_middle_tree.png"
             alt=""
             className="h-auto max-w-[89%]"
           />
-        </div>
+        </div> */}
 
-        <div className="absolute -top-5 right-2">
+        {/* <div className="absolute -top-5 right-2">
           <img
             src="images/deco_right_tree.png"
             alt=""
             className="h-auto max-w-[98%]"
           />
-        </div>
+        </div> */}
       </div>
     </>
   );

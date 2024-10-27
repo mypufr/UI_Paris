@@ -2,15 +2,21 @@
 export default {
   content: ["./index.html", "./src/**/*.{html, js,jsx}"],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        lg: "312px",    
+      },
+    },
     extend: {
       screens: {
-        "1830px" : "1830px",
+        "1830px": "1830px",
       },
       maxWidth: {
         "1296px": "1296px",
         "1200px": "1200px",
-        "max-1200px": {"max":"1200px"},
-        "min-1200px": {"min":"1200px"}
+        "max-1200px": { max: "1200px" },
+        "min-1200px": { min: "1200px" },
       },
       colors: {
         primary: {
@@ -49,7 +55,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Noto Sans TC", "sans-serif"],
+        sans: ['Noto Sans TC', 'sans-serif'],
       },
       dropShadow: {
         custom: "0px 4px 4px 0px rgba(0, 0, 0, 0.3)",
@@ -66,7 +72,7 @@ export default {
       grayscale: {
         120: "120%",
         240: "240%",
-      }
+      },
     },
   },
   plugins: [],
