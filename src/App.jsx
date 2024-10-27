@@ -22,8 +22,17 @@ import Policy from "./pages/Policy";
 export default function App() {
   return (
     <>
+
+    <div className="flex min-h-screen flex-col">
+
+
       <BrowserRouter>
         <Header />
+
+<main className="flex-grow">
+
+
+
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
 
@@ -31,44 +40,36 @@ export default function App() {
           <Route
             path="/search-tourguides/search-results"
             element={<SearchResultsPage />}
-          />
+            />
           <Route
             path="/search-tourguides/tourguide-profile/:id"
             element={<TourguideProfilePage />}
-          />
+            />
           <Route
             path="/search-tourguides/tourguide-profile/:id/message"
             element={<EditMessagePage />}
-          />
+            />
 
           <Route
             path="/search-tourguides/tourguide-profile/:id/private-trips"
             element={<BookPrivateTripsPage />}
-          />
+            />
 
           <Route
             path="/search-tourguides/tourguide-profile/:id/private-trips/confirm-order"
             element={<OrderInfoPage />}
-          />
+            />
 
           <Route
             path="/search-tourguides/tourguide-profile/:id/private-trips/payment"
             element={<PaymentPage />}
-          />
+            />
 
           <Route
             path="/search-tourguides/tourguide-profile/:id/private-trips/payment-success"
             element={<PaymentSuccessPage />}
-          />
-
-          {/* 
-          <Route path="/search-tourguides" element={<TourguidesPage />}>
-            <Route path="search-results" element={<SearchResultsPage />} />
-            <Route
-              path="tourguide-profile/:id"
-              element={<TourguideProfilePage />}
             />
-          </Route> */}
+
 
           <Route path="/book-trips" element={<TripsPage />}></Route>
           <Route path="/sites-info" element={<SitesInfoPage />}></Route>
@@ -86,8 +87,14 @@ export default function App() {
        
           <Route path="/sign-up" element={<SignUp />}></Route>
         </Routes>
+
+            </main>
+
+
         <Footer />
       </BrowserRouter>
+
+    </div>
       
     </>
   );

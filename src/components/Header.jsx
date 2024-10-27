@@ -161,7 +161,7 @@ function Header() {
   };
 
   return (
-    <div className="container py-10">
+    <div className="container p-3 lg:py-10">
       <div className="relative">
         <div className="mx-auto flex max-w-full items-center justify-between">
           {/* Logo */}
@@ -174,14 +174,14 @@ function Header() {
                   Paris, mon guide
                 </span>
               </h1>
-              <p className="text-[14px] leading-[1.5] text-blue-50">
+              <p className="text-[14px] leading-[1.5] tracking-1.5 text-blue-50">
                 在地導遊媒合平台
               </p>
             </div>
           </Link>
 
           {/* Desktop Menu - visible on larger screens */}
-          <ul className="hidden items-center justify-between space-x-16 lg:flex">
+          <ul className="hidden lg:flex lg:items-center lg:justify-between lg:space-x-16 ">
             <li className="text-base leading-[22.4px] text-grey-950">
               <Link
                 to="/search-tourguides"
@@ -214,7 +214,7 @@ function Header() {
                 旅行指南
               </Link>
             </li>
-            <li className="ps-[180px]">
+            <li className="ps-[180px] lg:ps-0">
               <button className="rounded-2xl bg-primary-600 text-base font-normal transition-colors duration-200 hover:bg-primary-300">
                 <Link
                   to="/sign-up"
@@ -227,7 +227,7 @@ function Header() {
           </ul>
 
           {/* Hamburger Icon - visible on smaller screens */}
-          <div className="pr-5 lg:hidden">
+          <div className="lg:hidden">
             <button
               onClick={toggleMenu}
               className="rounded-full bg-primary-600 p-2 text-white"
