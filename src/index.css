@@ -58,7 +58,8 @@
 }
 
 .slick-slide > div {
-  @apply mx-2.5;
+  @apply 
+  mx-2.5;
 }
 
 .swiper {
@@ -70,12 +71,20 @@
 }
 
 .slick-slide {
-  @apply space-y-8;
+  @apply 
+  
+  space-y-8;
 }
 
 /* .slick-list {
   @apply space-y-8;
 } */
+
+.overflow-clip {
+
+  overflow-x: clip;
+}
+
 
 .swiper-slide img {
   @apply block h-full w-full object-cover;
@@ -106,4 +115,10 @@
   /* display: block !important;
   z-index: 10; */
   background: #c42811;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
 }

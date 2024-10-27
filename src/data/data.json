@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "李文雅",
-    "img": "/images/img_tourguide_1.png",
+    "img": "https://i.imgur.com/5OKwoMa.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "巴黎歷史 建築學 巴洛克時期",
     "speciality1":"巴黎歷史",
@@ -14,7 +14,7 @@
   {
     "id": 4,
     "name": "Kevin Martin",
-    "img": "/images/img_tourguide_4.png",
+    "img": "https://i.imgur.com/8WVO0C7.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "巴黎時尚 購物導覽 設計師品牌",
     "speciality1":"巴黎時尚",
@@ -25,7 +25,7 @@
   {
     "id": 2,
     "name": "Marie Leclerc",
-    "img": "/images/img_tourguide_2.png",
+    "img": "https://i.imgur.com/b5AyDFM.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "美食之旅 街頭文化",
     "speciality1":"美食之旅",
@@ -36,7 +36,7 @@
   {
     "id": 5,
     "name": "王淑芬",
-    "img": "/images/img_tourguide_5.png",
+    "img": "https://i.imgur.com/MBb5iuY.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "巴黎攝影 浪漫景點 旅遊攝影指導",
     "speciality1":"巴黎攝影",
@@ -47,7 +47,7 @@
   {
     "id": 3,
     "name": "張曉明",
-    "img": "/images/img_tourguide_3.png",
+    "img": "https://i.imgur.com/js4LuRP.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "當代藝術 巴黎博物館 街頭藝術",
     "speciality1":"當代藝術",
@@ -58,7 +58,7 @@
   {
     "id": 6,
     "name": "Claire Dubois",
-    "img": "/images/img_tourguide_6.png",
+    "img": "https://i.imgur.com/g1MmV8d.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "家庭導覽 兒童友好景點 親子活動",
     "speciality1":"家庭導覽",
@@ -69,7 +69,7 @@
   {
     "id": 7,
     "name": "劉建國",
-    "img": "/images/img_tourguide_6.png",
+    "img": "https://i.imgur.com/g1MmV8d.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "古典音樂 歷史遺跡 歐洲文學",
     "speciality1": "古典音樂",
@@ -80,7 +80,7 @@
   {
     "id": 8,
     "name": "Anna Dubois",
-    "img": "/images/img_tourguide_6.png",
+    "img": "https://i.imgur.com/g1MmV8d.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "巴黎公園 自然景觀 步行導覽",
     "speciality1": "巴黎公園",
@@ -91,7 +91,7 @@
   {
     "id": 9,
     "name": "黃子軒",
-    "img": "/images/img_tourguide_6.png",
+    "img": "https://i.imgur.com/g1MmV8d.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "現代建築 街區文化 城市發展",
     "speciality1": "現代建築",
@@ -102,7 +102,7 @@
   {
     "id": 10,
     "name": "Sophia Muller",
-    "img": "/images/img_tourguide_6.png",
+    "img": "https://i.imgur.com/g1MmV8d.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "藝術博物館 文化遺產 巴黎歷史",
     "speciality1": "藝術博物館",
@@ -113,7 +113,7 @@
   {
     "id": 11,
     "name": "李志明",
-    "img": "/images/img_tourguide_6.png",
+    "img": "https://i.imgur.com/g1MmV8d.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "音樂文化 歷史建築 浪漫巴黎",
     "speciality1": "音樂文化",
@@ -124,7 +124,7 @@
   {
     "id": 12,
     "name": "Isabelle Petit",
-    "img": "/images/img_tourguide_6.png",
+    "img": "https://i.imgur.com/g1MmV8d.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "巴黎夜生活 酒吧文化 美食體驗",
     "speciality1": "巴黎夜生活",
@@ -135,7 +135,7 @@
   {
     "id": 13,
     "name": "王耀輝",
-    "img": "/images/img_tourguide_6.png",
+    "img": "https://i.imgur.com/g1MmV8d.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "歷史戰役 古蹟導覽 軍事歷史",
     "speciality1": "歷史戰役",
@@ -146,7 +146,7 @@
   {
     "id": 14,
     "name": "Emily Laurent",
-    "img": "/images/img_tourguide_6.png",
+    "img": "https://i.imgur.com/g1MmV8d.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "法國文學 巴黎書店 文藝文化",
     "speciality1": "法國文學",
@@ -157,7 +157,7 @@
   {
     "id": 15,
     "name": "周子晴",
-    "img": "/images/img_tourguide_6.png",
+    "img": "https://i.imgur.com/g1MmV8d.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "法式甜點 烹飪課程 美食探索",
     "speciality1": "法式甜點",
@@ -168,7 +168,7 @@
   {
     "id": 16,
     "name": "Alexandre Moreau",
-    "img": "/images/img_tourguide_6.png",
+    "img": "https://i.imgur.com/g1MmV8d.png",
     "imgUrl": "https://imgur.com/a/qtdT0t7",
     "review": "法國啤酒 葡萄酒導覽 美食文化",
     "speciality1": "法國啤酒",

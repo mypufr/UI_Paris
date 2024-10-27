@@ -69,7 +69,7 @@ function TourguideProfilePage() {
 
   return (
     <>
-      <div className="flex flex-col justify-center py-[5vh] text-3xl font-bold text-grey-950">
+      <div className="flex flex-col justify-center py-[5vh] text-3xl font-bold text-grey-950" >
         <div className="flex justify-evenly">
           {/* left: Search criteria */}
           <div className="mt-10">
@@ -214,9 +214,9 @@ function TourguideProfilePage() {
           </div>
 
           {/* right: Tourguide profile */}
-          <div className="max-w-[50%]">
+          <div className="max-w-[50%]" >
             {/* title */}
-            <div className="m-10 flex justify-center space-x-4 hover:cursor-pointer">
+            <div className="m-10 flex justify-center space-x-4 hover:cursor-pointer" id="target-section">
               <img
                 src="/images/vector_title.png"
                 alt=""
@@ -232,7 +232,11 @@ function TourguideProfilePage() {
               />
             </div>
             <img
-              src={`/images/img_tourguide_${id}.png`}
+              src=
+              // {`/images/img_tourguide_${id}.png`}
+              
+              {CardData.img}
+              
               alt=""
               className="object-center-30 inline-block max-h-[640.31px] w-full rounded-3xl object-cover"
             />

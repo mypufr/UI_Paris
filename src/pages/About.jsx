@@ -29,7 +29,7 @@ function About() {
         </div>
         <div
           className="relative h-screen bg-cover bg-center px-[10%] pb-[500px]"
-          style={{ backgroundImage: "url('/images/About.png')" }}
+          style={{ backgroundImage: "url('https://i.imgur.com/WapVXkT.png')" }}
         >
           <div className="absolute top-10 space-y-6">
             <p className="px-20 text-start text-2xl text-grey-950">

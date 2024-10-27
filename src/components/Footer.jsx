@@ -144,7 +144,7 @@ function Footer() {
 
         {/* 右側圖片 - 在小螢幕隱藏 */}
         <div className="absolute bottom-[150px] right-[400px] hidden 1830px:block">
-          <img src="/images/footer_img.png" alt="" 
+          <img src="https://i.imgur.com/IKExSXw.png" alt="footer_img" 
           className="w-full h-auto"/>
         </div>
 
@@ -218,6 +218,7 @@ function Footer() {
                   alt="facebook-link"
                   className="inline-block w-8 h-8"
                 />
+
               </Link>
               <Link to="/" className="inline-block rounded-full border-2 border-white p-2">
                 <RiInstagramFill className="text-sm" />

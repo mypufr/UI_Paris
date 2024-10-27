@@ -19,7 +19,7 @@ function SearchResultsPage() {
   const navigate = useNavigate();
 
   const handleCardClick = (id) => {
-    navigate(`/search-tourguides/tourguide-profile/${id}`);
+    navigate(`/search-tourguides/tourguide-profile/${id}#target-section`);
   };
 
   return (
@@ -72,7 +72,7 @@ function SearchResultsPage() {
       {/* slides show 1: search results */}
       <div className="m-auto my-20 max-w-[67.5%]">
         <div className="mt-8">
-          <Slider {...settings4} className="">
+          <Slider {...settings4} className="overflow-clip">
             {data.map((data, index) => (
               <div
                 key={index}

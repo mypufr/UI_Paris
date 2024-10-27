@@ -32,7 +32,7 @@ export default function HomePage() {
   const navigate = useNavigate();
 
   const handleCardClick = (id) => {
-    navigate(`/search-tourguides/tourguide-profile/${id}`);
+    navigate(`/search-tourguides/tourguide-profile/${id}#target-section`);
   };
 
   const settings1 = {
@@ -450,26 +450,95 @@ export default function HomePage() {
       </ul>
 
       {/* banner: Slides show */}
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        {SlidesData.map((data, index) => (
-          <SwiperSlide key={index}>
-            <SlideText imgUrl={data.imgUrl} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="relative">
+        <Swiper
+          effect={"fade"}
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: false,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper"
+        >
+          {SlidesData.map((data, index) => (
+            <SwiperSlide key={index}>
+              <SlideText imgUrl={data.imgUrl} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <div className="absolute left-[22%] top-[10%] z-10">
+          <div className="flex-col space-y-5 text-start">
+            <p className="noto-sans-tc-bold py-3 leading-[1.2] tracking-4 text-white shadow-black drop-shadow-2xl">
+              尋找你的完美巴黎旅程
+            </p>
+            <p className="py-6 text-2xl font-bold tracking-4 text-white shadow-black drop-shadow-2xl">
+              輕盈漫步在巴黎的街巷。
+            </p>
+            <div>
+              <p className="text-2xl font-bold leading-[28.8px] tracking-4 text-white shadow-black drop-shadow-2xl">
+                無論你心繫歷史的脈動、美食的馨香，還是藝術的深邃，
+              </p>
+              <p className="text-2xl font-bold leading-[28.8px] tracking-4 text-white shadow-black drop-shadow-2xl">
+                我們都為你精選了最契合靈魂的旅程。
+              </p>
+            </div>
+            <p className="py-6 text-2xl font-bold leading-[28.8px] tracking-4 text-white shadow-black drop-shadow-2xl">
+              一段符合你心之所向的旅程，正在靜靜等待與你邂逅。
+            </p>
+
+            <div className="flex items-center">
+              <div className="relative w-full">
+                <input
+                  type="text"
+                  className="w-full rounded-lg border border-gray-300 bg-white p-3 pr-4 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="尋找你的完美巴黎旅程"
+                />
+                <div className="absolute inset-y-0 right-0 flex items-center bg-primary-600 p-4 rounded-r-lg">
+                  <svg
+                    className="h-5 w-5 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+              法式美食
+            </button>
+            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+              浪漫蜜月行
+            </button>
+            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+              親子家庭遊
+            </button>
+            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+              時尚購物
+            </button>
+            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+              歷史建築
+            </button>
+            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+              藝術博物館
+            </button>
+            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+              文哲學巡禮
+            </button>
+            <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
+              自然風光
+            </button>
+          </div>
+        </div>
+      </div>
 
       <div className="mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
         <img
@@ -1051,6 +1120,8 @@ export default function HomePage() {
                   src="images/step-1-1.png"
                   alt=""
                   className="inline-block max-w-[200px] object-cover"
+                  data-aos="zoom-in-left"
+                  data-aos-easing="ease-in-sine"
                 />
                 <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
                   <p className="text-xl font-bold tracking-4 text-grey-950">
@@ -1068,6 +1139,8 @@ export default function HomePage() {
                     src="images/step-1-2.png"
                     alt=""
                     className="inline-block max-w-[200px] object-cover"
+                    data-aos="zoom-in-left"
+                    data-aos-easing="ease-in-sine"
                   />
                 </div>
                 <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
@@ -1085,6 +1158,8 @@ export default function HomePage() {
                     src="images/step-1-3.png"
                     alt=""
                     className="inline-block max-w-[200px] object-cover"
+                    data-aos="zoom-in-left"
+                    data-aos-easing="ease-in-sine"
                   />
                 </div>
                 <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
@@ -1123,6 +1198,8 @@ export default function HomePage() {
                   src="images/step-2-1.png"
                   alt=""
                   className="inline-block max-w-[188px] object-cover"
+                  data-aos="zoom-in-right"
+                  data-aos-easing="ease-in-sine"
                 />
 
                 <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
@@ -1141,6 +1218,8 @@ export default function HomePage() {
                     src="images/step-2-2.png"
                     alt=""
                     className="inline-block max-w-[188px] object-cover"
+                    data-aos="zoom-in-right"
+                    data-aos-easing="ease-in-sine"
                   />
                 </div>
                 <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
@@ -1158,6 +1237,8 @@ export default function HomePage() {
                     src="images/step-2-3.png"
                     alt=""
                     className="inline-block max-w-[188px] object-cover"
+                    data-aos="zoom-in-right"
+                    data-aos-easing="ease-in-sine"
                   />
                 </div>
                 <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
@@ -1176,6 +1257,8 @@ export default function HomePage() {
                     src="images/step-2-4.png"
                     alt=""
                     className="max-w-[188px] object-cover"
+                    data-aos="zoom-in-right"
+                    data-aos-easing="ease-in-sine"
                   />
                 </div>
                 <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">

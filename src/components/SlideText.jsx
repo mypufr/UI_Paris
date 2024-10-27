@@ -6,13 +6,18 @@ const SlideText = ({
 
 }) => {
   return (
-    <div className="relative h-full w-full">
+
+<>
+
+    <div className="h-full w-full">
+
     <img
       src={imgUrl}
       alt=""
       className="h-full w-full object-cover"
     />
-    <div className="absolute left-[22%] top-[10%]">
+
+    {/* <div className="absolute left-[22%] top-[10%]">
       <div className="flex-col space-y-5 text-start">
         <p className="noto-sans-tc-bold py-3 leading-[1.2] text-white tracking-4 drop-shadow-2xl shadow-black ">
           尋找你的完美巴黎旅程
@@ -76,8 +81,12 @@ const SlideText = ({
       <button className="mx-2 my-2 rounded-xl bg-background-2 p-1">
         時尚購物
       </button>
-    </div>
+    </div> */}
   </div>
+
+</>
+
+
 
   );
 };
