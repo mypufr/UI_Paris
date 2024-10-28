@@ -407,48 +407,51 @@ export default function HomePage() {
   return (
     <>
       {/* trip themes */}
-      <ul className="container hidden items-center justify-between text-base leading-[22.4px] text-grey-400 lg:flex lg:px-8 lg:py-2 2xl:py-7">
-        <li className="lg:border-r-1 lg:border-grey-100 lg:pr-6">
+      <ul className="container hidden items-center justify-between text-base leading-[22.4px] text-grey-400 lg:flex lg:px-4 lg:py-2 xl:w-10/12 xl:justify-evenly xl:py-7">
+        <li className="lg:border-r-1 lg:border-grey-100 lg:pr-6 xl:pr-8  xl:px-8 xl:border xl:border-r-1  xl:border-y-0 xl:border-l-0">
           <Link to="/" className="text-base">
             <span>法式美食</span>
           </Link>
         </li>
-        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:px-0 xl:border-0">
           <Link to="/">
             <span>浪漫蜜月行</span>
+       
           </Link>
         </li>
-        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:px-8 xl:border-r-1 xl:border xl:border-y-0 xl:border-l-1">
           <Link to="/">
             <span>親子家庭遊</span>
           </Link>
         </li>
-        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:px-0 xl:border-0">
           <Link to="/">
             <span>時尚購物</span>
           </Link>
         </li>
-        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:px-8 xl:border-r-1 xl:border xl:border-y-0 xl:border-l-1">
           <Link to="/">
             <span>歷史建築</span>
           </Link>
         </li>
-        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:px-0 xl:border-0">
           <Link to="/">
             <span>藝術博物館</span>
           </Link>
         </li>
-        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:px-8 xl:border-r-1 xl:border xl:border-y-0 xl:border-l-1">
           <Link to="/">
             <span>文哲學巡禮</span>
           </Link>
         </li>
-        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 pr-0 lg:px-6">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 pr-0 lg:px-6 xl:px-0 xl:border-0">
           <Link to="/">
             <span>自然風光</span>
           </Link>
         </li>
       </ul>
+
+
 
       {/* banner: Slides show */}
       <div className="relative">
@@ -476,8 +479,6 @@ export default function HomePage() {
 
         <div className="absolute left-[15vw] top-[17%] z-10 w-full md:top-[10%] xl:top-[15%] 2xl:left-[18%] 2xl:top-[17%]">
           <div className="flex-col text-start">
-
-
             <p className="noto-sans-tc-bold-mobile md:noto-sans-tc-bold text-shadow leading-[1.2] tracking-4 text-white shadow-black drop-shadow-2xl min-[200px]:text-2xl md:text-[40px] 2xl:text-[64px]">
               尋找你的完美巴黎旅程
             </p>
@@ -496,16 +497,14 @@ export default function HomePage() {
               一段符合你心之所向的旅程，正在靜靜等待與你邂逅。
             </p>
 
-            
-
             <div className="flex items-center">
               <div className="mt-6 w-full lg:relative lg:mt-5 2xl:pt-10">
                 <input
                   type="text"
-                  className="-left-8 m-auto rounded-lg border border-gray-300 bg-white p-[13px] pr-10 lg:pr-0 text-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 min-[200px]:w-8/12 md:w-6/12 lg:w-5/12 xl:w-6/12 xl:h-12"
+                  className="-left-8 m-auto rounded-lg border border-gray-300 bg-white p-[13px] pr-10 text-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 min-[200px]:w-8/12 md:w-6/12 lg:w-5/12 lg:pr-0 xl:h-12 xl:w-6/12"
                   placeholder="尋找你的完美巴黎旅程"
                 />
-                <div className="absolute inset-y-0 right-[28vw] md:right-[50vw] md:top-[80%] lg:top-0 lg:right-[58vw] xl:right-[50vw] 2xl:top-10  top-14 flex items-center rounded-r-lg bg-primary-600 p-5 lg:p-3">
+                <div className="absolute inset-y-0 right-[28vw] top-14 flex items-center rounded-r-lg bg-primary-600 p-5 md:right-[50vw] md:top-[80%] lg:right-[58vw] lg:top-0 lg:p-3 xl:right-[50vw] 2xl:top-10">
                   <svg
                     className="h-4 w-4 text-white lg:h-5 lg:w-5"
                     fill="currentColor"
@@ -516,29 +515,29 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="absolute -left-4 min-[390px]:left-0  md:left-0 lg:-left-3 mt-16 md:mt-4 md:w-8/12 lg:w-5/12 grid grid-cols-4 grid-rows-2 gap-x-1 gap-y-2 lg:gap-y-[1px] xl:left-0 xl:w-6/12 xl:flex xl:justify-between  xl:space-x-0 xl:mt-0">
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
+            <div className="absolute -left-4 mt-16 grid grid-cols-4 grid-rows-2 gap-x-1 gap-y-2 min-[390px]:left-0 md:left-0 md:mt-4 md:w-8/12 lg:-left-3 lg:w-5/12 lg:gap-y-[1px] xl:left-0 xl:mt-0 xl:flex xl:w-6/12 xl:justify-between xl:space-x-0">
+              <button className="lg:text-shadow-light w-full rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 法式美食
               </button>
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
+              <button className="lg:text-shadow-light w-full rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 浪漫蜜月行
               </button>
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
+              <button className="lg:text-shadow-light w-full rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 親子家庭遊
               </button>
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
+              <button className="lg:text-shadow-light w-full rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 時尚購物
               </button>
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
+              <button className="lg:text-shadow-light w-full rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 歷史建築
               </button>
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
+              <button className="lg:text-shadow-light w-full rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 藝術博物館
               </button>
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
+              <button className="lg:text-shadow-light w-full rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 文哲學巡禮
               </button>
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
+              <button className="lg:text-shadow-light w-full rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 自然風光
               </button>
             </div>

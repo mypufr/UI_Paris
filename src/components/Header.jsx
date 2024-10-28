@@ -161,9 +161,9 @@ function Header() {
   };
 
   return (
-    <div className="container p-3 lg:py-10">
+    <div className="container p-3 lg:py-10 ">
       <div className="relative">
-        <div className="mx-auto flex max-w-full items-center justify-between">
+        <div className="mx-auto flex max-w-full items-center justify-between xl:w-10/12">
           {/* Logo */}
           <Link to="/" className="flex cursor-pointer items-center">
             <img src="images/website_logo.png" alt="logo" className="h-10" />
