@@ -123,7 +123,7 @@ function Footer() {
   return (
     <>
       {/* footer */}
-      <footer className="bottom-0 w-full lg:absolute">
+      <footer className="bottom-0 w-full  lg:absolute">
         <div className="relative">
           {/* 背景圖片 */}
           <div className="hidden lg:block">
@@ -135,7 +135,10 @@ function Footer() {
           </div>
           <div className="relative -top-1 h-[380px] bg-primary-600 xl:h-[420px]">
             {/* 右側圖片 - 在小螢幕隱藏 */}
-            <div className="absolute bottom-[150px] right-[400px] hidden md:right-16 md:top-20 md:block lg:top-1 lg:right-[15vw] xl:-top-[30vh] ">
+            <div className="absolute bottom-[150px] right-[400px] hidden md:right-16 md:top-20 md:block lg:top-1 lg:right-[15vw] xl:-top-[20vh] ">
+              
+         
+              
               <img
                 src="https://i.imgur.com/IKExSXw.png"
                 alt="footer_img"
@@ -145,6 +148,9 @@ function Footer() {
 
             {/* Footer 文字部分 */}
             <div className="absolute left-8 top-10 min-[400px]:left-10 md:left-[10%] md:top-[20%] lg:left-[20%] lg:top-[10%]">
+              
+         
+              
               <ul className="space-y-6 text-base text-grey-100">
                 {/* 標誌 */}
                 <li className="flex">
@@ -238,11 +244,11 @@ function Footer() {
           </div>
 
           {/* 版權聲明 */}
-          <div className="hidden sm:absolute sm:bottom-[15%] sm:right-[19%] sm:translate-x-1/2 sm:transform">
+          {/* <div className=" absolute bottom-[10vh] right-[20vh] translate-x-1/2 transform z-20">
             <p className="text-center text-base text-grey-100">
               © 2024 樂遊巴黎版權所有
             </p>
-          </div>
+          </div> */}
         </div>
       </footer>
     </>

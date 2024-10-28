@@ -111,6 +111,18 @@
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
 
+
+
+.noto-sans-tc-bold-mobile {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-bold);
+  font-size: 24px;
+  line-height: 28.8px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+
 .text-shadow {
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 

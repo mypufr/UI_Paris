@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -14,6 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
@@ -407,51 +407,51 @@ export default function HomePage() {
   return (
     <>
       {/* trip themes */}
-      {/* <ul className="hidden lg:mx-auto lg:container lg:items-center lg: justify-between lg:py-7 lg:text-base lg:leading-[22.4px] lg:text-grey-400 lg:flex">
-        <li className="border border-y-0 border-grey-100 border-x-1 border-l-0  pr-11">
+      <ul className="container hidden items-center justify-between text-base leading-[22.4px] text-grey-400 lg:flex lg:px-8 lg:py-2 2xl:py-7">
+        <li className="lg:border-r-1 lg:border-grey-100 lg:pr-6">
           <Link to="/" className="text-base">
             <span>法式美食</span>
           </Link>
         </li>
-        <li className="border border-y-0 border-grey-100 border-x-1 border-r-0  border-l-0 px-11">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6">
           <Link to="/">
             <span>浪漫蜜月行</span>
           </Link>
         </li>
-        <li className="border border-y-0 border-grey-100 border-x-1 border-r-0 px-11">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6">
           <Link to="/">
             <span>親子家庭遊</span>
           </Link>
         </li>
-        <li className="border border-y-0 border-grey-100 border-x-1 border-r-0 px-11">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6">
           <Link to="/">
             <span>時尚購物</span>
           </Link>
         </li>
-        <li className="border border-y-0 border-grey-100 border-x-1 border-r-0 px-11">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6">
           <Link to="/">
             <span>歷史建築</span>
           </Link>
         </li>
-        <li className="border border-y-0 border-grey-100 border-x-1 border-r-0 px-11">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6">
           <Link to="/">
             <span>藝術博物館</span>
           </Link>
         </li>
-        <li className="border border-y-0 border-grey-100 border-x-1 border-r-0 px-11">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6">
           <Link to="/">
             <span>文哲學巡禮</span>
           </Link>
         </li>
-        <li className="border border-y-0 border-grey-100 border-x-1 border-r-0 px-11 pr-0">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 pr-0 lg:px-6">
           <Link to="/">
             <span>自然風光</span>
           </Link>
         </li>
-      </ul> */}
+      </ul>
 
       {/* banner: Slides show */}
-      {/* <div className="relative">
+      <div className="relative">
         <Swiper
           effect={"fade"}
           spaceBetween={30}
@@ -465,7 +465,7 @@ export default function HomePage() {
           }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
+          className="mySwiper relative"
         >
           {SlidesData.map((data, index) => (
             <SwiperSlide key={index}>
@@ -474,36 +474,40 @@ export default function HomePage() {
           ))}
         </Swiper>
 
-        <div className="absolute left-[18%] top-[17%] z-10">
+        <div className="absolute left-[15vw] top-[17%] z-10 w-full md:top-[10%] 2xl:left-[18%]">
           <div className="flex-col text-start">
-            <p className="noto-sans-tc-bold leading-[1.2] tracking-4 text-white shadow-black drop-shadow-2xl text-shadow">
+
+
+            <p className="noto-sans-tc-bold-mobile md:noto-sans-tc-bold text-shadow leading-[1.2] tracking-4 text-white shadow-black drop-shadow-2xl min-[200px]:text-2xl md:text-[40px]">
               尋找你的完美巴黎旅程
             </p>
-            <p className="pt-20 text-2xl font-bold tracking-4 text-white shadow-black drop-shadow-2xl text-shadow">
+            <p className="text-shadow hidden font-bold tracking-4 text-white shadow-black drop-shadow-2xl md:block md:pt-6 md:text-lg lg:pt-20 lg:text-2xl">
               輕盈漫步在巴黎的街巷。
             </p>
             <div>
-              <p className="pt-10 text-2xl font-bold leading-[28.8px] tracking-4 text-white shadow-black drop-shadow-2xl text-shadow">
+              <p className="text-shadow hidden font-bold tracking-4 text-white shadow-black drop-shadow-2xl md:block md:pt-2 md:text-lg lg:pt-20 lg:text-2xl">
                 無論你心繫歷史的脈動、美食的馨香，還是藝術的深邃，
               </p>
-              <p className="text-2xl font-bold leading-[28.8px] tracking-4 text-white shadow-black drop-shadow-2xl text-shadow">
+              <p className="text-shadow hidden font-bold tracking-4 text-white shadow-black drop-shadow-2xl md:block md:pt-0 md:text-lg lg:pt-20 lg:text-2xl">
                 我們都為你精選了最契合靈魂的旅程。
               </p>
             </div>
-            <p className="pt-10 text-2xl font-bold leading-[28.8px] tracking-4 text-white shadow-black drop-shadow-2xl text-shadow">
+            <p className="text-shadow hidden font-bold tracking-4 text-white shadow-black drop-shadow-2xl md:block md:pt-2 md:text-lg lg:pt-20 lg:text-2xl">
               一段符合你心之所向的旅程，正在靜靜等待與你邂逅。
             </p>
 
+            
+
             <div className="flex items-center">
-              <div className="relative w-full mt-20">
+              <div className="mt-6 w-full lg:relative lg:mt-20">
                 <input
                   type="text"
-                  className="w-full rounded-lg border border-gray-300 bg-white p-3 pr-4 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="-left-8 m-auto w-full rounded-lg border border-gray-300 bg-white p-[13px] pr-10 text-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 min-[200px]:w-8/12 md:w-6/12"
                   placeholder="尋找你的完美巴黎旅程"
                 />
-                <div className="absolute inset-y-0 right-0 flex items-center bg-primary-600 p-4 rounded-r-lg">
+                <div className="absolute inset-y-0 right-[28vw] md:right-[50vw] md:top-[80%] top-14 flex items-center rounded-r-lg bg-primary-600 p-5 lg:p-3">
                   <svg
-                    className="h-5 w-5 text-white"
+                    className="h-4 w-4 text-white lg:h-5 lg:w-5"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -512,34 +516,35 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-
-            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
-              法式美食
-            </button>
-            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
-              浪漫蜜月行
-            </button>
-            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
-              親子家庭遊
-            </button>
-            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
-              時尚購物
-            </button>
-            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
-              歷史建築
-            </button>
-            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
-              藝術博物館
-            </button>
-            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
-              文哲學巡禮
-            </button>
-            <button className="mx-2 mt-4 rounded-xl bg-background-2 p-1 text-shadow-light">
-              自然風光
-            </button>
+            <div className="absolute -left-4 min-[390px]:left-0  md:left-0 mt-16 md:mt-4 md:w-8/12 grid grid-cols-4 grid-rows-2 gap-x-1 gap-y-2  ">
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4">
+                法式美食
+              </button>
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 text-[13px] lg:mx-2 lg:mt-4 lg:p-1">
+                浪漫蜜月行
+              </button>
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4">
+                親子家庭遊
+              </button>
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4">
+                時尚購物
+              </button>
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4">
+                歷史建築
+              </button>
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4">
+                藝術博物館
+              </button>
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4">
+                文哲學巡禮
+              </button>
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4">
+                自然風光
+              </button>
+            </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* <div className="mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
         <img
@@ -556,8 +561,10 @@ export default function HomePage() {
           className="inline-block h-[40px]"
         />
       </div> */}
-      <div className="relative mt-[60px]">
-        {/* <div className="flex items-center justify-center">
+
+      {/* <div className="relative mt-[60px]"> */}
+
+      {/* <div className="flex items-center justify-center">
           <p className="text-1xl absolute left-[51.5%] top-[45.5%] text-secondary-700 text-white">
             4
           </p>
@@ -570,9 +577,10 @@ export default function HomePage() {
           />
         </div> */}
 
-        <div className="">
-          {/* Display selected district info */}
-          {/* {selectedDistrict && (
+      {/* <div className=""> */}
+
+      {/* Display selected district info */}
+      {/* {selectedDistrict && (
             <div
               className="absolute rounded-[28px] border border-gray-300 bg-background-blur p-4 shadow-lg"
               style={{
@@ -602,8 +610,8 @@ export default function HomePage() {
               </div>
             </div>
           )} */}
-          {/* Map for clickable areas */}
-          {/* <map name="parisMap">
+      {/* Map for clickable areas */}
+      {/* <map name="parisMap">
             <area
               shape="poly"
               coords="536,334,531,340,527,347,523,356,524,367,531,368,539,367,547,370,561,375,567,379,577,383,584,385,592,389,600,394,609,395,616,399,623,404,637,412,631,405,646,412,646,404,643,396,643,388,647,382,650,375,643,366,635,362,625,358,617,355,607,351,595,349,588,346,582,342,574,339,567,335,558,332,547,328,539,326"
@@ -788,8 +796,10 @@ export default function HomePage() {
               className="cursor-pointer"
             />
           </map> */}
-        </div>
-      </div>
+
+      {/* </div> */}
+      {/* 
+      </div> */}
 
       {/* <div>
         <img src="images/deco_sites.png" alt="decorations Paris sites" />
@@ -838,8 +848,10 @@ export default function HomePage() {
         </div>
       </div> */}
       {/* background settings */}
-      <div className="bg-popular_sites relative">
-        {/* <div className="">
+
+      {/* <div className="bg-popular_sites relative"> */}
+
+      {/* <div className="">
           <img
             src="images/upper-background_popular_sites_w1914.png"
             alt=""
@@ -852,7 +864,7 @@ export default function HomePage() {
           />
         </div> */}
 
-        {/* <div className="absolute left-[43%] top-[30%] mt-16">
+      {/* <div className="absolute left-[43%] top-[30%] mt-16">
           <div className="flex justify-center space-x-4 hover:cursor-pointer">
             <img
               src="images/vector_title.png"
@@ -870,8 +882,8 @@ export default function HomePage() {
           </div>
         </div> */}
 
-        {/* slides show: popular sites */}
-        {/* <div className="absolute left-[15%] top-[40%] max-w-[67.5%]">
+      {/* slides show: popular sites */}
+      {/* <div className="absolute left-[15%] top-[40%] max-w-[67.5%]">
           <div className="mt-20">
             <Slider {...settings2}>
               {TripsData.map((data, index) => (
@@ -894,7 +906,8 @@ export default function HomePage() {
             </Slider>
           </div>
         </div> */}
-      </div>
+
+      {/* </div> */}
 
       {/* 預約導遊和報名行程 */}
 
@@ -1281,17 +1294,19 @@ export default function HomePage() {
       </div> */}
 
       {/* Clouds decorations */}
-      <div className="relative mb-[20%]">
-        {/* <div className="absolute -top-6 left-[1%] -rotate-12">
+
+      {/* <div className="relative mb-[20%]"> */}
+
+      {/* <div className="absolute -top-6 left-[1%] -rotate-12">
           <img src="images/deco_footer_clouds.png" alt="" />
         </div> */}
 
-        {/* <div className="rotate-10 absolute -top-40 right-[3%]">
+      {/* <div className="rotate-10 absolute -top-40 right-[3%]">
           <img src="images/deco_footer_clouds.png" alt="" />
         </div> */}
 
-        {/* Tree decorations */}
-        {/* <div className="absolute left-16 top-[85px]">
+      {/* Tree decorations */}
+      {/* <div className="absolute left-16 top-[85px]">
           <img
             src="images/left_tree.png"
             alt=""
@@ -1299,7 +1314,7 @@ export default function HomePage() {
           />
         </div> */}
 
-        {/* <div className="absolute right-[7%] top-[190px] -rotate-3">
+      {/* <div className="absolute right-[7%] top-[190px] -rotate-3">
           <img
             src="images/deco_middle_tree.png"
             alt=""
@@ -1307,14 +1322,14 @@ export default function HomePage() {
           />
         </div> */}
 
-        {/* <div className="absolute -top-5 right-2">
+      {/* <div className="absolute -top-5 right-2">
           <img
             src="images/deco_right_tree.png"
             alt=""
             className="h-auto max-w-[98%]"
           />
         </div> */}
-      </div>
+      {/* </div> */}
     </>
   );
 }

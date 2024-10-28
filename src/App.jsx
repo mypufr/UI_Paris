@@ -22,80 +22,63 @@ import Policy from "./pages/Policy";
 export default function App() {
   return (
     <>
+      <div className="flex min-h-screen flex-col">
+        <BrowserRouter>
+          <Header />
 
-    <div className="flex min-h-screen flex-col">
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<HomePage />}></Route>
 
+              <Route path="/search-tourguides" element={<TourguidesPage />} />
+              <Route
+                path="/search-tourguides/search-results"
+                element={<SearchResultsPage />}
+              />
+              <Route
+                path="/search-tourguides/tourguide-profile/:id"
+                element={<TourguideProfilePage />}
+              />
+              <Route
+                path="/search-tourguides/tourguide-profile/:id/message"
+                element={<EditMessagePage />}
+              />
 
-      <BrowserRouter>
-        <Header />
+              <Route
+                path="/search-tourguides/tourguide-profile/:id/private-trips"
+                element={<BookPrivateTripsPage />}
+              />
 
-<main className="flex-grow">
+              <Route
+                path="/search-tourguides/tourguide-profile/:id/private-trips/confirm-order"
+                element={<OrderInfoPage />}
+              />
 
+              <Route
+                path="/search-tourguides/tourguide-profile/:id/private-trips/payment"
+                element={<PaymentPage />}
+              />
 
+              <Route
+                path="/search-tourguides/tourguide-profile/:id/private-trips/payment-success"
+                element={<PaymentSuccessPage />}
+              />
 
-        <Routes>
-          <Route path="/" element={<HomePage />}></Route>
+              <Route path="/book-trips" element={<TripsPage />}></Route>
+              <Route path="/sites-info" element={<SitesInfoPage />}></Route>
+              <Route path="/travel-info" element={<TravelInfoPage />}></Route>
 
-          <Route path="/search-tourguides" element={<TourguidesPage />} />
-          <Route
-            path="/search-tourguides/search-results"
-            element={<SearchResultsPage />}
-            />
-          <Route
-            path="/search-tourguides/tourguide-profile/:id"
-            element={<TourguideProfilePage />}
-            />
-          <Route
-            path="/search-tourguides/tourguide-profile/:id/message"
-            element={<EditMessagePage />}
-            />
+              <Route path="/about" element={<Policy />} />
 
-          <Route
-            path="/search-tourguides/tourguide-profile/:id/private-trips"
-            element={<BookPrivateTripsPage />}
-            />
+              <Route path="/about/privacy-policy" element={<About />} />
 
-          <Route
-            path="/search-tourguides/tourguide-profile/:id/private-trips/confirm-order"
-            element={<OrderInfoPage />}
-            />
+              <Route path="/sign-up" element={<SignUp />}></Route>
+            </Routes>
+          </main>
 
-          <Route
-            path="/search-tourguides/tourguide-profile/:id/private-trips/payment"
-            element={<PaymentPage />}
-            />
-
-          <Route
-            path="/search-tourguides/tourguide-profile/:id/private-trips/payment-success"
-            element={<PaymentSuccessPage />}
-            />
-
-
-          <Route path="/book-trips" element={<TripsPage />}></Route>
-          <Route path="/sites-info" element={<SitesInfoPage />}></Route>
-          <Route path="/travel-info" element={<TravelInfoPage />}></Route>
-
-   
-          <Route path="/about" element={<Policy />}/>    
-          
-          
-   
-          <Route path="/about/privacy-policy" element={<About />}/>
-          
-          
-          
-       
-          <Route path="/sign-up" element={<SignUp />}></Route>
-        </Routes>
-
-            </main>
-
-
-        <Footer />
-      </BrowserRouter>
-
-    </div>
-      
+          <Footer />
+        </BrowserRouter>
+      </div>
     </>
   );
 }
