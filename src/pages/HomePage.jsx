@@ -477,7 +477,7 @@ export default function HomePage() {
           ))}
         </Swiper>
 
-        <div className="absolute left-[15vw] top-[17%] z-10 w-full md:top-[10%] xl:top-[15%] 2xl:left-[18%] 2xl:top-[17%]">
+        <div className="absolute left-[15vw] top-[17%] z-10 w-full md:top-[10%] xl:top-[15%] 2xl:left-[18%] 2xl:top-[17%] min-[1920px]:top-[20%]">
           <div className="flex-col text-start">
             <p className="noto-sans-tc-bold-mobile md:noto-sans-tc-bold text-shadow leading-[1.2] tracking-4 text-white shadow-black drop-shadow-2xl min-[200px]:text-2xl md:text-[40px] 2xl:text-[64px]">
               尋找你的完美巴黎旅程
@@ -501,10 +501,10 @@ export default function HomePage() {
               <div className="mt-6 w-full lg:relative lg:mt-5 2xl:pt-10">
                 <input
                   type="text"
-                  className="-left-8 m-auto rounded-lg border border-gray-300 bg-white p-[13px] pr-10 text-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 min-[200px]:w-8/12 md:w-6/12 lg:w-5/12 lg:pr-0 xl:h-12 xl:w-6/12"
+                  className="-left-8 m-auto rounded-lg border border-gray-300 bg-white p-[13px] pr-10 text-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 min-[200px]:w-8/12 md:w-6/12 lg:w-5/12 lg:pr-0 xl:h-12 xl:w-6/12 2xl:w-[35%]"
                   placeholder="尋找你的完美巴黎旅程"
                 />
-                <div className="absolute inset-y-0 right-[28vw] top-14 flex items-center rounded-r-lg bg-primary-600 p-5 md:right-[50vw] md:top-[80%] lg:right-[58vw] lg:top-0 lg:p-3 xl:right-[50vw] 2xl:top-10">
+                <div className="absolute inset-y-0 right-[28vw] top-14 flex items-center rounded-r-lg bg-primary-600 p-5 md:right-[50vw] md:top-[80%] lg:right-[58vw] lg:top-0 lg:p-3 xl:right-[50vw] 2xl:top-10 min-[1920px]:right-[64vw]">
                   <svg
                     className="h-4 w-4 text-white lg:h-5 lg:w-5"
                     fill="currentColor"
@@ -515,7 +515,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="absolute -left-4 mt-16 grid grid-cols-4 grid-rows-2 gap-x-1 gap-y-2 min-[390px]:left-0 md:left-0 md:mt-4 md:w-8/12 lg:-left-3 lg:w-5/12 lg:gap-y-[1px] xl:left-0 xl:mt-0 xl:flex xl:w-6/12 xl:justify-between xl:space-x-0">
+            <div className="absolute -left-4 mt-16 grid grid-cols-4 grid-rows-2 gap-x-1 gap-y-2 min-[390px]:left-0 md:left-0 md:mt-4 md:w-8/12 lg:-left-3 lg:w-5/12 lg:gap-y-[1px] xl:left-0 xl:mt-0 xl:flex xl:w-6/12 xl:justify-between xl:space-x-0 min-[1920px]:w-[37.5%] ">
               <button className="lg:text-shadow-light w-full rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 法式美食
               </button>
