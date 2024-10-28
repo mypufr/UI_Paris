@@ -465,7 +465,7 @@ export default function HomePage() {
           }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper relative"
+          className="mySwiper"
         >
           {SlidesData.map((data, index) => (
             <SwiperSlide key={index}>
@@ -474,38 +474,38 @@ export default function HomePage() {
           ))}
         </Swiper>
 
-        <div className="absolute left-[15vw] top-[17%] z-10 w-full md:top-[10%] 2xl:left-[18%]">
+        <div className="absolute left-[15vw] top-[17%] z-10 w-full md:top-[10%] xl:top-[15%] 2xl:left-[18%] 2xl:top-[17%]">
           <div className="flex-col text-start">
 
 
-            <p className="noto-sans-tc-bold-mobile md:noto-sans-tc-bold text-shadow leading-[1.2] tracking-4 text-white shadow-black drop-shadow-2xl min-[200px]:text-2xl md:text-[40px]">
+            <p className="noto-sans-tc-bold-mobile md:noto-sans-tc-bold text-shadow leading-[1.2] tracking-4 text-white shadow-black drop-shadow-2xl min-[200px]:text-2xl md:text-[40px] 2xl:text-[64px]">
               尋找你的完美巴黎旅程
             </p>
-            <p className="text-shadow hidden font-bold tracking-4 text-white shadow-black drop-shadow-2xl md:block md:pt-6 md:text-lg lg:pt-20 lg:text-2xl">
+            <p className="text-shadow hidden font-bold tracking-4 text-white shadow-black drop-shadow-2xl md:block md:pt-6 md:text-lg 2xl:pt-20 2xl:text-2xl">
               輕盈漫步在巴黎的街巷。
             </p>
             <div>
-              <p className="text-shadow hidden font-bold tracking-4 text-white shadow-black drop-shadow-2xl md:block md:pt-2 md:text-lg lg:pt-20 lg:text-2xl">
+              <p className="text-shadow hidden font-bold tracking-4 text-white shadow-black drop-shadow-2xl md:block md:pt-2 md:text-lg lg:pt-4 2xl:pt-10 2xl:text-2xl">
                 無論你心繫歷史的脈動、美食的馨香，還是藝術的深邃，
               </p>
-              <p className="text-shadow hidden font-bold tracking-4 text-white shadow-black drop-shadow-2xl md:block md:pt-0 md:text-lg lg:pt-20 lg:text-2xl">
+              <p className="text-shadow hidden font-bold tracking-4 text-white shadow-black drop-shadow-2xl md:block md:pt-0 md:text-lg 2xl:text-2xl">
                 我們都為你精選了最契合靈魂的旅程。
               </p>
             </div>
-            <p className="text-shadow hidden font-bold tracking-4 text-white shadow-black drop-shadow-2xl md:block md:pt-2 md:text-lg lg:pt-20 lg:text-2xl">
+            <p className="text-shadow hidden font-bold tracking-4 text-white shadow-black drop-shadow-2xl md:block md:pt-2 md:text-lg lg:pt-4 2xl:pt-10 2xl:text-2xl">
               一段符合你心之所向的旅程，正在靜靜等待與你邂逅。
             </p>
 
             
 
             <div className="flex items-center">
-              <div className="mt-6 w-full lg:relative lg:mt-20">
+              <div className="mt-6 w-full lg:relative lg:mt-5 2xl:pt-10">
                 <input
                   type="text"
-                  className="-left-8 m-auto w-full rounded-lg border border-gray-300 bg-white p-[13px] pr-10 text-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 min-[200px]:w-8/12 md:w-6/12"
+                  className="-left-8 m-auto rounded-lg border border-gray-300 bg-white p-[13px] pr-10 lg:pr-0 text-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 min-[200px]:w-8/12 md:w-6/12 lg:w-5/12 xl:w-6/12 xl:h-12"
                   placeholder="尋找你的完美巴黎旅程"
                 />
-                <div className="absolute inset-y-0 right-[28vw] md:right-[50vw] md:top-[80%] top-14 flex items-center rounded-r-lg bg-primary-600 p-5 lg:p-3">
+                <div className="absolute inset-y-0 right-[28vw] md:right-[50vw] md:top-[80%] lg:top-0 lg:right-[58vw] xl:right-[50vw] 2xl:top-10  top-14 flex items-center rounded-r-lg bg-primary-600 p-5 lg:p-3">
                   <svg
                     className="h-4 w-4 text-white lg:h-5 lg:w-5"
                     fill="currentColor"
@@ -516,29 +516,29 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="absolute -left-4 min-[390px]:left-0  md:left-0 mt-16 md:mt-4 md:w-8/12 grid grid-cols-4 grid-rows-2 gap-x-1 gap-y-2  ">
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4">
+            <div className="absolute -left-4 min-[390px]:left-0  md:left-0 lg:-left-3 mt-16 md:mt-4 md:w-8/12 lg:w-5/12 grid grid-cols-4 grid-rows-2 gap-x-1 gap-y-2 lg:gap-y-[1px] xl:left-0 xl:w-6/12 xl:flex xl:justify-between  xl:space-x-0 xl:mt-0">
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 法式美食
               </button>
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 text-[13px] lg:mx-2 lg:mt-4 lg:p-1">
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 浪漫蜜月行
               </button>
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4">
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 親子家庭遊
               </button>
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4">
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 時尚購物
               </button>
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4">
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 歷史建築
               </button>
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4">
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 藝術博物館
               </button>
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4">
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 文哲學巡禮
               </button>
-              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4">
+              <button className="w-full lg:text-shadow-light rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 自然風光
               </button>
             </div>
