@@ -60,40 +60,6 @@ export default function HomePage() {
     // navigation: true,
   };
 
-  //   {
-  //     url: "https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  //   },
-  //   {
-  //     url: "https://images.unsplash.com/photo-1520503652613-5a55d772ec77?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  //   },
-  //   {
-  //     url: "https://images.unsplash.com/photo-1504896287989-ff1fbde00199?q=80&w=2533&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  //   },
-  //   {
-  //     url: "https://images.unsplash.com/photo-1501622549218-2c3ef86627cb?q=80&w=2373&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  //   },
-  //   {
-  //     url: "https://images.unsplash.com/photo-1528535619428-a995242b9096?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  //   },
-  // ];
-
-  // const [currentIndex, setCurrentIndex] = useState(0);
-
-  // const prevSlide = () => {
-  //   const isFirstSlide = currentIndex === 0;
-  //   const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-  //   setCurrentIndex(newIndex);
-  // };
-  // const nextSlide = () => {
-  //   const isLastSlide = currentIndex === slides.length - 1;
-  //   const newIndex = isLastSlide ? 0 : currentIndex + 1;
-  //   setCurrentIndex(newIndex);
-  // };
-
-  // const goToSlide = (slideIndex) => {
-  //   setCurrentIndex(slideIndex);
-  // };
-
   const [selectedDistrict, setSelectedDistrict] = useState(null);
   const [popupPosition, setPopupPosition] = useState({
     left: "10px",
@@ -396,7 +362,6 @@ export default function HomePage() {
       left: `${x * 0.35}px`, // Offset by 3.5% of the window width
       top: `${y * 0.1}px`, // Offset by 10% of the window height
     });
-
     console.log(popupPosition);
   };
 
@@ -408,50 +373,47 @@ export default function HomePage() {
     <>
       {/* trip themes */}
       <ul className="container hidden items-center justify-between text-base leading-[22.4px] text-grey-400 lg:flex lg:px-4 lg:py-2 xl:w-10/12 xl:justify-evenly xl:py-7">
-        <li className="lg:border-r-1 lg:border-grey-100 lg:pr-6 xl:pr-8  xl:px-8 xl:border xl:border-r-1  xl:border-y-0 xl:border-l-0">
+        <li className="lg:border-r-1 xl:border-r-1 lg:border-grey-100 lg:pr-6 xl:border xl:border-y-0 xl:border-l-0 xl:px-8 xl:pr-8">
           <Link to="/" className="text-base">
             <span>法式美食</span>
           </Link>
         </li>
-        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:px-0 xl:border-0">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:border-0 xl:px-0">
           <Link to="/">
             <span>浪漫蜜月行</span>
-       
           </Link>
         </li>
-        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:px-8 xl:border-r-1 xl:border xl:border-y-0 xl:border-l-1">
+        <li className="border-x-1 lg:border-y-1 xl:border-r-1 xl:border-l-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:border xl:border-y-0 xl:px-8">
           <Link to="/">
             <span>親子家庭遊</span>
           </Link>
         </li>
-        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:px-0 xl:border-0">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:border-0 xl:px-0">
           <Link to="/">
             <span>時尚購物</span>
           </Link>
         </li>
-        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:px-8 xl:border-r-1 xl:border xl:border-y-0 xl:border-l-1">
+        <li className="border-x-1 lg:border-y-1 xl:border-r-1 xl:border-l-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:border xl:border-y-0 xl:px-8">
           <Link to="/">
             <span>歷史建築</span>
           </Link>
         </li>
-        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:px-0 xl:border-0">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:border-0 xl:px-0">
           <Link to="/">
             <span>藝術博物館</span>
           </Link>
         </li>
-        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:px-8 xl:border-r-1 xl:border xl:border-y-0 xl:border-l-1">
+        <li className="border-x-1 lg:border-y-1 xl:border-r-1 xl:border-l-1 border border-y-0 border-r-0 border-grey-100 lg:px-6 xl:border xl:border-y-0 xl:px-8">
           <Link to="/">
             <span>文哲學巡禮</span>
           </Link>
         </li>
-        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 pr-0 lg:px-6 xl:px-0 xl:border-0">
+        <li className="border-x-1 lg:border-y-1 border border-y-0 border-r-0 border-grey-100 pr-0 lg:px-6 xl:border-0 xl:px-0">
           <Link to="/">
             <span>自然風光</span>
           </Link>
         </li>
       </ul>
-
-
 
       {/* banner: Slides show */}
       <div className="relative overflow-hidden">
@@ -515,7 +477,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="absolute -left-4 mt-16 grid grid-cols-4 grid-rows-2 gap-x-1 gap-y-2 min-[390px]:left-0 md:left-0 md:mt-4 md:w-8/12 lg:-left-3 lg:w-5/12 lg:gap-y-[1px] xl:left-0 xl:mt-0 xl:flex xl:w-6/12 xl:justify-between xl:space-x-0 min-[1920px]:w-[37.5%] ">
+            <div className="absolute -left-4 mt-16 grid grid-cols-4 grid-rows-2 gap-x-1 gap-y-2 min-[390px]:left-0 md:left-0 md:mt-4 md:w-8/12 lg:-left-3 lg:w-5/12 lg:gap-y-[1px] xl:left-0 xl:mt-0 xl:flex xl:w-6/12 xl:justify-between xl:space-x-0 min-[1920px]:w-[37.5%]">
               <button className="lg:text-shadow-light w-full rounded-xl bg-background-2 p-1 text-[13px] lg:mx-2 lg:mt-4 xl:mx-0">
                 法式美食
               </button>
@@ -562,8 +524,7 @@ export default function HomePage() {
       </div>
 
       <div className="relative mt-[60px]">
-
-      <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center">
           <p className="text-1xl absolute left-[51.5%] top-[45.5%] text-secondary-700 text-white">
             4
           </p>
@@ -576,10 +537,9 @@ export default function HomePage() {
           />
         </div>
 
-      <div className="">
-
-      {/* Display selected district info */}
-      {selectedDistrict && (
+        <div className="">
+          {/* Display selected district info */}
+          {selectedDistrict && (
             <div
               className="absolute rounded-[28px] border border-gray-300 bg-background-blur p-4 shadow-lg"
               style={{
@@ -609,8 +569,8 @@ export default function HomePage() {
               </div>
             </div>
           )}
-      {/* Map for clickable areas */}
-      <map name="parisMap">
+          {/* Map for clickable areas */}
+          <map name="parisMap">
             <area
               shape="poly"
               coords="536,334,531,340,527,347,523,356,524,367,531,368,539,367,547,370,561,375,567,379,577,383,584,385,592,389,600,394,609,395,616,399,623,404,637,412,631,405,646,412,646,404,643,396,643,388,647,382,650,375,643,366,635,362,625,358,617,355,607,351,595,349,588,346,582,342,574,339,567,335,558,332,547,328,539,326"
@@ -795,9 +755,7 @@ export default function HomePage() {
               className="cursor-pointer"
             />
           </map>
-
-      </div>
-      
+        </div>
       </div>
 
       <div>
@@ -849,8 +807,7 @@ export default function HomePage() {
       {/* background settings */}
 
       <div className="bg-popular_sites relative">
-
-      <div className="">
+        <div className="">
           <img
             src="images/upper-background_popular_sites_w1914.png"
             alt=""
@@ -863,7 +820,7 @@ export default function HomePage() {
           />
         </div>
 
-      <div className="absolute left-[43%] top-[30%] mt-16">
+        <div className="absolute left-[43%] top-[30%] mt-16">
           <div className="flex justify-center space-x-4 hover:cursor-pointer">
             <img
               src="images/vector_title.png"
@@ -881,8 +838,8 @@ export default function HomePage() {
           </div>
         </div>
 
-      {/* slides show: popular sites */}
-      <div className="absolute left-[15%] top-[40%] max-w-[67.5%]">
+        {/* slides show: popular sites */}
+        <div className="absolute left-[15%] top-[40%] max-w-[67.5%]">
           <div className="mt-20">
             <Slider {...settings2}>
               {TripsData.map((data, index) => (
@@ -905,7 +862,6 @@ export default function HomePage() {
             </Slider>
           </div>
         </div>
-
       </div>
 
       {/* 預約導遊和報名行程 */}
@@ -1111,7 +1067,7 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="flex justify-center space-x-6">
+        <div className="flex flex-wrap md:flex md:justify-center md:space-x-6">
           <div className="border-grey-200 max-w-[34%] rounded-2xl border">
             <span className="block rounded-t-2xl bg-primary-300 py-10 text-center text-2xl font-bold text-white">
               預約導遊
@@ -1126,7 +1082,11 @@ export default function HomePage() {
                   data-aos="zoom-in-left"
                   data-aos-easing="ease-in-sine"
                 />
-                <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
+                <div
+                  className="max-w-[360px] flex-col space-y-4 px-6 py-7"
+                  data-aos="zoom-in-right"
+                  data-aos-easing="ease-in-sine"
+                >
                   <p className="text-xl font-bold tracking-4 text-grey-950">
                     Step 1 瀏覽導遊資歷與專長
                   </p>
@@ -1146,7 +1106,11 @@ export default function HomePage() {
                     data-aos-easing="ease-in-sine"
                   />
                 </div>
-                <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
+                <div
+                  className="max-w-[360px] flex-col space-y-4 px-6 py-7"
+                  data-aos="zoom-in-right"
+                  data-aos-easing="ease-in-sine"
+                >
                   <p className="text-xl font-bold tracking-4 text-grey-950">
                     Step 2 與導遊聯絡
                   </p>
@@ -1165,7 +1129,11 @@ export default function HomePage() {
                     data-aos-easing="ease-in-sine"
                   />
                 </div>
-                <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
+                <div
+                  className="max-w-[360px] flex-col space-y-4 px-6 py-7"
+                  data-aos="zoom-in-right"
+                  data-aos-easing="ease-in-sine"
+                >
                   <p className="text-xl font-bold tracking-4 text-grey-950">
                     Step 3 開啟旅程
                   </p>
@@ -1201,11 +1169,15 @@ export default function HomePage() {
                   src="images/step-2-1.png"
                   alt=""
                   className="inline-block max-w-[188px] object-cover"
-                  data-aos="zoom-in-right"
+                  data-aos="zoom-in-left"
                   data-aos-easing="ease-in-sine"
                 />
 
-                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
+                <div
+                  className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]"
+                  data-aos="zoom-in-right"
+                  data-aos-easing="ease-in-sine"
+                >
                   <p className="text-xl font-bold tracking-4 text-grey-950">
                     Step 1 瀏覽行程提案
                   </p>
@@ -1221,11 +1193,15 @@ export default function HomePage() {
                     src="images/step-2-2.png"
                     alt=""
                     className="inline-block max-w-[188px] object-cover"
-                    data-aos="zoom-in-right"
+                    data-aos="zoom-in-left"
                     data-aos-easing="ease-in-sine"
                   />
                 </div>
-                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
+                <div
+                  className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]"
+                  data-aos="zoom-in-right"
+                  data-aos-easing="ease-in-sine"
+                >
                   <p className="text-xl font-bold tracking-4 text-grey-950">
                     Step 2 報名行程
                   </p>
@@ -1240,11 +1216,15 @@ export default function HomePage() {
                     src="images/step-2-3.png"
                     alt=""
                     className="inline-block max-w-[188px] object-cover"
-                    data-aos="zoom-in-right"
+                    data-aos="zoom-in-left"
                     data-aos-easing="ease-in-sine"
                   />
                 </div>
-                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
+                <div
+                  className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]"
+                  data-aos="zoom-in-right"
+                  data-aos-easing="ease-in-sine"
+                >
                   <p className="text-xl font-bold tracking-4 text-grey-950">
                     Step 3 開團確認通知
                   </p>
@@ -1260,11 +1240,15 @@ export default function HomePage() {
                     src="images/step-2-4.png"
                     alt=""
                     className="max-w-[188px] object-cover"
-                    data-aos="zoom-in-right"
+                    data-aos="zoom-in-left"
                     data-aos-easing="ease-in-sine"
                   />
                 </div>
-                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
+                <div
+                  className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]"
+                  data-aos="zoom-in-right"
+                  data-aos-easing="ease-in-sine"
+                >
                   <p className="text-xl font-bold tracking-4 text-grey-950">
                     Step 4 開啟旅程
                   </p>
@@ -1295,17 +1279,16 @@ export default function HomePage() {
       {/* Clouds decorations */}
 
       <div className="relative mb-[20%]">
-
-      <div className="absolute -top-6 left-[1%] -rotate-12">
+        <div className="absolute -top-6 left-[1%] -rotate-12">
           <img src="images/deco_footer_clouds.png" alt="" />
         </div>
 
-      <div className="rotate-10 absolute -top-40 right-[3%]">
+        <div className="rotate-10 absolute -top-40 right-[3%]">
           <img src="images/deco_footer_clouds.png" alt="" />
         </div>
 
-      {/* Tree decorations */}
-      <div className="absolute left-16 top-[85px]">
+        {/* Tree decorations */}
+        <div className="absolute left-16 top-[85px]">
           <img
             src="images/left_tree.png"
             alt=""
@@ -1313,7 +1296,7 @@ export default function HomePage() {
           />
         </div>
 
-      <div className="absolute right-[7%] top-[190px] -rotate-3">
+        <div className="absolute right-[7%] top-[190px] -rotate-3">
           <img
             src="images/deco_middle_tree.png"
             alt=""
@@ -1321,7 +1304,7 @@ export default function HomePage() {
           />
         </div>
 
-      <div className="absolute -top-5 right-2">
+        <div className="absolute -top-5 right-2">
           <img
             src="images/deco_right_tree.png"
             alt=""
