@@ -16,7 +16,7 @@ function Header() {
   };
 
   return (
-    <div className="container p-3 lg:py-10 ">
+    <div className="container p-3 lg:py-10">
       <div className="relative">
         <div className="mx-auto flex max-w-full items-center justify-between xl:w-10/12">
           {/* Logo */}
@@ -150,18 +150,19 @@ function Header() {
                 </li>
 
                 <li className="">
-                  <button
-                    to="/sign-up"
-                    className="flex w-full items-center bg-primary-600 px-2 py-2 pl-4 text-base text-white"
-                    onClick={toggleMenu}
-                  >
-                    <img
-                      src="/images/login_icon.svg"
-                      alt=""
-                      className="inline-block"
-                    />
-                    <span className="pl-2">登入 / 註冊</span>
-                  </button>
+                  <Link to="/sign-up">
+                    <button
+                      className="flex w-full items-center bg-primary-600 px-2 py-2 pl-4 text-base text-white"
+                      onClick={toggleMenu}
+                    >
+                      <img
+                        src="/images/login_icon.svg"
+                        alt=""
+                        className="inline-block"
+                      />
+                      <span className="p-2">登入 / 註冊</span>
+                    </button>
+                  </Link>
                 </li>
               </ul>
             </div>

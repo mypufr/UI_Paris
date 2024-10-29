@@ -123,7 +123,7 @@ function Footer() {
   return (
     <>
       {/* footer */}
-      <footer className="bottom-0 w-full  lg:absolute">
+      <footer className="bottom-0 w-full">
         <div className="relative">
           {/* 背景圖片 */}
           <div className="hidden lg:block">
@@ -244,11 +244,11 @@ function Footer() {
           </div>
 
           {/* 版權聲明 */}
-          {/* <div className=" absolute bottom-[10vh] right-[20vh] translate-x-1/2 transform z-20">
-            <p className="text-center text-base text-grey-100">
+          <div className="hidden 2xl:block 2xl:absolute 2xl:bottom-[2vh] 2xl:right-[30vh] translate-x-1/2 transform z-20">
+            <p className="text-center lg:text-sm xl:text-base text-grey-100">
               © 2024 樂遊巴黎版權所有
             </p>
-          </div> */}
+          </div>
         </div>
       </footer>
     </>

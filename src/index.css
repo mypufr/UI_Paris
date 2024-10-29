@@ -63,7 +63,7 @@
 }
 
 .swiper {
-  @apply h-[800px] w-full;
+  @apply w-full;
 }
 
 .swiper-slide {

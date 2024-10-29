@@ -454,20 +454,20 @@ export default function HomePage() {
 
 
       {/* banner: Slides show */}
-      <div className="relative">
+      <div className="relative overflow-hidden">
         <Swiper
           effect={"fade"}
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 5000,
+            delay: 8000,
             disableOnInteraction: false,
           }}
           pagination={{
             clickable: false,
           }}
           navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
+          modules={[Autoplay, Navigation]}
           className="mySwiper"
         >
           {SlidesData.map((data, index) => (
@@ -504,7 +504,7 @@ export default function HomePage() {
                   className="-left-8 m-auto rounded-lg border border-gray-300 bg-white p-[13px] pr-10 text-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 min-[200px]:w-8/12 md:w-6/12 lg:w-5/12 lg:pr-0 xl:h-12 xl:w-6/12 2xl:w-[35%]"
                   placeholder="尋找你的完美巴黎旅程"
                 />
-                <div className="absolute inset-y-0 right-[28vw] top-14 flex items-center rounded-r-lg bg-primary-600 p-5 md:right-[50vw] md:top-[80%] lg:right-[58vw] lg:top-0 lg:p-3 xl:right-[50vw] 2xl:top-10 min-[1920px]:right-[64vw]">
+                <div className="absolute inset-y-0 right-[28vw] top-14 flex items-center rounded-r-lg bg-primary-600 p-5 md:right-[50vw] md:top-[80%] lg:right-[58vw] lg:top-0 lg:p-3 xl:right-[50vw] 2xl:top-10 min-[1536px]:right-[64vw]">
                   <svg
                     className="h-4 w-4 text-white lg:h-5 lg:w-5"
                     fill="currentColor"
@@ -545,7 +545,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* <div className="mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
+      <div className="mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
         <img
           src="/images/vector_title.png"
           alt=""
@@ -559,11 +559,11 @@ export default function HomePage() {
           alt=""
           className="inline-block h-[40px]"
         />
-      </div> */}
+      </div>
 
-      {/* <div className="relative mt-[60px]"> */}
+      <div className="relative mt-[60px]">
 
-      {/* <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center">
           <p className="text-1xl absolute left-[51.5%] top-[45.5%] text-secondary-700 text-white">
             4
           </p>
@@ -574,12 +574,12 @@ export default function HomePage() {
             data-aos="zoom-in-left"
             data-aos-easing="ease-in-sine"
           />
-        </div> */}
+        </div>
 
-      {/* <div className=""> */}
+      <div className="">
 
       {/* Display selected district info */}
-      {/* {selectedDistrict && (
+      {selectedDistrict && (
             <div
               className="absolute rounded-[28px] border border-gray-300 bg-background-blur p-4 shadow-lg"
               style={{
@@ -608,9 +608,9 @@ export default function HomePage() {
                 </button>
               </div>
             </div>
-          )} */}
+          )}
       {/* Map for clickable areas */}
-      {/* <map name="parisMap">
+      <map name="parisMap">
             <area
               shape="poly"
               coords="536,334,531,340,527,347,523,356,524,367,531,368,539,367,547,370,561,375,567,379,577,383,584,385,592,389,600,394,609,395,616,399,623,404,637,412,631,405,646,412,646,404,643,396,643,388,647,382,650,375,643,366,635,362,625,358,617,355,607,351,595,349,588,346,582,342,574,339,567,335,558,332,547,328,539,326"
@@ -794,18 +794,18 @@ export default function HomePage() {
               alt="Paris 20"
               className="cursor-pointer"
             />
-          </map> */}
+          </map>
 
-      {/* </div> */}
-      {/* 
-      </div> */}
+      </div>
+      
+      </div>
 
-      {/* <div>
+      <div>
         <img src="images/deco_sites.png" alt="decorations Paris sites" />
-      </div> */}
+      </div>
 
       {/* slides show: popular tourist guides */}
-      {/* <div className="">
+      <div className="">
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
             src="images/vector_title.png"
@@ -821,8 +821,8 @@ export default function HomePage() {
             className="inline-block h-[40px]"
           />
         </div>
-      </div> */}
-      {/* <div className="m-auto max-w-[67.5%]">
+      </div>
+      <div className="m-auto max-w-[67.5%]">
         <div className="mt-8">
           <Slider {...settings1}>
             {data.map((data, index) => (
@@ -845,12 +845,12 @@ export default function HomePage() {
             ))}
           </Slider>
         </div>
-      </div> */}
+      </div>
       {/* background settings */}
 
-      {/* <div className="bg-popular_sites relative"> */}
+      <div className="bg-popular_sites relative">
 
-      {/* <div className="">
+      <div className="">
           <img
             src="images/upper-background_popular_sites_w1914.png"
             alt=""
@@ -861,9 +861,9 @@ export default function HomePage() {
             alt=""
             className="h-[900px] w-full"
           />
-        </div> */}
+        </div>
 
-      {/* <div className="absolute left-[43%] top-[30%] mt-16">
+      <div className="absolute left-[43%] top-[30%] mt-16">
           <div className="flex justify-center space-x-4 hover:cursor-pointer">
             <img
               src="images/vector_title.png"
@@ -879,10 +879,10 @@ export default function HomePage() {
               className="inline-block h-[40px]"
             />
           </div>
-        </div> */}
+        </div>
 
       {/* slides show: popular sites */}
-      {/* <div className="absolute left-[15%] top-[40%] max-w-[67.5%]">
+      <div className="absolute left-[15%] top-[40%] max-w-[67.5%]">
           <div className="mt-20">
             <Slider {...settings2}>
               {TripsData.map((data, index) => (
@@ -904,9 +904,9 @@ export default function HomePage() {
               ))}
             </Slider>
           </div>
-        </div> */}
+        </div>
 
-      {/* </div> */}
+      </div>
 
       {/* 預約導遊和報名行程 */}
 
@@ -1094,7 +1094,7 @@ export default function HomePage() {
         </div>
       </div> */}
 
-      {/* <div className="">
+      <div className="">
         <div className="mb-8 mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
           <img
             src="images/vector_title.png"
@@ -1290,45 +1290,45 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Clouds decorations */}
 
-      {/* <div className="relative mb-[20%]"> */}
+      <div className="relative mb-[20%]">
 
-      {/* <div className="absolute -top-6 left-[1%] -rotate-12">
+      <div className="absolute -top-6 left-[1%] -rotate-12">
           <img src="images/deco_footer_clouds.png" alt="" />
-        </div> */}
+        </div>
 
-      {/* <div className="rotate-10 absolute -top-40 right-[3%]">
+      <div className="rotate-10 absolute -top-40 right-[3%]">
           <img src="images/deco_footer_clouds.png" alt="" />
-        </div> */}
+        </div>
 
       {/* Tree decorations */}
-      {/* <div className="absolute left-16 top-[85px]">
+      <div className="absolute left-16 top-[85px]">
           <img
             src="images/left_tree.png"
             alt=""
             className="h-auto max-w-[98%]"
           />
-        </div> */}
+        </div>
 
-      {/* <div className="absolute right-[7%] top-[190px] -rotate-3">
+      <div className="absolute right-[7%] top-[190px] -rotate-3">
           <img
             src="images/deco_middle_tree.png"
             alt=""
             className="h-auto max-w-[89%]"
           />
-        </div> */}
+        </div>
 
-      {/* <div className="absolute -top-5 right-2">
+      <div className="absolute -top-5 right-2">
           <img
             src="images/deco_right_tree.png"
             alt=""
             className="h-auto max-w-[98%]"
           />
-        </div> */}
-      {/* </div> */}
+        </div>
+      </div>
     </>
   );
 }
