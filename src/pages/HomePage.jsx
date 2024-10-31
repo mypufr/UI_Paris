@@ -19,6 +19,28 @@ import "swiper/css/navigation";
 
 import data from "../data/data.json";
 import DistrictsData from "../data/districts.json";
+import {
+  District1,
+  District2,
+  District3,
+  District4,
+  District5,
+  District6,
+  District7,
+  District8,
+  District9,
+  District10,
+  District11,
+  District12,
+  District13,
+  District14,
+  District15,
+  District16,
+  District17,
+  District18,
+  District19,
+  District20,
+} from "../data/districtData.js";
 import TripsData from "../data/trips.json";
 import SlidesData from "../data/slides.json";
 
@@ -66,11 +88,13 @@ export default function HomePage() {
     top: "10px",
   });
 
+  // const filteredGuides = DistrictsData.filter(item => item.district === selectedDistrict)
+
   // List of districts with their respective info
   const districts = {
     1: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District1.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -80,11 +104,25 @@ export default function HomePage() {
             language={district.language}
           />
         ))}
+
+        {/* {filteredGuides.length > 0 ? (
+          filteredGuides.map((item) => (
+            <TourguideList
+              key={item.id}
+              name={item.name}
+              img={item.img}
+              specialities={item.specialities}
+              language={item.language}
+            />
+          ))
+        ) : (
+          <p>沒有符合的導遊資料</p>
+        )} */}
       </div>
     ),
     2: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District2.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -98,7 +136,7 @@ export default function HomePage() {
     ),
     3: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District3.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -112,7 +150,7 @@ export default function HomePage() {
     ),
     4: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District4.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -126,7 +164,7 @@ export default function HomePage() {
     ),
     5: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District5.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -140,7 +178,7 @@ export default function HomePage() {
     ),
     6: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District6.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -154,7 +192,7 @@ export default function HomePage() {
     ),
     7: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District7.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -168,7 +206,7 @@ export default function HomePage() {
     ),
     8: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District8.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -182,7 +220,7 @@ export default function HomePage() {
     ),
     9: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District9.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -196,7 +234,7 @@ export default function HomePage() {
     ),
     10: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District10.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -210,7 +248,7 @@ export default function HomePage() {
     ),
     11: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District11.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -224,7 +262,7 @@ export default function HomePage() {
     ),
     12: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District12.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -238,7 +276,7 @@ export default function HomePage() {
     ),
     13: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District13.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -252,7 +290,7 @@ export default function HomePage() {
     ),
     14: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District14.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -266,7 +304,7 @@ export default function HomePage() {
     ),
     15: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District15.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -280,7 +318,7 @@ export default function HomePage() {
     ),
     16: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District16.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -294,7 +332,7 @@ export default function HomePage() {
     ),
     17: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District17.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -308,7 +346,7 @@ export default function HomePage() {
     ),
     18: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District18.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -322,7 +360,7 @@ export default function HomePage() {
     ),
     19: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District19.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -336,7 +374,7 @@ export default function HomePage() {
     ),
     20: (
       <div>
-        {DistrictsData.map((district, index) => (
+        {District20.map((district, index) => (
           <TourguideList
             key={index}
             name={district.name}
@@ -351,12 +389,13 @@ export default function HomePage() {
   };
 
   // Handler for when a district is clicked
-  const handleDistrictClick = (event, district) => {
+  const handleDistrictClick = (event, districtId) => {
     event.preventDefault();
     let x = event.clientX;
     let y = event.clientY;
-    setSelectedDistrict(district);
+    setSelectedDistrict(districtId);
     console.log(x, y);
+    // console.log(filteredGuides);
 
     setPopupPosition({
       left: `${x * 0.35}px`, // Offset by 3.5% of the window width
@@ -558,14 +597,19 @@ export default function HomePage() {
 
               <div>{districts[selectedDistrict]}</div>
               <div className="mt-6 space-y-4">
-                <button className="flex w-full justify-center rounded-2xl bg-primary-600 py-4 font-bold tracking-1.5 text-white">
-                  <img src="images/BsHandIndex.svg" alt="" />
+                <Link to="/book-trips" className="block">
+                  <button className="flex w-full justify-center rounded-2xl bg-primary-600 py-4 font-bold tracking-1.5 text-white">
+                    <img src="images/BsHandIndex.svg" alt="" />
 
-                  <span className="ml-2">馬上預約</span>
-                </button>
-                <button className="w-full rounded-2xl bg-transparent py-4 font-bold tracking-1.5 text-primary-600 outline outline-1">
-                  所有{selectedDistrict}區推薦景點
-                </button>
+                    <span className="ml-2">馬上預約</span>
+                  </button>
+                </Link>
+
+                <Link to="sites-info" className="block mt-2">
+                  <button className="w-full rounded-2xl bg-transparent py-4 font-bold tracking-1.5 text-primary-600 outline outline-1">
+                    所有{selectedDistrict}區推薦景點
+                  </button>
+                </Link>
               </div>
             </div>
           )}

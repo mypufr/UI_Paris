@@ -1,31 +1,149 @@
 [
   {
     "name": "劉洋",
-    "district": "17",
+    "district": "1",
     "img": "https://i.imgur.com/eLrtRo5.png",
     "specialities": "浪漫景點、情侶拍攝",
     "language": "中文、英文"
   },
   {
     "name": "Lucie",
-    "district": "17",
+    "district": "1",
     "img": "https://i.imgur.com/F4xy7GQ.png",
-    "specialities": "藝館之旅、畫廊導覽",
+    "specialities": "歷史古蹟、博物館導覽",
     "language": "中文、法文"
   },
   {
+    "name": "Michel",
+    "district": "1",
+    "img": "https://i.imgur.com/8WVO0C7.png",
+    "specialities": "當地美食、餐廳推薦",
+    "language": "英文、法文"
+  },
+  {
     "name": "張志強",
-    "district": "16",
+    "district": "2",
     "img": "https://i.imgur.com/MBb5iuY.png",
     "specialities": "家庭旅遊、親子活動",
     "language": "中文、英文、法文"
   },
   {
-    "name": "Michel",
-    "district": "17",
-    "img": "https://i.imgur.com/8WVO0C7.png",
-    "specialities": "當地市場、手工藝品",
+    "name": "Emma",
+    "district": "2",
+    "img": "https://i.imgur.com/F4xy7GQ.png",
+    "specialities": "藝術館導覽、畫廊介紹",
+    "language": "法文、英文"
+  },
+  {
+    "name": "John",
+    "district": "2",
+    "img": "https://i.imgur.com/eLrtRo5.png",
+    "specialities": "當地市場、購物導覽",
     "language": "中文、英文"
+  },
+  {
+    "name": "Alice",
+    "district": "3",
+    "img": "https://i.imgur.com/F4xy7GQ.png",
+    "specialities": "歷史探索、古建築導覽",
+    "language": "法文、中文"
+  },
+  {
+    "name": "David",
+    "district": "3",
+    "img": "https://i.imgur.com/eLrtRo5.png",
+    "specialities": "夜生活體驗、當地酒吧",
+    "language": "英文、法文"
+  },
+  {
+    "name": "Sophie",
+    "district": "3",
+    "img": "https://i.imgur.com/8WVO0C7.png",
+    "specialities": "市集導覽、傳統工藝品",
+    "language": "中文、英文"
+  },
+  {
+    "name": "Thomas",
+    "district": "4",
+    "img": "https://i.imgur.com/MBb5iuY.png",
+    "specialities": "古蹟導覽、歷史講解",
+    "language": "英文、法文"
+  },
+  {
+    "name": "Marie",
+    "district": "4",
+    "img": "https://i.imgur.com/F4xy7GQ.png",
+    "specialities": "當地藝術、畫廊推薦",
+    "language": "中文、法文"
+  },
+  {
+    "name": "Charlotte",
+    "district": "4",
+    "img": "https://i.imgur.com/eLrtRo5.png",
+    "specialities": "餐廳推薦、美食之旅",
+    "language": "法文、英文"
+  },
+  {
+    "name": "Ethan",
+    "district": "5",
+    "img": "https://i.imgur.com/8WVO0C7.png",
+    "specialities": "公園探索、戶外活動",
+    "language": "中文、法文"
+  },
+  {
+    "name": "Isabella",
+    "district": "5",
+    "img": "https://i.imgur.com/F4xy7GQ.png",
+    "specialities": "劇院導覽、音樂活動",
+    "language": "法文、英文"
+  },
+  {
+    "name": "Jacob",
+    "district": "5",
+    "img": "https://i.imgur.com/eLrtRo5.png",
+    "specialities": "家庭活動、兒童互動",
+    "language": "中文、英文"
+  },
+  {
+    "name": "Sarah",
+    "district": "6",
+    "img": "https://i.imgur.com/8WVO0C7.png",
+    "specialities": "文化景點、藝術介紹",
+    "language": "法文、英文"
+  },
+  {
+    "name": "Ben",
+    "district": "6",
+    "img": "https://i.imgur.com/MBb5iuY.png",
+    "specialities": "當地風味小吃",
+    "language": "中文、英文"
+  },
+  {
+    "name": "Mia",
+    "district": "6",
+    "img": "https://i.imgur.com/F4xy7GQ.png",
+    "specialities": "城市探索、歷史文化",
+    "language": "法文、中文"
+  },
+  {
+    "name": "劉洋",
+    "district": "7",
+    "img": "https://i.imgur.com/eLrtRo5.png",
+    "specialities": "名勝古蹟、名人故居",
+    "language": "中文、英文"
+  },
+  {
+    "name": "Marc",
+    "district": "7",
+    "img": "https://i.imgur.com/F4xy7GQ.png",
+    "specialities": "建築之美、景觀導覽",
+    "language": "法文、英文"
+  },
+  {
+    "name": "Mélanie",
+    "district": "7",
+    "img": "https://i.imgur.com/8WVO0C7.png",
+    "specialities": "當地小店、手工製品",
+    "language": "中文、法文"
   }
 ]
-
