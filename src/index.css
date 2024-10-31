@@ -76,9 +76,17 @@
   space-y-8;
 }
 
-/* .slick-list {
-  @apply space-y-8;
-} */
+.slick-list {
+  /* @apply space-y-8; */
+  @apply pb-0;
+  
+}
+
+.slick-dots {
+  display: none !important;
+}
+
+
 
 .overflow-clip {
 

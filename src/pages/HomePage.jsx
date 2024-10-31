@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -58,6 +60,9 @@ export default function HomePage() {
     navigate(`/search-tourguides/tourguide-profile/${id}#target-section`);
   };
 
+  const sliderRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(1);
+
   const settings1 = {
     dots: true,
     infinite: true,
@@ -66,6 +71,50 @@ export default function HomePage() {
     slideseToScroll: 2,
     arrows: true,
     rows: 2,
+    afterChange: (index) => setCurrentSlide(index + 1),
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          rows: 1,
+        },
+      },
+
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          rows: 1,
+
+      
+        },
+      },
+
+
+      {
+        breakpoint: 375,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          rows: 1,
+ 
+        },
+      },
+
+
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          rows: 1,
+ 
+        },
+      },
+    ],
   };
 
   const settings2 = {
@@ -76,6 +125,34 @@ export default function HomePage() {
     slideseToScroll: 2,
     arrows: true,
     rows: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          rows: 1,
+        },
+      },
+
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          rows: 1,
+        },
+      },
+
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          rows: 1,
+        },
+      },
+    ],
     // pagination: {
     //   clickable: true,
     // },
@@ -87,8 +164,6 @@ export default function HomePage() {
     left: "10px",
     top: "10px",
   });
-
-  // const filteredGuides = DistrictsData.filter(item => item.district === selectedDistrict)
 
   // List of districts with their respective info
   const districts = {
@@ -104,20 +179,6 @@ export default function HomePage() {
             language={district.language}
           />
         ))}
-
-        {/* {filteredGuides.length > 0 ? (
-          filteredGuides.map((item) => (
-            <TourguideList
-              key={item.id}
-              name={item.name}
-              img={item.img}
-              specialities={item.specialities}
-              language={item.language}
-            />
-          ))
-        ) : (
-          <p>沒有符合的導遊資料</p>
-        )} */}
       </div>
     ),
     2: (
@@ -395,7 +456,6 @@ export default function HomePage() {
     let y = event.clientY;
     setSelectedDistrict(districtId);
     console.log(x, y);
-    // console.log(filteredGuides);
 
     setPopupPosition({
       left: `${x * 0.35}px`, // Offset by 3.5% of the window width
@@ -505,7 +565,7 @@ export default function HomePage() {
                   className="-left-8 m-auto rounded-lg border border-gray-300 bg-white p-[13px] pr-10 text-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 min-[200px]:w-8/12 md:w-6/12 lg:w-5/12 lg:pr-0 xl:h-12 xl:w-6/12 2xl:w-[35%]"
                   placeholder="尋找你的完美巴黎旅程"
                 />
-                <div className="absolute inset-y-0 right-[28vw] top-14 flex items-center rounded-r-lg bg-primary-600 p-5 md:right-[50vw] md:top-[80%] lg:right-[58vw] lg:top-0 lg:p-3 xl:right-[50vw] 2xl:top-10 min-[1536px]:right-[64vw]">
+                <div className="absolute inset-y-0 right-[28vw] top-14 flex items-center rounded-r-lg bg-primary-600 p-5 md:right-[45vw] md:top-[80%] lg:right-[58vw] lg:top-0 lg:p-3 xl:right-[50vw] 2xl:top-10 min-[1536px]:right-[64vw]">
                   <svg
                     className="h-4 w-4 text-white lg:h-5 lg:w-5"
                     fill="currentColor"
@@ -552,7 +612,7 @@ export default function HomePage() {
           alt=""
           className="inline-block h-[40px]"
         />
-        <h3 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
+        <h3 className="text-3xl 2xl:text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
           分區搜尋專屬導遊
         </h3>
         <img
@@ -605,7 +665,7 @@ export default function HomePage() {
                   </button>
                 </Link>
 
-                <Link to="sites-info" className="block mt-2">
+                <Link to="sites-info" className="mt-2 block">
                   <button className="w-full rounded-2xl bg-transparent py-4 font-bold tracking-1.5 text-primary-600 outline outline-1">
                     所有{selectedDistrict}區推薦景點
                   </button>
@@ -814,7 +874,7 @@ export default function HomePage() {
             alt=""
             className="inline-block h-[40px]"
           />
-          <h2 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
+          <h2 className="text-3xl 2xl:text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
             熱門導遊
           </h2>
           <img
@@ -824,13 +884,13 @@ export default function HomePage() {
           />
         </div>
       </div>
-      <div className="m-auto max-w-[67.5%]">
+      <div className="m-auto max-w-full min-[425px]:max-w-[95%] min-[768px]:max-w-[85%] lg:max-w-[67.5%]">
         <div className="mt-8">
-          <Slider {...settings1}>
+          <Slider {...settings1} arrows={false} ref={sliderRef}>
             {data.map((data, index) => (
               <div
                 key={index}
-                className="p-10 sm:p-4"
+                className="slide-item p-1 2xl:p-10 sm:p-4"
                 onClick={() => handleCardClick(data.id)}
               >
                 <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
@@ -842,12 +902,48 @@ export default function HomePage() {
                     specialities2={data.speciality2}
                     specialities3={data.speciality3}
                   />
+            
                 </div>
+
+
+
+
               </div>
             ))}
           </Slider>
+          <div className="2xl:mt-6 flex items-center justify-center space-x-8">
+            <button
+              onClick={() => sliderRef.current.slickPrev()}
+              className="hover:text-primary-400 p-2 text-grey-950"
+            >
+              <img
+                src="images/left_arrow.png"
+                alt="Previous"
+                className="h-8 bg-slate-200"
+              />
+            </button>
+
+            {/* 放置 pagination */}
+            <div className="pagination-container text-xl font-bold text-primary-600">
+              <span>{currentSlide}</span> /{" "}
+              <span className="text-grey-950">{data.length}</span>
+              {/* 可使用 Pagination 元件或根據 Slider 狀態自訂 */}
+            </div>
+
+            <button
+              onClick={() => sliderRef.current.slickNext()}
+              className="hover:text-primary-400  text-grey-950"
+            >
+              <img
+                src="images/right_arrow.png"
+                alt="Next"
+                className="h-8 bg-slate-200"
+              />
+            </button>
+          </div>
         </div>
       </div>
+
       {/* background settings */}
 
       <div className="bg-popular_sites relative">
@@ -871,7 +967,7 @@ export default function HomePage() {
               alt=""
               className="inline-block h-[40px]"
             />
-            <h4 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
+            <h4 className="text-3xl 2xl:text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
               熱門旅程
             </h4>
             <img
@@ -910,190 +1006,6 @@ export default function HomePage() {
 
       {/* 預約導遊和報名行程 */}
 
-      {/* <div className="">
-        <div className="mb-8 mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
-          <img
-            src="images/vector_title.png"
-            alt=""
-            className="inline-block h-[40px]"
-          />
-          <h5 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
-            預約導遊和報名行程
-          </h5>
-          <img
-            src="images/vector_title.png"
-            alt=""
-            className="inline-block h-[40px]"
-          />
-        </div>
-
-        <div className="flex items-center justify-center space-x-6 ">
-          <div className="border-grey-200 max-w-[34%] rounded-2xl border">
-            <span className="block rounded-t-2xl bg-primary-300 py-10 text-center text-2xl font-bold text-white">
-              預約導遊
-            </span>
-
-            <div className="space-y-[149px] pb-6">
-              <div className="mt-6 flex px-8">
-                <img
-                  src="images/step-1-1.png"
-                  alt=""
-                  className="inline-block max-w-[200px] object-cover"
-                />
-                <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
-                  <p className="text-xl font-bold tracking-4 text-grey-950">
-                    Step 1 瀏覽導遊資歷與專長
-                  </p>
-                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
-                    在平台上探索各種導遊的個人檔案，了解他們的資歷、專長領域，並觀看他們的自我介紹影片。挑選最適合你需求的在地專家。
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex px-8">
-                <div className="">
-                  <img
-                    src="images/step-1-2.png"
-                    alt=""
-                    className="inline-block max-w-[200px] object-cover"
-                  />
-                </div>
-                <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
-                  <p className="text-xl font-bold tracking-4 text-grey-950">
-                    Step 2 與導遊聯絡
-                  </p>
-                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
-                    登入會員後，通過私訊與選定的導遊聯絡，詳細溝通你的旅行需求、預期時間和特別喜好，確保導遊能為你提供量身定制的服務
-                  </p>
-                </div>
-              </div>
-              <div className="flex px-8">
-                <div className="">
-                  <img
-                    src="images/step-1-3.png"
-                    alt=""
-                    className="inline-block max-w-[200px] object-cover"
-                  />
-                </div>
-                <div className="max-w-[360px] flex-col space-y-4 px-6 py-7">
-                  <p className="text-xl font-bold tracking-4 text-grey-950">
-                    Step 3 開啟旅程
-                  </p>
-                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
-                    一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
-                  </p>
-                </div>
-              </div>
-              <div className="flex justify-center">
-                <button className="flex max-w-full justify-center rounded-2xl bg-primary-600 px-[15%] py-4 transition-colors duration-200 hover:bg-primary-300 active:border active:border-primary-600 active:bg-transparent">
-                  <img
-                    src="images/BsHandIndex.svg"
-                    alt=""
-                    className="inline-block"
-                  />
-
-                  <span className="ml-2 font-bold tracking-1.5 text-white">
-                    我要預約導遊
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-grey-200 max-w-[34%] rounded-2xl border">
-            <span className="block rounded-t-2xl bg-secondary-300 py-10 text-center text-2xl font-bold text-white">
-              報名行程
-            </span>
-
-            <div className="mt-10 flex-col space-y-10">
-              <div className="mt-6 flex px-8">
-                <img
-                  src="images/step-2-1.png"
-                  alt=""
-                  className="inline-block max-w-[188px] object-cover"
-                />
-
-                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
-                  <p className="text-xl font-bold tracking-4 text-grey-950">
-                    Step 1 瀏覽行程提案
-                  </p>
-                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
-                    在平台上瀏覽各種精心策劃的行程提案，從文化探險到美食之旅，總有一個行程能讓你心動不已。
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex px-8">
-                <div className="">
-                  <img
-                    src="images/step-2-2.png"
-                    alt=""
-                    className="inline-block max-w-[188px] object-cover"
-                  />
-                </div>
-                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
-                  <p className="text-xl font-bold tracking-4 text-grey-950">
-                    Step 2 報名行程
-                  </p>
-                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
-                    選定心儀的行程後，立即登入會員報名，確保你的名額。你還可以和其他參與者交流，分享期待與興奮
-                  </p>
-                </div>
-              </div>
-              <div className="flex px-8">
-                <div className="">
-                  <img
-                    src="images/step-2-3.png"
-                    alt=""
-                    className="inline-block max-w-[188px] object-cover"
-                  />
-                </div>
-                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
-                  <p className="text-xl font-bold tracking-4 text-grey-950">
-                    Step 3 開團確認通知
-                  </p>
-                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
-                    當行程人數達到標準時，我們將向你發送開團確認通知，讓你準備好出發。
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex px-8">
-                <div className="">
-                  <img
-                    src="images/step-2-4.png"
-                    alt=""
-                    className="max-w-[188px] object-cover"
-                  />
-                </div>
-                <div className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]">
-                  <p className="text-xl font-bold tracking-4 text-grey-950">
-                    Step 4 開啟旅程
-                  </p>
-                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
-                    一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex justify-center">
-                <button className="mt-2 flex max-w-full justify-center rounded-2xl bg-secondary-400 px-[15%] py-4 transition-colors duration-200 hover:bg-secondary-200 active:border active:border-secondary-200 active:bg-transparent">
-                  <img
-                    src="images/BsHandIndex.svg"
-                    alt=""
-                    className="inline-block"
-                  />
-
-                  <span className="ml-2 font-bold tracking-1.5 text-white">
-                    馬上報名行程
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       <div className="">
         <div className="mb-8 mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
           <img
@@ -1101,7 +1013,7 @@ export default function HomePage() {
             alt=""
             className="inline-block h-[40px]"
           />
-          <h5 className="text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
+          <h5 className="text-3xl 2xl:text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
             預約導遊和報名行程
           </h5>
           <img
@@ -1188,15 +1100,17 @@ export default function HomePage() {
               </div>
               <div className="flex justify-center">
                 <button className="flex max-w-full justify-center rounded-2xl bg-primary-600 px-[15%] py-4 transition-colors duration-200 hover:bg-primary-300 active:border active:border-primary-600 active:bg-transparent">
-                  <img
-                    src="images/BsHandIndex.svg"
-                    alt=""
-                    className="inline-block"
-                  />
+                  <Link to="/search-tourguides" className="">
+                    <img
+                      src="images/BsHandIndex.svg"
+                      alt=""
+                      className="inline-block"
+                    />
 
-                  <span className="ml-2 font-bold tracking-1.5 text-white">
-                    我要預約導遊
-                  </span>
+                    <span className="ml-2 font-bold tracking-1.5 text-white">
+                      我要預約導遊
+                    </span>
+                  </Link>
                 </button>
               </div>
             </div>
