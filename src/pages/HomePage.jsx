@@ -119,7 +119,7 @@ export default function HomePage() {
     slideseToScroll: 2,
     arrows: true,
     rows: 1,
-     responsive: [
+    responsive: [
       {
         breakpoint: 768,
         settings: {
@@ -945,7 +945,7 @@ export default function HomePage() {
       {/* background settings */}
 
       <div className="bg-popular_sites relative">
-        {/* <div className="">
+        <div className="">
           <img
             src="images/upper-background_popular_sites_w1914.png"
             alt=""
@@ -956,9 +956,9 @@ export default function HomePage() {
             alt=""
             className="h-[900px] w-full"
           />
-        </div> */}
+        </div>
 
-        {/* <div className="absolute left-[43%] top-[30%] mt-16">
+        <div className="absolute left-[43%] top-[30%] mt-16">
           <div className="flex justify-center space-x-4 hover:cursor-pointer">
             <img
               src="images/vector_title.png"
@@ -974,10 +974,10 @@ export default function HomePage() {
               className="inline-block h-[40px]"
             />
           </div>
-        </div> */}
+        </div>
 
         {/* slides show: popular sites */}
-        {/* <div className="absolute left-[15%] top-[40%] max-w-[67.5%]">
+        <div className="absolute left-[15%] top-[40%] max-w-[67.5%]">
           <div className="mt-20">
             <Slider {...settings2}>
               {TripsData.map((data, index) => (
@@ -999,12 +999,12 @@ export default function HomePage() {
               ))}
             </Slider>
           </div>
-        </div> */}
+        </div>
       </div>
 
       {/* 預約導遊和報名行程 */}
 
-      <div className="">
+      <div className="mb-12">
         <div className="mb-8 mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
           <img
             src="images/vector_title.png"
@@ -1021,213 +1021,87 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="flex flex-col justify-center items-center lg:flex lg:flex-wrap md:flex md:justify-center md:space-x-6">
-          <div className="border-grey-200 max-w-[98%] lg:max-w-[34%] rounded-2xl border">
-            
-            <div className="border border-1 border-grey-200 rounded-2xl mb-3  sm:border-0">
+        <div className="flex flex-col items-center justify-center md:space-x-0 lg:flex lg:flex-row lg:space-x-6">
+          <div className="md:border-grey-200 max-w-[90%] rounded-2xl border-0 md:border lg:max-w-[34%]">
+            <div className="border-1 border-grey-200 mb-3 rounded-2xl border sm:border-0">
+              <span className="block rounded-t-2xl bg-primary-300 py-4 text-center text-2xl font-bold text-white lg:py-10">
+                預約導遊
+              </span>
 
-
-        
-            
-            <span className="block rounded-t-2xl bg-primary-300 py-4 lg:py-10 text-center text-2xl font-bold text-white">
-              預約導遊
-            </span>
-
-            <div className="space-y-3 lg:space-y-[149px] pb-6">
-              <div className="mt-6 flex px-8 space-x-2">
-                <img
-                  src="images/step-1-1.png"
-                  alt=""
-                  className="inline-block h-[78px] lg:max-w-[200px] object-cover"
-                  data-aos="zoom-in-left"
-                  data-aos-easing="ease-in-sine"
-                />
-                <div
-                  className="lg:max-w-[360px] flex-col lg:space-y-4 lg:px-6 lg:py-7"
-                  data-aos="zoom-in-right"
-                  data-aos-easing="ease-in-sine"
-                >
-                  <p className="text-[14px] lg:text-xl font-bold tracking-4 text-grey-950">
-                    Step 1 瀏覽導遊資歷與專長
-                  </p>
-                  <p className="text-[12px] lg:text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
-                    在平台上探索各種導遊的個人檔案，了解他們的資歷、專長領域，並觀看他們的自我介紹影片。挑選最適合你需求的在地專家。
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex px-8 space-x-4">
-                <div className="">
+              <div className="space-y-4 pb-6 lg:mt-10 lg:space-y-[149px]">
+                <div className="mt-6 flex space-x-2 px-1 lg:px-8">
                   <img
-                    src="images/step-1-2.png"
+                    src="images/step-1-1.png"
                     alt=""
-                    className=" h-[78px] min-w-[100px] lg:max-w-[200px] object-cover"
+                    className="h-[78px] object-cover lg:max-w-[200px]"
                     data-aos="zoom-in-left"
                     data-aos-easing="ease-in-sine"
                   />
-                </div>
-                <div
-                  className="lg:max-w-[360px] flex-col lg:space-y-4 lg:px-6 lg:py-7"
-                  data-aos="zoom-in-right"
-                  data-aos-easing="ease-in-sine"
-                >
-                  <p className="text-[14px] lg:text-xl font-bold tracking-4 text-grey-950">
-                    Step 2 與導遊聯絡
-                  </p>
-                  <p className="text-[12px] lg:text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
-                    登入會員後，通過私訊與選定的導遊聯絡，詳細溝通你的旅行需求、預期時間和特別喜好，確保導遊能為你提供量身定制的服務
-                  </p>
-                </div>
-              </div>
-              <div className="flex px-8 space-x-4">
-                <div className="">
-                  <img
-                    src="images/step-1-3.png"
-                    alt=""
-                    className=" h-[78px] min-w-[100px] lg:max-w-[200px] object-cover"
-                    data-aos="zoom-in-left"
+                  <div
+                    className="flex-col space-y-2 lg:max-w-[360px] lg:space-y-4 lg:px-6 lg:py-7"
+                    data-aos="zoom-in-right"
                     data-aos-easing="ease-in-sine"
-                  />
-                </div>
-                <div
-                  className="lg:max-w-[360px] flex-col lg:space-y-4 lg:px-6 lg:py-7"
-                  data-aos="zoom-in-right"
-                  data-aos-easing="ease-in-sine"
-                >
-                  <p className="text-[14px] lg:text-xl font-bold tracking-4 text-grey-950">
-                    Step 3 開啟旅程
-                  </p>
-                  <p className="text-[12px] lg:text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
-                    一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
-                  </p>
-                </div>
-              </div>
-
-              </div>
+                  >
+                    <p className="text-[14px] font-bold tracking-4 text-grey-950 lg:text-xl">
+                      Step 1 瀏覽導遊資歷與專長
+                    </p>
+                    <p className="text-[12px] leading-[19.6px] tracking-1.5 text-grey-400 lg:text-[14px]">
+                      在平台上探索各種導遊的個人檔案，了解他們的資歷、專長領域，並觀看他們的自我介紹影片。挑選最適合你需求的在地專家。
+                    </p>
                   </div>
-              <div className="flex justify-center">
-                <button className="flex w-full sm:max-w-full justify-center rounded-2xl bg-primary-600 px-[15%] py-3 lg:py-4 transition-colors duration-200 hover:bg-primary-300 active:border active:border-primary-600 active:bg-transparent">
-                  <Link to="/search-tourguides" className="">
+                </div>
+
+                <div className="flex space-x-2">
+                  <div className="">
                     <img
-                      src="images/BsHandIndex.svg"
+                      src="images/step-1-2.png"
                       alt=""
-                      className="inline-block"
+                      className="h-[65px] min-w-[100px] object-cover lg:max-w-[200px]"
+                      data-aos="zoom-in-left"
+                      data-aos-easing="ease-in-sine"
                     />
-
-                    <span className="ml-2 font-bold tracking-1.5 text-white">
-                      我要預約導遊
-                    </span>
-                  </Link>
-                </button>
-              </div>
-
-            
-
-
-          </div>
-
-          <div className="border-grey-200 max-w-[34%] rounded-2xl border">
-            <span className="block rounded-t-2xl bg-secondary-300 py-10 text-center text-2xl font-bold text-white">
-              報名行程
-            </span>
-
-            <div className="mt-10 flex-col space-y-10">
-              <div className="mt-6 flex px-8">
-                <img
-                  src="images/step-2-1.png"
-                  alt=""
-                  className="inline-block max-w-[188px] object-cover"
-                  data-aos="zoom-in-left"
-                  data-aos-easing="ease-in-sine"
-                />
-
-                <div
-                  className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]"
-                  data-aos="zoom-in-right"
-                  data-aos-easing="ease-in-sine"
-                >
-                  <p className="text-xl font-bold tracking-4 text-grey-950">
-                    Step 1 瀏覽行程提案
-                  </p>
-                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
-                    在平台上瀏覽各種精心策劃的行程提案，從文化探險到美食之旅，總有一個行程能讓你心動不已。
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex px-8">
-                <div className="">
-                  <img
-                    src="images/step-2-2.png"
-                    alt=""
-                    className="inline-block max-w-[188px] object-cover"
-                    data-aos="zoom-in-left"
+                  </div>
+                  <div
+                    className="flex-col space-y-2 lg:max-w-[360px] lg:space-y-4 lg:px-6 lg:py-7"
+                    data-aos="zoom-in-right"
                     data-aos-easing="ease-in-sine"
-                  />
+                  >
+                    <p className="text-[14px] font-bold tracking-4 text-grey-950 lg:text-xl">
+                      Step 2 與導遊聯絡
+                    </p>
+                    <p className="text-[12px] leading-[19.6px] tracking-1.5 text-grey-400 lg:text-[14px]">
+                      登入會員後，通過私訊與選定的導遊聯絡，詳細溝通你的旅行需求、預期時間和特別喜好，確保導遊能為你提供量身定制的服務
+                    </p>
+                  </div>
                 </div>
-                <div
-                  className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]"
-                  data-aos="zoom-in-right"
-                  data-aos-easing="ease-in-sine"
-                >
-                  <p className="text-xl font-bold tracking-4 text-grey-950">
-                    Step 2 報名行程
-                  </p>
-                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
-                    選定心儀的行程後，立即登入會員報名，確保你的名額。你還可以和其他參與者交流，分享期待與興奮
-                  </p>
-                </div>
-              </div>
-              <div className="flex px-8">
-                <div className="">
-                  <img
-                    src="images/step-2-3.png"
-                    alt=""
-                    className="inline-block max-w-[188px] object-cover"
-                    data-aos="zoom-in-left"
+                <div className="flex space-x-2">
+                  <div className="">
+                    <img
+                      src="images/step-1-3.png"
+                      alt=""
+                      className="h-[78px] min-w-[100px] object-cover lg:max-w-[200px]"
+                      data-aos="zoom-in-left"
+                      data-aos-easing="ease-in-sine"
+                    />
+                  </div>
+                  <div
+                    className="flex-col space-y-2 lg:max-w-[360px] lg:space-y-4 lg:px-6 lg:py-7"
+                    data-aos="zoom-in-right"
                     data-aos-easing="ease-in-sine"
-                  />
-                </div>
-                <div
-                  className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]"
-                  data-aos="zoom-in-right"
-                  data-aos-easing="ease-in-sine"
-                >
-                  <p className="text-xl font-bold tracking-4 text-grey-950">
-                    Step 3 開團確認通知
-                  </p>
-                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
-                    當行程人數達到標準時，我們將向你發送開團確認通知，讓你準備好出發。
-                  </p>
+                  >
+                    <p className="text-[14px] font-bold tracking-4 text-grey-950 lg:text-xl">
+                      Step 3 開啟旅程
+                    </p>
+                    <p className="text-[12px] leading-[19.6px] tracking-1.5 text-grey-400 lg:text-[14px]">
+                      一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
+                    </p>
+                  </div>
                 </div>
               </div>
-
-              <div className="flex px-8">
-                <div className="">
-                  <img
-                    src="images/step-2-4.png"
-                    alt=""
-                    className="max-w-[188px] object-cover"
-                    data-aos="zoom-in-left"
-                    data-aos-easing="ease-in-sine"
-                  />
-                </div>
-                <div
-                  className="max-w-[360px] flex-col space-y-4 px-6 py-[48px]"
-                  data-aos="zoom-in-right"
-                  data-aos-easing="ease-in-sine"
-                >
-                  <p className="text-xl font-bold tracking-4 text-grey-950">
-                    Step 4 開啟旅程
-                  </p>
-                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
-                    一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex justify-center">
-                <button className="mt-2 flex max-w-full justify-center rounded-2xl bg-secondary-400 px-[15%] py-4 transition-colors duration-200 hover:bg-secondary-200 active:border active:border-secondary-200 active:bg-transparent">
+            </div>
+            <div className="flex justify-center mb-4">
+              <button className="flex max-w-full justify-center rounded-2xl bg-primary-600 px-[15%] py-3 transition-colors duration-200 hover:bg-primary-300 active:border active:border-primary-600 active:bg-transparent sm:max-w-full lg:py-4">
+                <Link to="/search-tourguides" className="">
                   <img
                     src="images/BsHandIndex.svg"
                     alt=""
@@ -1235,10 +1109,126 @@ export default function HomePage() {
                   />
 
                   <span className="ml-2 font-bold tracking-1.5 text-white">
-                    馬上報名行程
+                    我要預約導遊
                   </span>
-                </button>
+                </Link>
+              </button>
+            </div>
+          </div>
+
+          <div className="mt-10 md:border-grey-200 max-w-[90%] rounded-2xl border-0 md:border lg:max-w-[34%]">
+            <div className="border-1 border-grey-200 mb-3 rounded-2xl border sm:border-0">
+              <span className="block rounded-t-2xl bg-secondary-300 py-4 text-center text-2xl font-bold text-white lg:py-10">
+                報名行程
+              </span>
+
+              <div className="p-2 lg:mt-10">
+                <div className="grid gap-4 lg:grid-cols-2 lg:gap-10">
+          
+                  <div className="flex items-center space-x-2 lg:space-x-4">
+                    <img
+                      src="images/step-2-1.png"
+                      alt=""
+                      className="h-[95.43px] max-w-[100px] object-cover lg:max-w-[200px]"
+                      data-aos="zoom-in-left"
+                      data-aos-easing="ease-in-sine"
+                    />
+                    <div
+                      className="space-y-2 lg:max-w-[360px] lg:space-y-4"
+                      data-aos="zoom-in-right"
+                      data-aos-easing="ease-in-sine"
+                    >
+                      <p className="text-[14px] font-bold tracking-4 text-grey-950 lg:text-xl">
+                        Step 1 瀏覽行程提案
+                      </p>
+                      <p className="text-[12px] leading-[19.6px] tracking-1.5 text-grey-400 lg:text-[14px]">
+                        在平台上瀏覽各種精心策劃的行程提案，從文化探險到美食之旅，總有一個行程能讓你心動不已。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center space-x-2 lg:space-x-4">
+                    <img
+                      src="images/step-2-2.png"
+                      alt=""
+                      className="h-[95.43px] max-w-[100px] object-cover lg:max-w-[200px]"
+                      data-aos="zoom-in-left"
+                      data-aos-easing="ease-in-sine"
+                    />
+                    <div
+                      className="space-y-2 lg:max-w-[360px] lg:space-y-4"
+                      data-aos="zoom-in-right"
+                      data-aos-easing="ease-in-sine"
+                    >
+                      <p className="text-[14px] font-bold tracking-4 text-grey-950 lg:text-xl">
+                        Step 2 報名行程
+                      </p>
+                      <p className="text-[12px] leading-[19.6px] tracking-1.5 text-grey-400 lg:text-[14px]">
+                        選定心儀的行程後，立即登入會員報名，確保你的名額。你還可以和其他參與者交流，分享期待與興奮。
+                      </p>
+                    </div>
+                  </div>
+
+      
+
+                  <div className="flex items-center space-x-2 lg:space-x-4">
+                    <img
+                      src="images/step-2-3.png"
+                      alt=""
+                      className="h-[95.43px] max-w-[100px] object-cover lg:max-w-[200px]"
+                      data-aos="zoom-in-left"
+                      data-aos-easing="ease-in-sine"
+                    />
+                    <div
+                      className="space-y-2 lg:max-w-[360px] lg:space-y-4"
+                      data-aos="zoom-in-right"
+                      data-aos-easing="ease-in-sine"
+                    >
+                      <p className="text-[14px] font-bold tracking-4 text-grey-950 lg:text-xl">
+                        Step 3 開團確認通知
+                      </p>
+                      <p className="text-[12px] leading-[19.6px] tracking-1.5 text-grey-400 lg:text-[14px]">
+                        選定心儀的行程後，立即登入會員報名，確保你的名額。你還可以和其他參與者交流，分享期待與興奮。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center space-x-2 lg:space-x-4">
+                    <img
+                      src="images/step-2-4.png"
+                      alt=""
+                      className="h-[95.43px] max-w-[100px] object-cover lg:max-w-[200px]"
+                      data-aos="zoom-in-left"
+                      data-aos-easing="ease-in-sine"
+                    />
+                    <div
+                      className="space-y-2 lg:max-w-[360px] lg:space-y-4"
+                      data-aos="zoom-in-right"
+                      data-aos-easing="ease-in-sine"
+                    >
+                      <p className="text-[14px] font-bold tracking-4 text-grey-950 lg:text-xl">
+                        Step 4 開啟旅程
+                      </p>
+                      <p className="text-[12px] leading-[19.6px] tracking-1.5 text-grey-400 lg:text-[14px]">
+                        一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+            <div className="flex justify-center mb-4">
+              <button className="mt-2 flex max-w-full justify-center rounded-2xl bg-secondary-400 px-[15%] py-3 transition-colors duration-200 hover:bg-secondary-200 active:border active:border-secondary-200 active:bg-transparent">
+                <img
+                  src="images/BsHandIndex.svg"
+                  alt=""
+                  className="inline-block"
+                />
+
+                <span className="ml-2 font-bold tracking-1.5 text-white">
+                  馬上報名行程
+                </span>
+              </button>
             </div>
           </div>
         </div>
