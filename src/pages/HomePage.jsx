@@ -88,11 +88,8 @@ export default function HomePage() {
           slidesToShow: 1,
           slidesToScroll: 1,
           rows: 1,
-
-      
         },
       },
-
 
       {
         breakpoint: 375,
@@ -100,10 +97,8 @@ export default function HomePage() {
           slidesToShow: 1,
           slidesToScroll: 1,
           rows: 1,
- 
         },
       },
-
 
       {
         breakpoint: 320,
@@ -111,7 +106,6 @@ export default function HomePage() {
           slidesToShow: 1,
           slidesToScroll: 1,
           rows: 1,
- 
         },
       },
     ],
@@ -125,12 +119,12 @@ export default function HomePage() {
     slideseToScroll: 2,
     arrows: true,
     rows: 1,
-    responsive: [
+     responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           rows: 1,
         },
       },
@@ -138,8 +132,17 @@ export default function HomePage() {
       {
         breakpoint: 425,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          rows: 1,
+        },
+      },
+
+      {
+        breakpoint: 375,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
           rows: 1,
         },
       },
@@ -612,7 +615,7 @@ export default function HomePage() {
           alt=""
           className="inline-block h-[40px]"
         />
-        <h3 className="text-3xl 2xl:text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
+        <h3 className="text-3xl font-bold leading-[3rem] tracking-4 text-primary-600 2xl:text-[40px]">
           分區搜尋專屬導遊
         </h3>
         <img
@@ -874,7 +877,7 @@ export default function HomePage() {
             alt=""
             className="inline-block h-[40px]"
           />
-          <h2 className="text-3xl 2xl:text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
+          <h2 className="text-3xl font-bold leading-[3rem] tracking-4 text-primary-600 2xl:text-[40px]">
             熱門導遊
           </h2>
           <img
@@ -890,7 +893,7 @@ export default function HomePage() {
             {data.map((data, index) => (
               <div
                 key={index}
-                className="slide-item p-1 2xl:p-10 sm:p-4"
+                className="slide-item p-1 sm:p-4 2xl:p-10"
                 onClick={() => handleCardClick(data.id)}
               >
                 <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
@@ -902,16 +905,11 @@ export default function HomePage() {
                     specialities2={data.speciality2}
                     specialities3={data.speciality3}
                   />
-            
                 </div>
-
-
-
-
               </div>
             ))}
           </Slider>
-          <div className="2xl:mt-6 flex items-center justify-center space-x-8">
+          <div className="flex items-center justify-center space-x-8 2xl:mt-6">
             <button
               onClick={() => sliderRef.current.slickPrev()}
               className="hover:text-primary-400 p-2 text-grey-950"
@@ -932,7 +930,7 @@ export default function HomePage() {
 
             <button
               onClick={() => sliderRef.current.slickNext()}
-              className="hover:text-primary-400  text-grey-950"
+              className="hover:text-primary-400 text-grey-950"
             >
               <img
                 src="images/right_arrow.png"
@@ -947,7 +945,7 @@ export default function HomePage() {
       {/* background settings */}
 
       <div className="bg-popular_sites relative">
-        <div className="">
+        {/* <div className="">
           <img
             src="images/upper-background_popular_sites_w1914.png"
             alt=""
@@ -958,16 +956,16 @@ export default function HomePage() {
             alt=""
             className="h-[900px] w-full"
           />
-        </div>
+        </div> */}
 
-        <div className="absolute left-[43%] top-[30%] mt-16">
+        {/* <div className="absolute left-[43%] top-[30%] mt-16">
           <div className="flex justify-center space-x-4 hover:cursor-pointer">
             <img
               src="images/vector_title.png"
               alt=""
               className="inline-block h-[40px]"
             />
-            <h4 className="text-3xl 2xl:text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
+            <h4 className="text-3xl font-bold leading-[3rem] tracking-4 text-primary-600 2xl:text-[40px]">
               熱門旅程
             </h4>
             <img
@@ -976,10 +974,10 @@ export default function HomePage() {
               className="inline-block h-[40px]"
             />
           </div>
-        </div>
+        </div> */}
 
         {/* slides show: popular sites */}
-        <div className="absolute left-[15%] top-[40%] max-w-[67.5%]">
+        {/* <div className="absolute left-[15%] top-[40%] max-w-[67.5%]">
           <div className="mt-20">
             <Slider {...settings2}>
               {TripsData.map((data, index) => (
@@ -1001,7 +999,7 @@ export default function HomePage() {
               ))}
             </Slider>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* 預約導遊和報名行程 */}
@@ -1011,9 +1009,9 @@ export default function HomePage() {
           <img
             src="images/vector_title.png"
             alt=""
-            className="inline-block h-[40px]"
+            className="inline-blockh h-[40px]"
           />
-          <h5 className="text-3xl 2xl:text-[40px] font-bold leading-[3rem] tracking-4 text-primary-600">
+          <h5 className="text-3xl font-bold leading-[3rem] tracking-4 text-primary-600 2xl:text-[40px]">
             預約導遊和報名行程
           </h5>
           <img
@@ -1023,83 +1021,92 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="flex flex-wrap md:flex md:justify-center md:space-x-6">
-          <div className="border-grey-200 max-w-[34%] rounded-2xl border">
-            <span className="block rounded-t-2xl bg-primary-300 py-10 text-center text-2xl font-bold text-white">
+        <div className="flex flex-col justify-center items-center lg:flex lg:flex-wrap md:flex md:justify-center md:space-x-6">
+          <div className="border-grey-200 max-w-[98%] lg:max-w-[34%] rounded-2xl border">
+            
+            <div className="border border-1 border-grey-200 rounded-2xl mb-3  sm:border-0">
+
+
+        
+            
+            <span className="block rounded-t-2xl bg-primary-300 py-4 lg:py-10 text-center text-2xl font-bold text-white">
               預約導遊
             </span>
 
-            <div className="space-y-[149px] pb-6">
-              <div className="mt-6 flex px-8">
+            <div className="space-y-3 lg:space-y-[149px] pb-6">
+              <div className="mt-6 flex px-8 space-x-2">
                 <img
                   src="images/step-1-1.png"
                   alt=""
-                  className="inline-block max-w-[200px] object-cover"
+                  className="inline-block h-[78px] lg:max-w-[200px] object-cover"
                   data-aos="zoom-in-left"
                   data-aos-easing="ease-in-sine"
                 />
                 <div
-                  className="max-w-[360px] flex-col space-y-4 px-6 py-7"
+                  className="lg:max-w-[360px] flex-col lg:space-y-4 lg:px-6 lg:py-7"
                   data-aos="zoom-in-right"
                   data-aos-easing="ease-in-sine"
                 >
-                  <p className="text-xl font-bold tracking-4 text-grey-950">
+                  <p className="text-[14px] lg:text-xl font-bold tracking-4 text-grey-950">
                     Step 1 瀏覽導遊資歷與專長
                   </p>
-                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                  <p className="text-[12px] lg:text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
                     在平台上探索各種導遊的個人檔案，了解他們的資歷、專長領域，並觀看他們的自我介紹影片。挑選最適合你需求的在地專家。
                   </p>
                 </div>
               </div>
 
-              <div className="flex px-8">
+              <div className="flex px-8 space-x-4">
                 <div className="">
                   <img
                     src="images/step-1-2.png"
                     alt=""
-                    className="inline-block max-w-[200px] object-cover"
+                    className=" h-[78px] min-w-[100px] lg:max-w-[200px] object-cover"
                     data-aos="zoom-in-left"
                     data-aos-easing="ease-in-sine"
                   />
                 </div>
                 <div
-                  className="max-w-[360px] flex-col space-y-4 px-6 py-7"
+                  className="lg:max-w-[360px] flex-col lg:space-y-4 lg:px-6 lg:py-7"
                   data-aos="zoom-in-right"
                   data-aos-easing="ease-in-sine"
                 >
-                  <p className="text-xl font-bold tracking-4 text-grey-950">
+                  <p className="text-[14px] lg:text-xl font-bold tracking-4 text-grey-950">
                     Step 2 與導遊聯絡
                   </p>
-                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                  <p className="text-[12px] lg:text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
                     登入會員後，通過私訊與選定的導遊聯絡，詳細溝通你的旅行需求、預期時間和特別喜好，確保導遊能為你提供量身定制的服務
                   </p>
                 </div>
               </div>
-              <div className="flex px-8">
+              <div className="flex px-8 space-x-4">
                 <div className="">
                   <img
                     src="images/step-1-3.png"
                     alt=""
-                    className="inline-block max-w-[200px] object-cover"
+                    className=" h-[78px] min-w-[100px] lg:max-w-[200px] object-cover"
                     data-aos="zoom-in-left"
                     data-aos-easing="ease-in-sine"
                   />
                 </div>
                 <div
-                  className="max-w-[360px] flex-col space-y-4 px-6 py-7"
+                  className="lg:max-w-[360px] flex-col lg:space-y-4 lg:px-6 lg:py-7"
                   data-aos="zoom-in-right"
                   data-aos-easing="ease-in-sine"
                 >
-                  <p className="text-xl font-bold tracking-4 text-grey-950">
+                  <p className="text-[14px] lg:text-xl font-bold tracking-4 text-grey-950">
                     Step 3 開啟旅程
                   </p>
-                  <p className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
+                  <p className="text-[12px] lg:text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">
                     一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
                   </p>
                 </div>
               </div>
+
+              </div>
+                  </div>
               <div className="flex justify-center">
-                <button className="flex max-w-full justify-center rounded-2xl bg-primary-600 px-[15%] py-4 transition-colors duration-200 hover:bg-primary-300 active:border active:border-primary-600 active:bg-transparent">
+                <button className="flex w-full sm:max-w-full justify-center rounded-2xl bg-primary-600 px-[15%] py-3 lg:py-4 transition-colors duration-200 hover:bg-primary-300 active:border active:border-primary-600 active:bg-transparent">
                   <Link to="/search-tourguides" className="">
                     <img
                       src="images/BsHandIndex.svg"
@@ -1113,7 +1120,10 @@ export default function HomePage() {
                   </Link>
                 </button>
               </div>
-            </div>
+
+            
+
+
           </div>
 
           <div className="border-grey-200 max-w-[34%] rounded-2xl border">
@@ -1236,7 +1246,7 @@ export default function HomePage() {
 
       {/* Clouds decorations */}
 
-      <div className="relative mb-[20%]">
+      <div className="hidden lg:relative lg:mb-[20%]">
         <div className="absolute -top-6 left-[1%] -rotate-12">
           <img src="images/deco_footer_clouds.png" alt="" />
         </div>
