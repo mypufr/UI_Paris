@@ -147,7 +147,7 @@ function PaymentSuccessPage() {
                 <div className="min-w-[30%] flex flex-col justify-center border border-background-2 bg-background-2 px-8 py-6">
                   <div className="flex items-center justify-center space-x-4">
                     <img
-                      src={CardData.img}
+                      src="https://images.unsplash.com/photo-1460794418188-1bb7dba2720d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D"
                       alt=""
                       className="inline-block h-20 max-w-20 rounded-full"
                     />
