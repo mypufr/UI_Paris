@@ -627,7 +627,7 @@ export default function HomePage() {
             4
           </p>
           <img
-            src="images/parismap_dist_web.png"
+            src="https://i.imgur.com/wTyuAmr.png"
             useMap="#parisMap"
             alt="Paris District Map"
             data-aos="zoom-in-left"
@@ -1246,7 +1246,7 @@ export default function HomePage() {
 
         <div className="absolute right-[7%] top-[190px] -rotate-3">
           <img
-            src="images/deco_middle_tree.png"
+            src="/images/deco_middle_tree.png"
             alt=""
             className="h-auto max-w-[89%]"
           />
