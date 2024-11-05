@@ -21,7 +21,7 @@ const TripCard = ({
 }) => {
   return (
     <div className="rounded-2xl bg-background-2 bg-white shadow-lg md:max-w-sm lg:border-2 lg:border-secondary-200 md:">
-      <Link to="/">
+      <Link to="/book-trips">
         <div className="rounded-xl border-0">
           <img
             className="h-[257px] w-full rounded-xl object-cover md:h-[150px] xl:h-[360px]"
@@ -69,7 +69,7 @@ const TripCard = ({
 
             <div className="lg:hidden flex justify-center md:py-3">
               <button className="w-full rounded-xl bg-secondary-400 px-[10%] py-3 transition-colors duration-200 hover:bg-primary-300 active:border active:border-primary-600 active:bg-transparent">
-                <Link to="/search-tourguides" className="flex justify-center">
+                <div to="/search-tourguides" className="flex justify-center">
                   <img
                     src="images/BsHandIndex.svg"
                     alt=""
@@ -79,7 +79,7 @@ const TripCard = ({
                   <span className="font-bold tracking-1.5 text-white mt-auto">
                     報名行程
                   </span>
-                </Link>
+                </div>
               </button>
             </div>
           </div>
