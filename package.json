@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist",
-    "start": "tailwindcss -i ./src/index.css -o ./src/output.css --watch"
+    "start": "tailwindcss -i ./src/index.css -o ./src/output.css --watch",
+    "build:css": "tailwindcss -o ./src/output.css --minify"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",

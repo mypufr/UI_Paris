@@ -42,24 +42,24 @@ const Card = ({
           </div>
       <div className="flex justify-center pt-3 md:hidden">
         <button className="w-full rounded-xl bg-primary-600 px-[10%] py-3 transition-colors duration-200 hover:bg-primary-300 active:border active:border-primary-600 active:bg-transparent">
-          <Link to="/search-tourguides" className="flex justify-center">
-            <img src="images/BsHandIndex.svg" alt="" className="inline-block h-6 pr-1" />
+          <div to="/search-tourguides" className="flex justify-center">
+            <img src="/images/BsHandIndex.svg" alt="" className="inline-block h-6 pr-1" />
 
             <span className=" font-bold tracking-1.5 text-white">
               我要預約導遊
             </span>
-          </Link>
+          </div>
         </button>
       </div>
       <div className="hidden md:flex md:justify-center py-3 2xl:hidden">
         <button className="w-full rounded-xl bg-secondary-400 px-[10%] py-3 transition-colors duration-200 hover:bg-primary-300 active:border active:border-primary-600 active:bg-transparent">
-          <Link to="/search-tourguides" className="flex justify-center">
-            <img src="images/BsHandIndex.svg" alt="" className="inline-block h-6 pr-1" />
+          <div to="/search-tourguides" className="flex justify-center">
+            <img src="/images/BsHandIndex.svg" alt="" className="inline-block h-6 pr-1" />
 
             <span className=" font-bold tracking-1.5 text-white">
               點我看更多
             </span>
-          </Link>
+          </div>
         </button>
       </div>
         </div>

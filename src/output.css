@@ -651,10 +651,6 @@ body {
   bottom: -10%;
 }
 
-.bottom-\[15\%\] {
-  bottom: 15%;
-}
-
 .bottom-\[150px\] {
   bottom: 150px;
 }
@@ -681,10 +677,6 @@ body {
 
 .left-\[15vw\] {
   left: 15vw;
-}
-
-.left-\[20\%\] {
-  left: 20%;
 }
 
 .left-\[32\%\] {
@@ -717,10 +709,6 @@ body {
 
 .right-5 {
   right: 1.25rem;
-}
-
-.right-\[19\%\] {
-  right: 19%;
 }
 
 .right-\[28vw\] {
@@ -773,10 +761,6 @@ body {
 
 .top-\[190px\] {
   top: 190px;
-}
-
-.top-\[30\%\] {
-  top: 30%;
 }
 
 .top-\[36\%\] {
@@ -1051,10 +1035,6 @@ body {
   height: 40px;
 }
 
-.h-\[420px\] {
-  height: 420px;
-}
-
 .h-\[65px\] {
   height: 65px;
 }
@@ -1153,10 +1133,6 @@ body {
 
 .min-w-\[50\%\] {
   min-width: 50%;
-}
-
-.max-w-10 {
-  max-width: 2.5rem;
 }
 
 .max-w-20 {

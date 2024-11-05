@@ -125,7 +125,6 @@ export default function HomePage() {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-   
         },
       },
 
@@ -134,7 +133,6 @@ export default function HomePage() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-
         },
       },
 
@@ -143,7 +141,6 @@ export default function HomePage() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-
         },
       },
 
@@ -152,7 +149,6 @@ export default function HomePage() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-
         },
       },
     ],
@@ -609,7 +605,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="mt-10 2xl:mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
+      <div className="mt-10 flex justify-center space-x-4 hover:cursor-pointer 2xl:mt-[80px]">
         <img
           src="/images/vector_title.png"
           alt=""
@@ -888,12 +884,12 @@ export default function HomePage() {
         </div>
       </div>
       <div className="m-auto max-w-full min-[425px]:max-w-[95%] min-[768px]:max-w-[85%] lg:max-w-[67.5%]">
-        <div className="mt-0 2xl:mt-8 ">
+        <div className="mt-0 2xl:mt-8">
           <Slider {...settings1} arrows={false} ref={sliderRef}>
             {data.map((data, index) => (
               <div
                 key={index}
-                className="slide-item p-1 sm:p-4 2xl:p-10 "
+                className="slide-item p-1 sm:p-4 2xl:p-10"
                 onClick={() => handleCardClick(data.id)}
               >
                 <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
@@ -958,7 +954,7 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="lg:absolute lg:left-[43%] lg:top-[30%] mt-8 lg:mt-16">
+        <div className="mt-8 lg:absolute lg:left-[43%] lg:top-[30%] lg:mt-16">
           <div className="flex justify-center space-x-4 hover:cursor-pointer">
             <img
               src="images/vector_title.png"
@@ -977,12 +973,11 @@ export default function HomePage() {
         </div>
 
         {/* slides show: popular sites */}
-        <div className="m-auto md:mt-4 lg:absolute lg:left-[15%] lg:top-[40%] min-[425px]:max-w-[95%] min-[768px]:max-w-[85%] lg:max-w-[67.5%]">
-    
+        <div className="m-auto min-[425px]:max-w-[95%] md:mt-4 min-[768px]:max-w-[85%] lg:absolute lg:left-[15%] lg:top-[40%] lg:max-w-[67.5%]">
           <div className="mt-2 lg:mt-20">
             <Slider {...settings2}>
               {TripsData.map((data, index) => (
-                <div key={index} className="md:p-0 p-4">
+                <div key={index} className="p-4 md:p-0">
                   <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
                     <TripCard
                       tripName={data.tripName}
@@ -999,8 +994,6 @@ export default function HomePage() {
                 </div>
               ))}
             </Slider>
-
-            
           </div>
         </div>
       </div>
@@ -1024,110 +1017,15 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="flex flex-col items-center justify-center md:space-x-0 lg:flex lg:flex-row lg:space-x-6 lg:items-stretch" >
-          {/* <div className="md:border-grey-200 max-w-[90%] rounded-2xl border-0 md:border lg:max-w-[34%] lg:min-h-[900px]">
+        <div className="flex flex-col items-center justify-center md:space-x-0 lg:flex lg:flex-row lg:items-stretch lg:space-x-6">
+          <div className="md:border-grey-200 mt-10 flex max-w-[90%] flex-col rounded-2xl border-0 md:border lg:min-h-[1000px] lg:max-w-[34%]">
             <div className="border-1 border-grey-200 mb-3 rounded-2xl border sm:border-0">
               <span className="block rounded-t-2xl bg-primary-300 py-4 text-center text-2xl font-bold text-white lg:py-10">
                 預約導遊
               </span>
 
-              <div className="space-y-4 pb-6 lg:mt-10 lg:space-y-[149px]">
-                <div className="mt-6 flex space-x-2 px-1 lg:px-8">
-                  <img
-                    src="images/step-1-1.png"
-                    alt=""
-                    className="h-[78px] object-cover lg:max-w-[200px]"
-                    data-aos="zoom-in-left"
-                    data-aos-easing="ease-in-sine"
-                  />
-                  <div
-                    className="flex-col space-y-2 lg:max-w-[360px] lg:space-y-4 lg:px-6 lg:py-7"
-                    data-aos="zoom-in-right"
-                    data-aos-easing="ease-in-sine"
-                  >
-                    <p className="text-[14px] font-bold tracking-4 text-grey-950 lg:text-xl">
-                      Step 1 瀏覽導遊資歷與專長
-                    </p>
-                    <p className="text-[12px] leading-[19.6px] tracking-1.5 text-grey-400 lg:text-[14px]">
-                      在平台上探索各種導遊的個人檔案，了解他們的資歷、專長領域，並觀看他們的自我介紹影片。挑選最適合你需求的在地專家。
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex space-x-2">
-                  <div className="">
-                    <img
-                      src="images/step-1-2.png"
-                      alt=""
-                      className="h-[65px] min-w-[100px] object-cover lg:max-w-[200px]"
-                      data-aos="zoom-in-left"
-                      data-aos-easing="ease-in-sine"
-                    />
-                  </div>
-                  <div
-                    className="flex-col space-y-2 lg:max-w-[360px] lg:space-y-4 lg:px-6 lg:py-7"
-                    data-aos="zoom-in-right"
-                    data-aos-easing="ease-in-sine"
-                  >
-                    <p className="text-[14px] font-bold tracking-4 text-grey-950 lg:text-xl">
-                      Step 2 與導遊聯絡
-                    </p>
-                    <p className="text-[12px] leading-[19.6px] tracking-1.5 text-grey-400 lg:text-[14px]">
-                      登入會員後，通過私訊與選定的導遊聯絡，詳細溝通你的旅行需求、預期時間和特別喜好，確保導遊能為你提供量身定制的服務
-                    </p>
-                  </div>
-                </div>
-                <div className="flex space-x-2">
-                  <div className="">
-                    <img
-                      src="images/step-1-3.png"
-                      alt=""
-                      className="h-[78px] min-w-[100px] object-cover lg:max-w-[200px]"
-                      data-aos="zoom-in-left"
-                      data-aos-easing="ease-in-sine"
-                    />
-                  </div>
-                  <div
-                    className="flex-col space-y-2 lg:max-w-[360px] lg:space-y-4 lg:px-6 lg:py-7"
-                    data-aos="zoom-in-right"
-                    data-aos-easing="ease-in-sine"
-                  >
-                    <p className="text-[14px] font-bold tracking-4 text-grey-950 lg:text-xl">
-                      Step 3 開啟旅程
-                    </p>
-                    <p className="text-[12px] leading-[19.6px] tracking-1.5 text-grey-400 lg:text-[14px]">
-                      一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex justify-center mb-4">
-              <button className="flex max-w-full justify-center rounded-2xl bg-primary-600 px-[15%] py-3 transition-colors duration-200 hover:bg-primary-300 active:border active:border-primary-600 active:bg-transparent sm:max-w-full lg:py-4">
-                <Link to="/search-tourguides" className="">
-                  <img
-                    src="images/BsHandIndex.svg"
-                    alt=""
-                    className="inline-block"
-                  />
-
-                  <span className="ml-2 font-bold tracking-1.5 text-white">
-                    我要預約導遊
-                  </span>
-                </Link>
-              </button>
-            </div>
-          </div> */}
-
-          <div className="mt-10 md:border-grey-200 max-w-[90%] rounded-2xl border-0 md:border lg:max-w-[34%] lg:min-h-[1000px] flex flex-col">
-            <div className="border-1 border-grey-200 mb-3 rounded-2xl border sm:border-0">
-              <span className="block rounded-t-2xl bg-primary-300 py-4 text-center text-2xl font-bold text-white lg:py-10">
-                預約導遊
-              </span>
-
-              <div className="p-2 lg:mt-10 flex-1">
-                <div className="grid gap-4 lg:grid-cols-2 lg:gap-10 lg:flex lg:flex-col lg:space-y-10 lg:px-8 lg:justify-between">
-          
+              <div className="flex-1 p-2 lg:mt-10">
+                <div className="grid gap-4 lg:flex lg:grid-cols-2 lg:flex-col lg:justify-between lg:gap-10 lg:space-y-10 lg:px-8">
                   <div className="flex items-center space-x-2 lg:space-x-4">
                     <img
                       src="images/step-1-1.png"
@@ -1142,10 +1040,10 @@ export default function HomePage() {
                       data-aos-easing="ease-in-sine"
                     >
                       <p className="text-[14px] font-bold tracking-4 text-grey-950 lg:text-xl">
-                      Step 1 瀏覽導遊資歷與專長
+                        Step 1 瀏覽導遊資歷與專長
                       </p>
                       <p className="text-[12px] leading-[19.6px] tracking-1.5 text-grey-400 lg:text-[14px]">
-                      在平台上探索各種導遊的個人檔案，了解他們的資歷、專長領域，並觀看他們的自我介紹影片。挑選最適合你需求的在地專家。
+                        在平台上探索各種導遊的個人檔案，了解他們的資歷、專長領域，並觀看他們的自我介紹影片。挑選最適合你需求的在地專家。
                       </p>
                     </div>
                   </div>
@@ -1167,12 +1065,10 @@ export default function HomePage() {
                         Step 2 與導遊聯絡
                       </p>
                       <p className="text-[12px] leading-[19.6px] tracking-1.5 text-grey-400 lg:text-[14px]">
-                      登入會員後，通過私訊與選定的導遊聯絡，詳細溝通你的旅行需求、預期時間和特別喜好，確保導遊能為你提供量身定制的服務。
+                        登入會員後，通過私訊與選定的導遊聯絡，詳細溝通你的旅行需求、預期時間和特別喜好，確保導遊能為你提供量身定制的服務。
                       </p>
                     </div>
                   </div>
-
-      
 
                   <div className="flex items-center space-x-2 lg:space-x-4">
                     <img
@@ -1191,16 +1087,14 @@ export default function HomePage() {
                         Step 3 開啟旅程
                       </p>
                       <p className="text-[12px] leading-[19.6px] tracking-1.5 text-grey-400 lg:text-[14px]">
-                      一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
+                        一切確認後，準備好你的行囊，迎接一段由專業導遊帶領的難忘巴黎旅程吧！
                       </p>
                     </div>
                   </div>
-
-           
                 </div>
               </div>
             </div>
-            <div className="flex justify-center mb-4 mt-auto pb-10">
+            <div className="mb-4 mt-auto flex justify-center pb-10">
               <button className="mt-2 flex max-w-full justify-center rounded-2xl bg-primary-600 px-[15%] py-3 transition-colors duration-200 hover:bg-secondary-200 active:border active:border-secondary-200 active:bg-transparent">
                 <img
                   src="images/BsHandIndex.svg"
@@ -1215,15 +1109,14 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-10 md:border-grey-200 max-w-[90%] rounded-2xl border-0 md:border lg:max-w-[34%] lg:min-h-[1000px] flex flex-col">
+          <div className="md:border-grey-200 mt-10 flex max-w-[90%] flex-col rounded-2xl border-0 md:border lg:min-h-[1000px] lg:max-w-[34%]">
             <div className="border-1 border-grey-200 mb-3 rounded-2xl border sm:border-0">
               <span className="block rounded-t-2xl bg-secondary-300 py-4 text-center text-2xl font-bold text-white lg:py-10">
                 報名行程
               </span>
 
-              <div className="p-2 lg:mt-10 flex-1">
-                <div className="grid gap-4 lg:grid-cols-2 lg:gap-10 lg:flex lg:flex-col lg:space-y-10 lg:px-8">
-          
+              <div className="flex-1 p-2 lg:mt-10">
+                <div className="grid gap-4 lg:flex lg:grid-cols-2 lg:flex-col lg:gap-10 lg:space-y-10 lg:px-8">
                   <div className="flex items-center space-x-2 lg:space-x-4">
                     <img
                       src="images/step-2-1.png"
@@ -1267,8 +1160,6 @@ export default function HomePage() {
                       </p>
                     </div>
                   </div>
-
-      
 
                   <div className="flex items-center space-x-2 lg:space-x-4">
                     <img
@@ -1316,7 +1207,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center mb-4 mt-auto pb-10">
+            <div className="mb-4 mt-auto flex justify-center pb-10">
               <button className="mt-2 flex max-w-full justify-center rounded-2xl bg-secondary-400 px-[15%] py-3 transition-colors duration-200 hover:bg-secondary-200 active:border active:border-secondary-200 active:bg-transparent">
                 <img
                   src="images/BsHandIndex.svg"
@@ -1330,8 +1221,6 @@ export default function HomePage() {
               </button>
             </div>
           </div>
-
-
         </div>
       </div>
 
