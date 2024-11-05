@@ -21,7 +21,7 @@ function Header() {
         <div className="mx-auto flex max-w-full items-center justify-between xl:w-10/12">
           {/* Logo */}
           <Link to="/" className="flex cursor-pointer items-center">
-            <img src="/images/website_logo.png" alt="logo" className="h-10" />
+            <img src="images/website_logo.png" alt="logo" className="h-10" />
             <div className="flex flex-col justify-around">
               <h1 className="text-[20px] font-bold leading-6 text-secondary-600">
                 樂遊巴黎
@@ -156,7 +156,7 @@ function Header() {
                       onClick={toggleMenu}
                     >
                       <img
-                        src="/images/login_icon.svg"
+                        src="images/login_icon.svg"
                         alt=""
                         className="inline-block"
                       />

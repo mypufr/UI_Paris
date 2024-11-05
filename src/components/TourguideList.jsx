@@ -21,11 +21,11 @@ const TourguideList = ({ name, img, specialities, language }) => {
                 {name}
               </span>
               <span className="flex">
-              <img src="/images/star.svg" alt="" className="h-6"/>
-              <img src="/images/star.svg" alt="" className="h-6"/>
-              <img src="/images/star.svg" alt="" className="h-6"/>
-              <img src="/images/star.svg" alt="" className="h-6"/>
-              <img src="/images/empty-star.svg" alt="" className="h-6"/>
+              <img src="images/star.svg" alt="" className="h-6"/>
+              <img src="images/star.svg" alt="" className="h-6"/>
+              <img src="images/star.svg" alt="" className="h-6"/>
+              <img src="images/star.svg" alt="" className="h-6"/>
+              <img src="images/empty-star.svg" alt="" className="h-6"/>
               </span>
               </div>
               <span className="text-[14px] leading-[19.6px] tracking-1.5 text-grey-400">

@@ -8,11 +8,11 @@ const CommentaryList = ({ name, date, userImg, commentaryText }) => {
         <Link to="/">
           <div className="flex flex-col p-6">
             <div className="flex py-4">
-              <img src="/images/star.svg" alt="" className="h-6 md:h-6 lg:h-7" />
-              <img src="/images/star.svg" alt="" className="h-6 md:h-6 lg:h-7" />
-              <img src="/images/star.svg" alt="" className="h-6 md:h-6 lg:h-7" />
-              <img src="/images/star.svg" alt="" className="h-6 md:h-6 lg:h-7" />
-              <img src="/images/empty-star.svg" alt="" className="h-6 md:h-6 lg:h-7" />
+              <img src="images/star.svg" alt="" className="h-6 md:h-6 lg:h-7" />
+              <img src="images/star.svg" alt="" className="h-6 md:h-6 lg:h-7" />
+              <img src="images/star.svg" alt="" className="h-6 md:h-6 lg:h-7" />
+              <img src="images/star.svg" alt="" className="h-6 md:h-6 lg:h-7" />
+              <img src="images/empty-star.svg" alt="" className="h-6 md:h-6 lg:h-7" />
             </div>
 
             <p className="flex-grow ext-[12px] md:text-[14px] lg:text-[16px] leading-[18px] md:leading-[20px] lg:leading-[22px] tracking-1.5 text-grey-400">

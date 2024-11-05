@@ -35,7 +35,7 @@ function EditMessagePage() {
         <div className="border rounded-3xl bg-background-2 my-10 max-w-[70%] m-auto">
           <div className="mt-10 flex justify-center space-x-4 hover:cursor-pointer">
             <img
-              src="/images/vector_title.png"
+              src="images/vector_title.png"
               alt=""
               className="inline-block h-[40px]"
             />
@@ -43,7 +43,7 @@ function EditMessagePage() {
               我要留言給
             </h3>
             <img
-              src="/images/vector_title.png"
+              src="images/vector_title.png"
               alt=""
               className="inline-block h-[40px]"
             />

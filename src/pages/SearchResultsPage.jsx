@@ -27,7 +27,7 @@ function SearchResultsPage() {
 
 <div className="flex justify-center space-x-4 mt-10">
         <img
-          src="/images/vector_title.png"
+          src="images/vector_title.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -35,7 +35,7 @@ function SearchResultsPage() {
         您選定的搜尋條件
         </h2>
         <img
-          src="../../images/vector_title.png"
+          src="images/vector_title.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -55,7 +55,7 @@ function SearchResultsPage() {
 
       <div className="flex justify-center space-x-4 mt-[-20px]">
         <img
-          src="/images/website_logo.png"
+          src="images/website_logo.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -63,7 +63,7 @@ function SearchResultsPage() {
           搜尋您的專屬導遊區，有10位導遊可為您服務
         </h2>
         <img
-          src="/images/website_logo.png"
+          src="images/website_logo.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -115,7 +115,7 @@ function SearchResultsPage() {
 
       <div className="mt-10 flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="/images/website_logo.png"
+            src="images/website_logo.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -123,7 +123,7 @@ function SearchResultsPage() {
             還有其他導遊正等你隨時預約!
           </h2>
           <img
-            src="/images/website_logo.png"
+            src="images/website_logo.png"
             alt=""
             className="inline-block h-[40px]"
           />

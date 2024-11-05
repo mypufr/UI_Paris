@@ -16,7 +16,7 @@ function Policy() {
             使用者條款
           </h5>
           <img
-            src="/images/vector_title.png"
+            src="images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />

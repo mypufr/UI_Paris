@@ -43,15 +43,15 @@ const SiteCard = ({
                 </h6>
                 <span className="flex">
                   <img
-                    src="/images/star.svg"
+                    src="images/star.svg"
                     alt=""
                     className="inline-block h-20 max-w-6"
                   />
-                  <img src="/images/star.svg" alt="" className="max-w-6" />
-                  <img src="/images/star.svg" alt="" className="max-w-6" />
-                  <img src="/images/star.svg" alt="" className="max-w-6" />
+                  <img src="images/star.svg" alt="" className="max-w-6" />
+                  <img src="images/star.svg" alt="" className="max-w-6" />
+                  <img src="images/star.svg" alt="" className="max-w-6" />
                   <img
-                    src="/images/empty-star.svg"
+                    src="images/empty-star.svg"
                     alt=""
                     className="max-w-6"
                   />
@@ -62,7 +62,7 @@ const SiteCard = ({
                 <div className="flex justify-between">
                   <div className="flex space-x-2">
                     <img
-                      src="/images/vector_title.png"
+                      src="images/vector_title.png"
                       alt=""
                       className="inline-block h-5 max-w-5"
                     />
@@ -73,7 +73,7 @@ const SiteCard = ({
 
                   <div className="flex space-x-2">
                     <img
-                      src="/images/vector_title.png"
+                      src="images/vector_title.png"
                       alt=""
                       className="inline-block h-5 max-w-5"
                     />
@@ -89,14 +89,14 @@ const SiteCard = ({
 
                 <div className="flex justify-between py-4">
                   <div className="flex justify-end space-x-2">
-                    <img src="/images/Group.svg" alt="" />
+                    <img src="images/Group.svg" alt="" />
                     <p className="text-sm leading-[15.4px] tracking-1.5 text-primary-500">
                       出發日期：{date}
                     </p>
                   </div>
 
                   <div className="flex justify-end space-x-2">
-                    <img src="src/assets/image/Group.svg" alt="" />
+                    <img src="image/Group.svg" alt="" />
                     <p className="text-xl leading-[15.4px] tracking-1.5 text-secondary-700">
                       {price} €/人
                     </p>

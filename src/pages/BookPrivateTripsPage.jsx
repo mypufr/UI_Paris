@@ -30,7 +30,7 @@ function BookPrivateTripsPage() {
 {/* title */}
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="/images/vector_title.png"
+            src="images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -38,7 +38,7 @@ function BookPrivateTripsPage() {
             立即預約私人行程
           </h2>
           <img
-            src="/images/vector_title.png"
+            src="images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />

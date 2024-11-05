@@ -28,7 +28,7 @@ function PaymentSuccessPage() {
         {/* title */}
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="/images/vector_title.png"
+            src="images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -36,7 +36,7 @@ function PaymentSuccessPage() {
             預約成功 !
           </h2>
           <img
-            src="/images/vector_title.png"
+            src="images/vector_title.png"
             alt=""
             className="inline-block h-[40px]"
           />
