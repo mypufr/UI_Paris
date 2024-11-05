@@ -862,7 +862,7 @@ export default function HomePage() {
       </div>
 
       <div>
-        <img src="images/deco_sites.png" alt="decorations Paris sites" />
+        <img src="https://i.imgur.com/r1iTcL1.png" alt="decorations Paris sites" />
       </div>
 
       {/* slides show: popular tourist guides */}
