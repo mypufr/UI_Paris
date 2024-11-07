@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaRegCalendarCheck } from "react-icons/fa";
 
 function truncateText(text, maxLength) {
   if (text.length > maxLength) {
@@ -32,7 +33,7 @@ const TripCard = ({
           <div className="space-y-2 px-4 py-[18.5px]">
             <div className="flex space-x-2">
               <img
-                src="images/vector_title.png"
+                src="https://i.imgur.com/zoB5vaQ.png"
                 alt=""
                 className="inline-block h-5 max-w-5"
               />
@@ -61,7 +62,8 @@ const TripCard = ({
             </p>
 
             <div className="hidden lg:flex lg:justify-end lg:space-x-2">
-              <img src="/images/Group.svg" alt="" />
+              {/* <img src="/images/Group.svg" alt="" /> */}
+              <FaRegCalendarCheck className="text-primary-300"/>
               <p className="text-[11px] leading-[15.4px] tracking-1.5 text-primary-500">
                 {date}
               </p>
