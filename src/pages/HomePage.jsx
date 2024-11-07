@@ -19,6 +19,8 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+
 import data from "../data/data.json";
 import DistrictsData from "../data/districts.json";
 import {
@@ -862,7 +864,10 @@ export default function HomePage() {
       </div>
 
       <div>
-        <img src="https://i.imgur.com/r1iTcL1.png" alt="decorations Paris sites" />
+        <img
+          src="https://i.imgur.com/r1iTcL1.png"
+          alt="decorations Paris sites"
+        />
       </div>
 
       {/* slides show: popular tourist guides */}
@@ -884,12 +889,17 @@ export default function HomePage() {
         </div>
       </div>
       <div className="m-auto max-w-full min-[425px]:max-w-[95%] min-[768px]:max-w-[85%] lg:max-w-[67.5%]">
-        <div className="mt-0 2xl:mt-8">
+        <div
+
+        // className="mt-0 2xl:mt-8" 原有
+        >
           <Slider {...settings1} arrows={false} ref={sliderRef}>
             {data.map((data, index) => (
               <div
                 key={index}
-                className="slide-item p-1 sm:p-4 2xl:p-10"
+                // className="slide-item p-1 sm:p-4 2xl:p-10" 原有
+
+                className="slide-item grid gap-4 p-1 sm:grid-cols-1 sm:p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3"
                 onClick={() => handleCardClick(data.id)}
               >
                 <div className="transform space-x-0 transition-transform duration-300 hover:scale-105">
@@ -910,11 +920,13 @@ export default function HomePage() {
               onClick={() => sliderRef.current.slickPrev()}
               className="hover:text-primary-400 p-2 text-grey-950"
             >
-              <img
+              {/* <img
                 src="images/left_arrow.png"
                 alt="Previous"
                 className="h-8 bg-slate-200"
-              />
+              /> */}
+
+              <SlArrowLeft />
             </button>
 
             {/* 放置 pagination */}
@@ -928,11 +940,12 @@ export default function HomePage() {
               onClick={() => sliderRef.current.slickNext()}
               className="hover:text-primary-400 text-grey-950"
             >
-              <img
+              {/* <img
                 src="images/right_arrow.png"
                 alt="Next"
                 className="h-8 bg-slate-200"
-              />
+              /> */}
+              <SlArrowRight />
             </button>
           </div>
         </div>
@@ -943,12 +956,12 @@ export default function HomePage() {
       <div className="bg-popular_sites relative">
         <div className="hidden lg:block">
           <img
-            src="images/upper-background_popular_sites_w1914.png"
+            src="https://i.imgur.com/MzjNbOk.png"
             alt=""
             className="h-[328px] w-full object-cover"
           />
           <img
-            src="images/background_popular_sites_cutted.png"
+            src="https://i.imgur.com/mydRBqI.png"
             alt=""
             className="h-[900px] w-full"
           />
