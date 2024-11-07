@@ -20,6 +20,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import { TfiHandPointRight } from "react-icons/tfi";
 
 import data from "../data/data.json";
 import DistrictsData from "../data/districts.json";
@@ -609,7 +610,7 @@ export default function HomePage() {
 
       <div className="mt-10 flex justify-center space-x-4 hover:cursor-pointer 2xl:mt-[80px]">
         <img
-          src="/images/vector_title.png"
+          src="https://i.imgur.com/zoB5vaQ.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -617,7 +618,7 @@ export default function HomePage() {
           分區搜尋專屬導遊
         </h3>
         <img
-          src="/images/vector_title.png"
+          src="https://i.imgur.com/zoB5vaQ.png"
           alt=""
           className="inline-block h-[40px]"
         />
@@ -649,7 +650,7 @@ export default function HomePage() {
             >
               <h3 className="space-x-2 py-6 text-xl font-bold leading-7 tracking-4 text-primary-600">
                 <img
-                  src="images/vector_title.png"
+                  src="https://i.imgur.com/zoB5vaQ.png"
                   alt=""
                   className="inline-block"
                 />
@@ -660,8 +661,8 @@ export default function HomePage() {
               <div className="mt-6 space-y-4">
                 <Link to="/book-trips" className="block">
                   <button className="flex w-full justify-center rounded-2xl bg-primary-600 py-4 font-bold tracking-1.5 text-white">
-                    <img src="images/BsHandIndex.svg" alt="" />
-
+                    {/* <img src="images/BsHandIndex.svg" alt="" /> */}
+                    <TfiHandPointRight className="text-2xl" />
                     <span className="ml-2">馬上預約</span>
                   </button>
                 </Link>
@@ -874,7 +875,7 @@ export default function HomePage() {
       <div className="mt-10">
         <div className="flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="images/vector_title.png"
+            src="https://i.imgur.com/zoB5vaQ.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -882,7 +883,7 @@ export default function HomePage() {
             熱門導遊
           </h2>
           <img
-            src="images/vector_title.png"
+            src="https://i.imgur.com/zoB5vaQ.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -970,7 +971,7 @@ export default function HomePage() {
         <div className="mt-8 lg:absolute lg:left-[43%] lg:top-[30%] lg:mt-16">
           <div className="flex justify-center space-x-4 hover:cursor-pointer">
             <img
-              src="images/vector_title.png"
+              src="https://i.imgur.com/zoB5vaQ.png"
               alt=""
               className="inline-block h-[40px]"
             />
@@ -978,7 +979,7 @@ export default function HomePage() {
               熱門旅程
             </h4>
             <img
-              src="images/vector_title.png"
+              src="https://i.imgur.com/zoB5vaQ.png"
               alt=""
               className="inline-block h-[40px]"
             />
@@ -1016,7 +1017,7 @@ export default function HomePage() {
       <div className="mb-12">
         <div className="mb-8 mt-[80px] flex justify-center space-x-4 hover:cursor-pointer">
           <img
-            src="images/vector_title.png"
+            src="https://i.imgur.com/zoB5vaQ.png"
             alt=""
             className="inline-blockh h-[40px]"
           />
@@ -1024,7 +1025,7 @@ export default function HomePage() {
             預約導遊和報名行程
           </h5>
           <img
-            src="images/vector_title.png"
+            src="https://i.imgur.com/zoB5vaQ.png"
             alt=""
             className="inline-block h-[40px]"
           />
@@ -1041,7 +1042,7 @@ export default function HomePage() {
                 <div className="grid gap-4 lg:flex lg:grid-cols-2 lg:flex-col lg:justify-between lg:gap-10 lg:space-y-10 lg:px-8">
                   <div className="flex items-center space-x-2 lg:space-x-4">
                     <img
-                      src="images/step-1-1.png"
+                      src="https://i.imgur.com/1aTjRc7.png"
                       alt=""
                       className="h-[65px] min-w-[100px] object-cover lg:max-w-[200px]"
                       data-aos="zoom-in-left"
@@ -1063,7 +1064,7 @@ export default function HomePage() {
 
                   <div className="flex items-center space-x-2 lg:space-x-4">
                     <img
-                      src="images/step-1-2.png"
+                      src="https://i.imgur.com/Urcn1PC.png"
                       alt=""
                       className="h-[65px] min-w-[100px] object-cover lg:max-w-[200px]"
                       data-aos="zoom-in-left"
@@ -1085,7 +1086,7 @@ export default function HomePage() {
 
                   <div className="flex items-center space-x-2 lg:space-x-4">
                     <img
-                      src="images/step-1-3.png"
+                      src="https://i.imgur.com/5NmpdbL.png"
                       alt=""
                       className="h-[65px] min-w-[100px] object-cover lg:max-w-[200px]"
                       data-aos="zoom-in-left"
@@ -1109,11 +1110,12 @@ export default function HomePage() {
             </div>
             <div className="mb-4 mt-auto flex justify-center pb-10">
               <button className="mt-2 flex max-w-full justify-center rounded-2xl bg-primary-600 px-[15%] py-3 transition-colors duration-200 hover:bg-secondary-200 active:border active:border-secondary-200 active:bg-transparent">
-                <img
+                {/* <img
                   src="images/BsHandIndex.svg"
                   alt=""
                   className="inline-block"
-                />
+                /> */}
+                <TfiHandPointRight className="text-2xl text-white" />
 
                 <span className="ml-2 font-bold tracking-1.5 text-white">
                   我要預約導遊
@@ -1132,7 +1134,7 @@ export default function HomePage() {
                 <div className="grid gap-4 lg:flex lg:grid-cols-2 lg:flex-col lg:gap-10 lg:space-y-10 lg:px-8">
                   <div className="flex items-center space-x-2 lg:space-x-4">
                     <img
-                      src="images/step-2-1.png"
+                      src="https://i.imgur.com/HnhEgvw.png"
                       alt=""
                       className="h-[95.43px] max-w-[100px] object-cover lg:max-w-[200px]"
                       data-aos="zoom-in-left"
@@ -1154,7 +1156,7 @@ export default function HomePage() {
 
                   <div className="flex items-center space-x-2 lg:space-x-4">
                     <img
-                      src="images/step-2-2.png"
+                      src="https://i.imgur.com/siL2mH0.png"
                       alt=""
                       className="h-[95.43px] max-w-[100px] object-cover lg:max-w-[200px]"
                       data-aos="zoom-in-left"
@@ -1176,7 +1178,7 @@ export default function HomePage() {
 
                   <div className="flex items-center space-x-2 lg:space-x-4">
                     <img
-                      src="images/step-2-3.png"
+                      src="https://i.imgur.com/H6qjFno.png"
                       alt=""
                       className="h-[95.43px] max-w-[100px] object-cover lg:max-w-[200px]"
                       data-aos="zoom-in-left"
@@ -1198,7 +1200,7 @@ export default function HomePage() {
 
                   <div className="flex items-center space-x-2 lg:space-x-4">
                     <img
-                      src="images/step-2-4.png"
+                      src="https://i.imgur.com/Q5toHw4.png"
                       alt=""
                       className="h-[95.43px] max-w-[100px] object-cover lg:max-w-[200px]"
                       data-aos="zoom-in-left"
@@ -1222,12 +1224,12 @@ export default function HomePage() {
             </div>
             <div className="mb-4 mt-auto flex justify-center pb-10">
               <button className="mt-2 flex max-w-full justify-center rounded-2xl bg-secondary-400 px-[15%] py-3 transition-colors duration-200 hover:bg-secondary-200 active:border active:border-secondary-200 active:bg-transparent">
-                <img
+                {/* <img
                   src="images/BsHandIndex.svg"
                   alt=""
                   className="inline-block"
-                />
-
+                /> */}
+                <TfiHandPointRight className="text-2xl text-white" />
                 <span className="ml-2 font-bold tracking-1.5 text-white">
                   馬上報名行程
                 </span>
@@ -1239,35 +1241,35 @@ export default function HomePage() {
 
       {/* Clouds decorations */}
 
-      <div className="hidden lg:relative lg:mb-[20%]">
-        <div className="absolute -top-6 left-[1%] -rotate-12">
-          <img src="images/deco_footer_clouds.png" alt="" />
+      <div className="lg:relative lg:mb-[15%]">
+        <div className="hidden lg:absolute lg:-top-6 lg:left-[1%] lg:-rotate-12 lg:block">
+          <img src="https://i.imgur.com/dn5n8ac.png" alt="" />
         </div>
 
-        <div className="rotate-10 absolute -top-40 right-[3%]">
-          <img src="images/deco_footer_clouds.png" alt="" />
+        <div className="hidden lg:rotate-10 lg:absolute lg:top-0 lg:right-[1%] 2xl:-top-40 lg:block">
+          <img src="https://i.imgur.com/dn5n8ac.png" alt="" />
         </div>
 
         {/* Tree decorations */}
-        <div className="absolute left-16 top-[85px]">
+        <div className="hidden 2xl:absolute 2xl:left-16 2xl:top-[85px] 2xl:block">
           <img
-            src="images/left_tree.png"
+            src="https://i.imgur.com/ku7iNV8.png"
             alt=""
             className="h-auto max-w-[98%]"
           />
         </div>
 
-        <div className="absolute right-[7%] top-[190px] -rotate-3">
+        <div className="hidden 2xl:absolute 2xl:right-[7%] 2xl:top-[190px] 2xl:-rotate-3 2xl:block">
           <img
-            src="/images/deco_middle_tree.png"
+            src="https://i.imgur.com/0q6kIet.png"
             alt=""
             className="h-auto max-w-[89%]"
           />
         </div>
 
-        <div className="absolute -top-5 right-2">
+        <div className="hidden 2xl:absolute 2xl:-top-5 2xl:right-2 2xl:block">
           <img
-            src="images/deco_right_tree.png"
+            src="https://i.imgur.com/Ze8tmid.png"
             alt=""
             className="h-auto max-w-[98%]"
           />

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { SlArrowRight } from "react-icons/sl";
 import { FiMenu } from "react-icons/fi";
+import { BsPersonCircle } from "react-icons/bs";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -155,11 +156,12 @@ function Header() {
                       className="flex w-full items-center bg-primary-600 px-2 py-2 pl-4 text-base text-white"
                       onClick={toggleMenu}
                     >
-                      <img
+                      {/* <img
                         src="images/login_icon.svg"
                         alt=""
                         className="inline-block"
-                      />
+                      /> */}
+                      <BsPersonCircle />
                       <span className="p-2">登入 / 註冊</span>
                     </button>
                   </Link>
