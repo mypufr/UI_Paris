@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import TourguidesPage from "./pages/TourguidesPage";
+import TourguidesPage from "./pages/SearchTourguidesPage";
 import SearchResultsPage from "./pages/SearchResultsPage";
 import TourguideProfilePage from "./pages/TourguideProfilePage";
 import EditMessagePage from "./pages/EditMessagePage";
